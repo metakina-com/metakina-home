@@ -1,0 +1,242 @@
+/* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Light gray background */
+            color: #374151; /* Dark gray text */
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Header style */
+        header {
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent white */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb; /* Light border */
+        }
+        /* Hero Section Background */
+        .hero-fintech-bg {
+             background-color: #f0f4ff; /* Even lighter Indigo background */
+        }
+
+        /* Card styles */
+        .fintech-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smoother transition */
+            border-radius: 0.5rem; /* Rounded */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+        .fintech-card:hover {
+            transform: translateY(-5px); /* Slightly more lift */
+            box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04); /* Softer, larger shadow */
+        }
+        /* Primary CTA button */
+        .cta-primary-button {
+            background-color: #4f46e5; /* Indigo */
+            color: #ffffff;
+            transition: background-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        .cta-primary-button:hover {
+            background-color: #4338ca; /* Darker Indigo */
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
+        }
+        /* Secondary button style (Outlined) */
+        .cta-secondary-button {
+             background-color: transparent;
+             border: 1px solid #4f46e5;
+             color: #4f46e5;
+             transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out;
+        }
+        .cta-secondary-button:hover {
+             background-color: #eef2ff;
+             color: #4338ca;
+             transform: translateY(-1px);
+        }
+        /* Link styles */
+        .fintech-link {
+            color: #4f46e5;
+            transition: color 0.2s ease-out;
+            font-weight: 500;
+        }
+        .fintech-link:hover {
+            color: #3730a3; /* Darker Indigo */
+            text-decoration: underline;
+        }
+        /* Navigation link hover */
+        .nav-link {
+            color: #4b5563;
+            transition: color 0.2s ease-out, border-color 0.2s ease-out; /* Added border-color transition */
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover {
+            color: #4f46e5;
+            border-bottom-color: #4f46e5; /* Underline effect on hover */
+        }
+        /* Language switcher styles */
+        .lang-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 60px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 50;
+            right: 0;
+            border-radius: 0.375rem;
+            border: 1px solid #e5e7eb;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+        .lang-dropdown-content a {
+            color: #374151;
+            padding: 6px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.875rem;
+            text-align: center;
+            white-space: nowrap;
+            transition: background-color 0.2s ease-out, color 0.2s ease-out;
+        }
+        .lang-dropdown-content a:hover {
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .lang-dropdown:hover .lang-dropdown-content {
+            display: block;
+        }
+        .lang-button {
+            border: 1px solid #d1d5db;
+            color: #4b5563;
+            transition: border-color 0.2s ease-out, background-color 0.2s ease-out;
+        }
+        .lang-button:hover {
+            border-color: #9ca3af;
+            background-color: #f9fafb;
+        }
+        .lang-button-text {
+            font-weight: 500;
+            margin-left: 0.25rem;
+            margin-right: 0.125rem;
+        }
+        /* Footer style */
+        footer {
+            background-color: #f3f4f6; /* Slightly darker light gray footer */
+            border-top: 1px solid #e5e7eb;
+            color: #4b5563;
+        }
+        footer h4 { color: #1f2937; }
+        footer a { color: #4b5563; transition: color 0.2s ease-out; }
+        footer a:hover { color: #4f46e5; }
+
+        /* Headings and Text */
+        h1, h2, h3, h4, h5, h6 {
+            color: #111827;
+        }
+        p, li, label, blockquote footer span:first-child {
+             color: #4b5563;
+        }
+        blockquote p {
+             color: #374151;
+        }
+        /* Input fields */
+        input, textarea {
+            background-color: #ffffff;
+            border-color: #d1d5db;
+            color: #111827;
+            border-radius: 0.375rem;
+            transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #9ca3af;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15); /* Adjusted ring */
+        }
+        hr {
+            border-color: #e5e7eb;
+        }
+        /* Section background variations */
+        .section-bg-light { background-color: #f9fafb; }
+        .section-bg-white { background-color: #ffffff; }
+        .section-bg-accent { background-color: #eef2ff; }
+        .section-bg-gradient-light { background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%); }
+
+        /* Subtle scroll animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Language span visibility */
+        [data-lang] { display: none; }
+        html[lang="zh-CN"] [data-lang="zh-CN"],
+        html[lang="en"] [data-lang="en"],
+        html[lang="ja"] [data-lang="ja"],
+        html[lang="ko"] [data-lang="ko"] {
+            display: inline;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .desktop-nav { display: none; }
+            .mobile-nav-controls { display: flex; }
+        }
+        @media (min-width: 1025px) {
+             .desktop-nav { display: flex; }
+             .mobile-nav-controls { display: none; }
+             #mobile-menu { display: none !important; }
+        }
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.2rem; line-height: 1.2; }
+            .hero-subtitle { font-size: 1rem; }
+            .lang-dropdown { margin-left: auto; margin-right: 1rem; }
+        }
+        /* Logo grid styling */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2.5rem; /* Increased gap */
+            align-items: center;
+        }
+        .logo-item {
+            filter: grayscale(100%) opacity(60%);
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+        .logo-item:hover {
+            filter: grayscale(0%) opacity(100%);
+        }
+        /* Partnership Program Tier Card Highlight */
+        .tier-highlight {
+            border-color: #4f46e5;
+            box-shadow: 0 6px 12px rgba(79, 70, 229, 0.1); /* Slightly stronger shadow */
+        }
+        /* Ensure icons have consistent size and alignment */
+        .icon-feature {
+            width: 4rem; /* 64px */
+            height: 4rem; /* 64px */
+            font-size: 1.875rem; /* text-3xl */
+        }
+        .icon-card {
+             width: 2rem; /* 32px */
+             height: 2rem; /* 32px */
+             font-size: 1.25rem; /* text-xl */
+        }
+         .icon-list {
+             width: 1em;
+             height: 1em;
+             margin-right: 0.5em; /* space between icon and text */
+             vertical-align: -0.125em; /* Adjust icon vertical alignment */
+         }

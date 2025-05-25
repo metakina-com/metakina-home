@@ -9,251 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Base styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9fafb; /* Light gray background */
-            color: #374151; /* Dark gray text */
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        /* Header style */
-        header {
-            background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent white */
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e5e7eb; /* Light border */
-        }
-        /* Hero Section Background */
-        .hero-fintech-bg {
-             background-color: #f0f4ff; /* Even lighter Indigo background */
-        }
-
-        /* Card styles */
-        .fintech-card {
-            background-color: #ffffff;
-            border: 1px solid #e5e7eb;
-            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smoother transition */
-            border-radius: 0.5rem; /* Rounded */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-        }
-        .fintech-card:hover {
-            transform: translateY(-5px); /* Slightly more lift */
-            box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04); /* Softer, larger shadow */
-        }
-        /* Primary CTA button */
-        .cta-primary-button {
-            background-color: #4f46e5; /* Indigo */
-            color: #ffffff;
-            transition: background-color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-        .cta-primary-button:hover {
-            background-color: #4338ca; /* Darker Indigo */
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
-        }
-        /* Secondary button style (Outlined) */
-        .cta-secondary-button {
-             background-color: transparent;
-             border: 1px solid #4f46e5;
-             color: #4f46e5;
-             transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out;
-        }
-        .cta-secondary-button:hover {
-             background-color: #eef2ff;
-             color: #4338ca;
-             transform: translateY(-1px);
-        }
-        /* Link styles */
-        .fintech-link {
-            color: #4f46e5;
-            transition: color 0.2s ease-out;
-            font-weight: 500;
-        }
-        .fintech-link:hover {
-            color: #3730a3; /* Darker Indigo */
-            text-decoration: underline;
-        }
-        /* Navigation link hover */
-        .nav-link {
-            color: #4b5563;
-            transition: color 0.2s ease-out, border-color 0.2s ease-out; /* Added border-color transition */
-            padding-bottom: 2px;
-            border-bottom: 2px solid transparent;
-        }
-        .nav-link:hover {
-            color: #4f46e5;
-            border-bottom-color: #4f46e5; /* Underline effect on hover */
-        }
-        /* Language switcher styles */
-        .lang-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .lang-dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ffffff;
-            min-width: 60px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            z-index: 50;
-            right: 0;
-            border-radius: 0.375rem;
-            border: 1px solid #e5e7eb;
-            padding-top: 4px;
-            padding-bottom: 4px;
-        }
-        .lang-dropdown-content a {
-            color: #374151;
-            padding: 6px 12px;
-            text-decoration: none;
-            display: block;
-            font-size: 0.875rem;
-            text-align: center;
-            white-space: nowrap;
-            transition: background-color 0.2s ease-out, color 0.2s ease-out;
-        }
-        .lang-dropdown-content a:hover {
-            background-color: #f3f4f6;
-            color: #1f2937;
-        }
-        .lang-dropdown:hover .lang-dropdown-content {
-            display: block;
-        }
-        .lang-button {
-            border: 1px solid #d1d5db;
-            color: #4b5563;
-            transition: border-color 0.2s ease-out, background-color 0.2s ease-out;
-        }
-        .lang-button:hover {
-            border-color: #9ca3af;
-            background-color: #f9fafb;
-        }
-        .lang-button-text {
-            font-weight: 500;
-            margin-left: 0.25rem;
-            margin-right: 0.125rem;
-        }
-        /* Footer style */
-        footer {
-            background-color: #f3f4f6; /* Slightly darker light gray footer */
-            border-top: 1px solid #e5e7eb;
-            color: #4b5563;
-        }
-        footer h4 { color: #1f2937; }
-        footer a { color: #4b5563; transition: color 0.2s ease-out; }
-        footer a:hover { color: #4f46e5; }
-
-        /* Headings and Text */
-        h1, h2, h3, h4, h5, h6 {
-            color: #111827;
-        }
-        p, li, label, blockquote footer span:first-child {
-             color: #4b5563;
-        }
-        blockquote p {
-             color: #374151;
-        }
-        /* Input fields */
-        input, textarea {
-            background-color: #ffffff;
-            border-color: #d1d5db;
-            color: #111827;
-            border-radius: 0.375rem;
-            transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
-        }
-        input::placeholder, textarea::placeholder {
-            color: #9ca3af;
-        }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #6366f1;
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15); /* Adjusted ring */
-        }
-        hr {
-            border-color: #e5e7eb;
-        }
-        /* Section background variations */
-        .section-bg-light { background-color: #f9fafb; }
-        .section-bg-white { background-color: #ffffff; }
-        .section-bg-accent { background-color: #eef2ff; }
-        .section-bg-gradient-light { background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%); }
-
-        /* Subtle scroll animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Language span visibility */
-        [data-lang] { display: none; }
-        html[lang="zh-CN"] [data-lang="zh-CN"],
-        html[lang="en"] [data-lang="en"],
-        html[lang="ja"] [data-lang="ja"],
-        html[lang="ko"] [data-lang="ko"] {
-            display: inline;
-        }
-        /* Responsive adjustments */
-        @media (max-width: 1024px) {
-            .desktop-nav { display: none; }
-            .mobile-nav-controls { display: flex; }
-        }
-        @media (min-width: 1025px) {
-             .desktop-nav { display: flex; }
-             .mobile-nav-controls { display: none; }
-             #mobile-menu { display: none !important; }
-        }
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.2rem; line-height: 1.2; }
-            .hero-subtitle { font-size: 1rem; }
-            .lang-dropdown { margin-left: auto; margin-right: 1rem; }
-        }
-        /* Logo grid styling */
-        .logo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 2.5rem; /* Increased gap */
-            align-items: center;
-        }
-        .logo-item {
-            filter: grayscale(100%) opacity(60%);
-            transition: filter 0.3s ease, opacity 0.3s ease;
-        }
-        .logo-item:hover {
-            filter: grayscale(0%) opacity(100%);
-        }
-        /* Partnership Program Tier Card Highlight */
-        .tier-highlight {
-            border-color: #4f46e5;
-            box-shadow: 0 6px 12px rgba(79, 70, 229, 0.1); /* Slightly stronger shadow */
-        }
-        /* Ensure icons have consistent size and alignment */
-        .icon-feature {
-            width: 4rem; /* 64px */
-            height: 4rem; /* 64px */
-            font-size: 1.875rem; /* text-3xl */
-        }
-        .icon-card {
-             width: 2rem; /* 32px */
-             height: 2rem; /* 32px */
-             font-size: 1.25rem; /* text-xl */
-        }
-         .icon-list {
-             width: 1em;
-             height: 1em;
-             margin-right: 0.5em; /* space between icon and text */
-             vertical-align: -0.125em; /* Adjust icon vertical alignment */
-         }
-
-    </style>
+    <link rel="stylesheet" href="css/index-custom.css">
 </head>
 <body class="font-sans antialiased">
 
@@ -310,7 +66,7 @@
                     </div>
                 </div>
                 <button id="mobile-menu-button" class="text-gray-600 focus:outline-none" aria-label="Open Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
@@ -380,11 +136,11 @@
                         <span data-lang="ko">업계 리더들의 신뢰</span>
                     </p>
                     <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 logo-item">
-                        <img src="https://placehold.co/120x40/cccccc/888888?text=Client+1" alt="客户 Logo 1" class="h-8" width="120" height="40" onerror="this.style.display='none'">
-                        <img src="https://placehold.co/120x40/cccccc/888888?text=Client+2" alt="客户 Logo 2" class="h-8" width="120" height="40" onerror="this.style.display='none'">
-                        <img src="https://placehold.co/120x40/cccccc/888888?text=Client+3" alt="客户 Logo 3" class="h-8" width="120" height="40" onerror="this.style.display='none'">
-                        <img src="https://placehold.co/120x40/cccccc/888888?text=Client+4" alt="客户 Logo 4" class="h-8 hidden md:inline-block" width="120" height="40" onerror="this.style.display='none'">
-                        <img src="https://placehold.co/120x40/cccccc/888888?text=Client+5" alt="客户 Logo 5" class="h-8 hidden lg:inline-block" width="120" height="40" onerror="this.style.display='none'">
+                        <img src="https://via.placeholder.com/120x40/E0E7FF/4338CA?text=Trusted+Client+Logo+1" alt="Trusted Client Logo 1" class="h-8" width="120" height="40" onerror="this.style.display='none'">
+                        <img src="https://via.placeholder.com/120x40/D1D5DB/1F2937?text=Valued+Partner+Logo+2" alt="Valued Partner Logo 2" class="h-8" width="120" height="40" onerror="this.style.display='none'">
+                        <img src="https://placehold.co/120x40/BFDBFE/1E40AF?text=Key+Supporter+3" alt="Key Supporter Logo 3" class="h-8" width="120" height="40" onerror="this.style.display='none'">
+                        <img src="https://via.placeholder.com/120x40/A5B4FC/1C1917?text=Industry+Leader+4" alt="Industry Leader Logo 4" class="h-8 hidden md:inline-block" width="120" height="40" onerror="this.style.display='none'">
+                        <img src="https://placehold.co/120x40/93C5FD/0C4A6E?text=Strategic+Ally+5" alt="Strategic Ally Logo 5" class="h-8 hidden lg:inline-block" width="120" height="40" onerror="this.style.display='none'">
                     </div>
                 </div>
             </div>
@@ -526,22 +282,22 @@
                       <h3 class="text-2xl font-semibold mb-6 text-gray-900"><span data-lang="zh-CN">我们的核心团队</span><span data-lang="en">Our Core Team</span></h3>
                       <div class="flex flex-wrap justify-center gap-8">
                           <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 text-center">
-                              <img src="https://placehold.co/150x150/e0e7ff/4338ca?text=CEO" alt="团队成员" class="rounded-full mx-auto mb-3 shadow-md border-2 border-indigo-200" width="150" height="150" onerror="this.src='https://placehold.co/150x150/e0e7ff/4338ca?text=Error'">
+                              <img src="https://via.placeholder.com/150x150/E0E7FF/4338CA?text=Wang+Fang+CEO" alt="王芳 (CEO) - 资深金融背景，资产管理与风控专家" class="rounded-full mx-auto mb-3 shadow-md border-2 border-indigo-200" width="150" height="150" onerror="this.src='https://via.placeholder.com/150x150/E0E7FF/4338CA?text=Error+Loading+Image'; this.alt='Error Loading CEO Image';">
                               <h4 class="font-semibold text-gray-800">王芳 (CEO)</h4>
                               <p class="text-sm text-gray-600"><span data-lang="zh-CN">资深金融背景，资产管理与风控专家</span><span data-lang="en">Senior finance, asset mgt. & risk expert</span></p>
                           </div>
                           <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 text-center">
-                              <img src="https://placehold.co/150x150/e0e7ff/4338ca?text=COO" alt="团队成员" class="rounded-full mx-auto mb-3 shadow-md border-2 border-indigo-200" width="150" height="150" onerror="this.src='https://placehold.co/150x150/e0e7ff/4338ca?text=Error'">
+                              <img src="https://via.placeholder.com/150x150/E0E7FF/4338CA?text=Zhang+Qiangwei+COO" alt="张强伟 (COO) - 运营管理专家，精于流程优化与合规执行" class="rounded-full mx-auto mb-3 shadow-md border-2 border-indigo-200" width="150" height="150" onerror="this.src='https://via.placeholder.com/150x150/E0E7FF/4338CA?text=Error+Loading+Image'; this.alt='Error Loading COO Image';">
                               <h4 class="font-semibold text-gray-800">张强伟 (COO)</h4>
                               <p class="text-sm text-gray-600"><span data-lang="zh-CN">运营管理专家，精于流程优化与合规执行</span><span data-lang="en">Operations expert, process & compliance</span></p>
                           </div>
                            <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 text-center">
-                              <img src="https://placehold.co/150x150/e0e7ff/4338ca?text=CTO" alt="团队成员" class="rounded-full mx-auto mb-3 shadow-md border-2 border-indigo-200" width="150" height="150" onerror="this.src='https://placehold.co/150x150/e0e7ff/4338ca?text=Error'">
+                              <img src="https://via.placeholder.com/150x150/E0E7FF/4338CA?text=Zhu+Yinjun+CTO" alt="朱银军 (CTO) - 技术专家，精通区块链与智能合约安全" class="rounded-full mx-auto mb-3 shadow-md border-2 border-indigo-200" width="150" height="150" onerror="this.src='https://via.placeholder.com/150x150/E0E7FF/4338CA?text=Error+Loading+Image'; this.alt='Error Loading CTO Image';">
                               <h4 class="font-semibold text-gray-800">朱银军 (CTO)</h4>
                               <p class="text-sm text-gray-600"><span data-lang="zh-CN">技术专家，精通区块链与智能合约安全</span><span data-lang="en">Tech expert, blockchain & contract security</span></p>
                           </div>
                            <div class="w-full sm:w-1/2 md:w-1/4 lg:w-1/5 text-center">
-                              <img src="https://placehold.co/150x150/e0e7ff/4338ca?text=CMO" alt="团队成员" class="rounded-full mx-auto mb-3 shadow-md border-2 border-indigo-200" width="150" height="150" onerror="this.src='https://placehold.co/150x150/e0e7ff/4338ca?text=Error'">
+                              <img src="https://via.placeholder.com/150x150/E0E7FF/4338CA?text=Taylor+CMO" alt="Taylor (CMO) - 市场营销专家，品牌与市场沟通" class="rounded-full mx-auto mb-3 shadow-md border-2 border-indigo-200" width="150" height="150" onerror="this.src='https://via.placeholder.com/150x150/E0E7FF/4338CA?text=Error+Loading+Image'; this.alt='Error Loading CMO Image';">
                               <h4 class="font-semibold text-gray-800">Taylor (CMO)</h4>
                               <p class="text-sm text-gray-600"><span data-lang="zh-CN">市场营销专家，品牌与市场沟通</span><span data-lang="en">Marketing expert, brand & comms</span></p>
                           </div>
@@ -573,12 +329,12 @@
                          <span data-lang="ko">협력 1차 시장 플랫폼 예시</span>
                      </h3>
                      <div class="logo-grid">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=DAO+Maker" alt="DAO Maker Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Polkastarter" alt="Polkastarter Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Seedify" alt="Seedify Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=GameFi.org" alt="GameFi.org Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=CoinList" alt="CoinList Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=ChainGPT+Pad" alt="ChainGPT Pad Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/CBD5E1/475569?text=DAO+Maker" alt="DAO Maker Platform Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/CBD5E1/475569?text=Polkastarter" alt="Polkastarter Platform Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/CBD5E1/475569?text=Seedify" alt="Seedify Platform Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/CBD5E1/475569?text=GameFi.org" alt="GameFi.org Platform Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/CBD5E1/475569?text=CoinList" alt="CoinList Platform Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/CBD5E1/475569?text=ChainGPT+Pad" alt="ChainGPT Pad Platform Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
                          </div>
                  </div>
 
@@ -590,16 +346,16 @@
                          <span data-lang="ko">협력 2차 시장 거래소 예시</span>
                      </h3>
                      <div class="logo-grid">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Binance" alt="Binance Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Coinbase" alt="Coinbase Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Kraken" alt="Kraken Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=OKX" alt="OKX Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=KuCoin" alt="KuCoin Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Gate.io" alt="Gate.io Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Uniswap" alt="Uniswap Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=PancakeSwap" alt="PancakeSwap Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Curve" alt="Curve Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                          <img src="https://placehold.co/120x40/cccccc/888888?text=Jupiter" alt="Jupiter Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=Binance+Exchange" alt="Binance Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=Coinbase+Exchange" alt="Coinbase Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=Kraken+Exchange" alt="Kraken Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=OKX+Exchange" alt="OKX Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=KuCoin+Exchange" alt="KuCoin Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=Gate.io+Exchange" alt="Gate.io Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=Uniswap+DEX" alt="Uniswap Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=PancakeSwap+DEX" alt="PancakeSwap Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=Curve+DEX" alt="Curve Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                          <img src="https://via.placeholder.com/120x40/9CA3AF/374151?text=Jupiter+Aggregator" alt="Jupiter Exchange Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
                          </div>
                  </div>
                   <p class="text-center text-sm text-gray-500 mt-8 animate-on-scroll" style="animation-delay: 0.4s;">
@@ -633,12 +389,12 @@
                          <span data-lang="ko">현재 지원되는 주요 네트워크 유형</span>
                      </h3>
                      <div class="logo-grid">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Ethereum" alt="Ethereum Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Polygon" alt="Polygon Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Avalanche" alt="Avalanche Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=BNB+Chain" alt="BNB Chain Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Solana" alt="Solana Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/120x40/cccccc/888888?text=Hyperledger" alt="Hyperledger Fabric Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/DBEAFE/1E3A8A?text=Ethereum" alt="Ethereum Network Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/DBEAFE/1E3A8A?text=Polygon" alt="Polygon Network Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/DBEAFE/1E3A8A?text=Avalanche" alt="Avalanche Network Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/DBEAFE/1E3A8A?text=BNB+Chain" alt="BNB Chain Network Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/DBEAFE/1E3A8A?text=Solana" alt="Solana Network Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/120x40/DBEAFE/1E3A8A?text=Hyperledger" alt="Hyperledger Fabric Network Logo" class="h-8 mx-auto logo-item" width="120" height="40" onerror="this.style.display='none'">
                          </div>
                  </div>
                   <p class="text-center text-sm text-gray-500 mt-8 animate-on-scroll" style="animation-delay: 0.3s;">
@@ -831,9 +587,9 @@
                  </h2>
                   <div class="mb-12 animate-on-scroll" style="animation-delay: 0.1s;">
                      <div class="flex flex-wrap justify-center items-center gap-8 logo-item">
-                         <img src="https://placehold.co/150x50/cccccc/888888?text=Client+A" alt="知名项目方 A Logo" class="h-10" width="150" height="50" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/150x50/cccccc/888888?text=Client+B" alt="知名项目方 B Logo" class="h-10" width="150" height="50" onerror="this.style.display='none'">
-                         <img src="https://placehold.co/150x50/cccccc/888888?text=Client+C" alt="知名项目方 C Logo" class="h-10" width="150" height="50" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/150x50/D1FAE5/065F46?text=Successful+Client+A" alt="Successful Client A Logo" class="h-10" width="150" height="50" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/150x50/D1FAE5/065F46?text=Successful+Client+B" alt="Successful Client B Logo" class="h-10" width="150" height="50" onerror="this.style.display='none'">
+                         <img src="https://via.placeholder.com/150x50/D1FAE5/065F46?text=Successful+Client+C" alt="Successful Client C Logo" class="h-10" width="150" height="50" onerror="this.style.display='none'">
                      </div>
                  </div>
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
