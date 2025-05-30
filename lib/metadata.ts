@@ -41,15 +41,15 @@ export async function constructMetadata({
   const imageUrls =
     images.length > 0
       ? images.map((img) => ({
-          url: img.startsWith("http") ? img : `${siteConfig.url}/${img}`,
-          alt: pageTitle,
-        }))
+        url: img.startsWith("http") ? img : `${siteConfig.url}/${img}`,
+        alt: pageTitle,
+      }))
       : [
-          {
-            url: `${siteConfig.url}/og.png`,
-            alt: pageTitle,
-          },
-        ];
+        {
+          url: `${siteConfig.url}/og.png`,
+          alt: pageTitle,
+        },
+      ];
 
   // Open Graph Site
   const pageURL =

@@ -9,7 +9,8 @@
     "countdown": "将在 {countdown} 秒后关闭"
   },
   "Home": {
-    "title": "Next Forge",
+    "name": "达普韦伯",
+    "title": "元话RWA",
     "tagLine": "Next.js 多语言启动模板",
     "description": "内置多语言支持的 Next.js 15 启动模板，助您快速构建面向全球的出海网站。简洁高效，开箱即用，完全优化的SEO基础架构。"
   },
@@ -20,11 +21,14 @@
     "blog": "博客咨询",
     "followUs": "关注我们",
     "aboutUs": "关于我们",
-    "contactUs": "联系我们"
+    "contactUs": "联系我们",
+    "home": "首页",
+    "whyChooseUs": "为何选择我们",
+    "supportedChains": "支持公链",
+    "cooperationMode": "合作模式",
+    "joinUs": "平台注册/申请"
   },
   "Footer": {
-    "Copyright": "© 2025 达普韦伯 (DappWeb.cn). 保留所有权利。",
-    "followUs": "关注我们",
     "footerLinks": {
       "services": {
         "title": "核心服务",
@@ -37,6 +41,189 @@
         "wallet": "钱包",
         "trustedData": "可信数据",
         "ai": "AI"
+      }
+    },
+    "about": {
+      "title": "关于元话RWA",
+      "description": "构建现实资产与数字金融的合规桥梁。"
+    },
+    "quickLinks": {
+      "title": "快速链接",
+      "solutions": "解决方案",
+      "whyChooseUs": "为何选择我们",
+      "marketDynamics": "市场对接",
+      "supportedChains": "支持公链",
+      "digitalCurrency": "数字投行合作",
+      "resourceCenter": "资源中心",
+      "customerSuccess": "客户成功"
+    },
+    "resources": {
+      "title": "资源",
+      "whitepaper": "白皮书",
+      "serviceManual": "服务手册",
+      "industryInsight": "行业洞察",
+      "faq": "常见问题"
+    },
+    "followUs": {
+      "title": "关注我们"
+    },
+    "copyright": "© 2025 METAKINA LIMITED & 西安达普韦伯网络科技有限责任公司. 保留所有权利.",
+    "privacyPolicy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "Consult": {
+    "logo": "元话RWA",
+    "title": "盘活万亿资产，合规连接全球资本",
+    "subtitle": "提供机构级、端到端、合规优先的RWA与数据资产化解决方案，赋能您的资产潜力。",
+    "button": "申请免费咨询"
+  },
+  "challenges": {
+    "title": "传统资产与数据资产面临的挑战",
+    "liquidity": {
+      "title": "流动性困境",
+      "description": "非标资产难以快速变现，持有成本高。"
+    },
+    "financing": {
+      "title": "融资与合规难题",
+      "description": "传统渠道门槛高，跨境、数据资产化合规复杂。"
+    },
+    "efficiency": {
+      "title": "效率与透明度不足",
+      "description": "交易流程冗长，信息不对称，管理成本高。"
+    }
+  },
+  "solutions": {
+    "sectionTitle": "解决方案",
+    "mainTitle": "端到端 RWA 与数据资产化服务",
+    "common": {
+      "learnMore": "了解详情"
+    },
+    "assetDigital": {
+      "title": "资产数字化",
+      "description": "利用 AI 实现资产标准化，设计标准 Tokenomics，通过安全可靠的智能合约实现资产上链。"
+    },
+    "crossBorder": {
+      "title": "合规跨境融资促进",
+      "description": "设计符合跨境监管的融资架构（如香港 JP+结构或 CFLP），搭建对接全球合规投资者网络。"
+    },
+    "compliance": {
+      "title": "全流程合规保障",
+      "description": "基于合规原则搭建，提供法规解读、整合 KYC/AML/KYB，保障数据安全与隐私。"
+    },
+    "ecosystem": {
+      "title": "生态与市场运营",
+      "description": "利用元宇宙 AI 进行市场分析，构建和运营社群，协调市场对接，提供持续的技术维护和品牌建设。"
+    },
+    "dataFinance": {
+      "title": "数据资产金融化",
+      "description": "基于中国'数据资产入表'政策，提供从合规治理到金融化方案设计、市场对接的全流程服务。"
+    },
+    "modular": {
+      "title": "模块化与定制化",
+      "description": "根据项目需求和预算，灵活选择服务模块，我们提供高度定制化的解决方案。"
+    }
+  },
+  "team": {
+    "title": "我们的核心团队",
+    "coo": {
+      "description": "资深金融背景，资产管理与风控专家"
+    },
+    "ceo": {
+      "description": "运营管理专家，精于流程优化与合规执行"
+    },
+    "cto": {
+      "description": "技术专家，精通区块链与智能合约安全"
+    },
+    "cmo": {
+      "description": "市场营销专家，品牌与市场沟通"
+    }
+  },
+  "platform": {
+    "title": "合作平台"
+  },
+  "RWACooperation": {
+    "title": "元话RWA数字投行合作计划",
+    "flexibleMode": "灵活的合作模式",
+    "processTitle": "合作流程",
+    "getDetailButton": "获取详细报价与合作方案",
+    "plans": {
+      "registered": {
+        "title": "注册伙伴",
+        "description": "建立联系，获取合作信息与基础资源。"
+      },
+      "certified": {
+        "title": "认证伙伴",
+        "description": "获得专业认证，享有专属支持，市场资源与佣金激励。"
+      },
+      "premium": {
+        "title": "优选伙伴",
+        "description": "深度战略合作，共享市场资源、最高权益、MDF及独家课程/软件授权"
+      }
+    },
+    "modes": {
+      "modular": {
+        "title": "模块化服务",
+        "description": "按需组合核心服务模块。"
+      },
+      "customized": {
+        "title": "定制化解决方案",
+        "description": "为特殊资产或大规模项目量身定制。"
+      },
+      "transparent": {
+        "title": "透明定价",
+        "description": "详细费用构成，可选里程碑或绩效模式。"
+      }
+    },
+    "process": {
+      "consultation": "初步咨询",
+      "evaluation": "项目评估",
+      "design": "方案设计",
+      "agreement": "协议签署",
+      "execution": "执行与追踪"
+    }
+  },
+  "contact": {
+    "title": {
+      "part1": "联系我们，",
+      "part2": "开启您的 RWA 之旅"
+    },
+    "form": {
+      "title": "发送咨询",
+      "name": "姓名",
+      "namePlaceholder": "请输入您的姓名",
+      "nameRequired": "请输入姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "请输入您的邮箱",
+      "emailRequired": "请输入邮箱",
+      "emailInvalid": "请输入有效的邮箱地址",
+      "company": "公司名称 (可选)",
+      "companyPlaceholder": "请输入您的公司名称",
+      "message": "您的需求或问题",
+      "messagePlaceholder": "请描述您的需求或问题",
+      "messageRequired": "请输入您的需求或问题",
+      "submit": "提交信息"
+    },
+    "info": {
+      "contactTitle": "联系方式",
+      "address": "地址",
+      "businessEmail": "业务邮箱",
+      "hk": {
+        "company": "香港 METAKINA LIMITED",
+        "address": "中国香港特别行政区数码港",
+        "businessEmail": "rwa.service@metakina.com",
+        "businessEmailLabel": "业务邮箱",
+        "contactPerson": "联系人（张强伟）",
+        "phone": "+86 177 0922 4992",
+        "website": "www.metakina.com",
+        "websiteLabel": "官网"
+      },
+      "xian": {
+        "company": "西安达普韦伯 (技术伙伴)",
+        "address": "中国陕西省西安市雁塔区",
+        "techConsult": "技术咨询",
+        "techEmail": "qiangweizhang@dappweb.cn",
+        "website": "www.dappweb.cn",
+        "websiteLabel": "官网"
       }
     }
   }

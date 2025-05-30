@@ -19,6 +19,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { notFound } from "next/navigation";
+import bgImg from "public/bg.png";
 
 type MetadataProps = {
   params: Promise<{ locale: string }>;
@@ -64,7 +65,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale || DEFAULT_LOCALE} suppressHydrationWarning>
-      <head />
+      {/* <head /> */}
       <body
         className={cn(
           "min-h-screen bg-background flex flex-col font-sans antialiased"
@@ -76,14 +77,17 @@ export default async function LocaleLayout({
             defaultTheme={siteConfig.defaultNextTheme}
             enableSystem
           >
-            {messages.LanguageDetection && <LanguageDetectionAlert />}
-            {messages.Header && <Header />}
+            <div style={{ background: `url(${bgImg.src}) no-repeat center center/cover`, backgroundSize: '100% 100%' }} className="bg-no-repeat bg-cover">
+              {messages.LanguageDetection && <LanguageDetectionAlert />}
+              {messages.Header && <Header />}
 
-            <main className="flex-1 flex flex-col items-center">
-              {children}
-            </main>
+              <main className="flex-1 flex flex-col items-center">
+                {children}
+              </main>
 
-            {messages.Footer && <Footer />}
+              {messages.Footer && <Footer />}
+
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
         <TailwindIndicator />

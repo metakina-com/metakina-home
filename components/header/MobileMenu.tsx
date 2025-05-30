@@ -1,6 +1,5 @@
 import { headerLinks } from "@/components/header/HeaderLinks";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,11 +9,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { siteConfig } from "@/config/site";
 import { Link as I18nLink } from "@/i18n/routing";
 import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+
 
 export default function MobileMenu() {
   const t = useTranslations("Home");
@@ -22,21 +20,21 @@ export default function MobileMenu() {
   return (
     <div className="flex items-center gap-x-2 md:hidden">
       <LocaleSwitcher />
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
       <DropdownMenu>
         <DropdownMenuTrigger className="p-2">
           <Menu className="h-5 w-5" />
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>
-            <I18nLink
+            {/* <I18nLink
               href="/"
               prefetch={false}
               className="flex items-center space-x-1 font-bold"
             >
               <Image
                 alt={siteConfig.name}
-                src="/logo.svg"
+                src={groupImg.src}
                 className="w-6 h-6"
                 width={32}
                 height={32}
@@ -44,7 +42,7 @@ export default function MobileMenu() {
               <span className="text-gray-800 dark:text-gray-200">
                 {t("title")}
               </span>
-            </I18nLink>
+            </I18nLink> */}
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>

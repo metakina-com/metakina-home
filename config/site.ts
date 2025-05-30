@@ -16,8 +16,8 @@ export const siteConfig: SiteConfig = {
   ],
   defaultNextTheme: "system", // next-theme option: system | dark | light
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/logo.png",
-    apple: "/logo.png", // apple-touch-icon.png
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png", // apple-touch-icon.png
   },
 };

@@ -3,33 +3,33 @@ import { useTranslations } from "next-intl";
 
 export const headerLinks = [
   {
-    name: "services",
+    name: "home",
     href: "/",
   },
   {
-    name: "case",
+    name: "whyChooseUs",
     href: "/",
   },
   {
-    name: "platform",
+    name: "supportedChains",
     href: "/",
   },
   {
-    name: "blog",
+    name: "cooperationMode",
     href: "/",
   },
-  {
-    name: "followUs",
-    href: "/",
-  },
-  {
-    name: "aboutUs",
-    href: "/",
-  },
-  {
-    name: "contactUs",
-    href: "/",
-  },
+  // {
+  //   name: "followUs",
+  //   href: "/",
+  // },
+  // {
+  //   name: "aboutUs",
+  //   href: "/",
+  // },
+  // {
+  //   name: "contactUs",
+  //   href: "/",
+  // },
 ];
 
 const HeaderLinks = () => {
@@ -44,7 +44,7 @@ const HeaderLinks = () => {
           href={link.href}
           title={tHeader(link.name)}
           prefetch={false}
-          className="text-white hover:text-blue-400 transition-colors"
+          className="text-white hover:text-[#D900FF] transition-colors"
         >
           {tHeader(link.name)}
         </I18nLink>
