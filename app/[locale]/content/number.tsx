@@ -16,7 +16,7 @@ import React from "react"
 const RWACooperationPlan = () => {
   const t = useTranslations("RWACooperation")
 
-  // 合作计划数据-1
+  // 合作计划数据-
   const cooperationPlans = [
     {
       id: 1,
