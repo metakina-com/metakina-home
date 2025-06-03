@@ -1,0 +1,237 @@
+{
+  "LanguageDetection": {
+    "title": "Language Suggestion",
+    "description": "We noticed your browser language differs from the current site language. You can switch languages anytime 👉",
+    "countdown": "Closing in {countdown} seconds"
+  },
+  "Header": {
+    "blogs": "Blogs",
+    "about": "About",
+    "sourceCode": "Source Code",
+    "proVersion": "Pro Version",
+    "home": "Home",
+    "whyChooseUs": "Why Choose Us",
+    "supportedChains": "Supported Chains",
+    "cooperationMode": "Cooperation Mode",
+    "joinUs": "Register/Apply"
+  },
+  "Footer": {
+    "about": {
+      "title": "About METAKINA RWA",
+      "description": "Building compliant bridges between real assets and digital finance."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "solutions": "Solutions",
+      "whyChooseUs": "Why Choose Us",
+      "marketDynamics": "Market Docking",
+      "supportedChains": "Supported Chains",
+      "digitalCurrency": "Digital Investment Banking",
+      "resourceCenter": "Resource Center",
+      "customerSuccess": "Customer Success"
+    },
+    "resources": {
+      "title": "Resources",
+      "whitepaper": "Whitepaper",
+      "serviceManual": "Service Manual",
+      "industryInsight": "Industry Insights",
+      "faq": "FAQ"
+    },
+    "followUs": {
+      "title": "Follow Us"
+    },
+    "copyright": "© 2025 METAKINA LIMITED & Xi'an Dapuweibo Network Technology Co., Ltd. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "Newsletter": {
+      "title": "Subscribe to our newsletter",
+      "description": "Get the latest news and updates from Next Forge",
+      "defaultErrorMessage": "Please enter a valid email address",
+      "successMessage": "Subscription successful",
+      "errorMessage": "Subscription failed",
+      "errorMessage2": "Subscription failed. Please try again later.",
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing...",
+      "subscribed": "Subscription successful! Thank you for your attention."
+    }
+  },
+  "Home": {
+    "name": "DappWeb",
+    "title": "Metakina RWA",
+    "tagLine": "Multilingual Next.js 15 Starter",
+    "description": "A multilingual Next.js 15 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation.",
+    "whoIsUsing": "Who is Using This Starter"
+  },
+  "Blogs": {
+    "title": "Blog Posts",
+    "description": "A list of blog posts"
+  },
+  "About": {
+    "title": "About",
+    "description": "About the site"
+  },
+  "TermsOfService": {
+    "title": "Terms of Service",
+    "description": "Terms of Service"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "description": "Privacy Policy"
+  },
+  "Consult": {
+    "logo": "YuanHua RWA",
+    "title": "Unlock Trillion-Dollar Assets, Connect Global Capital Compliantly",
+    "subtitle": "Providing institutional-grade, end-to-end, compliance-first RWA and data asset tokenization solutions to empower your asset potential.",
+    "button": "Apply for Free Consultation"
+  },
+  "challenges": {
+    "title": "Challenges Facing Traditional and Data Assets",
+    "liquidity": {
+      "title": "Liquidity Dilemma",
+      "description": "Non-standard assets are difficult to liquidate quickly, with high holding costs."
+    },
+    "financing": {
+      "title": "Financing & Compliance Challenges",
+      "description": "Traditional channels have high barriers, cross-border and data asset compliance is complex."
+    },
+    "efficiency": {
+      "title": "Lack of Efficiency & Transparency",
+      "description": "Lengthy transaction processes, information asymmetry, and high management costs."
+    }
+  },
+  "solutions": {
+    "sectionTitle": "Solutions",
+    "mainTitle": "End-to-End RWA and Data Asset Tokenization Services",
+    "common": {
+      "learnMore": "Learn More"
+    },
+    "assetDigital": {
+      "title": "Asset Digitalization",
+      "description": "Leverage AI for asset standardization, design standard Tokenomics, and implement secure smart contracts for asset tokenization."
+    },
+    "crossBorder": {
+      "title": "Compliant Cross-Border Financing",
+      "description": "Design financing structures compliant with cross-border regulations (e.g., Hong Kong JP+ or CFLP), connecting global compliant investor networks."
+    },
+    "compliance": {
+      "title": "Full-Process Compliance",
+      "description": "Built on compliance principles, providing regulatory interpretation, integrated KYC/AML/KYB, ensuring data security and privacy."
+    },
+    "ecosystem": {
+      "title": "Ecosystem & Market Operations",
+      "description": "Utilize Metaverse AI for market analysis, build and operate communities, coordinate market connections, provide ongoing technical maintenance and branding."
+    },
+    "dataFinance": {
+      "title": "Data Asset Financialization",
+      "description": "Based on China's 'Data Asset Recognition' policy, providing full-service from compliance governance to financial solution design and market connections."
+    },
+    "modular": {
+      "title": "Modular & Customization",
+      "description": "Flexibly select service modules based on project needs and budget, we provide highly customized solutions."
+    }
+  },
+  "team": {
+    "title": "Our Core Team",
+    "coo": {
+      "description": "Senior financial background, asset management and risk control expert"
+    },
+    "ceo": {
+      "description": "Operations management expert, specializing in process optimization and compliance execution"
+    },
+    "cto": {
+      "description": "Technology expert, proficient in blockchain and smart contract security"
+    },
+    "cmo": {
+      "description": "Marketing expert, brand and market communication"
+    }
+  },
+  "platform": {
+    "title": "Cooperation Platform"
+  },
+  "RWACooperation": {
+    "title": "MetaTalk RWA Digital Investment Banking Partnership Program",
+    "flexibleMode": "Flexible Cooperation Models",
+    "processTitle": "Cooperation Process",
+    "getDetailButton": "Get Detailed Pricing & Cooperation Plan",
+    "plans": {
+      "registered": {
+        "title": "Registered Partner",
+        "description": "Establish connections, access cooperation information and basic resources."
+      },
+      "certified": {
+        "title": "Certified Partner",
+        "description": "Obtain professional certification, enjoy exclusive support, market resources and commission incentives."
+      },
+      "premium": {
+        "title": "Premium Partner",
+        "description": "Deep strategic cooperation, sharing market resources, highest benefits, MDF and exclusive courses/software licenses."
+      }
+    },
+    "modes": {
+      "modular": {
+        "title": "Modular Services",
+        "description": "Combine core service modules as needed."
+      },
+      "customized": {
+        "title": "Customized Solutions",
+        "description": "Tailor-made for special assets or large-scale projects."
+      },
+      "transparent": {
+        "title": "Transparent Pricing",
+        "description": "Detailed cost breakdown, optional milestone or performance-based models."
+      }
+    },
+    "process": {
+      "consultation": "Initial Consultation",
+      "evaluation": "Project Assessment",
+      "design": "Solution Design",
+      "agreement": "Agreement Signing",
+      "execution": "Execution & Tracking"
+    }
+  },
+  "contact": {
+    "title": {
+      "part1": "Contact Us, ",
+      "part2": "Start Your RWA Journey"
+    },
+    "form": {
+      "title": "Send Inquiry",
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "nameRequired": "Please enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Please enter a valid email address",
+      "company": "Company Name (Optional)",
+      "companyPlaceholder": "Enter your company name",
+      "message": "Your Requirements or Questions",
+      "messagePlaceholder": "Please describe your requirements or questions",
+      "messageRequired": "Please enter your requirements or questions",
+      "submit": "Submit"
+    },
+    "info": {
+      "contactTitle": "Contact Information",
+      "address": "Address",
+      "businessEmail": "Business Email",
+      "hk": {
+        "company": "Hong Kong METAKINA LIMITED",
+        "address": "Cyberport, Hong Kong SAR, China",
+        "businessEmail": "rwa.service@metakina.com",
+        "businessEmailLabel": "Business Email",
+        "contactPerson": "Contact Person (Zhang Qiangwei)",
+        "phone": "+86 177 0922 4992",
+        "website": "www.metakina.com",
+        "websiteLabel": "Website"
+      },
+      "xian": {
+        "company": "Xi'an DappWeb (Technology Partner)",
+        "address": "Yanta District, Xi'an City, Shaanxi Province, China",
+        "techConsult": "Technical Consultation",
+        "techEmail": "qiangweizhang@dappweb.cn",
+        "website": "www.dappweb.cn",
+        "websiteLabel": "Website"
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "LanguageDetection": {
+    "title": "言語の提案",
+    "description": "ブラウザの言語設定が現在のサイト言語と異なっています。いつでも言語を切り替えることができます 👉",
+    "countdown": "閉じるまで {countdown} 秒"
+  },
+  "Header": {
+    "blogs": "ブログ",
+    "about": "サイトについて",
+    "sourceCode": "ソースコード",
+    "proVersion": "Pro Version",
+    "home": "ホーム",
+    "whyChooseUs": "選ばれる理由",
+    "supportedChains": "サポートチェーン",
+    "cooperationMode": "協力モード",
+    "joinUs": "登録/申請"
+  },
+  "Footer": {
+    "about": {
+      "title": "METAKINA RWAについて",
+      "description": "実物資産とデジタル金融のコンプライアンスブリッジを構築します。"
+    },
+    "quickLinks": {
+      "title": "クイックリンク",
+      "solutions": "ソリューション",
+      "whyChooseUs": "選ばれる理由",
+      "marketDynamics": "市場連携",
+      "supportedChains": "サポートチェーン",
+      "digitalCurrency": "デジタル投資銀行提携",
+      "resourceCenter": "リソースセンター",
+      "customerSuccess": "カスタマーサクセス"
+    },
+    "resources": {
+      "title": "リソース",
+      "whitepaper": "ホワイトペーパー",
+      "serviceManual": "サービスマニュアル",
+      "industryInsight": "業界インサイト",
+      "faq": "よくある質問"
+    },
+    "followUs": {
+      "title": "フォローする"
+    },
+    "copyright": "© 2025 METAKINA LIMITED & 西安達普韋伯ネットワーク科技有限責任会社. 全著作権所有.",
+    "privacyPolicy": "プライバシーポリシー",
+    "terms": "サービス利用規約",
+    "Newsletter": {
+      "title": "Next Forgeのニュースレターに登録する",
+      "description": "Next Forgeの最新のニュースと更新情報を入手します。",
+      "defaultErrorMessage": "有効なメールアドレスを入力してください。",
+      "successMessage": "登録が完了しました。",
+      "errorMessage": "登録に失敗しました。",
+      "errorMessage2": "登録に失敗しました。少し待ってから再試行してください。",
+      "subscribe": "登録する",
+      "subscribing": "登録中...",
+      "subscribed": "登録が完了しました。ありがとうございます。"
+    }
+  },
+  "Home": {
+    "name": "ダップウェブ",
+    "title": "メタキナRWA",
+    "tagLine": "Next.js 多言語スターターテンプレート",
+    "description": "多言語対応機能を搭載したNext.js 15スターターテンプレート。SEO最適化済みで、グローバル展開可能なウェブアプリを効率的に構築できます。",
+    "whoIsUsing": "誰がこのスターターを使用していますか"
+  },
+  "Blogs": {
+    "title": "ブログ一覧",
+    "description": "ブログ投稿の一覧"
+  },
+  "About": {
+    "title": "サイトについて",
+    "description": "サイトについて"
+  },
+  "TermsOfService": {
+    "title": "サービス利用規約",
+    "description": "サービス利用規約"
+  },
+  "PrivacyPolicy": {
+    "title": "プライバシーポリシー",
+    "description": "プライバシーポリシー"
+  },
+  "Consult": {
+    "logo": "元話RWA",
+    "title": "兆単位の資産を活性化し、コンプライアンスに準拠してグローバル資本と接続",
+    "subtitle": "機関投資家グレード、エンドツーエンド、コンプライアンス優先のRWAとデータ資産化ソリューションを提供し、お客様の資産の可能性を引き出します。",
+    "button": "無料相談を申し込む"
+  },
+  "challenges": {
+    "title": "従来資産とデータ資産が直面する課題",
+    "liquidity": {
+      "title": "流動性の困難",
+      "description": "非標準資産は迅速な現金化が困難で、保有コストが高い。"
+    },
+    "financing": {
+      "title": "資金調達とコンプライアンスの課題",
+      "description": "従来のチャネルは参入障壁が高く、国境を越えたデータ資産化のコンプライアンスは複雑。"
+    },
+    "efficiency": {
+      "title": "効率性と透明性の不足",
+      "description": "取引プロセスが長く、情報の非対称性があり、管理コストが高い。"
+    }
+  },
+  "solutions": {
+    "sectionTitle": "ソリューション",
+    "mainTitle": "エンドツーエンドRWAとデータ資産トークン化サービス",
+    "common": {
+      "learnMore": "詳細を見る"
+    },
+    "assetDigital": {
+      "title": "資産デジタル化",
+      "description": "AIを活用した資産の標準化、標準的なトークノミクスの設計、安全なスマートコントラクトによる資産のトークン化を実現。"
+    },
+    "crossBorder": {
+      "title": "コンプライアント国境越え融資",
+      "description": "国境を越えた規制に準拠した融資構造（香港JP+やCFLPなど）を設計し、グローバルなコンプライアント投資家ネットワークと接続。"
+    },
+    "compliance": {
+      "title": "全プロセスコンプライアンス",
+      "description": "コンプライアンス原則に基づいて構築、規制解釈の提供、KYC/AML/KYBの統合、データセキュリティとプライバシーの確保。"
+    },
+    "ecosystem": {
+      "title": "エコシステムと市場運営",
+      "description": "メタバースAIを活用した市場分析、コミュニティの構築と運営、市場接続の調整、継続的な技術メンテナンスとブランディングの提供。"
+    },
+    "dataFinance": {
+      "title": "データ資産の金融化",
+      "description": "中国の「データ資産計上」政策に基づき、コンプライアンスガバナンスから金融ソリューション設計、市場接続までのフルサービスを提供。"
+    },
+    "modular": {
+      "title": "モジュール化とカスタマイズ",
+      "description": "プロジェクトのニーズと予算に基づいてサービスモジュールを柔軟に選択、高度にカスタマイズされたソリューションを提供。"
+    }
+  },
+  "team": {
+    "title": "コアチーム",
+    "coo": {
+      "description": "シニア金融バックグラウンド、資産管理とリスク管理の専門家"
+    },
+    "ceo": {
+      "description": "運営管理の専門家、プロセス最適化とコンプライアンス実行に精通"
+    },
+    "cto": {
+      "description": "技術専門家、ブロックチェーンとスマートコントラクトセキュリティに精通"
+    },
+    "cmo": {
+      "description": "マーケティング専門家、ブランドと市場コミュニケーション"
+    }
+  },
+  "platform": {
+    "title": "協力プラットフォーム"
+  },
+  "RWACooperation": {
+    "title": "メタトークRWAデジタル投資銀行パートナーシッププログラム",
+    "flexibleMode": "柔軟な協力モデル",
+    "processTitle": "協力プロセス",
+    "getDetailButton": "詳細な見積もりと協力プランを取得",
+    "plans": {
+      "registered": {
+        "title": "登録パートナー",
+        "description": "関係を構築し、協力情報と基本リソースを取得します。"
+      },
+      "certified": {
+        "title": "認定パートナー",
+        "description": "専門認定を取得し、専属サポート、市場リソース、佣金インセンティブを享受します。"
+      },
+      "premium": {
+        "title": "プレミアムパートナー",
+        "description": "深い戦略的協力、市場リソースの共有、最高の権益、MDFおよび独占コース/ソフトウェアライセンス。"
+      }
+    },
+    "modes": {
+      "modular": {
+        "title": "モジュラーサービス",
+        "description": "必要に応じてコアサービスモジュールを組み合わせます。"
+      },
+      "customized": {
+        "title": "カスタマイゼソリューション",
+        "description": "特別な資産または大規模プロジェクトのためにカスタマイゼします。"
+      },
+      "transparent": {
+        "title": "透明な価格設定",
+        "description": "詳細なコスト構成、オプションのマイルストーンまたはパフォーマンスベースモデル。"
+      }
+    },
+    "process": {
+      "consultation": "初期相談",
+      "evaluation": "プロジェクト評価",
+      "design": "ソリューション設計",
+      "agreement": "契約締結",
+      "execution": "実行とトラッキング"
+    }
+  },
+  "contact": {
+    "title": {
+      "part1": "お問い合わせ、",
+      "part2": "RWAの旅を始めましょう"
+    },
+    "form": {
+      "title": "お問い合わせを送信",
+      "name": "お名前",
+      "namePlaceholder": "お名前を入力してください",
+      "nameRequired": "お名前を入力してください",
+      "email": "メールアドレス",
+      "emailPlaceholder": "メールアドレスを入力してください",
+      "emailRequired": "メールアドレスを入力してください",
+      "emailInvalid": "有効なメールアドレスを入力してください",
+      "company": "会社名（任意）",
+      "companyPlaceholder": "会社名を入力してください",
+      "message": "ご要望またはご質問",
+      "messagePlaceholder": "ご要望またはご質問をご記入ください",
+      "messageRequired": "ご要望またはご質問を入力してください",
+      "submit": "送信"
+    },
+    "info": {
+      "contactTitle": "連絡先情報",
+      "address": "住所",
+      "businessEmail": "ビジネスメール",
+      "hk": {
+        "company": "香港 METAKINA LIMITED",
+        "address": "中国香港特別行政区サイバーポート",
+        "businessEmail": "rwa.service@metakina.com",
+        "businessEmailLabel": "ビジネスメール",
+        "contactPerson": "担当者（張強偉）",
+        "phone": "+86 177 0922 4992",
+        "website": "www.metakina.com",
+        "websiteLabel": "ウェブサイト"
+      },
+      "xian": {
+        "company": "西安ダップウェブ（技術パートナー）",
+        "address": "中国陝西省西安市雁塔区",
+        "techConsult": "技術相談",
+        "techEmail": "qiangweizhang@dappweb.cn",
+        "website": "www.dappweb.cn",
+        "websiteLabel": "ウェブサイト"
+      }
+    }
+  }
+}
