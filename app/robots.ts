@@ -2,6 +2,7 @@ import { siteConfig } from '@/config/site'
 import type { MetadataRoute } from 'next'
 
 const siteUrl = siteConfig.url
+export const dynamic = 'force-static'
 
 export default function robots(): MetadataRoute.Robots {
   return {
