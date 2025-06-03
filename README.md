@@ -1,5 +1,3 @@
-∙ [简体中文](README_zh.md)
-
 # Next Forge - Multilingual Next.js 15 Starter
 
 A feature-rich Next.js 15 multilingual starter template to help you quickly build globally-ready websites.
