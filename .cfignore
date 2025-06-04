@@ -1,0 +1,5 @@
+# .cfignore
+.next/cache
+.next/server
+*.pack
+node_modules
