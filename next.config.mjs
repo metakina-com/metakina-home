@@ -4,14 +4,16 @@ const withNextIntl = createNextIntlPlugin()
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true,
     remotePatterns: [
       ...(process.env.R2_PUBLIC_URL
         ? [
-            {
-              hostname: process.env.R2_PUBLIC_URL.replace("https://", ""),
-            },
-          ]
+          {
+            hostname: process.env.R2_PUBLIC_URL.replace("https://", ""),
+          },
+        ]
         : []),
     ],
   },
@@ -19,8 +21,8 @@ const nextConfig = {
     removeConsole:
       process.env.NODE_ENV === "production"
         ? {
-            exclude: ["error"],
-          }
+          exclude: ["error"],
+        }
         : false,
   },
 }
