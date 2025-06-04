@@ -16,7 +16,7 @@ type ChangeFrequency =
   | undefined;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Static pages
+  // Static  pages
   const staticPages = [
     "",
     "/blogs",
