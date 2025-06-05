@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "carbonid1.emmet-jss",
+    "antfu.unocss"
+  ]
+}
