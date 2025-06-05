@@ -9,6 +9,8 @@ import 'animate.css';
 import 'virtual:uno.css';
 import './assets/css/index.less';
 import './App.css';
+// 引入i18n配置
+import './i18n/index.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <HashRouter>

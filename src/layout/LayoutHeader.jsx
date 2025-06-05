@@ -1,63 +1,79 @@
-import AssetLogoFull from '@/assets/images/login/assets-logo-full.svg';
-import AssetLogo from '@/assets/images/login/assets-t-logo.svg';
-import useStoreSystem from '@/stores/storeSystem.js';
-import { clearToken } from '@/utils/auth.js';
-import { DownOutlined, LogoutOutlined, MenuOutlined, UserOutlined } from '@ant-design/icons';
-import { useSize } from 'ahooks';
-import { Button, Image, Popover, Space } from 'antd';
-import { memo, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import groupImg from '@/assets/images/home/Group.png';
+import LanguageSwitcher from '@/components/LanguageSwitcher.jsx';
+import { Image } from 'antd';
+import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const LayoutHeader = memo(() => {
-  const navigate = useNavigate();
-  const ref = useRef(null);
-  const size = useSize(ref);
+  const { t } = useTranslation();
 
-  const systemMenuFull = useStoreSystem(state => state.systemMenuFull);
-  const setSystemMenuFull = useStoreSystem(state => state.setSystemMenuFull);
+  const navItems = [
+    { path: '/', label: t('Header.home') },
+    { path: '/', label: t('Header.whyChooseUs') },
+    { path: '/', label: t('Header.supportedChains') },
+    { path: '/', label: t('Header.cooperationMode') },
+  ];
 
-  useEffect(() => {
-    size?.width && setSystemMenuFull(size?.width > 1400);
-  }, [size]);
+  const renderLogo = () => (
+    <Link to="/" className="flex items-center font-bold space-x-1">
+      <Image
+        alt={t('Home.name')}
+        src={groupImg}
+        className="h-6 w-6"
+        width={32}
+        height={32}
+        preview={false}
+      />
+      <span className="pl-[5px] text-3xl text-white hover:text-gray-200">
+        {t('Home.title')}
+      </span>
+    </Link>
+  );
+
+  const renderNavItems = () => (
+    <>
+      {navItems.map((item, index) => (
+        <Link
+          key={item.path}
+          to={item.path}
+          className={`flex items-center ${index > 0 ? 'ml-8' : ''}`}
+        >
+          <span className="text-lg text-white">{item.label}</span>
+        </Link>
+      ))}
+    </>
+  );
+
+  const renderButtons = () => (
+    <div className="ml-8 flex items-center">
+      <Link
+        to="/"
+        className="flex items-center border border-white rounded-2 px-6 py-2 text-white transition-colors hover:bg-white/10"
+      >
+        <span className="text-base">{t('Header.joinUs')}</span>
+      </Link>
+      <Link
+        to="/"
+        className="ml-4 flex items-center rounded-2 bg-[#E000E9] px-6 py-2 text-white transition-colors hover:bg-[#C000C9]"
+      >
+        <span className="text-base">{t('Header.contactUs')}</span>
+      </Link>
+    </div>
+  );
 
   return (
-    <div className="h-full w-full flex items-center justify-between" ref={ref}>
-      <Space>
-        <Image src={systemMenuFull ? AssetLogoFull : AssetLogo} height={33} preview={false} />
-        <Button
-          type="link"
-          icon={<MenuOutlined />}
-          size={33}
-          onClick={() => setSystemMenuFull(!systemMenuFull)}
-        />
-      </Space>
-      <Popover
-        content={(
-          <Space direction="vertical" style={{ width: '120px' }}>
-            <Button type="text" icon={<UserOutlined />}>
-              用户中心
-            </Button>
-            <Button
-              type="text"
-              icon={<LogoutOutlined />}
-              onClick={() => {
-                clearToken();
-                navigate('/login');
-              }}
-            >
-              退出登录
-            </Button>
-          </Space>
-        )}
-        trigger="click"
-        placement="bottom"
-      >
-        <Button type="link" icon={<UserOutlined />}>
-          admin
-          {' '}
-          <DownOutlined />
-        </Button>
-      </Popover>
+    <div className="h-full flex flex-1 items-center justify-between px-8">
+      <div className="flex items-center">
+        {renderLogo()}
+      </div>
+      <div className="ml-12 flex items-center">
+        {renderNavItems()}
+        {renderButtons()}
+        <div className="ml-4">
+          <LanguageSwitcher />
+        </div>
+      </div>
     </div>
   );
 });

@@ -1,3 +1,4 @@
+import path from 'node:path';
 import process from 'node:process';
 import { webUpdateNotice } from '@plugin-web-update-notification/vite';
 import tailwindcss from '@tailwindcss/vite';
@@ -80,7 +81,7 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@': '/src',
+        '@': path.resolve(__dirname, 'src'),
       },
     },
     server: {

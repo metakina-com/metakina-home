@@ -1,10 +1,9 @@
-import process from 'node:process';
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';// 导入语言文件
-import enUS from './locales/en.json';
-import jaJP from './locales/ja.json';
-import zhCN from './locales/zh.json';
+import enUS from './locales/en-US.json';
+import jaJP from './locales/ja-JP.json';
+import zhCN from './locales/zh-CN.json';
 
 const resources = {
   en: {
@@ -27,7 +26,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'zh',
-    debug: process.env.NODE_ENV === 'development',
+    debug: import.meta.env.MODE === 'development',
     interpolation: {
       escapeValue: false, // 不需要为React转义
     },

@@ -1,4 +1,13 @@
 {
+  "LocaleSwitcher": {
+    "label": "言語を変更",
+    "locale": "{locale}"
+  },
+  "Navigation": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "contact": "お問い合わせ"
+  },
   "LanguageDetection": {
     "title": "言語の提案",
     "description": "ブラウザの言語設定が現在のサイト言語と異なっています。いつでも言語を切り替えることができます 👉",
@@ -13,7 +22,8 @@
     "whyChooseUs": "選ばれる理由",
     "supportedChains": "サポートチェーン",
     "cooperationMode": "協力モード",
-    "joinUs": "登録/申請"
+    "joinUs": "登録/申請",
+    "contactUs": "お問い合わせ"
   },
   "Footer": {
     "about": {

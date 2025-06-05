@@ -1,4 +1,13 @@
 {
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale}"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
   "LanguageDetection": {
     "title": "Language Suggestion",
     "description": "We noticed your browser language differs from the current site language. You can switch languages anytime 👉",
@@ -13,7 +22,8 @@
     "whyChooseUs": "Why Choose Us",
     "supportedChains": "Supported Chains",
     "cooperationMode": "Cooperation Mode",
-    "joinUs": "Register/Apply"
+    "joinUs": "Register/Apply",
+    "contactUs": "Contact Us"
   },
   "Footer": {
     "about": {

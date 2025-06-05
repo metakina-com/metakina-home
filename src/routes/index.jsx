@@ -10,7 +10,6 @@ import { Navigate } from 'react-router-dom';
 // 路由懒加载
 /* eslint-disable react-refresh/only-export-components */
 const Index = lazy(() => import('../pages/index.jsx'));
-const LoginIndex = lazy(() => import('../pages/module-login/index.jsx'));
 const HomeIndex = lazy(() => import('../pages/module-home/index.jsx'));
 const TextIndex = lazy(() => import('../pages/module-test/index.jsx'));
 
@@ -25,7 +24,7 @@ const routes = [
     errorElement: <CommonError />,
     meta: {
       title: '首页',
-      needLogin: true,
+      needLogin: false,
     },
     children: [
       {
@@ -33,7 +32,7 @@ const routes = [
         element: <HomeIndex />,
         meta: {
           title: '首页',
-          needLogin: true,
+          needLogin: false,
         },
       },
       {
@@ -41,18 +40,10 @@ const routes = [
         element: <TextIndex />,
         meta: {
           title: '测试页面',
-          needLogin: true,
+          needLogin: false,
         },
       },
     ],
-  },
-  {
-    path: 'login',
-    element: <LoginIndex />,
-    meta: {
-      title: '登录页',
-      needLogin: false,
-    },
   },
   // 放最后
   {
@@ -60,7 +51,7 @@ const routes = [
     element: <Router404 />,
     meta: {
       title: '404',
-      needLogin: true,
+      needLogin: false,
     },
   },
 ];

@@ -1,4 +1,13 @@
 {
+  "LocaleSwitcher": {
+    "label": "更改语言",
+    "locale": "{locale}"
+  },
+  "Navigation": {
+    "home": "首页",
+    "about": "关于",
+    "contact": "联系我们"
+  },
   "Company": {
     "name": "西安达普韦伯网络科技有限责任公司",
     "address": "总部：中国西安"
@@ -227,4 +236,5 @@
       }
     }
   }
+
 }
