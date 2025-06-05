@@ -14,7 +14,6 @@ import AutoDecimal from 'unplugin-auto-decimal/vite';
 import Printer from 'unplugin-printer/vite';
 import { defineConfig, loadEnv } from 'vite';
 import viteCompression from 'vite-plugin-compression';
-import viteImagemin from 'vite-plugin-imagemin';
 import vitePluginNoBug from 'vite-plugin-no-bug';
 
 // https://vitejs.dev/config/
@@ -37,36 +36,8 @@ export default defineConfig(({ mode }) => {
       viteCompression({
         algorithm: 'gzip',
         verbose: false,
-        filter: /\.(js|css|html|svg)$/,
+        filter: /\.(js|css|html|svg|png|jpe?g|gif|webp|ico)$/,
         threshold: 10240, // 10kb以上的文件进行压缩
-      }),
-      // 图片压缩配置
-      viteImagemin({
-        gifsicle: {
-          optimizationLevel: 7,
-          interlaced: false,
-        },
-        optipng: {
-          optimizationLevel: 7,
-        },
-        mozjpeg: {
-          quality: 80,
-        },
-        pngquant: {
-          quality: [0.8, 0.9],
-          speed: 4,
-        },
-        svgo: {
-          plugins: [
-            {
-              name: 'removeViewBox',
-            },
-            {
-              name: 'removeEmptyAttrs',
-              active: false,
-            },
-          ],
-        },
       }),
       legacy({
         targets: ['defaults', 'not IE 11'],
@@ -98,8 +69,8 @@ export default defineConfig(({ mode }) => {
       postcss: {
         plugins: [
           env.VITE_USE_REM === 'true' && postCssPxToRem({
-            rootValue: 16, // 1rem的大小
-            propList: ['*'], // 需要转换的属性，这里选择全部都进行转换
+            rootValue: 16,
+            propList: ['*'],
             selectorBlackList: ['#app'],
           }),
           autoprefixer({
@@ -118,7 +89,6 @@ export default defineConfig(({ mode }) => {
       host: true,
       open: true,
       proxy: {
-        // 代理
         '/PROXY': {
           target: 'http://xxxx',
           changeOrigin: true,
@@ -127,13 +97,15 @@ export default defineConfig(({ mode }) => {
       },
     },
     esbuild: {
-      drop: ['console', 'debugger'], // 删除 所有的console 和 debugger
+      drop: ['console', 'debugger'],
     },
     build: {
       chunkSizeWarningLimit: 1500,
       reportCompressedSize: false,
       // 图片优化配置
       assetsInlineLimit: 4096, // 4kb以下的图片会被转为base64
+      // 图片压缩配置
+      assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.webp', '**/*.ico', '**/*.svg'],
       rollupOptions: {
         output: {
           experimentalMinChunkSize: 1000,
