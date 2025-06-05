@@ -14,6 +14,7 @@ import AutoDecimal from 'unplugin-auto-decimal/vite';
 import Printer from 'unplugin-printer/vite';
 import { defineConfig, loadEnv } from 'vite';
 import viteCompression from 'vite-plugin-compression';
+import viteImagemin from 'vite-plugin-imagemin';
 import vitePluginNoBug from 'vite-plugin-no-bug';
 
 // https://vitejs.dev/config/
@@ -36,7 +37,36 @@ export default defineConfig(({ mode }) => {
       viteCompression({
         algorithm: 'gzip',
         verbose: false,
-        filter: /\.(js)$/,
+        filter: /\.(js|css|html|svg)$/,
+        threshold: 10240, // 10kb以上的文件进行压缩
+      }),
+      // 图片压缩配置
+      viteImagemin({
+        gifsicle: {
+          optimizationLevel: 7,
+          interlaced: false,
+        },
+        optipng: {
+          optimizationLevel: 7,
+        },
+        mozjpeg: {
+          quality: 80,
+        },
+        pngquant: {
+          quality: [0.8, 0.9],
+          speed: 4,
+        },
+        svgo: {
+          plugins: [
+            {
+              name: 'removeViewBox',
+            },
+            {
+              name: 'removeEmptyAttrs',
+              active: false,
+            },
+          ],
+        },
       }),
       legacy({
         targets: ['defaults', 'not IE 11'],
@@ -102,6 +132,8 @@ export default defineConfig(({ mode }) => {
     build: {
       chunkSizeWarningLimit: 1500,
       reportCompressedSize: false,
+      // 图片优化配置
+      assetsInlineLimit: 4096, // 4kb以下的图片会被转为base64
       rollupOptions: {
         output: {
           experimentalMinChunkSize: 1000,
@@ -112,6 +144,17 @@ export default defineConfig(({ mode }) => {
             ahooks: ['ahooks'],
             antdStyle: ['antd-style'],
             zustand: ['zustand'],
+          },
+          // 静态资源分类打包
+          assetFileNames: (assetInfo) => {
+            const info = assetInfo.fileName.split('.');
+            let extType = info[info.length - 1];
+
+            if (/\.(?:png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.fileName)) {
+              extType = 'img';
+            }
+
+            return `static/${extType}/[name]-[hash][extname]`;
           },
         },
       },
