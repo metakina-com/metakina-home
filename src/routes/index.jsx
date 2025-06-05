@@ -12,6 +12,7 @@ import { Navigate } from 'react-router-dom';
 const Index = lazy(() => import('../pages/index.jsx'));
 const HomeIndex = lazy(() => import('../pages/module-home/index.jsx'));
 const TextIndex = lazy(() => import('../pages/module-test/index.jsx'));
+const PrivacyPolicy = lazy(() => import('../pages/module-home/PrivacyPolicy.jsx'));
 
 const routes = [
   {
@@ -42,6 +43,15 @@ const routes = [
           title: '测试页面',
           needLogin: false,
         },
+      },
+      {
+        path: 'privacy-policy',
+        element: <PrivacyPolicy />,
+        meta: {
+          title: '隐私政策',
+          needLogin: false,
+        },
+
       },
     ],
   },

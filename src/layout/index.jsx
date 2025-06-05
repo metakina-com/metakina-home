@@ -1,5 +1,4 @@
 // import LayoutSider from './LayoutSider.jsx';
-import bgImg from '@/assets/images/bg.png';
 /**
  * 布局
  */
@@ -13,7 +12,7 @@ const LayoutIndex = memo(() => {
   // const systemMenuFull = useStoreSystem(state => state.systemMenuFull);
 
   return (
-    <Layout className="h-full" style={{ background: `url(${bgImg}) no-repeat center center/cover`, backgroundSize: '100% 100%' }}>
+    <Layout className="h-full">
       <Layout.Header className="fixed inset-x-[2vw] top-5 z-50 w-[96vw] flex rounded-2xl bg-[rgba(255,255,255,0.2)] p-0 text-white shadow-md">
         <LayoutHeader />
       </Layout.Header>
