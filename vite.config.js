@@ -118,16 +118,16 @@ export default defineConfig(({ mode }) => {
             zustand: ['zustand'],
           },
           // 静态资源分类打包
-          assetFileNames: (assetInfo) => {
-            const info = assetInfo.fileName.split('.');
-            let extType = info[info.length - 1];
+          // assetFileNames: (assetInfo) => {
+          //   const info = assetInfo.fileName.split('.');
+          //   let extType = info[info.length - 1];
 
-            if (/\.(?:png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.fileName)) {
-              extType = 'img';
-            }
+          //   if (/\.(?:png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.fileName)) {
+          //     extType = 'img';
+          //   }
 
-            return `static/${extType}/[name]-[hash][extname]`;
-          },
+          //   return `static/${extType}/[name]-[hash][extname]`;
+          // },
         },
       },
     },
