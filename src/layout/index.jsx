@@ -12,8 +12,8 @@ const LayoutIndex = memo(() => {
   // const systemMenuFull = useStoreSystem(state => state.systemMenuFull);
 
   return (
-    <Layout className="h-full">
-      <Layout.Header className="fixed inset-x-[2vw] top-5 z-50 w-[96vw] flex rounded-2xl bg-[rgba(255,255,255,0.2)] p-0 text-white shadow-md">
+    <div className="h-full">
+      <Layout.Header className="fixed inset-x-[2vw] top-5 z-50 h-18 w-[96vw] flex rounded-2xl bg-[rgba(255,255,255,0.2)] p-0 text-white shadow-md">
         <LayoutHeader />
       </Layout.Header>
       {/* <Layout hasSider className="mt-20 bg-[rgba(255,255,255,0)]"> */}
@@ -24,7 +24,7 @@ const LayoutIndex = memo(() => {
       <LayoutContent />
       {/* </Layout.Content> */}
       {/* </Layout> */}
-    </Layout>
+    </div>
   );
 });
 

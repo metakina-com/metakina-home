@@ -48,7 +48,7 @@ function CollaborationPlatform() {
           {/* <div className="absolute -inset-4 bg-purple-600/20 blur-xl rounded-3xl"></div> */}
 
           {/* 主容器 */}
-          <div className="p-12 md:p-24" style={{ background: `url(${platformImg.src}) no-repeat center center/100% 100%` }}>
+          <div className="p-12 md:p-24" style={{ background: `url(${platformImg}) no-repeat center center/100% 100%` }}>
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-3 md:gap-x-20 md:gap-y-12">
               {partners.map((partner, index) => (
                 <div key={`${index}coo`} className="group flex items-center justify-center gap-3">

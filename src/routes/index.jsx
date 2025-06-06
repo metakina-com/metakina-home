@@ -12,7 +12,8 @@ import { Navigate } from 'react-router-dom';
 const Index = lazy(() => import('../pages/index.jsx'));
 const HomeIndex = lazy(() => import('../pages/module-home/index.jsx'));
 const TextIndex = lazy(() => import('../pages/module-test/index.jsx'));
-const PrivacyPolicy = lazy(() => import('../pages/module-home/PrivacyPolicy.jsx'));
+const PrivacyPolicy = lazy(() => import('../pages/module-footer/PrivacyPolicy.jsx'));
+const ServiceTerms = lazy(() => import('../pages/module-footer/ServiceTerms.tsx'));
 
 const routes = [
   {
@@ -51,7 +52,14 @@ const routes = [
           title: '隐私政策',
           needLogin: false,
         },
-
+      },
+      {
+        path: 'service-terms',
+        element: <ServiceTerms />,
+        meta: {
+          title: '服务条款',
+          needLogin: false,
+        },
       },
     ],
   },

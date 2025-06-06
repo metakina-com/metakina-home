@@ -14,11 +14,11 @@ function LayoutContent() {
   const mainRef = useRef(null);
 
   return (
-    <main className="h-[100%] w-100% overflow-y-auto p-15px" style={{ background: `url(${bgImg}) no-repeat center center/cover`, backgroundSize: '100% 100%' }} ref={mainRef}>
+    <div className="h-auto w-100% overflow-y-auto p-15px" style={{ background: `url(${bgImg}) no-repeat center center/cover`, backgroundSize: '100% 100%' }} ref={mainRef}>
       <RouterTransition>{currentOutlet}</RouterTransition>
       <FloatButton.BackTop target={() => mainRef.current} visibilityHeight={100} />
       <LayoutFooter />
-    </main>
+    </div>
   );
 }
 

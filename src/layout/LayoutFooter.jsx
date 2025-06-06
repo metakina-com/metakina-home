@@ -18,7 +18,7 @@ const LayoutFooter = memo(() => {
 
   const resourceLinks = [
     { path: '/privacy-policy', key: 'Footer.resources.whitepaper' },
-    { path: '/', key: 'Footer.resources.serviceManual' },
+    { path: '/service-terms', key: 'Footer.resources.serviceManual' },
     { path: '/', key: 'Footer.resources.industryInsight' },
     { path: '/', key: 'Footer.resources.faq' },
   ];
