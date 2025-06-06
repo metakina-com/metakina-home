@@ -34,6 +34,9 @@ export default antfu(
       '@stylistic/semi': [2, 'always'],
       '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       'react-hooks/exhaustive-deps': 'off',
+      'sort-keys': 'off',
+      'sort-imports': 'off',
+      'import/order': 'off',
       'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: '*', next: 'return' },

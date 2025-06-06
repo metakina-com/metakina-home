@@ -19,9 +19,6 @@ export default function LanguageSwitcher() {
         dropdownStyle={{
           background: '#ffffff',
         }}
-        style={{
-          minWidth: 80,
-        }}
         className="language-select"
         prefix={<GlobalOutlined className="text-white" />}
         options={[

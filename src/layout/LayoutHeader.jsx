@@ -1,12 +1,15 @@
 import groupImg from '@/assets/images/home/Group.png';
 import LanguageSwitcher from '@/components/LanguageSwitcher.jsx';
-import { Image } from 'antd';
-import { memo } from 'react';
+import { MenuOutlined } from '@ant-design/icons';
+import { Button, Image, Menu } from 'antd';
+import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LayoutHeader = memo(() => {
   const { t } = useTranslation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     { path: '/', label: t('Header.home') },
@@ -20,12 +23,10 @@ const LayoutHeader = memo(() => {
       <Image
         alt={t('Home.name')}
         src={groupImg}
-        className="h-6 w-6"
-        width={32}
-        height={32}
+        className="h-8! w-8! md:h-10! md:w-10!"
         preview={false}
       />
-      <span className="pl-[5px] text-3xl text-white hover:text-gray-200">
+      <span className="pl-[5px] text-xl text-white md:text-3xl hover:text-gray-200">
         {t('Home.title')}
       </span>
     </Link>
@@ -62,18 +63,48 @@ const LayoutHeader = memo(() => {
     </div>
   );
 
+  const handleAnchorClick = ({ _key, path }) => {
+    setMobileMenuOpen(false);
+    navigate(path);
+  };
+
   return (
-    <div className="h-full flex flex-1 items-center justify-between px-8">
+    <div className="h-full flex flex-1 items-center justify-between px-4 md:px-8">
       <div className="flex items-center">
         {renderLogo()}
       </div>
-      <div className="ml-12 flex items-center">
+      <div className="ml-12 hidden items-center md:flex">
         {renderNavItems()}
         {renderButtons()}
         <div className="ml-4">
           <LanguageSwitcher />
         </div>
       </div>
+      <div className="ml-2 flex md:hidden">
+        <LanguageSwitcher />
+        <Button
+          type="text"
+          icon={<MenuOutlined />}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="ml-2"
+          style={{ color: 'white' }}
+        />
+      </div>
+      {/* 移动端导航菜单 */}
+      {mobileMenuOpen && (
+        <div className="absolute left-0 right-0 top-16 bg-gray-900 py-2 md:hidden">
+          <div className="mx-auto px-4 container">
+            <Menu
+              mode="inline"
+              theme="dark"
+              items={navItems}
+              style={{ fontSize: '1rem', color: '#ffffff' }}
+              onSelect={({ key }) => handleAnchorClick({ key, path: '/' })}
+              className="white-text-menu !text-white"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 });
