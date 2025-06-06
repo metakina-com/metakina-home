@@ -36,7 +36,7 @@ const LayoutHeader = memo(() => {
     <>
       {navItems.map((item, index) => (
         <Link
-          key={item.path}
+          key={`${item.path}d${index}`}
           to={item.path}
           className={`flex items-center ${index > 0 ? 'ml-8' : ''}`}
         >

@@ -2,7 +2,7 @@ import { getToken } from '@/utils/auth.js';
 import axios from 'axios';
 
 // 访问前缀（线下）
-export const BASE_NAME = '/API_BASE'; // 测试版本
+export const BASE_NAME = '/api'; // 测试版本
 
 // 响应码
 export const ResponseCode = {

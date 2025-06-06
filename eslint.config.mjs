@@ -37,6 +37,7 @@ export default antfu(
       'sort-keys': 'off',
       'sort-imports': 'off',
       'import/order': 'off',
+      'react/no-array-index-key': 'off',
       'padding-line-between-statements': [
         'error',
         { blankLine: 'always', prev: '*', next: 'return' },

@@ -75,8 +75,8 @@ const LayoutFooter = memo(() => {
     <div className="space-y-4">
       <h3 className="text-lg font-semibold">{t('Footer.quickLinks.title')}</h3>
       <ul className="space-y-2">
-        {quickLinks.map(link => (
-          <li key={link.path}>
+        {quickLinks.map((link, index) => (
+          <li key={`${link.path}s${index}`}>
             <Link
               to={link.path}
               className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
@@ -93,8 +93,8 @@ const LayoutFooter = memo(() => {
     <div className="space-y-4">
       <h3 className="text-lg font-semibold">{t('Footer.resources.title')}</h3>
       <ul className="space-y-2">
-        {resourceLinks.map(link => (
-          <li key={link.path}>
+        {resourceLinks.map((link, index) => (
+          <li key={`${link.path}a${index}`}>
             <Link
               to={link.path}
               className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
@@ -111,9 +111,9 @@ const LayoutFooter = memo(() => {
     <div className="space-y-4">
       <h3 className="text-lg font-semibold">{t('Footer.followUs.title')}</h3>
       <div className="flex space-x-4">
-        {socialLinks.map(social => (
+        {socialLinks.map((social, index) => (
           <a
-            key={social.name}
+            key={`${social.name}f${index}`}
             href={social.href}
             target="_blank"
             rel="noopener noreferrer"

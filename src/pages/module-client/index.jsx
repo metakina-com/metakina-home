@@ -1,18 +1,35 @@
 'use client';
 
+import { updateFormApi } from '@/apis/api-user.js';
 import { Button, Checkbox, DatePicker, Form, Input, Radio, Select } from 'antd';
 // import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const { TextArea } = Input;
 
 export default function RWAApplicationForm() {
   const { t } = useTranslation();
   const [form] = Form.useForm();
+  const navigate = useNavigate();
 
   const handleSubmit = async (values) => {
-    // eslint-disable-next-line no-console
-    console.log('Form values:', values);
+    // console.log('Form values:', values);
+
+    // const formData = new FormData()
+    for (const key in values) {
+      if (Array.isArray(values[key])) {
+        values[key] = values[key].join(';');
+        // values[key] = JSON.stringify(values[key]);
+      }
+    }
+
+    const res = await updateFormApi(values);
+
+    if (res.code === 200) {
+      form.resetFields();
+      navigate('/home');
+    }
     // TODO: Handle form submission
   };
 
@@ -72,13 +89,13 @@ export default function RWAApplicationForm() {
                   <Input />
                 </Form.Item>
 
-                <Form.Item label={t('RWAForm.sections.basicInfo.fields.position.label')} name="position">
+                <Form.Item label={t('RWAForm.sections.basicInfo.fields.position.label')} name="contactPosition">
                   <Input />
                 </Form.Item>
 
                 <Form.Item
                   label={t('RWAForm.sections.basicInfo.fields.phone.label')}
-                  name="phone"
+                  name="contactPhone"
                   rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.phone.required') }]}
                 >
                   <Input />
@@ -86,7 +103,7 @@ export default function RWAApplicationForm() {
 
                 <Form.Item
                   label={t('RWAForm.sections.basicInfo.fields.email.label')}
-                  name="email"
+                  name="contactEmail"
                   rules={[
                     { required: true, message: t('RWAForm.sections.basicInfo.fields.email.required') },
                     { type: 'email', message: t('RWAForm.sections.basicInfo.fields.email.invalid') },
@@ -98,14 +115,14 @@ export default function RWAApplicationForm() {
 
               <Form.Item
                 label={t('RWAForm.sections.basicInfo.fields.address.label')}
-                name="address"
+                name="companyAddress"
                 rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.address.required') }]}
               >
                 <Input />
               </Form.Item>
 
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-                <Form.Item label={t('RWAForm.sections.basicInfo.fields.businessLicense.label')} name="businessLicense">
+                <Form.Item label={t('RWAForm.sections.basicInfo.fields.businessLicense.label')} name="businessLicenseCode">
                   <Input />
                 </Form.Item>
 
@@ -209,7 +226,7 @@ export default function RWAApplicationForm() {
               </div>
 
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-                <Form.Item label={t('RWAForm.sections.assetInfo.fields.assetValue.fields.annualReturn.label')} name="annualReturn">
+                <Form.Item label={t('RWAForm.sections.assetInfo.fields.assetValue.fields.annualReturn.label')} name="annualReturnRate">
                   <Input type="number" step="0.01" />
                 </Form.Item>
 
@@ -249,7 +266,7 @@ export default function RWAApplicationForm() {
                   <Input type="number" max={100} min={0} />
                 </Form.Item>
 
-                <Form.Item label={t('RWAForm.sections.assetInfo.fields.ownershipStatus.fields.encumbrance.label')} name="encumbrance">
+                <Form.Item label={t('RWAForm.sections.assetInfo.fields.ownershipStatus.fields.encumbrance.label')} name="encumbranceId">
                   <Radio.Group>
                     <Radio value="no">{t('RWAForm.sections.assetInfo.fields.ownershipStatus.fields.encumbrance.options.no')}</Radio>
                     <Radio value="yes">{t('RWAForm.sections.assetInfo.fields.ownershipStatus.fields.encumbrance.options.yes')}</Radio>
@@ -306,14 +323,14 @@ export default function RWAApplicationForm() {
                 rules={[{ required: true, message: t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.required') }]}
               >
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  <Checkbox value="increase_liquidity">{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.increase_liquidity')}</Checkbox>
-                  <Checkbox value="expand_funding">{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.expand_funding')}</Checkbox>
-                  <Checkbox value="simplify_management">{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.simplify_management')}</Checkbox>
-                  <Checkbox value="attract_investors">{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.attract_investors')}</Checkbox>
-                  <Checkbox value="transparent_operation">{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.transparent_operation')}</Checkbox>
-                  <Checkbox value="fractional_ownership">{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.fractional_ownership')}</Checkbox>
-                  <Checkbox value="global_access">{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.global_access')}</Checkbox>
-                  <Checkbox value="automatic_dividend">{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.automatic_dividend')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.increase_liquidity')}>{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.increase_liquidity')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.expand_funding')}>{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.expand_funding')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.simplify_management')}>{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.simplify_management')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.attract_investors')}>{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.attract_investors')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.transparent_operation')}>{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.transparent_operation')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.fractional_ownership')}>{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.fractional_ownership')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.global_access')}>{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.global_access')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.automatic_dividend')}>{t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.options.automatic_dividend')}</Checkbox>
                 </Checkbox.Group>
               </Form.Item>
             </div>
@@ -331,7 +348,7 @@ export default function RWAApplicationForm() {
                 </Form.Item>
               </div>
 
-              <Form.Item label={t('RWAForm.sections.tokenization.fields.targetInvestors.label')} name="targetInvestors">
+              <Form.Item label={t('RWAForm.sections.tokenization.fields.targetInvestors.label')} name="targetInvestorsId">
                 <Radio.Group>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <Radio value="institutional">{t('RWAForm.sections.tokenization.fields.targetInvestors.options.institutional')}</Radio>
@@ -415,7 +432,7 @@ export default function RWAApplicationForm() {
                 </Radio.Group>
               </Form.Item>
 
-              <Form.Item label={t('RWAForm.sections.technology.fields.tokenStandard.label')} name="tokenStandard">
+              <Form.Item label={t('RWAForm.sections.technology.fields.tokenStandard.label')} name="tokenStandardId">
                 <Radio.Group>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <Radio value="erc3643">{t('RWAForm.sections.technology.fields.tokenStandard.fields.tokenStandard.options.erc3643')}</Radio>
@@ -436,16 +453,16 @@ export default function RWAApplicationForm() {
                 rules={[{ required: true, message: t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.required') }]}
               >
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  <Checkbox value="user_management">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.user_management')}</Checkbox>
-                  <Checkbox value="wallet_management">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.wallet_management')}</Checkbox>
-                  <Checkbox value="asset_tracking">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.asset_tracking')}</Checkbox>
-                  <Checkbox value="token_management">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.token_management')}</Checkbox>
-                  <Checkbox value="dividend_distribution">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.dividend_distribution')}</Checkbox>
-                  <Checkbox value="compliance_module">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.compliance_module')}</Checkbox>
-                  <Checkbox value="reporting_dashboard">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.reporting_dashboard')}</Checkbox>
-                  <Checkbox value="document_management">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.document_management')}</Checkbox>
-                  <Checkbox value="notification_system">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.notification_system')}</Checkbox>
-                  <Checkbox value="otc_trading">{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.otc_trading')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.user_management')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.user_management')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.wallet_management')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.wallet_management')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.asset_tracking')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.asset_tracking')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.token_management')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.token_management')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.dividend_distribution')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.dividend_distribution')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.compliance_module')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.compliance_module')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.reporting_dashboard')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.reporting_dashboard')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.document_management')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.document_management')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.notification_system')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.notification_system')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.otc_trading')}>{t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.options.otc_trading')}</Checkbox>
                 </Checkbox.Group>
               </Form.Item>
             </div>
@@ -453,7 +470,7 @@ export default function RWAApplicationForm() {
             {/* 数据集成与验证需求 */}
             <div className="rounded-lg bg-gray-50 p-6">
               <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.technology.fields.dataSource.title')}</h3>
-              <Form.Item label={t('RWAForm.sections.technology.fields.dataSource.fields.dataSource.label')} name="dataSource">
+              <Form.Item label={t('RWAForm.sections.technology.fields.dataSource.fields.dataSource.label')} name="dataSources">
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Checkbox value="manual_input">{t('RWAForm.sections.technology.fields.dataSource.fields.dataSource.options.manual_input')}</Checkbox>
                   <Checkbox value="erp_integration">{t('RWAForm.sections.technology.fields.dataSource.fields.dataSource.options.erp_integration')}</Checkbox>
@@ -503,7 +520,7 @@ export default function RWAApplicationForm() {
             {/* 一级市场发行策略 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
               <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.tokenMarket.fields.primaryMarket.title')}</h3>
-              <Form.Item label={t('RWAForm.sections.tokenMarket.fields.primaryMarket.fields.primaryMarket.label')} name="primaryMarket">
+              <Form.Item label={t('RWAForm.sections.tokenMarket.fields.primaryMarket.fields.primaryMarket.label')} name="primaryMarketId">
                 <Radio.Group>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                     <Radio value="sto">{t('RWAForm.sections.tokenMarket.fields.primaryMarket.fields.primaryMarket.options.sto')}</Radio>
@@ -516,7 +533,7 @@ export default function RWAApplicationForm() {
               </Form.Item>
 
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-                <Form.Item label={t('RWAForm.sections.tokenMarket.fields.launchpadPreference.label')} name="launchpadPreference">
+                <Form.Item label={t('RWAForm.sections.tokenMarket.fields.launchpadPreference.label')} name="launchpadPreferenceId">
                   <Select placeholder={t('RWAForm.sections.tokenMarket.fields.launchpadPreference.placeholder')}>
                     <Select.Option value="tier1">{t('RWAForm.sections.tokenMarket.fields.launchpadPreference.options.tier1')}</Select.Option>
                     <Select.Option value="tier2">{t('RWAForm.sections.tokenMarket.fields.launchpadPreference.options.tier2')}</Select.Option>
@@ -532,7 +549,7 @@ export default function RWAApplicationForm() {
                 </Form.Item>
               </div>
 
-              <Form.Item label={t('RWAForm.sections.tokenMarket.fields.kycRequirement.label')} name="kycRequirement">
+              <Form.Item label={t('RWAForm.sections.tokenMarket.fields.kycRequirement.label')} name="kycRequirementId">
                 <Radio.Group>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                     <Radio value="strict">{t('RWAForm.sections.tokenMarket.fields.kycRequirement.fields.kycRequirement.options.strict')}</Radio>
@@ -546,7 +563,7 @@ export default function RWAApplicationForm() {
             {/* 二级市场交易所对接 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
               <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.tokenMarket.fields.exchangePreference.title')}</h3>
-              <Form.Item label={t('RWAForm.sections.tokenMarket.fields.exchangePreference.fields.exchangePreference.label')} name="exchangePreference">
+              <Form.Item label={t('RWAForm.sections.tokenMarket.fields.exchangePreference.fields.exchangePreference.label')} name="exchangePreferences">
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Checkbox value="cex_tier1">{t('RWAForm.sections.tokenMarket.fields.exchangePreference.fields.exchangePreference.options.cex_tier1')}</Checkbox>
                   <Checkbox value="cex_tier2">{t('RWAForm.sections.tokenMarket.fields.exchangePreference.fields.exchangePreference.options.cex_tier2')}</Checkbox>
@@ -557,7 +574,7 @@ export default function RWAApplicationForm() {
                 </Checkbox.Group>
               </Form.Item>
 
-              <Form.Item label={t('RWAForm.sections.tokenMarket.fields.liquidityStrategy.label')} name="liquidityStrategy">
+              <Form.Item label={t('RWAForm.sections.tokenMarket.fields.liquidityStrategy.label')} name="liquidityStrategies">
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Checkbox value="market_maker">{t('RWAForm.sections.tokenMarket.fields.liquidityStrategy.fields.liquidityStrategy.options.market_maker')}</Checkbox>
                   <Checkbox value="liquidity_pool">{t('RWAForm.sections.tokenMarket.fields.liquidityStrategy.fields.liquidityStrategy.options.liquidity_pool')}</Checkbox>
@@ -597,10 +614,10 @@ export default function RWAApplicationForm() {
 
                 <Form.Item label={t('RWAForm.sections.tokenMarket.fields.marketingTimeline.label')} name="marketingTimeline">
                   <Select placeholder={t('RWAForm.sections.tokenMarket.fields.marketingTimeline.placeholder')}>
-                    <Select.Option value="pre_launch">{t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.pre_launch')}</Select.Option>
-                    <Select.Option value="launch_period">{t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.launch_period')}</Select.Option>
-                    <Select.Option value="post_launch">{t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.post_launch')}</Select.Option>
-                    <Select.Option value="long_term">{t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.long_term')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.pre_launch')}>{t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.pre_launch')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.launch_period')}>{t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.launch_period')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.post_launch')}>{t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.post_launch')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.long_term')}>{t('RWAForm.sections.tokenMarket.fields.marketingTimeline.options.long_term')}</Select.Option>
                   </Select>
                 </Form.Item>
               </div>
@@ -631,14 +648,14 @@ export default function RWAApplicationForm() {
                 rules={[{ required: true, message: t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.required') }]}
               >
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  <Checkbox value="china_mainland">{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.china_mainland')}</Checkbox>
-                  <Checkbox value="hongkong">{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.hongkong')}</Checkbox>
-                  <Checkbox value="singapore">{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.singapore')}</Checkbox>
-                  <Checkbox value="usa">{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.usa')}</Checkbox>
-                  <Checkbox value="eu">{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.eu')}</Checkbox>
-                  <Checkbox value="japan">{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.japan')}</Checkbox>
-                  <Checkbox value="south_korea">{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.south_korea')}</Checkbox>
-                  <Checkbox value="other">{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.other')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.china_mainland')}>{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.china_mainland')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.hongkong')}>{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.hongkong')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.singapore')}>{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.singapore')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.usa')}>{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.usa')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.eu')}>{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.eu')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.japan')}>{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.japan')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.south_korea')}>{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.south_korea')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.other')}>{t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.options.other')}</Checkbox>
                 </Checkbox.Group>
               </Form.Item>
 
@@ -693,15 +710,15 @@ export default function RWAApplicationForm() {
               <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.compliance.fields.riskAcknowledgment.title')}</h3>
               <Form.Item
                 label={t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.label')}
-                name="riskAcknowledgment"
+                name="riskAcknowledgments"
                 rules={[{ required: true, message: t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.required') }]}
               >
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  <Checkbox value="policy_risk">{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.policy_risk')}</Checkbox>
-                  <Checkbox value="market_risk">{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.market_risk')}</Checkbox>
-                  <Checkbox value="technical_risk">{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.technical_risk')}</Checkbox>
-                  <Checkbox value="compliance_risk">{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.compliance_risk')}</Checkbox>
-                  <Checkbox value="responsibility">{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.responsibility')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.policy_risk')}>{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.policy_risk')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.market_risk')}>{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.market_risk')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.technical_risk')}>{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.technical_risk')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.compliance_risk')}>{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.compliance_risk')}</Checkbox>
+                  <Checkbox value={t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.responsibility')}>{t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.options.responsibility')}</Checkbox>
                 </Checkbox.Group>
               </Form.Item>
             </div>
@@ -741,10 +758,10 @@ export default function RWAApplicationForm() {
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <Form.Item label={t('RWAForm.sections.ongoingService.fields.serviceLevel.label')} name="serviceLevel">
                   <Select placeholder={t('RWAForm.sections.ongoingService.fields.serviceLevel.placeholder')}>
-                    <Select.Option value="basic">{t('RWAForm.sections.ongoingService.fields.serviceLevel.options.basic')}</Select.Option>
-                    <Select.Option value="standard">{t('RWAForm.sections.ongoingService.fields.serviceLevel.options.standard')}</Select.Option>
-                    <Select.Option value="premium">{t('RWAForm.sections.ongoingService.fields.serviceLevel.options.premium')}</Select.Option>
-                    <Select.Option value="enterprise">{t('RWAForm.sections.ongoingService.fields.serviceLevel.options.enterprise')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.ongoingService.fields.serviceLevel.options.basic')}>{t('RWAForm.sections.ongoingService.fields.serviceLevel.options.basic')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.ongoingService.fields.serviceLevel.options.standard')}>{t('RWAForm.sections.ongoingService.fields.serviceLevel.options.standard')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.ongoingService.fields.serviceLevel.options.premium')}>{t('RWAForm.sections.ongoingService.fields.serviceLevel.options.premium')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.ongoingService.fields.serviceLevel.options.enterprise')}>{t('RWAForm.sections.ongoingService.fields.serviceLevel.options.enterprise')}</Select.Option>
                   </Select>
                 </Form.Item>
 
@@ -815,11 +832,11 @@ export default function RWAApplicationForm() {
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <Form.Item label={t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.label')} name="projectTimeline">
                   <Select placeholder={t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.placeholder')}>
-                    <Select.Option value="3_months">{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.3_months')}</Select.Option>
-                    <Select.Option value="4_months">{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.4_months')}</Select.Option>
-                    <Select.Option value="6_months">{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.6_months')}</Select.Option>
-                    <Select.Option value="12_months">{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.12_months')}</Select.Option>
-                    <Select.Option value="flexible">{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.flexible')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.3_months')}>{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.3_months')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.4_months')}>{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.4_months')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.6_months')}>{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.6_months')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.12_months')}>{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.12_months')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.flexible')}>{t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.options.flexible')}</Select.Option>
                   </Select>
                 </Form.Item>
 
@@ -868,27 +885,27 @@ export default function RWAApplicationForm() {
               </Form.Item>
 
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-                <Form.Item label={t('RWAForm.sections.additional.fields.hearAboutUs.label')} name="hearAboutUs">
+                <Form.Item label={t('RWAForm.sections.additional.fields.hearAboutUs.label')} name="hearAboutUsId">
                   <Select placeholder={t('RWAForm.sections.additional.fields.hearAboutUs.placeholder')}>
-                    <Select.Option value="referral">{t('RWAForm.sections.additional.fields.hearAboutUs.options.referral')}</Select.Option>
-                    <Select.Option value="search_engine">{t('RWAForm.sections.additional.fields.hearAboutUs.options.search_engine')}</Select.Option>
-                    <Select.Option value="social_media">{t('RWAForm.sections.additional.fields.hearAboutUs.options.social_media')}</Select.Option>
-                    <Select.Option value="industry_event">{t('RWAForm.sections.additional.fields.hearAboutUs.options.industry_event')}</Select.Option>
-                    <Select.Option value="media_report">{t('RWAForm.sections.additional.fields.hearAboutUs.options.media_report')}</Select.Option>
-                    <Select.Option value="business_partner">{t('RWAForm.sections.additional.fields.hearAboutUs.options.business_partner')}</Select.Option>
-                    <Select.Option value="other">{t('RWAForm.sections.additional.fields.hearAboutUs.options.other')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.additional.fields.hearAboutUs.options.referral')}>{t('RWAForm.sections.additional.fields.hearAboutUs.options.referral')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.additional.fields.hearAboutUs.options.search_engine')}>{t('RWAForm.sections.additional.fields.hearAboutUs.options.search_engine')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.additional.fields.hearAboutUs.options.social_media')}>{t('RWAForm.sections.additional.fields.hearAboutUs.options.social_media')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.additional.fields.hearAboutUs.options.industry_event')}>{t('RWAForm.sections.additional.fields.hearAboutUs.options.industry_event')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.additional.fields.hearAboutUs.options.media_report')}>{t('RWAForm.sections.additional.fields.hearAboutUs.options.media_report')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.additional.fields.hearAboutUs.options.business_partner')}>{t('RWAForm.sections.additional.fields.hearAboutUs.options.business_partner')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.additional.fields.hearAboutUs.options.other')}>{t('RWAForm.sections.additional.fields.hearAboutUs.options.other')}</Select.Option>
                   </Select>
                 </Form.Item>
 
-                <Form.Item label={t('RWAForm.sections.additional.fields.existingProjects.label')} name="existingProjects">
+                <Form.Item label={t('RWAForm.sections.additional.fields.existingProjects.label')} name="existingProjectsId">
                   <Radio.Group>
-                    <Radio value="yes">{t('RWAForm.sections.additional.fields.existingProjects.options.yes')}</Radio>
-                    <Radio value="no">{t('RWAForm.sections.additional.fields.existingProjects.options.no')}</Radio>
+                    <Radio value="yes">{t('RWAForm.sections.additional.fields.existingProjects.fields.existingProjects.options.yes')}</Radio>
+                    <Radio value="no">{t('RWAForm.sections.additional.fields.existingProjects.fields.existingProjects.options.no')}</Radio>
                   </Radio.Group>
                 </Form.Item>
               </div>
 
-              <Form.Item label={t('RWAForm.sections.additional.fields.additionalInfo.label')} name="additional">
+              <Form.Item label={t('RWAForm.sections.additional.fields.additionalInfo.label')} name="additionalInfo">
                 <Input.TextArea
                   placeholder={t('RWAForm.sections.additional.fields.additionalInfo.placeholder')}
                   autoSize={{ minRows: 3, maxRows: 6 }}

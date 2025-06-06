@@ -15,3 +15,14 @@ export async function userLoginApi(value) {
     console.error(error);
   }
 }
+
+// 提交表单
+export async function updateFormApi(value) {
+  try {
+    const data = await http.post(`${BASE_NAME}/v1/rwa/projects`, value);
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}

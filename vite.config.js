@@ -89,10 +89,10 @@ export default defineConfig(({ mode }) => {
       host: true,
       open: true,
       proxy: {
-        '/PROXY': {
-          target: 'http://xxxx',
+        '/api': {
+          target: 'http://47.84.60.166:8083',
           changeOrigin: true,
-          rewrite: path => path.replace(/^\/PROXY/, ''),
+
         },
       },
     },

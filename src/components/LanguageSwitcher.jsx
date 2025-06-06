@@ -15,7 +15,7 @@ export default function LanguageSwitcher() {
       <Select
         defaultValue={i18n.language}
         onChange={handleChange}
-        bordered={false}
+        variant={false}
         dropdownStyle={{
           background: '#ffffff',
         }}
