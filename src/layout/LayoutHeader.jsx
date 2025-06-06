@@ -49,7 +49,7 @@ const LayoutHeader = memo(() => {
   const renderButtons = () => (
     <div className="ml-8 flex items-center">
       <Link
-        to="/"
+        to="/apply"
         className="flex items-center border border-white rounded-2 px-6 py-2 text-white transition-colors hover:bg-white/10"
       >
         <span className="text-base">{t('Header.joinUs')}</span>

@@ -14,6 +14,7 @@ const HomeIndex = lazy(() => import('../pages/module-home/index.jsx'));
 const TextIndex = lazy(() => import('../pages/module-test/index.jsx'));
 const PrivacyPolicy = lazy(() => import('../pages/module-footer/PrivacyPolicy.jsx'));
 const ServiceTerms = lazy(() => import('../pages/module-footer/ServiceTerms.tsx'));
+const RWAApplicationForm = lazy(() => import('../pages/module-client/index.jsx'));
 
 const routes = [
   {
@@ -58,6 +59,14 @@ const routes = [
         element: <ServiceTerms />,
         meta: {
           title: '服务条款',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'apply',
+        element: <RWAApplicationForm />,
+        meta: {
+          title: 'RWA项目申请',
           needLogin: false,
         },
       },

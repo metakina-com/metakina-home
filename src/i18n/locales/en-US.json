@@ -22,7 +22,7 @@
     "whyChooseUs": "Why Choose Us",
     "supportedChains": "Supported Chains",
     "cooperationMode": "Cooperation Mode",
-    "joinUs": "Register/Apply",
+    "joinUs": "Apply Now",
     "contactUs": "Contact Us"
   },
   "Footer": {
@@ -371,6 +371,728 @@
       "title": "10. Contact Us",
       "content": "If you have any questions about these Terms, please contact us at:",
       "email": "contact@dappweb.cn"
+    }
+  },
+  "RWAForm": {
+    "logo": "Metakina RWA",
+    "title": "RWA Digitalization & Tokenization Project Information Form",
+    "subtitle": "Comprehensive Services for Real World Assets (RWA) Digitalization and Tokenization",
+    "processTitle": "Service Process:",
+    "processDescription": "Phase 1: Consulting & Legal Structure Design → Phase 2: Technical Development & Tokenization → Phase 3: Token Issuance & Listing → Phase 4: On-chain Asset Management & Ongoing Services",
+    "sections": {
+      "basicInfo": {
+        "title": "Client (Party A) Basic Information",
+        "badge": "Basic Info",
+        "fields": {
+          "companyName": {
+            "label": "Company Name or Individual Name",
+            "placeholder": "Please enter the complete company name as shown on business license",
+            "required": "Please enter company name or individual name"
+          },
+          "legalPerson": {
+            "label": "Legal Representative or Person in Charge",
+            "required": "Please enter legal representative or person in charge"
+          },
+          "contactPerson": {
+            "label": "Project Contact Person",
+            "required": "Please enter project contact person"
+          },
+          "position": {
+            "label": "Contact Person Position"
+          },
+          "phone": {
+            "label": "Contact Phone",
+            "required": "Please enter contact phone"
+          },
+          "email": {
+            "label": "Email",
+            "required": "Please enter email",
+            "invalid": "Please enter a valid email address"
+          },
+          "address": {
+            "label": "Detailed Address",
+            "required": "Please enter detailed address"
+          },
+          "businessLicense": {
+            "label": "Business License Number/Unified Social Credit Code"
+          },
+          "registeredCapital": {
+            "label": "Registered Capital (in 10,000 CNY)"
+          }
+        }
+      },
+      "assetInfo": {
+        "title": "RWA Asset Detailed Information",
+        "badge": "Phase 1",
+        "description": "Please provide detailed information about your real-world assets. This information will be used for asset assessment, compliance governance, ownership verification, and value evaluation in the preliminary work.",
+        "fields": {
+          "assetType": {
+            "label": "Asset Type",
+            "required": "Please select asset type",
+            "placeholder": "Please select asset type",
+            "options": {
+              "infrastructure": "Infrastructure (Highways, Bridges, Tunnels, etc.)",
+              "real_estate_commercial": "Commercial Real Estate (Office Buildings, Shopping Malls, Hotels, etc.)",
+              "real_estate_residential": "Residential Real Estate",
+              "energy_renewable": "Renewable Energy (Wind Power, Solar Power, etc.)",
+              "energy_traditional": "Traditional Energy (Electricity, Gas, etc.)",
+              "transportation": "Transportation (Ports, Airports, Logistics Centers)",
+              "utility": "Utilities (Water Supply, Power Supply, Communications)",
+              "industrial": "Industrial Assets (Plants, Equipment, Production Lines)",
+              "agricultural": "Agricultural Assets (Land, Farms, Forests)",
+              "commodity": "Commodities (Precious Metals, Raw Materials, etc.)",
+              "financial": "Financial Assets (Debt Rights, Income Rights, etc.)",
+              "intellectual": "Intellectual Property (Patents, Trademarks, Copyrights)",
+              "other": "Others"
+            }
+          },
+          "assetSubtype": {
+            "label": "Asset Subtype Details",
+            "placeholder": "e.g., Specific Highway Section, Commercial Complex, Solar Power Station, etc."
+          },
+          "assetDescription": {
+            "label": "Detailed Asset Description",
+            "required": "Please provide detailed asset description",
+            "placeholder": "Please describe the asset's location, scale, operational status, revenue model, market position, etc."
+          },
+          "assetValue": {
+            "title": "Asset Value and Financial Information",
+            "fields": {
+              "latestAssessmentValue": {
+                "label": "Latest Assessment Value (in 10,000 CNY)",
+                "required": "Please enter asset assessment value"
+              },
+              "assessmentDate": {
+                "label": "Assessment Date"
+              },
+              "assessmentMethod": {
+                "label": "Assessment Method",
+                "placeholder": "Please select",
+                "options": {
+                  "cost_approach": "Cost Approach",
+                  "income_approach": "Income Approach",
+                  "market_approach": "Market Approach",
+                  "dcf": "Discounted Cash Flow",
+                  "multiple": "Multiple Methods Combined"
+                }
+              },
+              "annualRevenue": {
+                "label": "Annual Revenue (in 10,000 CNY)"
+              },
+              "annualProfit": {
+                "label": "Annual Net Profit (in 10,000 CNY)"
+              },
+              "annualReturn": {
+                "label": "Annual Return Rate (%)"
+              },
+              "operationPeriod": {
+                "label": "Operation Period",
+                "placeholder": "Please select",
+                "options": {
+                  "5_years": "Under 5 years",
+                  "5_10_years": "5-10 years",
+                  "10_20_years": "10-20 years",
+                  "20_30_years": "20-30 years",
+                  "over_30_years": "Over 30 years",
+                  "permanent": "Permanent"
+                }
+              }
+            }
+          },
+          "ownershipStatus": {
+            "title": "Ownership and Legal Status",
+            "fields": {
+              "ownershipStatus": {
+                "label": "Ownership Status",
+                "required": "Please select ownership status",
+                "options": {
+                  "full_ownership": "Full Ownership/Title",
+                  "partial_ownership": "Partial Ownership/Co-ownership",
+                  "usage_rights": "Usage Rights/Franchise Rights",
+                  "pending": "Ownership in Process"
+                }
+              },
+              "ownershipRatio": {
+                "label": "Ownership Percentage (%)"
+              },
+              "encumbrance": {
+                "label": "Are there any encumbrances such as mortgages or pledges",
+                "options": {
+                  "no": "No encumbrances",
+                  "yes": "Encumbrances exist"
+                }
+              },
+              "encumbranceDetails": {
+                "label": "Encumbrance Details",
+                "placeholder": "If there are mortgages, pledges, or other encumbrances, please provide details"
+              }
+            }
+          },
+          "assetDocuments": {
+            "title": "Existing Asset Documentation",
+            "fields": {
+              "assetDocuments": {
+                "label": "Available Asset Documentation",
+                "options": {
+                  "property_deed": "Property Deed/Real Estate Title Certificate",
+                  "business_license": "Business License/Operating Permit",
+                  "valuation_report": "Asset Valuation Report",
+                  "financial_statements": "Financial Statements (Last 3 Years)",
+                  "audit_report": "Audit Report",
+                  "legal_opinion": "Legal Opinion",
+                  "insurance": "Insurance Contract/Policy",
+                  "environmental": "Environmental Impact Assessment Report",
+                  "operation_contract": "Operation Management Contract",
+                  "revenue_contract": "Revenue Rights Documentation"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tokenMarket": {
+        "title": "Token Issuance and Market Access Requirements",
+        "badge": "Phase 3",
+        "description": "According to the contract, we will assist you with primary market issuance, secondary market listing, and market promotion. Note: Listing decisions and fees are determined by exchanges.",
+        "fields": {
+          "primaryMarket": {
+            "title": "Primary Market Issuance Strategy",
+            "fields": {
+              "primaryMarket": {
+                "label": "Primary Market Issuance Method Preference",
+                "options": {
+                  "sto": "STO (Security Token Offering)",
+                  "private_sale": "Private Sale",
+                  "ieo": "IEO (Initial Exchange Offering)",
+                  "ido": "IDO (Initial DEX Offering)",
+                  "mixed": "Mixed Issuance Model"
+                }
+              }
+            }
+          },
+          "launchpadPreference": {
+            "label": "Launchpad Platform Preference",
+            "placeholder": "Please select platform type",
+            "options": {
+              "tier1": "Tier-1 Platforms (e.g., Binance Launchpad)",
+              "tier2": "Well-known Tier-2 Platforms",
+              "specialized": "Specialized RWA Platforms",
+              "decentralized": "Decentralized Issuance Platforms",
+              "multiple": "Multi-platform Simultaneous Issuance",
+              "no_preference": "No Specific Preference"
+            }
+          },
+          "issuePrice": {
+            "label": "Expected Issuance Price (USDT)"
+          },
+          "kycRequirement": {
+            "label": "KYC/AML Compliance Requirements",
+            "fields": {
+              "kycRequirement": {
+                "options": {
+                  "strict": "Strict KYC (Institutional Level)",
+                  "standard": "Standard KYC",
+                  "basic": "Basic KYC"
+                }
+              }
+            }
+          },
+          "exchangePreference": {
+            "title": "Secondary Market Exchange Integration",
+            "fields": {
+              "exchangePreference": {
+                "label": "Target Exchange Types (Multiple Choice)",
+                "options": {
+                  "cex_tier1": "Tier-1 Centralized Exchanges",
+                  "cex_tier2": "Tier-2 Centralized Exchanges",
+                  "dex_uniswap": "Uniswap-type DEX",
+                  "dex_curve": "Curve-type Stablecoin DEX",
+                  "specialized_rwa": "Professional RWA Trading Platform",
+                  "regional_exchange": "Regional Exchanges"
+                }
+              }
+            }
+          },
+          "liquidityStrategy": {
+            "label": "Liquidity Strategy Preference",
+            "fields": {
+              "liquidityStrategy": {
+                "options": {
+                  "market_maker": "Professional Market Making Services",
+                  "liquidity_pool": "DEX Liquidity Pool",
+                  "incentive_program": "Liquidity Incentive Program",
+                  "treasury_management": "Treasury Management Strategy"
+                }
+              }
+            }
+          },
+          "marketingSupport": {
+            "title": "Marketing Promotion Requirements",
+            "fields": {
+              "marketingSupport": {
+                "label": "Marketing & PR Support Requirements (Multiple Choice)",
+                "options": {
+                  "whitepaper": "Whitepaper Writing & Optimization",
+                  "tokenomics_design": "Tokenomics Visual Design",
+                  "community_building": "Community Building & Management",
+                  "pr_services": "PR Services",
+                  "ama_events": "AMA Event Planning",
+                  "roadshow": "Investor Roadshow",
+                  "media_coverage": "Media Coverage Promotion",
+                  "influencer_marketing": "KOL Partnership Marketing"
+                }
+              }
+            }
+          },
+          "marketingBudget": {
+            "label": "Marketing Budget (in 10,000 CNY)",
+            "placeholder": "Please select budget range",
+            "options": {
+              "under_50": "Under 500,000",
+              "50_100": "500,000-1,000,000",
+              "100_200": "1,000,000-2,000,000",
+              "200_500": "2,000,000-5,000,000",
+              "over_500": "Over 5,000,000",
+              "flexible": "Flexible Budget"
+            },
+            "description": "For advertising, KOL promotion, community activities, and other execution costs"
+          },
+          "marketingTimeline": {
+            "label": "Marketing Timeline",
+            "placeholder": "Please select",
+            "options": {
+              "pre_launch": "Pre-launch Warm-up (1-2 months)",
+              "launch_period": "Launch Period (1 month)",
+              "post_launch": "Post-launch Maintenance (3-6 months)",
+              "long_term": "Long-term Promotion (Over 1 year)"
+            }
+          }
+        }
+      },
+      "compliance": {
+        "title": "Compliance and Legal Requirements",
+        "badge": "All Phases",
+        "warning": "Important Notice: Tokenization projects must strictly comply with relevant laws and regulations. Please ensure you fully understand the regulatory requirements in the regions involved.",
+        "important": "Important Notice: Tokenization projects must strictly comply with relevant laws and regulations. Please ensure you fully understand the regulatory requirements in the regions involved.",
+        "fields": {
+          "jurisdictions": {
+            "title": "Jurisdictions and Compliance Requirements",
+            "fields": {
+              "jurisdictions": {
+                "label": "Project Jurisdictions (Multiple Choice)",
+                "required": "Please select jurisdictions",
+                "options": {
+                  "china_mainland": "Mainland China",
+                  "hongkong": "Hong Kong SAR",
+                  "singapore": "Singapore",
+                  "usa": "United States",
+                  "eu": "European Union",
+                  "japan": "Japan",
+                  "south_korea": "South Korea",
+                  "other": "Other Regions"
+                }
+              }
+            }
+          },
+          "legalStructure": {
+            "label": "Proposed Legal Structure",
+            "fields": {
+              "legalStructure": {
+                "options": {
+                  "spv": "SPV (Special Purpose Vehicle)",
+                  "trust": "Trust Structure",
+                  "fund": "Fund Structure",
+                  "company": "Direct Company Issuance",
+                  "uncertain": "Need Professional Advice"
+                }
+              }
+            }
+          },
+          "complianceExperience": {
+            "title": "Existing Legal and Compliance Preparation",
+            "fields": {
+              "complianceExperience": {
+                "label": "Compliance Experience Level",
+                "options": {
+                  "expert": "Rich Digital Asset Compliance Experience",
+                  "some": "Traditional Financial Compliance Experience",
+                  "limited": "Limited Compliance Experience",
+                  "none": "No Relevant Compliance Experience"
+                }
+              }
+            }
+          },
+          "legalSupport": {
+            "label": "Current Legal Support Status",
+            "fields": {
+              "legalSupport": {
+                "options": {
+                  "have_lawyers": "Have Professional Legal Team",
+                  "partial_support": "Partial Legal Support",
+                  "need_lawyers": "Need Legal Support",
+                  "unsure": "Uncertain"
+                }
+              }
+            }
+          },
+          "existingLicenses": {
+            "label": "Existing Licenses or Permits",
+            "placeholder": "e.g., Financial Services License, Digital Asset Trading License, etc."
+          },
+          "riskAcknowledgment": {
+            "title": "Risk Assessment and Declaration",
+            "fields": {
+              "riskAcknowledgment": {
+                "label": "Risk Awareness and Bearing Capacity",
+                "required": true,
+                "options": {
+                  "policy_risk": "Fully Understand Policy Risks",
+                  "market_risk": "Fully Understand Market Risks",
+                  "technical_risk": "Fully Understand Technical Risks",
+                  "compliance_risk": "Fully Understand Compliance Risks",
+                  "responsibility": "Commit to Bear Project Risks Independently"
+                }
+              }
+            }
+          }
+        }
+      },
+      "budget": {
+        "title": "Budget and Timeline",
+        "note": "Reference Quote: According to the contract, the total fee for the complete four-phase service is 1.05 million CNY (excluding third-party fees). Specific fees will be adjusted based on your actual needs.",
+        "fields": {
+          "totalBudget": {
+            "title": "Budget Arrangement",
+            "fields": {
+              "totalBudget": {
+                "label": "Total Project Budget Range (in 10,000 CNY)",
+                "placeholder": "Please select budget range",
+                "options": {
+                  "50_100": "500,000-1,000,000",
+                  "100_150": "1,000,000-1,500,000 (Standard Configuration)",
+                  "150_200": "1,500,000-2,000,000",
+                  "200_300": "2,000,000-3,000,000",
+                  "over_300": "Over 3,000,000",
+                  "flexible": "Flexible, Based on Requirements"
+                }
+              }
+            }
+          },
+          "thirdPartyBudget": {
+            "label": "Third-party Fee Budget (in 10,000 CNY)",
+            "description": "Including exchange listing fees, audit fees, legal fees, etc."
+          },
+          "paymentPreference": {
+            "label": "Payment Method Preference",
+            "fields": {
+              "paymentPreference": {
+                "options": {
+                  "milestone": "Milestone-based Payment (Recommended)",
+                  "stage": "Service Phase-based Payment",
+                  "monthly": "Monthly Payment",
+                  "custom": "Custom Payment Method"
+                }
+              }
+            }
+          },
+          "projectTimeline": {
+            "title": "Timeline",
+            "fields": {
+              "projectTimeline": {
+                "label": "Expected Project Completion Time",
+                "placeholder": "Please select time period",
+                "options": {
+                  "3_months": "Within 3 Months",
+                  "4_months": "4 Months (Standard Cycle)",
+                  "6_months": "Within 6 Months",
+                  "12_months": "Within 12 Months",
+                  "flexible": "Flexible Timeline"
+                }
+              }
+            }
+          },
+          "urgency": {
+            "label": "Project Urgency Level",
+            "options": {
+              "normal": "Normal Progress",
+              "urgent": "Relatively Urgent",
+              "very_urgent": "Very Urgent"
+            }
+          },
+          "preferredStartDate": {
+            "label": "Preferred Start Date"
+          },
+          "targetLaunchDate": {
+            "label": "Target Launch Date"
+          }
+        }
+      },
+      "additional": {
+        "title": "Additional Information and Special Requirements",
+        "fields": {
+          "specialRequirements": {
+            "label": "Special Requirements or Customization Needs",
+            "placeholder": "Please describe any special technical requirements, compliance requirements, timeline arrangements, or other customization needs"
+          },
+          "concernsQuestions": {
+            "label": "Main Concerns or Questions",
+            "placeholder": "Please describe your main concerns during project implementation or aspects that need our special attention"
+          },
+          "hearAboutUs": {
+            "label": "How Did You Learn About Our Services?",
+            "placeholder": "Please select",
+            "options": {
+              "referral": "Friend/Partner Referral",
+              "search_engine": "Search Engine",
+              "social_media": "Social Media",
+              "industry_event": "Industry Conference/Event",
+              "media_report": "Media Coverage",
+              "business_partner": "Business Partner Introduction",
+              "other": "Other"
+            }
+          },
+          "existingProjects": {
+            "label": "Do You Have Other RWA Project Experience?",
+            "fields": {
+              "existingProjects": {
+                "options": {
+                  "yes": "Have Relevant Experience",
+                  "no": "This is the First Project"
+                }
+              }
+            }
+          },
+          "additionalInfo": {
+            "label": "Other Additional Information",
+            "placeholder": "Any other information you would like us to know"
+          }
+        }
+      },
+      "ongoingService": {
+        "title": "On-chain Asset Management and Ongoing Service Requirements",
+        "badge": "Phase 4",
+        "description": "Phase 4 services ensure long-term value maintenance of tokenized assets and investor relationship management.",
+        "fields": {
+          "onchainServices": {
+            "title": "On-chain Asset Management Requirements",
+            "fields": {
+              "onchainServices": {
+                "label": "On-chain Asset Management Service Requirements (Multiple Choice)",
+                "options": {
+                  "asset_monitoring": "On-chain Asset Data Monitoring",
+                  "automated_distribution": "Automated Revenue Distribution",
+                  "compliance_monitoring": "Continuous Compliance Monitoring",
+                  "platform_maintenance": "Technical Platform Maintenance",
+                  "security_updates": "Security Updates and Technical Support",
+                  "investor_relations": "Investor Relations Management",
+                  "community_management": "Community Management Support",
+                  "reporting_services": "Regular Report Generation"
+                }
+              }
+            }
+          },
+          "serviceLevel": {
+            "label": "Service Level Requirements",
+            "placeholder": "Please select service level",
+            "options": {
+              "basic": "Basic Service (Monthly Reports)",
+              "standard": "Standard Service (Weekly Monitoring)",
+              "premium": "Premium Service (Real-time Monitoring)",
+              "enterprise": "Enterprise Service (24/7 Support)"
+            }
+          },
+          "serviceDuration": {
+            "label": "Expected Service Duration",
+            "placeholder": "Please select",
+            "options": {
+              "1_year": "1 Year",
+              "2_years": "2 Years",
+              "3_years": "3 Years",
+              "5_years": "5 Years",
+              "long_term": "Long-term Cooperation"
+            }
+          }
+        }
+      },
+      "tokenization": {
+        "title": "Tokenization Requirements and Project Goals",
+        "badge": "Phase 1",
+        "description": "This information will be used for Tokenomics design and financial structure design.",
+        "fields": {
+          "projectGoals": {
+            "title": "Core Project Goals",
+            "fields": {
+              "projectGoals": {
+                "label": "Main Tokenization Goals (Multiple Choice)",
+                "required": "Please select tokenization goals",
+                "options": {
+                  "increase_liquidity": "Increase Asset Liquidity",
+                  "expand_funding": "Expand Financing Channels",
+                  "simplify_management": "Simplify Asset Management",
+                  "attract_investors": "Attract More Investors",
+                  "transparent_operation": "Achieve Transparent Operations",
+                  "fractional_ownership": "Enable Fractional Ownership",
+                  "global_access": "Access Global Investors",
+                  "automatic_dividend": "Automated Dividend Distribution"
+                }
+              }
+            }
+          },
+          "fundingTarget": {
+            "title": "Financing and Investor Positioning",
+            "fields": {
+              "fundingTarget": {
+                "label": "Funding Target (in 10,000 CNY)"
+              }
+            }
+          },
+          "tokenPercent": {
+            "label": "Planned Asset Tokenization Ratio (%)",
+            "description": "What percentage of assets will be tokenized"
+          },
+          "targetInvestors": {
+            "label": "Target Investor Groups",
+            "options": {
+              "institutional": "Institutional Investors",
+              "high_net_worth": "High Net Worth Individuals",
+              "retail": "Retail Investors",
+              "mixed": "Mixed Investors"
+            }
+          },
+          "minInvestment": {
+            "label": "Minimum Investment Amount (in 10,000 CNY)"
+          },
+          "maxInvestors": {
+            "label": "Maximum Number of Investors"
+          },
+          "tokenRights": {
+            "title": "Token Rights Design Preferences",
+            "fields": {
+              "tokenRights": {
+                "label": "Token Holder Rights (Multiple Choice)",
+                "options": {
+                  "revenue_share": "Revenue Distribution Rights",
+                  "voting_rights": "Governance Voting Rights",
+                  "transfer_rights": "Transfer and Trading Rights",
+                  "redemption_rights": "Redemption Rights",
+                  "information_rights": "Information Access Rights",
+                  "liquidation_rights": "Liquidation Distribution Rights"
+                }
+              }
+            }
+          },
+          "dividendFrequency": {
+            "label": "Dividend Distribution Frequency",
+            "placeholder": "Please select",
+            "options": {
+              "monthly": "Monthly Distribution",
+              "quarterly": "Quarterly Distribution",
+              "semi_annually": "Semi-annual Distribution",
+              "annually": "Annual Distribution",
+              "event_based": "Event-based Distribution"
+            }
+          },
+          "dividendRatio": {
+            "label": "Planned Distribution Ratio (%)"
+          }
+        }
+      },
+      "technology": {
+        "title": "Technical Development Requirements",
+        "badge": "Phase 2",
+        "description": "According to the contract, we will conduct technical solution design, smart contract development, and security audit coordination.",
+        "fields": {
+          "blockchainPreference": {
+            "title": "Blockchain Technology Selection",
+            "fields": {
+              "blockchainPreference": {
+                "label": "Blockchain Platform Preference",
+                "options": {
+                  "consortium": "Consortium Chain (Recommended)",
+                  "ethereum": "Ethereum Mainnet",
+                  "polygon": "Polygon",
+                  "bsc": "BSC (Binance Smart Chain)",
+                  "custom": "Custom Solution"
+                }
+              }
+            }
+          },
+          "tokenStandard": {
+            "label": "Smart Contract Token Standard Preference",
+            "fields": {
+              "tokenStandard": {
+                "options": {
+                  "erc3643": "ERC-3643 (Compliance Standard Recommended)",
+                  "erc1400": "ERC-1400 (Security Token)",
+                  "erc20": "ERC-20 (Standard Token)",
+                  "custom": "Custom Contract Standard"
+                }
+              }
+            }
+          },
+          "platformFeatures": {
+            "title": "Platform Feature Requirements",
+            "fields": {
+              "platformFeatures": {
+                "label": "Digital Asset Management Platform Core Features (Multiple Choice)",
+                "required": "Please select required feature modules",
+                "options": {
+                  "user_management": "User Management (Registration/Login/KYC)",
+                  "wallet_management": "Wallet Connection & Management",
+                  "asset_tracking": "On-chain Asset Status Sync",
+                  "token_management": "Token Transfer/Receive Functions",
+                  "dividend_distribution": "Automated Dividend Distribution",
+                  "compliance_module": "Compliance Features (Whitelist Management, etc.)",
+                  "reporting_dashboard": "Data Dashboard & Report Generation",
+                  "document_management": "Asset-related Document Management",
+                  "notification_system": "Notification System",
+                  "otc_trading": "OTC Trading Function (Optional)"
+                }
+              }
+            }
+          },
+          "dataSource": {
+            "title": "Data Integration and Validation Requirements",
+            "fields": {
+              "dataSource": {
+                "label": "Asset Data Sources",
+                "options": {
+                  "manual_input": "Manual Input",
+                  "erp_integration": "ERP System Integration",
+                  "iot_sensors": "IoT Sensor Data",
+                  "third_party_api": "Third-party Data API",
+                  "oracle_service": "Oracle Service"
+                }
+              }
+            }
+          },
+          "updateFrequency": {
+            "label": "Data Update Frequency Requirements",
+            "placeholder": "Please select",
+            "options": {
+              "real_time": "Real-time Updates",
+              "daily": "Daily Updates",
+              "weekly": "Weekly Updates",
+              "monthly": "Monthly Updates",
+              "quarterly": "Quarterly Updates",
+              "event_driven": "Event-driven Updates"
+            }
+          },
+          "needAudit": {
+            "label": "Need Third-party Security Audit",
+            "options": {
+              "yes": "Yes (Recommended)",
+              "no": "Not Required"
+            }
+          }
+        }
+      }
+    },
+    "securityNote": "Information Security Commitment: We commit to strictly protecting all information you provide, using it only for project evaluation and solution design. All materials will be handled according to confidentiality agreement requirements.",
+    "submit": {
+      "button": "Submit Project Application",
+      "description": "After submission, our professional team will contact you within 24 hours for initial project evaluation",
+      "contact": "Service Hotline: 17709224992 | Email: [Service Email]"
     }
   }
 }

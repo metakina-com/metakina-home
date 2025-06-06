@@ -7,9 +7,11 @@ import pImg from '@/assets/images/home/p.png';
 import sImg from '@/assets/images/home/s.png';
 import { Button, Image } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 export default function Consult() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const cooperation = [
     {
@@ -80,6 +82,7 @@ export default function Consult() {
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 4px 20px rgba(217, 0, 255, 0.3)';
             }}
+            onClick={() => navigate('/apply')}
           >
             {t('Consult.button')}
           </Button>

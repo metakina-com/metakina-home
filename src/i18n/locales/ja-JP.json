@@ -22,7 +22,7 @@
     "whyChooseUs": "選ばれる理由",
     "supportedChains": "サポートチェーン",
     "cooperationMode": "協力モード",
-    "joinUs": "登録/申請",
+    "joinUs": "申請する",
     "contactUs": "お問い合わせ"
   },
   "Footer": {
@@ -363,6 +363,728 @@
       "title": "10. お問い合わせ",
       "content": "本規約に関するご質問がございましたら、以下までお問い合わせください：",
       "email": "contact@dappweb.cn"
+    }
+  },
+  "RWAForm": {
+    "logo": "元話RWA",
+    "title": "RWAデジタル化・トークン化プロジェクト資料収集フォーム",
+    "subtitle": "現実世界資産（RWA）のデジタル化・トークン化総合サービス",
+    "processTitle": "サービスフロー：",
+    "processDescription": "第一段階：コンサルティング計画と法的構造設計 → 第二段階：技術開発とトークン化 → 第三段階：トークン発行と上場 → 第四段階：オンチェーン資産管理と継続サービス",
+    "sections": {
+      "basicInfo": {
+        "title": "委託者（甲方）基本情報",
+        "badge": "基本情報",
+        "fields": {
+          "companyName": {
+            "label": "会社正式名称または個人氏名",
+            "placeholder": "営業許可証に記載されている正式な会社名をご記入ください",
+            "required": "会社正式名称または個人氏名をご記入ください"
+          },
+          "legalPerson": {
+            "label": "法定代表者または責任者",
+            "required": "法定代表者または責任者をご記入ください"
+          },
+          "contactPerson": {
+            "label": "プロジェクト担当者",
+            "required": "プロジェクト担当者をご記入ください"
+          },
+          "position": {
+            "label": "担当者役職"
+          },
+          "phone": {
+            "label": "連絡先電話番号",
+            "required": "連絡先電話番号をご記入ください"
+          },
+          "email": {
+            "label": "メールアドレス",
+            "required": "メールアドレスをご記入ください",
+            "invalid": "有効なメールアドレスを入力してください"
+          },
+          "address": {
+            "label": "詳細住所",
+            "required": "詳細住所をご記入ください"
+          },
+          "businessLicense": {
+            "label": "営業許可証統一社会信用コード"
+          },
+          "registeredCapital": {
+            "label": "登録資本金（万円）"
+          }
+        }
+      },
+      "assetInfo": {
+        "title": "RWA資産詳細情報",
+        "badge": "第一段階",
+        "description": "お持ちの現実世界資産情報を詳しくご記入ください。この情報は資産整理、コンプライアンス管理、所有権確認、価値評価などの事前作業に使用されます。",
+        "fields": {
+          "assetType": {
+            "label": "資産タイプ",
+            "required": "資産タイプを選択してください",
+            "placeholder": "資産タイプを選択してください",
+            "options": {
+              "infrastructure": "インフラ（高速道路、橋、トンネル等）",
+              "real_estate_commercial": "商業不動産（オフィスビル、ショッピングモール、ホテル等）",
+              "real_estate_residential": "住宅不動産",
+              "energy_renewable": "再生可能エネルギー（風力発電、太陽光発電等）",
+              "energy_traditional": "従来型エネルギー（電力、ガス等）",
+              "transportation": "交通運輸（港湾、空港、物流センター）",
+              "utility": "公共事業（水道、電力、通信）",
+              "industrial": "産業資産（工場、設備、生産ライン）",
+              "agricultural": "農業資産（土地、農場、林地）",
+              "commodity": "コモディティ（貴金属、原材料等）",
+              "financial": "金融資産（債権、収益権等）",
+              "intellectual": "知的財産権（特許、商標、著作権）",
+              "other": "その他"
+            }
+          },
+          "assetSubtype": {
+            "label": "資産サブタイプ詳細",
+            "placeholder": "例：京秦高速道路某区間、商業複合施設、太陽光発電所等"
+          },
+          "assetDescription": {
+            "label": "資産詳細説明",
+            "required": "資産詳細説明をご記入ください",
+            "placeholder": "資産の地理的位置、建設規模、運営状況、収益モデル、市場地位などの情報を詳しく説明してください"
+          },
+          "assetValue": {
+            "title": "資産価値と財務情報",
+            "fields": {
+              "latestAssessmentValue": {
+                "label": "最新評価額（万円）",
+                "required": "資産評価額をご記入ください"
+              },
+              "assessmentDate": {
+                "label": "評価日"
+              },
+              "assessmentMethod": {
+                "label": "評価方法",
+                "placeholder": "選択してください",
+                "options": {
+                  "cost_approach": "コストアプローチ",
+                  "income_approach": "インカムアプローチ",
+                  "market_approach": "マーケットアプローチ",
+                  "dcf": "DCF法",
+                  "multiple": "複数方法の総合"
+                }
+              },
+              "annualRevenue": {
+                "label": "年間売上高（万円）"
+              },
+              "annualProfit": {
+                "label": "年間純利益（万円）"
+              },
+              "annualReturn": {
+                "label": "年間収益率（%）"
+              },
+              "operationPeriod": {
+                "label": "運営期間",
+                "placeholder": "選択してください",
+                "options": {
+                  "5_years": "5年以内",
+                  "5_10_years": "5-10年",
+                  "10_20_years": "10-20年",
+                  "20_30_years": "20-30年",
+                  "over_30_years": "30年以上",
+                  "permanent": "永久"
+                }
+              }
+            }
+          },
+          "ownershipStatus": {
+            "title": "所有権と法的状況",
+            "fields": {
+              "ownershipStatus": {
+                "label": "所有権状態",
+                "required": "所有権状態を選択してください",
+                "options": {
+                  "full_ownership": "完全所有権",
+                  "partial_ownership": "部分所有権/共有権",
+                  "usage_rights": "使用権/フランチャイズ権",
+                  "pending": "所有権手続き中"
+                }
+              },
+              "ownershipRatio": {
+                "label": "保有比率（%）"
+              },
+              "encumbrance": {
+                "label": "抵当権、質権等の権利制限の有無",
+                "options": {
+                  "no": "権利制限なし",
+                  "yes": "権利制限あり"
+                }
+              },
+              "encumbranceDetails": {
+                "label": "権利制限詳細",
+                "placeholder": "抵当権、質権等がある場合は詳しく説明してください"
+              }
+            }
+          },
+          "assetDocuments": {
+            "title": "既存資産証明書類",
+            "fields": {
+              "assetDocuments": {
+                "label": "保有している資産証明書類",
+                "options": {
+                  "property_deed": "所有権証書/不動産権利証",
+                  "business_license": "営業許可証/経営許可証",
+                  "valuation_report": "資産評価報告書",
+                  "financial_statements": "財務諸表（直近3年）",
+                  "audit_report": "監査報告書",
+                  "legal_opinion": "法律意見書",
+                  "insurance": "保険契約/保険証券",
+                  "environmental": "環境影響評価報告書",
+                  "operation_contract": "運営管理契約",
+                  "revenue_contract": "収益権証明書類"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tokenization": {
+        "title": "トークン化ニーズとプロジェクト目標",
+        "badge": "第一段階",
+        "description": "この部分の情報はトークンエコノミクス（Tokenomics）設計と金融構造設計に使用されます。",
+        "fields": {
+          "projectGoals": {
+            "title": "プロジェクトの核心目標",
+            "fields": {
+              "projectGoals": {
+                "label": "トークン化の主要目標（複数選択可）",
+                "required": "トークン化目標を選択してください",
+                "options": {
+                  "increase_liquidity": "資産流動性の向上",
+                  "expand_funding": "資金調達チャネルの拡大",
+                  "simplify_management": "資産管理の簡素化",
+                  "attract_investors": "より多くの投資家の誘致",
+                  "transparent_operation": "透明な運営の実現",
+                  "fractional_ownership": "分割所有権の実現",
+                  "global_access": "グローバル投資家への対応",
+                  "automatic_dividend": "自動化された収益配分"
+                }
+              }
+            }
+          },
+          "fundingTarget": {
+            "title": "資金調達と投資家ターゲティング",
+            "fields": {
+              "fundingTarget": {
+                "label": "資金調達目標（万円）"
+              }
+            }
+          },
+          "tokenPercent": {
+            "label": "トークン化予定資産比率（%）",
+            "description": "資産のどの程度の割合をトークン化する予定か"
+          },
+          "targetInvestors": {
+            "label": "ターゲット投資家層",
+            "options": {
+              "institutional": "機関投資家",
+              "high_net_worth": "富裕層個人",
+              "retail": "個人投資家",
+              "mixed": "混合投資家"
+            }
+          },
+          "minInvestment": {
+            "label": "最小投資金額（万円）"
+          },
+          "maxInvestors": {
+            "label": "最大投資家数"
+          },
+          "tokenRights": {
+            "title": "トークン権利設計の選好",
+            "fields": {
+              "tokenRights": {
+                "label": "トークン保有者の権利（複数選択可）",
+                "options": {
+                  "revenue_share": "収益配当権",
+                  "voting_rights": "ガバナンス投票権",
+                  "transfer_rights": "譲渡取引権",
+                  "redemption_rights": "償還権",
+                  "information_rights": "情報開示権",
+                  "liquidation_rights": "清算分配権"
+                }
+              }
+            }
+          },
+          "dividendFrequency": {
+            "label": "収益配分頻度",
+            "placeholder": "選択してください",
+            "options": {
+              "monthly": "月次配分",
+              "quarterly": "四半期配分",
+              "semi_annually": "半年配分",
+              "annually": "年次配分",
+              "event_based": "特定イベントベース"
+            }
+          },
+          "dividendRatio": {
+            "label": "配分予定収益比率（%）"
+          }
+        }
+      },
+      "technology": {
+        "title": "技術開発ニーズ",
+        "badge": "第二段階",
+        "description": "契約に基づき、技術ソリューション設計、スマートコントラクト開発、セキュリティ監査調整などの作業を行います。",
+        "fields": {
+          "blockchainPreference": {
+            "title": "ブロックチェーン技術選択",
+            "fields": {
+              "blockchainPreference": {
+                "label": "ブロックチェーンプラットフォームの選好",
+                "options": {
+                  "consortium": "コンソーシアムチェーン（優先推奨）",
+                  "ethereum": "イーサリアムメインネット",
+                  "polygon": "Polygon",
+                  "bsc": "BSCバイナンススマートチェーン",
+                  "custom": "カスタマイズソリューション"
+                }
+              }
+            }
+          },
+          "tokenStandard": {
+            "label": "スマートコントラクトトークン規格の選好",
+            "fields": {
+              "tokenStandard": {
+                "options": {
+                  "erc3643": "ERC-3643（コンプライアンス規格推奨）",
+                  "erc1400": "ERC-1400（セキュリティトークン）",
+                  "erc20": "ERC-20（標準トークン）",
+                  "custom": "カスタマイズ契約規格"
+                }
+              }
+            }
+          },
+          "platformFeatures": {
+            "title": "プラットフォーム機能ニーズ",
+            "fields": {
+              "platformFeatures": {
+                "label": "デジタル資産管理プラットフォームのコア機能（複数選択可）",
+                "required": "必要な機能モジュールを選択してください",
+                "options": {
+                  "user_management": "ユーザー管理（登録/ログイン/KYC）",
+                  "wallet_management": "ウォレット接続と管理",
+                  "asset_tracking": "オンチェーン資産状態同期",
+                  "token_management": "トークン送受信機能",
+                  "dividend_distribution": "自動収益配分",
+                  "compliance_module": "コンプライアンス機能（ホワイトリスト管理等）",
+                  "reporting_dashboard": "データダッシュボードとレポート生成",
+                  "document_management": "資産関連ドキュメント管理",
+                  "notification_system": "通知アラートシステム",
+                  "otc_trading": "OTC取引機能（オプション）"
+                }
+              }
+            }
+          },
+          "dataSource": {
+            "title": "データ統合と検証ニーズ",
+            "fields": {
+              "dataSource": {
+                "label": "資産データソース",
+                "options": {
+                  "manual_input": "手動入力",
+                  "erp_integration": "ERPシステム連携",
+                  "iot_sensors": "IoTセンサーデータ",
+                  "third_party_api": "サードパーティデータAPI",
+                  "oracle_service": "オラクルサービス"
+                }
+              }
+            }
+          },
+          "updateFrequency": {
+            "label": "データ更新頻度要件",
+            "placeholder": "選択してください",
+            "options": {
+              "real_time": "リアルタイム更新",
+              "daily": "日次更新",
+              "weekly": "週次更新",
+              "monthly": "月次更新",
+              "quarterly": "四半期更新",
+              "event_driven": "イベント駆動型更新"
+            }
+          },
+          "needAudit": {
+            "label": "第三者セキュリティ監査の必要性",
+            "options": {
+              "yes": "必要（推奨）",
+              "no": "現時点では不要"
+            }
+          }
+        }
+      },
+      "compliance": {
+        "title": "コンプライアンスと法的要件",
+        "badge": "全段階",
+        "warning": "重要提示：トークン化プロジェクトは関連法規制を厳格に遵守する必要があります。プロジェクトに関わる地域の規制要件を十分に理解していることを確認してください。",
+        "important": "重要提示：トークン化プロジェクトは関連法規制を厳格に遵守する必要があります。プロジェクトに関わる地域の規制要件を十分に理解していることを確認してください。",
+        "fields": {
+          "jurisdictions": {
+            "title": "司法管轄とコンプライアンス要件",
+            "fields": {
+              "jurisdictions": {
+                "label": "プロジェクトに関わる司法管轄区域（複数選択可）",
+                "required": "司法管轄区域を選択してください",
+                "options": {
+                  "china_mainland": "中国本土",
+                  "hongkong": "香港特別行政区",
+                  "singapore": "シンガポール",
+                  "usa": "アメリカ",
+                  "eu": "EU",
+                  "japan": "日本",
+                  "south_korea": "韓国",
+                  "other": "その他の地域"
+                }
+              }
+            }
+          },
+          "legalStructure": {
+            "label": "採用予定の法的構造",
+            "fields": {
+              "legalStructure": {
+                "options": {
+                  "spv": "SPV（特別目的事業体）",
+                  "trust": "信託構造",
+                  "fund": "ファンド構造",
+                  "company": "会社直接発行",
+                  "uncertain": "専門的アドバイスが必要"
+                }
+              }
+            }
+          },
+          "complianceExperience": {
+            "title": "既存の法的およびコンプライアンス準備",
+            "fields": {
+              "complianceExperience": {
+                "label": "コンプライアンス経験レベル",
+                "options": {
+                  "expert": "豊富なデジタル資産コンプライアンス経験",
+                  "some": "従来の金融コンプライアンス経験あり",
+                  "limited": "コンプライアンス経験は限定的",
+                  "none": "関連コンプライアンス経験なし"
+                }
+              }
+            }
+          },
+          "legalSupport": {
+            "label": "既存の法的サポート状況",
+            "fields": {
+              "legalSupport": {
+                "options": {
+                  "have_lawyers": "専門弁護士チームあり",
+                  "partial_support": "部分的な法的サポート",
+                  "need_lawyers": "法的サポートが必要",
+                  "unsure": "不確定"
+                }
+              }
+            }
+          },
+          "existingLicenses": {
+            "label": "取得済みの関連許可証またはライセンス",
+            "placeholder": "例：金融サービスライセンス、デジタル資産取引許可等"
+          },
+          "riskAcknowledgment": {
+            "title": "リスク評価と声明",
+            "fields": {
+              "riskAcknowledgment": {
+                "label": "リスク認識と負担能力",
+                "required": true,
+                "options": {
+                  "policy_risk": "政策リスクを十分に理解している",
+                  "market_risk": "市場リスクを十分に理解している",
+                  "technical_risk": "技術リスクを十分に理解している",
+                  "compliance_risk": "コンプライアンスリスクを十分に理解している",
+                  "responsibility": "プロジェクトリスクを独立して負担することを約束する"
+                }
+              }
+            }
+          }
+        }
+      },
+      "budget": {
+        "title": "予算とスケジュール",
+        "note": "参考価格：契約に基づき、完全な4段階サービスの総費用は105万元人民元（第三者費用を含まない）。実際の費用は具体的なニーズに応じて調整されます。",
+        "fields": {
+          "totalBudget": {
+            "title": "予算計画",
+            "fields": {
+              "totalBudget": {
+                "label": "プロジェクト総予算範囲（万円）",
+                "placeholder": "予算範囲を選択してください",
+                "options": {
+                  "50_100": "50-100万",
+                  "100_150": "100-150万（標準構成）",
+                  "150_200": "150-200万",
+                  "200_300": "200-300万",
+                  "over_300": "300万以上",
+                  "flexible": "予算は柔軟、ニーズに応じて決定"
+                }
+              }
+            }
+          },
+          "thirdPartyBudget": {
+            "label": "第三者費用予算（万円）",
+            "description": "取引所上場費、監査費、法務費用等を含む"
+          },
+          "paymentPreference": {
+            "label": "支払い方法の選好",
+            "fields": {
+              "paymentPreference": {
+                "options": {
+                  "milestone": "マイルストーン分割払い（推奨）",
+                  "stage": "サービス段階別支払い",
+                  "monthly": "月払い",
+                  "custom": "カスタム支払い方法"
+                }
+              }
+            }
+          },
+          "projectTimeline": {
+            "title": "スケジュール",
+            "fields": {
+              "projectTimeline": {
+                "label": "プロジェクト完了希望時期",
+                "placeholder": "期間を選択してください",
+                "options": {
+                  "3_months": "3ヶ月以内",
+                  "4_months": "4ヶ月（標準期間）",
+                  "6_months": "6ヶ月以内",
+                  "12_months": "12ヶ月以内",
+                  "flexible": "時間は柔軟"
+                }
+              }
+            }
+          },
+          "urgency": {
+            "label": "プロジェクト緊急度",
+            "options": {
+              "normal": "通常進行",
+              "urgent": "やや緊急",
+              "very_urgent": "非常に緊急"
+            }
+          },
+          "preferredStartDate": {
+            "label": "希望開始日"
+          },
+          "targetLaunchDate": {
+            "label": "目標発行日"
+          }
+        }
+      },
+      "additional": {
+        "title": "補足情報と特別要求",
+        "fields": {
+          "specialRequirements": {
+            "label": "特別要求またはカスタマイズ要件",
+            "placeholder": "特殊な技術要求、コンプライアンス要件、スケジュール、その他のカスタマイズニーズを説明してください"
+          },
+          "concernsQuestions": {
+            "label": "主な関心事または疑問",
+            "placeholder": "プロジェクト実施過程で最も関心のある問題や重点的に注目してほしい点を説明してください"
+          },
+          "hearAboutUs": {
+            "label": "どのように当社のサービスを知りましたか？",
+            "placeholder": "選択してください",
+            "options": {
+              "referral": "友人/パートナーの紹介",
+              "search_engine": "検索エンジン",
+              "social_media": "ソーシャルメディア",
+              "industry_event": "業界会議/イベント",
+              "media_report": "メディア報道",
+              "business_partner": "ビジネスパートナーの紹介",
+              "other": "その他"
+            }
+          },
+          "existingProjects": {
+            "label": "他のRWAプロジェクト経験の有無",
+            "fields": {
+              "existingProjects": {
+                "options": {
+                  "yes": "関連経験あり",
+                  "no": "初めてのプロジェクト"
+                }
+              }
+            }
+          },
+          "additionalInfo": {
+            "label": "その他の補足情報",
+            "placeholder": "その他、私たちに知ってもらいたい情報"
+          }
+        }
+      },
+      "ongoingService": {
+        "title": "オンチェーン資産管理と継続サービスニーズ",
+        "badge": "第四段階",
+        "description": "第四段階サービスはトークン化資産の長期価値維持と投資家関係管理を保証します。",
+        "fields": {
+          "onchainServices": {
+            "title": "オンチェーン資産管理ニーズ",
+            "fields": {
+              "onchainServices": {
+                "label": "オンチェーン資産管理サービスニーズ（複数選択可）",
+                "options": {
+                  "asset_monitoring": "オンチェーン資産データモニタリング",
+                  "automated_distribution": "自動収益配分実行",
+                  "compliance_monitoring": "継続的コンプライアンス監視",
+                  "platform_maintenance": "技術プラットフォームメンテナンス",
+                  "security_updates": "セキュリティアップデートと技術サポート",
+                  "investor_relations": "投資家関係管理",
+                  "community_management": "コミュニティ管理サポート",
+                  "reporting_services": "定期レポート生成"
+                }
+              }
+            }
+          },
+          "serviceLevel": {
+            "label": "サービスレベル要求",
+            "placeholder": "サービスレベルを選択してください",
+            "options": {
+              "basic": "基本サービス（月次レポート）",
+              "standard": "標準サービス（週次モニタリング）",
+              "premium": "プレミアムサービス（リアルタイム監視）",
+              "enterprise": "エンタープライズサービス（7x24サポート）"
+            }
+          },
+          "serviceDuration": {
+            "label": "予定サービス期間",
+            "placeholder": "選択してください",
+            "options": {
+              "1_year": "1年",
+              "2_years": "2年",
+              "3_years": "3年",
+              "5_years": "5年",
+              "long_term": "長期協力"
+            }
+          }
+        }
+      },
+      "tokenMarket": {
+        "title": "トークン発行と市場連携ニーズ",
+        "badge": "第三段階",
+        "description": "契約に基づき、プライマリーマーケット発行、セカンダリーマーケット上場、マーケティングなどの作業をサポートします。注意：上場決定権と費用は取引所によって決定されます。",
+        "fields": {
+          "primaryMarket": {
+            "title": "プライマリーマーケット発行戦略",
+            "fields": {
+              "primaryMarket": {
+                "label": "プライマリーマーケット発行方式の選好",
+                "options": {
+                  "sto": "STO（セキュリティトークンオファリング）",
+                  "private_sale": "プライベートセール",
+                  "ieo": "IEO（取引所初回発行）",
+                  "ido": "IDO（分散型初回発行）",
+                  "mixed": "混合発行モデル"
+                }
+              }
+            }
+          },
+          "launchpadPreference": {
+            "label": "Launchpadプラットフォームの選好",
+            "placeholder": "プラットフォームタイプを選択してください",
+            "options": {
+              "tier1": "一線プラットフォーム（Binance Launchpad等）",
+              "tier2": "二線有名プラットフォーム",
+              "specialized": "専門RWAプラットフォーム",
+              "decentralized": "分散型発行プラットフォーム",
+              "multiple": "複数プラットフォーム同時発行",
+              "no_preference": "特別な選好なし"
+            }
+          },
+          "issuePrice": {
+            "label": "予定発行価格（USDT）"
+          },
+          "kycRequirement": {
+            "label": "KYC/AMLコンプライアンス要件",
+            "fields": {
+              "kycRequirement": {
+                "options": {
+                  "strict": "厳格KYC（機関レベル）",
+                  "standard": "標準KYC",
+                  "basic": "基本KYC"
+                }
+              }
+            }
+          },
+          "exchangePreference": {
+            "title": "セカンダリーマーケット取引所連携",
+            "fields": {
+              "exchangePreference": {
+                "label": "ターゲット取引所タイプ（複数選択可）",
+                "options": {
+                  "cex_tier1": "一線中央集権型取引所",
+                  "cex_tier2": "二線中央集権型取引所",
+                  "dex_uniswap": "Uniswap型DEX",
+                  "dex_curve": "Curve型ステーブルコインDEX",
+                  "specialized_rwa": "専門RWA取引プラットフォーム",
+                  "regional_exchange": "地域性取引所"
+                }
+              }
+            }
+          },
+          "liquidityStrategy": {
+            "label": "流動性戦略の選好",
+            "fields": {
+              "liquidityStrategy": {
+                "options": {
+                  "market_maker": "専門マーケットメーカーサービス",
+                  "liquidity_pool": "DEX流動性プール",
+                  "incentive_program": "流動性インセンティブプログラム",
+                  "treasury_management": "トレジャリー管理戦略"
+                }
+              }
+            }
+          },
+          "marketingSupport": {
+            "title": "マーケティングニーズ",
+            "fields": {
+              "marketingSupport": {
+                "label": "マーケティングとPRサポートニーズ（複数選択可）",
+                "options": {
+                  "whitepaper": "ホワイトペーパー作成最適化",
+                  "tokenomics_design": "Tokenomicsビジュアルデザイン",
+                  "community_building": "コミュニティ構築管理",
+                  "pr_services": "PR広報サービス",
+                  "ama_events": "AMAイベント企画",
+                  "roadshow": "投資家ロードショー",
+                  "media_coverage": "メディア報道プロモーション",
+                  "influencer_marketing": "KOL協力プロモーション"
+                }
+              }
+            }
+          },
+          "marketingBudget": {
+            "label": "マーケティング予算（万円）",
+            "placeholder": "予算範囲を選択してください",
+            "options": {
+              "under_50": "50万以下",
+              "50_100": "50-100万",
+              "100_200": "100-200万",
+              "200_500": "200-500万",
+              "over_500": "500万以上",
+              "flexible": "予算は柔軟"
+            },
+            "description": "広告投入、KOL宣伝、コミュニティ活動等の実行費用に使用"
+          },
+          "marketingTimeline": {
+            "label": "プロモーション期間",
+            "placeholder": "選択してください",
+            "options": {
+              "pre_launch": "発行前プレヒート（1-2ヶ月）",
+              "launch_period": "発行期間（1ヶ月）",
+              "post_launch": "発行後メンテナンス（3-6ヶ月）",
+              "long_term": "長期プロモーション（1年以上）"
+            }
+          }
+        }
+      }
+    },
+    "securityNote": "情報セキュリティ承諾：お客様から提供されたすべての情報を厳格に保護し、プロジェクト評価とソリューション設計のみに使用することを約束します。すべての資料は機密保持契約の要求に従って処理されます。",
+    "submit": {
+      "button": "プロジェクト申請を提出",
+      "description": "提出後、専門チームが24時間以内にご連絡し、プロジェクトの初期評価を行います",
+      "contact": "サービスホットライン：17709224992 | メール：[サービスメール]"
     }
   }
 }
