@@ -1,0 +1,6 @@
+# API 代理 - 使用硬编码的后端 URL
+ /api/* https://rwaform.dappweb.cn/:splat 200 
+ # 如果有其他 API 版本 
+ /api/v1/* https://rwaform.dappweb.cn/v1/:splat 200
+  # SPA 路由回退 
+  /* /index.html 200
