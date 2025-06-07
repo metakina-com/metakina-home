@@ -88,13 +88,13 @@ export default defineConfig(({ mode }) => {
     server: {
       host: true,
       open: true,
-      // proxy: {
-      //   '/api': {
-      //     target: 'http://47.84.60.166:8083',
-      //     changeOrigin: true,
+      proxy: {
+        '/api': {
+          target: 'http://47.84.60.166:8083',
+          changeOrigin: true,
 
-      //   },
-      // },
+        },
+      },
     },
     esbuild: {
       drop: ['console', 'debugger'],
