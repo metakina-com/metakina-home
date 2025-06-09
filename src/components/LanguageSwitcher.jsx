@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
           },
           {
             value: 'ja-JP',
-            label: 'にほんご',
+            label: '日本語',
           },
         ]}
       />
