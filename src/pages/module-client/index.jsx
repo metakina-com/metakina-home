@@ -1,8 +1,8 @@
 'use client';
 
 import { updateFormApi } from '@/apis/api-user.js';
-import { Button, Checkbox, DatePicker, Form, Input, Radio, Select } from 'antd';
-// import { useState } from 'react';
+import { Button, Checkbox, DatePicker, Form, Input, message, Radio, Select } from 'antd';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,11 +12,14 @@ export default function RWAApplicationForm() {
   const { t } = useTranslation();
   const [form] = Form.useForm();
   const navigate = useNavigate();
+  const [submitLoad, setSubmitLoad] = useState(false);
 
   const handleSubmit = async (values) => {
     // console.log('Form values:', values);
 
     // const formData = new FormData()
+    setSubmitLoad(true);
+
     for (const key in values) {
       if (Array.isArray(values[key])) {
         values[key] = values[key].join(';');
@@ -26,9 +29,14 @@ export default function RWAApplicationForm() {
 
     const res = await updateFormApi(values);
 
-    if (res.code === 200) {
+    setSubmitLoad(false);
+
+    if (res.msg === 'success') {
+      message.success(t('RWAForm.submit.message.success'));
       form.resetFields();
       navigate('/home');
+    } else {
+      message.success(t('RWAForm.submit.message.error'));
     }
     // TODO: Handle form submission
   };
@@ -924,6 +932,7 @@ export default function RWAApplicationForm() {
             <Button
               type="primary"
               htmlType="submit"
+              loading={submitLoad}
               className="h-auto rounded-full bg-white px-10 py-4 text-xl text-[#1e3c72] font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
             >
               {t('RWAForm.submit.button')}
