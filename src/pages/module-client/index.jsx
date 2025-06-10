@@ -1,7 +1,8 @@
 'use client';
 
 import { updateFormApi } from '@/apis/api-user.js';
-import { Button, Checkbox, DatePicker, Form, Input, message, Radio, Select } from 'antd';
+import titlebgImg from '@/assets/images/client/titlebg.png';
+import { Button, Checkbox, DatePicker, Form, Input, message, Progress, Radio, Select } from 'antd';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -13,11 +14,17 @@ export default function RWAApplicationForm() {
   const [form] = Form.useForm();
   const navigate = useNavigate();
   const [submitLoad, setSubmitLoad] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [percent, setPercent] = useState(0);
 
   const handleSubmit = async (values) => {
     // console.log('Form values:', values);
 
     // const formData = new FormData()
+    if (currentStep !== 8) {
+      return message.info(t('stepValidation.info'));
+    }
+
     setSubmitLoad(true);
 
     for (const key in values) {
@@ -41,122 +48,167 @@ export default function RWAApplicationForm() {
     // TODO: Handle form submission
   };
 
-  return (
-    <div className="min-h-screen py-20">
-      <div className="mx-auto max-w-[1200px] overflow-hidden rounded-[20px] shadow-lg">
-        {/* Header */}
-        <div className="relative p-10 text-center text-white">
-          {/* <div className="absolute right-5 top-2.5 text-xs opacity-70">{t('RWAForm.logo')}</div> */}
-          <h1 className="mb-2.5 text-4xl font-bold">{t('RWAForm.title')}</h1>
-          <p className="text-lg opacity-90">{t('RWAForm.subtitle')}</p>
-          <div className="mt-5 rounded-lg bg-white/10 p-4 text-sm">
-            <strong>{t('RWAForm.processTitle')}</strong>
-            {t('RWAForm.processDescription')}
-          </div>
-        </div>
+  const validateCurrentStep = async () => {
+    try {
+      let fieldsToValidate = [];
 
-        <Form
-          form={form}
-          onFinish={handleSubmit}
-          layout="vertical"
-          className="p-10 space-y-8"
-          scrollToFirstError
-        >
-          {/* 委托方基本信息 */}
-          <div className="border-2 border-[#f0f0f0] rounded-[15px] p-8 transition-all hover:border-[#667eea] hover:shadow-md">
-            <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
-              📋
-              {' '}
+      if (currentStep === 0) {
+        // 委托方基本信息必填字段
+        fieldsToValidate = [
+          'companyName',
+          'legalPerson',
+          'contactPerson',
+          'contactPhone',
+          'contactEmail',
+          'companyAddress',
+        ];
+      } else if (currentStep === 1) {
+        // RWA资产详细信息必填字段
+        fieldsToValidate = [
+          'assetType',
+          'assetDescription',
+          'assetValue',
+          'ownershipStatus',
+        ];
+      } else if (currentStep === 2) {
+        // 代币化需求与目标
+        fieldsToValidate = [
+          'projectGoals',
+        ];
+      } else if (currentStep === 3) {
+        // 技术开发需求
+        fieldsToValidate = [
+          'platformFeatures',
+        ];
+      } else if (currentStep === 5) {
+        // 合规与法律要求
+        fieldsToValidate = ['jurisdictions', 'riskAcknowledgments'];
+      } else {
+        fieldsToValidate = [];
+      }
+
+      await form.validateFields(fieldsToValidate);
+
+      return true;
+    } catch (error) {
+      console.error('表单验证失败:', error);
+
+      // 如果有错误字段，滚动到第一个错误字段
+      if (error.errorFields && error.errorFields.length > 0) {
+        form.scrollToField(error.errorFields[0].name, { behavior: 'smooth', block: 'center' });
+      }
+
+      return false;
+    }
+  };
+
+  const nextStep = async () => {
+    const isValid = await validateCurrentStep();
+
+    if (isValid) {
+      setCurrentStep(currentStep + 1);
+      setPercent(100 / 9 * (currentStep + 1));
+      window.scrollTo(0, 0);
+    } else {
+      message.error(t('stepValidation.error'));
+    }
+  };
+
+  const prevStep = () => {
+    setCurrentStep(currentStep - 1);
+    window.scrollTo(0, 0);
+  };
+
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case 0:
+        // 委托方基本信息
+        return (
+          <>
+            <h2 className="mb-5 flex items-center gap-2.5 pb-2 text-2xl text-[#000000] font-semibold">
               {t('RWAForm.sections.basicInfo.title')}
-              <span className="rounded-full bg-[#667eea] px-2 py-1 text-xs text-white font-normal">
-                {t('RWAForm.sections.basicInfo.badge')}
-              </span>
             </h2>
-            <div className="rounded-lg bg-white p-4">
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-                <Form.Item
-                  label={t('RWAForm.sections.basicInfo.fields.companyName.label')}
-                  name="companyName"
-                  rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.companyName.required') }]}
-                >
-                  <Input placeholder={t('RWAForm.sections.basicInfo.fields.companyName.placeholder')} />
-                </Form.Item>
-
-                <Form.Item
-                  label={t('RWAForm.sections.basicInfo.fields.legalPerson.label')}
-                  name="legalPerson"
-                  rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.legalPerson.required') }]}
-                >
-                  <Input />
-                </Form.Item>
-
-                <Form.Item
-                  label={t('RWAForm.sections.basicInfo.fields.contactPerson.label')}
-                  name="contactPerson"
-                  rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.contactPerson.required') }]}
-                >
-                  <Input />
-                </Form.Item>
-
-                <Form.Item label={t('RWAForm.sections.basicInfo.fields.position.label')} name="contactPosition">
-                  <Input />
-                </Form.Item>
-
-                <Form.Item
-                  label={t('RWAForm.sections.basicInfo.fields.phone.label')}
-                  name="contactPhone"
-                  rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.phone.required') }]}
-                >
-                  <Input />
-                </Form.Item>
-
-                <Form.Item
-                  label={t('RWAForm.sections.basicInfo.fields.email.label')}
-                  name="contactEmail"
-                  rules={[
-                    { required: true, message: t('RWAForm.sections.basicInfo.fields.email.required') },
-                    { type: 'email', message: t('RWAForm.sections.basicInfo.fields.email.invalid') },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-              </div>
+            <div className="grid grid-cols-1 gap-5 border-t border-[#130F30] pt-4 md:grid-cols-2">
+              <Form.Item
+                label={t('RWAForm.sections.basicInfo.fields.companyName.label')}
+                name="companyName"
+                rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.companyName.required') }]}
+              >
+                <Input placeholder={t('RWAForm.sections.basicInfo.fields.companyName.placeholder')} />
+              </Form.Item>
 
               <Form.Item
-                label={t('RWAForm.sections.basicInfo.fields.address.label')}
-                name="companyAddress"
-                rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.address.required') }]}
+                label={t('RWAForm.sections.basicInfo.fields.legalPerson.label')}
+                name="legalPerson"
+                rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.legalPerson.required') }]}
               >
                 <Input />
               </Form.Item>
 
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-                <Form.Item label={t('RWAForm.sections.basicInfo.fields.businessLicense.label')} name="businessLicenseCode">
-                  <Input />
-                </Form.Item>
+              <Form.Item
+                label={t('RWAForm.sections.basicInfo.fields.contactPerson.label')}
+                name="contactPerson"
+                rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.contactPerson.required') }]}
+              >
+                <Input />
+              </Form.Item>
 
-                <Form.Item label={t('RWAForm.sections.basicInfo.fields.registeredCapital.label')} name="registeredCapital">
-                  <Input type="number" />
-                </Form.Item>
-              </div>
+              <Form.Item label={t('RWAForm.sections.basicInfo.fields.position.label')} name="contactPosition">
+                <Input />
+              </Form.Item>
+
+              <Form.Item
+                label={t('RWAForm.sections.basicInfo.fields.phone.label')}
+                name="contactPhone"
+                rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.phone.required') }]}
+              >
+                <Input />
+              </Form.Item>
+
+              <Form.Item
+                label={t('RWAForm.sections.basicInfo.fields.email.label')}
+                name="contactEmail"
+                rules={[
+                  { required: true, message: t('RWAForm.sections.basicInfo.fields.email.required') },
+                  { type: 'email', message: t('RWAForm.sections.basicInfo.fields.email.invalid') },
+                ]}
+              >
+                <Input />
+              </Form.Item>
             </div>
-          </div>
 
-          {/* RWA资产详细信息 */}
-          <div className="border-2 border-[#f0f0f0] rounded-[15px] p-8 transition-all hover:border-[#667eea] hover:shadow-md">
-            <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
-              🏢
-              {' '}
+            <Form.Item
+              label={t('RWAForm.sections.basicInfo.fields.address.label')}
+              name="companyAddress"
+              rules={[{ required: true, message: t('RWAForm.sections.basicInfo.fields.address.required') }]}
+            >
+              <Input />
+            </Form.Item>
+
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              <Form.Item label={t('RWAForm.sections.basicInfo.fields.businessLicense.label')} name="businessLicenseCode">
+                <Input />
+              </Form.Item>
+
+              <Form.Item label={t('RWAForm.sections.basicInfo.fields.registeredCapital.label')} name="registeredCapital">
+                <Input type="number" />
+              </Form.Item>
+            </div>
+          </>
+        );
+
+      case 1:
+        // RWA资产详细信息
+        return (
+          <>
+            <h2 className="text-block mb-5 flex items-center gap-2.5 pb-2.5 text-2xl font-semibold">
               {t('RWAForm.sections.assetInfo.title')}
-              <span className="rounded-full bg-[#667eea] px-2 py-1 text-xs text-white font-normal">
-                {t('RWAForm.sections.assetInfo.badge')}
-              </span>
             </h2>
+            <div className="border-t border-[#130F30]"></div>
 
-            <div className="mb-8 rounded-lg bg-blue-50 p-4 text-blue-800">
+            <div className="mt-4 rounded-lg bg-blue-50 p-4 text-blue-800">
               <strong>{t('RWAForm.sections.assetInfo.description')}</strong>
             </div>
-
             <div className="mb-8 rounded-lg bg-white p-4">
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <Form.Item
@@ -197,6 +249,7 @@ export default function RWAApplicationForm() {
                 />
               </Form.Item>
             </div>
+
             {/* 资产价值与财务信息 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
               <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.assetInfo.fields.assetValue.title')}</h3>
@@ -306,26 +359,25 @@ export default function RWAApplicationForm() {
                 </Checkbox.Group>
               </Form.Item>
             </div>
-          </div>
+          </>
+        );
 
-          {/* 代币化需求与目标 */}
-          <div className="border-2 border-[#f0f0f0] rounded-[15px] p-8 transition-all hover:border-[#667eea] hover:shadow-md">
-            <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
-              🎯
-              {' '}
+      case 2:
+      // 代币化需求与目标
+        return (
+          <>
+            <h2 className="mb-5 flex items-center gap-2.5 pb-2.5 text-2xl text-black font-semibold">
               {t('RWAForm.sections.tokenization.title')}
-              <span className="rounded-full bg-[#667eea] px-2 py-1 text-xs text-white font-normal">
-                {t('RWAForm.sections.tokenization.badge')}
-              </span>
             </h2>
+            <div className="border-t border-[#130F30]"></div>
 
-            <div className="mb-8 rounded-lg bg-blue-50 p-4 text-blue-800">
+            <div className="mt-4 rounded-lg bg-blue-50 p-4 text-blue-800">
               <strong>{t('RWAForm.sections.tokenization.description')}</strong>
             </div>
 
             {/* 项目核心目标 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.tokenization.fields.projectGoals.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.tokenization.fields.projectGoals.title')}</h3>
               <Form.Item
                 label={t('RWAForm.sections.tokenization.fields.projectGoals.fields.projectGoals.label')}
                 name="projectGoals"
@@ -346,7 +398,7 @@ export default function RWAApplicationForm() {
 
             {/* 融资与投资者定位 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.tokenization.fields.fundingTarget.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.tokenization.fields.fundingTarget.title')}</h3>
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <Form.Item label={t('RWAForm.sections.tokenization.fields.fundingTarget.fields.fundingTarget.label')} name="fundingTarget">
                   <Input type="number" />
@@ -381,7 +433,7 @@ export default function RWAApplicationForm() {
 
             {/* 代币权益设计偏好 */}
             <div className="rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.tokenization.fields.tokenRights.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.tokenization.fields.tokenRights.title')}</h3>
               <Form.Item label={t('RWAForm.sections.tokenization.fields.tokenRights.fields.tokenRights.label')} name="tokenRights">
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Checkbox value={t('RWAForm.sections.tokenization.fields.tokenRights.fields.tokenRights.options.revenue_share')}>{t('RWAForm.sections.tokenization.fields.tokenRights.fields.tokenRights.options.revenue_share')}</Checkbox>
@@ -409,26 +461,25 @@ export default function RWAApplicationForm() {
                 </Form.Item>
               </div>
             </div>
-          </div>
+          </>
+        );
 
-          {/* 技术开发需求 */}
-          <div className="border-2 border-[#f0f0f0] rounded-[15px] p-8 transition-all hover:border-[#667eea] hover:shadow-md">
-            <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
-              ⚙️
-              {' '}
+      case 3:
+        // 技术开发需求
+        return (
+          <>
+            <h2 className="mb-5 flex items-center gap-2.5 pb-2.5 text-2xl text-black font-semibold">
               {t('RWAForm.sections.technology.title')}
-              <span className="rounded-full bg-[#667eea] px-2 py-1 text-xs text-white font-normal">
-                {t('RWAForm.sections.technology.badge')}
-              </span>
             </h2>
+            <div className="border-t border-[#130F30]"></div>
 
-            <div className="mb-8 rounded-lg bg-blue-50 p-4 text-blue-800">
+            <div className="mt-4 rounded-lg bg-blue-50 p-4 text-blue-800">
               <strong>{t('RWAForm.sections.technology.description')}</strong>
             </div>
 
             {/* 区块链技术选择 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.technology.fields.blockchainPreference.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.technology.fields.blockchainPreference.title')}</h3>
               <Form.Item label={t('RWAForm.sections.technology.fields.blockchainPreference.fields.blockchainPreference.label')} name="blockchainPreference">
                 <Radio.Group>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -455,7 +506,7 @@ export default function RWAApplicationForm() {
 
             {/* 平台功能需求 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.technology.fields.platformFeatures.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.technology.fields.platformFeatures.title')}</h3>
               <Form.Item
                 label={t('RWAForm.sections.technology.fields.platformFeatures.fields.platformFeatures.label')}
                 name="platformFeatures"
@@ -478,7 +529,7 @@ export default function RWAApplicationForm() {
 
             {/* 数据集成与验证需求 */}
             <div className="rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.technology.fields.dataSource.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.technology.fields.dataSource.title')}</h3>
               <Form.Item label={t('RWAForm.sections.technology.fields.dataSource.fields.dataSource.label')} name="dataSources">
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Checkbox value={t('RWAForm.sections.technology.fields.dataSource.fields.dataSource.options.manual_input')}>{t('RWAForm.sections.technology.fields.dataSource.fields.dataSource.options.manual_input')}</Checkbox>
@@ -509,26 +560,25 @@ export default function RWAApplicationForm() {
                 </Form.Item>
               </div>
             </div>
-          </div>
+          </>
+        );
 
-          {/* 代币发行与市场对接需求 */}
-          <div className="border-2 border-[#f0f0f0] rounded-[15px] p-8 transition-all hover:border-[#667eea] hover:shadow-md">
-            <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
-              📈
-              {' '}
+      case 4:
+        // 代币发行与市场对接需求
+        return (
+          <>
+            <h2 className="mb-5 flex items-center gap-2.5 pb-2.5 text-2xl text-black font-semibold">
               {t('RWAForm.sections.tokenMarket.title')}
-              <span className="rounded-full bg-[#667eea] px-2 py-1 text-xs text-white font-normal">
-                {t('RWAForm.sections.tokenMarket.badge')}
-              </span>
             </h2>
+            <div className="border-t border-[#130F30]"></div>
 
-            <div className="mb-8 rounded-lg bg-blue-50 p-4 text-blue-800">
+            <div className="mt-4 rounded-lg bg-blue-50 p-4 text-blue-800">
               <strong>{t('RWAForm.sections.tokenMarket.description')}</strong>
             </div>
 
             {/* 一级市场发行策略 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.tokenMarket.fields.primaryMarket.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.tokenMarket.fields.primaryMarket.title')}</h3>
               <Form.Item label={t('RWAForm.sections.tokenMarket.fields.primaryMarket.fields.primaryMarket.label')} name="primaryMarketId">
                 <Radio.Group>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -571,7 +621,7 @@ export default function RWAApplicationForm() {
 
             {/* 二级市场交易所对接 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.tokenMarket.fields.exchangePreference.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.tokenMarket.fields.exchangePreference.title')}</h3>
               <Form.Item label={t('RWAForm.sections.tokenMarket.fields.exchangePreference.fields.exchangePreference.label')} name="exchangePreferences">
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Checkbox value={t('RWAForm.sections.tokenMarket.fields.exchangePreference.fields.exchangePreference.options.cex_tier1')}>{t('RWAForm.sections.tokenMarket.fields.exchangePreference.fields.exchangePreference.options.cex_tier1')}</Checkbox>
@@ -595,7 +645,7 @@ export default function RWAApplicationForm() {
 
             {/* 市场推广需求 */}
             <div className="rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.tokenMarket.fields.marketingSupport.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.tokenMarket.fields.marketingSupport.title')}</h3>
               <Form.Item label={t('RWAForm.sections.tokenMarket.fields.marketingSupport.fields.marketingSupport.label')} name="marketingSupport">
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Checkbox value={t('RWAForm.sections.tokenMarket.fields.marketingSupport.fields.marketingSupport.options.whitepaper')}>{t('RWAForm.sections.tokenMarket.fields.marketingSupport.fields.marketingSupport.options.whitepaper')}</Checkbox>
@@ -631,26 +681,25 @@ export default function RWAApplicationForm() {
                 </Form.Item>
               </div>
             </div>
-          </div>
+          </>
+        );
 
-          {/* 合规与法律要求 */}
-          <div className="border-2 border-[#f0f0f0] rounded-[15px] p-8 transition-all hover:border-[#667eea] hover:shadow-md">
-            <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
-              ⚖️
-              {' '}
+      case 5:
+        // 合规与法律要求
+        return (
+          <>
+            <h2 className="mb-5 flex items-center gap-2.5 pb-2.5 text-2xl text-black font-semibold">
               {t('RWAForm.sections.compliance.title')}
-              <span className="rounded-full bg-[#667eea] px-2 py-1 text-xs text-white font-normal">
-                {t('RWAForm.sections.compliance.badge')}
-              </span>
             </h2>
+            <div className="border-t border-[#130F30]"></div>
 
-            <div className="mb-8 rounded-lg bg-red-50 p-4 text-red-800">
+            <div className="mt-4 rounded-lg bg-red-50 p-4 text-red-800">
               <strong>{t('RWAForm.sections.compliance.important')}</strong>
             </div>
 
             {/* 司法管辖与合规要求 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.compliance.fields.jurisdictions.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.compliance.fields.jurisdictions.title')}</h3>
               <Form.Item
                 label={t('RWAForm.sections.compliance.fields.jurisdictions.fields.jurisdictions.label')}
                 name="jurisdictions"
@@ -683,7 +732,7 @@ export default function RWAApplicationForm() {
 
             {/* 现有法律与合规准备 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.compliance.fields.complianceExperience.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.compliance.fields.complianceExperience.title')}</h3>
               <Form.Item label={t('RWAForm.sections.compliance.fields.complianceExperience.fields.complianceExperience.label')} name="complianceExperience">
                 <Radio.Group>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -716,7 +765,7 @@ export default function RWAApplicationForm() {
 
             {/* 风险评估与声明 */}
             <div className="rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.compliance.fields.riskAcknowledgment.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.compliance.fields.riskAcknowledgment.title')}</h3>
               <Form.Item
                 label={t('RWAForm.sections.compliance.fields.riskAcknowledgment.fields.riskAcknowledgment.label')}
                 name="riskAcknowledgments"
@@ -731,26 +780,25 @@ export default function RWAApplicationForm() {
                 </Checkbox.Group>
               </Form.Item>
             </div>
-          </div>
+          </>
+        );
 
-          {/* 链上资产管理与持续服务需求 */}
-          <div className="border-2 border-[#f0f0f0] rounded-[15px] p-8 transition-all hover:border-[#667eea] hover:shadow-md">
-            <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
-              🔄
-              {' '}
+      case 6:
+        // 链上资产管理与持续服务需求
+        return (
+          <>
+            <h2 className="mb-5 flex items-center gap-2.5 pb-2.5 text-2xl text-black font-semibold">
               {t('RWAForm.sections.ongoingService.title')}
-              <span className="rounded-full bg-[#667eea] px-2 py-1 text-xs text-white font-normal">
-                {t('RWAForm.sections.ongoingService.badge')}
-              </span>
             </h2>
+            <div className="border-t border-[#130F30]"></div>
 
-            <div className="mb-8 rounded-lg bg-blue-50 p-4 text-blue-800">
+            <div className="mt-4 rounded-lg bg-blue-50 p-4 text-blue-800">
               <strong>{t('RWAForm.sections.ongoingService.description')}</strong>
             </div>
 
             {/* 链上资产管理需求 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.ongoingService.fields.onchainServices.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.ongoingService.fields.onchainServices.title')}</h3>
               <Form.Item label={t('RWAForm.sections.ongoingService.fields.onchainServices.fields.onchainServices.label')} name="onchainServices">
                 <Checkbox.Group className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Checkbox value={t('RWAForm.sections.ongoingService.fields.onchainServices.fields.onchainServices.options.asset_monitoring')}>{t('RWAForm.sections.ongoingService.fields.onchainServices.fields.onchainServices.options.asset_monitoring')}</Checkbox>
@@ -785,23 +833,25 @@ export default function RWAApplicationForm() {
                 </Form.Item>
               </div>
             </div>
-          </div>
+          </>
+        );
 
-          {/* 预算与时间安排 */}
-          <div className="border-2 border-[#f0f0f0] rounded-[15px] p-8 transition-all hover:border-[#667eea] hover:shadow-md">
-            <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
-              💰
-              {' '}
+      case 7:
+        // 预算与时间安排
+        return (
+          <>
+            <h2 className="mb-5 flex items-center gap-2.5 pb-2.5 text-2xl text-black font-semibold">
               {t('RWAForm.sections.budget.title')}
             </h2>
+            <div className="border-t border-[#130F30]"></div>
 
-            <div className="mb-8 rounded-lg bg-yellow-50 p-4 text-yellow-800">
+            <div className="mt-4 rounded-lg bg-yellow-50 p-4 text-yellow-800">
               <strong>{t('RWAForm.sections.budget.note')}</strong>
             </div>
 
             {/* 预算安排 */}
             <div className="mb-8 rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.budget.fields.totalBudget.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.budget.fields.totalBudget.title')}</h3>
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <Form.Item label={t('RWAForm.sections.budget.fields.totalBudget.fields.totalBudget.label')} name="totalBudget">
                   <Select placeholder={t('RWAForm.sections.budget.fields.totalBudget.fields.totalBudget.placeholder')}>
@@ -837,7 +887,7 @@ export default function RWAApplicationForm() {
 
             {/* 时间安排 */}
             <div className="rounded-lg bg-gray-50 p-6">
-              <h3 className="mb-6 text-xl text-[#1e3c72] font-semibold">{t('RWAForm.sections.budget.fields.projectTimeline.title')}</h3>
+              <h3 className="mb-6 text-xl text-black font-semibold">{t('RWAForm.sections.budget.fields.projectTimeline.title')}</h3>
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <Form.Item label={t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.label')} name="projectTimeline">
                   <Select placeholder={t('RWAForm.sections.budget.fields.projectTimeline.fields.projectTimeline.placeholder')}>
@@ -868,15 +918,17 @@ export default function RWAApplicationForm() {
                 </Form.Item>
               </div>
             </div>
-          </div>
+          </>
+        );
 
-          {/* 补充信息 */}
-          <div className="border-2 border-[#f0f0f0] rounded-[15px] p-8 transition-all hover:border-[#667eea] hover:shadow-md">
+      case 8:
+        // 补充信息
+        return (
+          <>
             <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
-              📝
-              {' '}
               {t('RWAForm.sections.additional.title')}
             </h2>
+            <div className="border-t border-[#130F30]"></div>
 
             <div className="rounded-lg bg-white p-4">
               <Form.Item label={t('RWAForm.sections.additional.fields.specialRequirements.label')} name="specialRequirements">
@@ -921,6 +973,69 @@ export default function RWAApplicationForm() {
                 />
               </Form.Item>
             </div>
+          </>
+        );
+    }
+  };
+
+  return (
+    <div className="min-h-screen py-20">
+      <div className="mx-auto max-w-[1200px] overflow-hidden rounded-[20px] shadow-lg">
+        {/* Header */}
+        <div className="relative p-10 text-center text-white">
+          {/* <div className="absolute right-5 top-2.5 text-xs opacity-70">{t('RWAForm.logo')}</div> */}
+          <h1 className="mb-2.5 text-4xl font-bold">{t('RWAForm.title')}</h1>
+          <p className="text-lg opacity-90">{t('RWAForm.subtitle')}</p>
+          <div className="mt-5 rounded-lg bg-white/20 p-4 text-sm">
+            <strong>{t('RWAForm.processTitle')}</strong>
+            {t('RWAForm.processDescription')}
+          </div>
+        </div>
+
+        <Form
+          form={form}
+          onFinish={handleSubmit}
+          layout="vertical"
+          className="p-10 space-y-8"
+          scrollToFirstError
+        >
+          {/* 委托方基本信息 */}
+          <div className="border-2 border-[#C931F7] rounded-[15px] p-4 transition-all hover:shadow-md">
+            <div className="bg-white px-20 py-10 bg-no-repeat" style={{ backgroundImage: `url(${titlebgImg})` }}>
+              {renderStepContent()}
+
+              <div className="mt-10 flex">
+                <span className="w-15">
+                  {t('stepValidation.progress')}
+                  :
+                </span>
+                <Progress showInfo={false} percent={percent} strokeColor="#D900FF" trailColor="rgba(217,0,255,0.1)" />
+              </div>
+            </div>
+            <div className="mt-5 text-right">
+              {currentStep === 0
+                ? ''
+                : (
+                    <Button
+                      type="primary"
+                      onClick={() => prevStep()}
+                      className="mr-10 h-auto bg-[#D502FE] px-10 py-4 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                    >
+                      上一步
+                    </Button>
+                  )}
+              {currentStep === 8
+                ? ''
+                : (
+                    <Button
+                      type="primary"
+                      onClick={() => nextStep()}
+                      className="h-auto bg-[#D502FE] px-10 py-4 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                    >
+                      下一步
+                    </Button>
+                  )}
+            </div>
           </div>
 
           <div className="mb-8 rounded-lg bg-blue-50 p-4 text-blue-800">
@@ -929,14 +1044,18 @@ export default function RWAApplicationForm() {
 
           {/* Submit Section */}
           <div className="p-10 text-center from-[#667eea] to-[#764ba2] bg-gradient-to-r -mx-10 -mb-10">
-            <Button
-              type="primary"
-              htmlType="submit"
-              loading={submitLoad}
-              className="h-auto rounded-full bg-white px-10 py-4 text-xl text-[#1e3c72] font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
-            >
-              {t('RWAForm.submit.button')}
-            </Button>
+            {currentStep === 8
+              ? (
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    loading={submitLoad}
+                    className="h-auto rounded-full bg-white px-10 py-4 text-xl text-[#1e3c72] font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                  >
+                    {t('RWAForm.submit.button')}
+                  </Button>
+                )
+              : ''}
             <p className="mt-4 text-white opacity-90">
               {t('RWAForm.submit.description')}
             </p>

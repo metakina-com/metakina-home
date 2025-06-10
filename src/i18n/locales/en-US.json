@@ -1092,11 +1092,16 @@
     "submit": {
       "button": "Submit Project Application",
       "description": "After submission, our professional team will contact you within 24 hours for initial project evaluation",
-      "contact": "Service Hotline: 17709224992 | Email: [Service Email]",
+      "contact": "Service Hotline: 17709224992 | Email: contact@dappweb.cn",
       "message": {
         "success": "Submitted successfully！",
         "error": " Submission failed, please try again later"
       }
     }
+  },
+  "stepValidation": {
+    "error": "Please fill in all required fields",
+    "info": "Please submit at the final step",
+    "progress": "Progress"
   }
 }

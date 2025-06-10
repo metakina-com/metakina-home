@@ -1086,11 +1086,16 @@
     "submit": {
       "button": "提交项目申请",
       "description": "提交后，我们的专业团队将在24小时内与您联系，进行项目初步评估",
-      "contact": "服务热线：17709224992 | 邮箱：[服务邮箱]",
+      "contact": "服务热线：17709224992 | 邮箱：contact@dappweb.cn",
       "message": {
         "success": "提交成功！",
         "error": "提交失败,请稍后再试"
       }
     }
+  },
+  "stepValidation": {
+    "error": "请填写完整所有必填项",
+    "info": "请到最后一步再提交",
+    "progress": "进度"
   }
 }

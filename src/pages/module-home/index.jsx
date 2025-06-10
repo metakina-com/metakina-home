@@ -2,7 +2,7 @@ import ChallengePage from './challenge.jsx';
 import ConsultPage from './consult.jsx';
 import ContactUsPage from './contactUs.jsx';
 import CooperationPlatformPage from './cooperationPlatform.tsx';
-import CoreTeamPage from './coreTeam.jsx';
+// import CoreTeamPage from './coreTeam.jsx';
 import NumberPage from './number.jsx';
 import SolutionPage from './solution.jsx';
 
@@ -12,7 +12,7 @@ function Index() {
       <ConsultPage />
       <ChallengePage />
       <SolutionPage />
-      <CoreTeamPage />
+      {/* <CoreTeamPage /> */}
       <CooperationPlatformPage />
       <NumberPage />
       <ContactUsPage />
