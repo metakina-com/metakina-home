@@ -3,7 +3,7 @@
 import { updateFormApi } from '@/apis/api-user.js';
 import titlebgImg from '@/assets/images/client/titlebg.png';
 import { Button, Checkbox, DatePicker, Form, Input, message, Progress, Radio, Select } from 'antd';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,37 +15,68 @@ export default function RWAApplicationForm() {
   const navigate = useNavigate();
   const [submitLoad, setSubmitLoad] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
-  const [percent, setPercent] = useState(0);
+  const [percent, setPercent] = useState(100 / 9);
+  // 添加全局formState状态，用于保存所有步骤的表单数据
+  const [formState, setFormState] = useState({});
 
-  const handleSubmit = async (values) => {
-    // console.log('Form values:', values);
+  useEffect(() => {
+    // 从本地存储恢复表单状态(如果有)
+    try {
+      const savedState = localStorage.getItem('rwaFormState');
 
-    // const formData = new FormData()
+      if (savedState) {
+        const parsedState = JSON.parse(savedState);
+
+        setFormState(parsedState);
+        form.setFieldsValue(parsedState);
+      }
+    } catch (error) {
+      console.error('恢复表单状态失败:', error);
+    }
+  }, [form]);
+
+  // 保存表单状态到本地存储
+  useEffect(() => {
+    if (Object.keys(formState).length > 0) {
+      localStorage.setItem('rwaFormState', JSON.stringify(formState));
+    }
+  }, [formState]);
+
+  const handleSubmit = async () => {
+    // 如果不是最后一步，显示提示信息
     if (currentStep !== 8) {
       return message.info(t('stepValidation.info'));
     }
 
     setSubmitLoad(true);
 
-    for (const key in values) {
-      if (Array.isArray(values[key])) {
-        values[key] = values[key].join(';');
-        // values[key] = JSON.stringify(values[key]);
+    // 提交前再次获取完整表单数据
+    const formData = {
+      ...formState,
+      ...form.getFieldsValue(true),
+    };
+
+    // 处理数组类型的值，转换为字符串
+    for (const key in formData) {
+      if (Array.isArray(formData[key])) {
+        formData[key] = formData[key].join(';');
       }
     }
 
-    const res = await updateFormApi(values);
+    // 使用formData进行API提交，确保包含所有表单数据
+    const res = await updateFormApi(formData);
 
     setSubmitLoad(false);
 
     if (res.msg === 'success') {
       message.success(t('RWAForm.submit.message.success'));
       form.resetFields();
+      setFormState({});
+      localStorage.setItem('rwaFormState', JSON.stringify({}));
       navigate('/home');
     } else {
-      message.success(t('RWAForm.submit.message.error'));
+      message.error(t('RWAForm.submit.message.error'));
     }
-    // TODO: Handle form submission
   };
 
   const validateCurrentStep = async () => {
@@ -106,8 +137,16 @@ export default function RWAApplicationForm() {
     const isValid = await validateCurrentStep();
 
     if (isValid) {
+      // 保存当前步骤数据
+      const currentValues = form.getFieldsValue(true);
+
+      setFormState(prevState => ({
+        ...prevState,
+        ...currentValues,
+      }));
+
       setCurrentStep(currentStep + 1);
-      setPercent(100 / 9 * (currentStep + 1));
+      setPercent(100 / 9 * (currentStep + 2));
       window.scrollTo(0, 0);
     } else {
       message.error(t('stepValidation.error'));
@@ -115,6 +154,14 @@ export default function RWAApplicationForm() {
   };
 
   const prevStep = () => {
+    // 保存当前步骤数据
+    const currentValues = form.getFieldsValue(true);
+
+    setFormState(prevState => ({
+      ...prevState,
+      ...currentValues,
+    }));
+
     setCurrentStep(currentStep - 1);
     window.scrollTo(0, 0);
   };
