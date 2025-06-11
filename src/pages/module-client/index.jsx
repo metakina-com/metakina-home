@@ -1066,7 +1066,7 @@ export default function RWAApplicationForm() {
                     <Button
                       type="primary"
                       onClick={() => prevStep()}
-                      className="mr-10 h-auto bg-[#FFFFFF] px-10 py-4 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                      className="mr-10 h-auto bg-[#FFFFFF] px-10 py-4 text-xl text-black font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                     >
                       上一步
                     </Button>
