@@ -16,27 +16,27 @@ export default function Consult() {
   const cooperation = [
     {
       icon: eImg,
-      title: 'Consult.Ethereum',
+      title: 'Ethereum',
     },
     {
       icon: pImg,
-      title: 'Consult.Polygon',
+      title: 'Polygon',
     },
     {
       icon: aImg,
-      title: 'Consult.Avalanche',
+      title: 'Avalanche',
     },
     {
       icon: bImg,
-      title: 'Consult.BNB Chain',
+      title: 'BNB Chain',
     },
     {
       icon: sImg,
-      title: 'Consult.Solana',
+      title: 'Solana',
     },
     {
       icon: hImg,
-      title: 'Consult.Hyperledger',
+      title: 'Hyperledger',
     },
   ];
 
