@@ -374,7 +374,7 @@
     "processDescription": "第一阶段：咨询规划与法律结构设计 → 第二阶段：技术开发与代币化 → 第三阶段：代币发行与上市 → 第四阶段：链上资产管理与持续服务",
     "sections": {
       "basicInfo": {
-        "title": "委托方（甲方）基本信息",
+        "title": "委托方基本信息",
         "badge": "基础信息",
         "fields": {
           "companyName": {

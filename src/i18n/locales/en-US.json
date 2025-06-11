@@ -381,7 +381,7 @@
     "processDescription": "Phase 1: Consulting & Legal Structure Design → Phase 2: Technical Development & Tokenization → Phase 3: Token Issuance & Listing → Phase 4: On-chain Asset Management & Ongoing Services",
     "sections": {
       "basicInfo": {
-        "title": "Client (Party A) Basic Information",
+        "title": "Client Basic Information",
         "badge": "Basic Info",
         "fields": {
           "companyName": {
