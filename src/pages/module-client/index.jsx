@@ -1066,13 +1066,22 @@ export default function RWAApplicationForm() {
                     <Button
                       type="primary"
                       onClick={() => prevStep()}
-                      className="mr-10 h-auto bg-[#D502FE] px-10 py-4 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                      className="mr-10 h-auto bg-[#FFFFFF] px-10 py-4 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                     >
                       上一步
                     </Button>
                   )}
               {currentStep === 8
-                ? ''
+                ? (
+                    <Button
+                      type="primary"
+                      htmlType="submit"
+                      loading={submitLoad}
+                      className="h-auto bg-[#D502FE] px-10 py-4 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                    >
+                      {t('RWAForm.submit.button')}
+                    </Button>
+                  )
                 : (
                     <Button
                       type="primary"
@@ -1091,7 +1100,7 @@ export default function RWAApplicationForm() {
 
           {/* Submit Section */}
           <div className="p-10 text-center from-[#667eea] to-[#764ba2] bg-gradient-to-r -mx-10 -mb-10">
-            {currentStep === 8
+            {/* {currentStep === 8
               ? (
                   <Button
                     type="primary"
@@ -1102,7 +1111,7 @@ export default function RWAApplicationForm() {
                     {t('RWAForm.submit.button')}
                   </Button>
                 )
-              : ''}
+              : ''} */}
             <p className="mt-4 text-white opacity-90">
               {t('RWAForm.submit.description')}
             </p>
