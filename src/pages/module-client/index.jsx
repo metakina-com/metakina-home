@@ -1041,7 +1041,6 @@ export default function RWAApplicationForm() {
 
         <Form
           form={form}
-          onFinish={handleSubmit}
           layout="vertical"
           className="p-10 space-y-8"
           scrollToFirstError
@@ -1075,7 +1074,7 @@ export default function RWAApplicationForm() {
                 ? (
                     <Button
                       type="primary"
-                      htmlType="submit"
+                      onClick={handleSubmit}
                       loading={submitLoad}
                       className="h-auto bg-[#D502FE] px-10 py-4 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                     >
