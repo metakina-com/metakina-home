@@ -1,63 +1,49 @@
-// 修复图片导入路径，使用相对路径
-import aImg from '@/assets/images/home/a.png';
-import bImg from '@/assets/images/home/b.png';
-import eImg from '@/assets/images/home/e.png';
-import hImg from '@/assets/images/home/h.png';
-import pImg from '@/assets/images/home/p.png';
-import sImg from '@/assets/images/home/s.png';
-import { Button, Image } from 'antd';
+import consultBgImg from '@/assets/images/home/consult-bg.png';
+import consultMobileBgImg from '@/assets/images/home/mobile-home-bg.png';
+import { Button } from 'antd';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 export default function Consult() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
 
-  const cooperation = [
-    {
-      icon: eImg,
-      title: 'Ethereum',
-    },
-    {
-      icon: pImg,
-      title: 'Polygon',
-    },
-    {
-      icon: aImg,
-      title: 'Avalanche',
-    },
-    {
-      icon: bImg,
-      title: 'BNB Chain',
-    },
-    {
-      icon: sImg,
-      title: 'Solana',
-    },
-    {
-      icon: hImg,
-      title: 'Hyperledger',
-    },
-  ];
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
 
   return (
-    <div>
-      <div className="m-x-auto h-[80vh] w-[85vw] flex items-center px-8 pt-32 text-white lg:px-24 md:px-16">
-        <div>
+    <div
+      style={{
+        background: `url(${isMobile ? consultMobileBgImg : consultBgImg}) no-repeat center center / cover`,
+      }}
+      className="mt-[72px]"
+    >
+      <div className="m-x-auto h-[calc(100vh-72px)] w-[85vw] flex items-center px-0 text-white lg:px-24 md:px-16">
+        <div className="max-md:absolute max-md:top-[3rem]">
           {/* Logo */}
-          <div className="mb-10">
-            <h1 className="text-4xl text-[#D900FF] font-bold md:text-5xl">
-              {t('Consult.logo')}
-            </h1>
-          </div>
+          <h1 className="mb-10 text-[3rem] text-white font-bold md:text-[6rem]">
+            {t('Consult.logo')}
+          </h1>
 
           {/* 主标题 */}
-          <h2 className="mb-8 text-4xl leading-tight lg:text-6xl md:text-5xl">
+          <h2 className="mb-8 text-xl leading-tight md:text-[3rem]">
             {t('Consult.title')}
           </h2>
 
           {/* 副标题 */}
-          <p className="mb-12 text-lg text-gray-300 md:text-xl">
+          <p className="mb-12 w-[60%] text-xs text-gray-300 md:w-[31vw] md:text-2xl">
             {t('Consult.subtitle')}
           </p>
 
@@ -67,8 +53,7 @@ export default function Consult() {
             size="large"
             className="transition-all duration-300 hover:scale-105"
             style={{
-              background: 'linear-gradient(180deg, #D900FF 0%, #2F4EE8 80%, #006EFF 100%)',
-              boxShadow: '0 4px 20px rgba(217, 0, 255, 0.3)',
+              background: 'linear-gradient(180deg, #0055FF 0%, #2F4EE8 100%)',
               border: 'none',
               height: 'auto',
               padding: '16px 32px',
@@ -76,35 +61,11 @@ export default function Consult() {
               fontWeight: 500,
               borderRadius: '8px',
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 8px 32px rgba(217, 0, 255, 0.4)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = '0 4px 20px rgba(217, 0, 255, 0.3)';
-            }}
             onClick={() => navigate('/apply')}
           >
             {t('Consult.button')}
           </Button>
-
         </div>
-      </div>
-      <div className="m-x-auto w-[85vw] flex flex-wrap justify-between px-8 pt-20 text-white lg:px-24 md:px-16 md:pt-32">
-        {
-          cooperation.map((item, index) => (
-            <div key={`cooperation-${index}`} className="mb-8 flex items-center">
-              <Image
-                src={item.icon}
-                alt={item.title}
-                width={32}
-                height={32}
-                preview={false}
-                style={{ objectFit: 'contain' }}
-              />
-              <p className="ml-2 text-lg font-bold">{item.title}</p>
-            </div>
-          ))
-        }
       </div>
     </div>
   );

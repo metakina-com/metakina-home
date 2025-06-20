@@ -13,8 +13,9 @@ const LayoutHeader = memo(() => {
 
   const navItems = [
     { path: '/', label: t('Header.home') },
-    { path: '/', label: t('Header.whyChooseUs') },
+    { path: '/', label: '解决方案' },
     { path: '/', label: t('Header.supportedChains') },
+    { path: '/', label: '资源中心' },
     { path: '/', label: t('Header.cooperationMode') },
   ];
 
@@ -23,12 +24,12 @@ const LayoutHeader = memo(() => {
       <Image
         alt={t('Home.name')}
         src={groupImg}
-        className="h-8! w-8! md:h-10! md:w-10!"
+        className="h-[41px]! max-md:h-8!"
         preview={false}
       />
-      <span className="pl-[5px] text-xl text-white md:text-3xl hover:text-gray-200">
+      {/* <span className="pl-[5px] text-xl text-white md:text-3xl hover:text-gray-200">
         {t('Home.title')}
-      </span>
+      </span> */}
     </Link>
   );
 
@@ -56,7 +57,7 @@ const LayoutHeader = memo(() => {
       </Link>
       <Link
         to="/"
-        className="ml-4 flex items-center rounded-2 bg-[#E000E9] px-6 py-2 text-white transition-colors hover:bg-[#C000C9]"
+        className="ml-4 flex items-center rounded-2 bg-[#ffffff] px-6 py-2 text-[#0055FF] transition-colors hover:bg-white/80"
       >
         <span className="text-base">{t('Header.contactUs')}</span>
       </Link>
@@ -69,7 +70,7 @@ const LayoutHeader = memo(() => {
   };
 
   return (
-    <div className="h-full flex flex-1 items-center justify-between px-4 md:px-8">
+    <div className="mx-auto h-full w-[85vw] flex flex-1 items-center justify-between px-2 max-md:w-[90vw] md:px-8">
       <div className="flex items-center">
         {renderLogo()}
       </div>
@@ -92,7 +93,7 @@ const LayoutHeader = memo(() => {
       </div>
       {/* 移动端导航菜单 */}
       {mobileMenuOpen && (
-        <div className="absolute left-0 right-0 top-16 bg-gray-900 py-2 md:hidden">
+        <div className="absolute left-0 right-0 top-[73px] z-[10] block bg-[#0055FF] py-2 md:hidden">
           <div className="mx-auto px-4 container">
             <Menu
               mode="inline"
@@ -100,7 +101,7 @@ const LayoutHeader = memo(() => {
               items={navItems}
               style={{ fontSize: '1rem', color: '#ffffff' }}
               onSelect={({ key }) => handleAnchorClick({ key, path: '/' })}
-              className="white-text-menu !text-white"
+              className="white-text-menu !bg-[#0055FF] !text-white"
             />
           </div>
         </div>

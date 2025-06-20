@@ -1,10 +1,10 @@
-import solution1Img from '@/assets/images/home/solution1.png';
-import solution2Img from '@/assets/images/home/solution2.png';
-import solution3Img from '@/assets/images/home/solution3.png';
-import solution4Img from '@/assets/images/home/solution4.png';
-import solution5Img from '@/assets/images/home/solution5.png';
-import solution6Img from '@/assets/images/home/solution6.png';
-import solutionBgImg from '@/assets/images/home/solution-bg.png';
+import heguiImg from '@/assets/images/home/hegui.png';
+import liuchengImg from '@/assets/images/home/liucheng.png';
+import mokuaiImg from '@/assets/images/home/mokuai.png';
+import shengtaiImg from '@/assets/images/home/shengtai.png';
+import shujuImg from '@/assets/images/home/shuju.png';
+import zichanImg from '@/assets/images/home/zichan.png';
+import SectionTitle from '@/components/SectionTitle.jsx';
 import { Image } from 'antd';
 import { useTranslation } from 'react-i18next';
 
@@ -17,102 +17,109 @@ export default function RWASolutionsPage() {
       title: t('solutions.assetDigital.title'),
       description: t('solutions.assetDigital.description'),
       link: t('solutions.common.learnMore'),
-      icon: solution1Img,
-      gradient: 'from-[#D900FF] to-[#8B00FF]',
+      icon: zichanImg,
+      gradient: 'from-gray-800 to-gray-900',
     },
     {
       key: 'crossBorder',
       title: t('solutions.crossBorder.title'),
       description: t('solutions.crossBorder.description'),
       link: t('solutions.common.learnMore'),
-      icon: solution2Img,
-      gradient: 'from-[#006EFF] to-[#0099FF]',
+      icon: heguiImg,
+      gradient: 'from-gray-800 to-gray-900',
     },
     {
       key: 'compliance',
       title: t('solutions.compliance.title'),
       description: t('solutions.compliance.description'),
       link: t('solutions.common.learnMore'),
-      icon: solution3Img,
-      gradient: 'from-[#D900FF] to-[#FF00FF]',
+      icon: liuchengImg,
+      gradient: 'from-gray-800 to-gray-900',
     },
     {
       key: 'ecosystem',
       title: t('solutions.ecosystem.title'),
       description: t('solutions.ecosystem.description'),
       link: t('solutions.common.learnMore'),
-      icon: solution4Img,
-      gradient: 'from-[#2F4EE8] to-[#6B7FFF]',
+      icon: shengtaiImg,
+      gradient: 'from-gray-800 to-gray-900',
     },
     {
       key: 'dataFinance',
       title: t('solutions.dataFinance.title'),
       description: t('solutions.dataFinance.description'),
       link: t('solutions.common.learnMore'),
-      icon: solution5Img,
-      gradient: 'from-[#8B00FF] to-[#D900FF]',
+      icon: shujuImg,
+      gradient: 'from-gray-800 to-gray-900',
     },
     {
       key: 'modular',
       title: t('solutions.modular.title'),
       description: t('solutions.modular.description'),
       link: t('solutions.common.learnMore'),
-      icon: solution6Img,
-      gradient: 'from-[#006EFF] to-[#2F4EE8]',
+      icon: mokuaiImg,
+      gradient: 'from-gray-800 to-gray-900',
     },
   ];
 
   return (
-    <div className="m-x-auto w-[85vw] px-8 pt-20 text-white lg:px-24 md:px-16 md:pt-32">
-      <div className="w-full">
+    <div className="bg-[#EEF4FA] md:pt-[72px]">
+      <div className="m-x-auto w-[85vw] pb-24 pt-14 lg:px-24 md:px-16 md:pt-10">
         {/* 标题区域 */}
-        <div className="mb-16 text-right text-[#D900FF]">
-          <h1 className="mb-4 text-3xl font-bold lg:text-5xl md:text-4xl">
+        <div className="mb-16 text-center">
+          {/* <h1 className="mb-4 text-3xl text-black font-bold lg:text-5xl md:text-4xl">
             {t('solutions.sectionTitle')}
           </h1>
-          <h1 className="text-3xl font-bold lg:text-5xl md:text-4xl">
+          <p className="text-lg text-gray-600 lg:text-xl">
             {t('solutions.mainTitle')}
-          </h1>
+          </p> */}
+          <SectionTitle title={t('solutions.sectionTitle')} mainTitle={t('solutions.mainTitle')} />
+
         </div>
 
         {/* 解决方案网格 */}
-        <div className="grid grid-cols-1 gap-x-40 gap-y-10 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 md:grid-cols-2">
           {solutions.map(solution => (
             <div
               key={solution.key}
-              className="group relative cursor-pointer"
+              className={`group relative cursor-pointer overflow-hidden rounded-2xl p-8 transition-all duration-500 hover:scale-101 ${
+                'bg-white text-gray-800 hover:bg-gradient-to-br! hover:from-[#2F4EE8]! hover:to-[#0066FF]! hover:text-white!'
+              }`}
               style={{
-                background: `url(${solutionBgImg}) no-repeat center center/cover`,
-                backgroundSize: '100% 100%',
+                background: 'linear-gradient(180deg, #FFFFFF 0%, #E8F0FF 100%)',
               }}
             >
+              {/* 图标 */}
+              <div className="mb-6 block group-hover:hidden">
+                <Image
+                  src={solution.icon}
+                  alt={solution.title}
+                  className="h-12 w-12 object-contain"
+                  preview={false}
+                />
+              </div>
 
               {/* 卡片内容 */}
-              <div className="relative flex items-start justify-between p-8 md:p-14">
-                <div className="flex-1 pr-4">
-                  <h3 className="mb-10 flex items-end justify-between text-xl text-white font-semibold md:text-3xl">
-                    {solution.title}
-                    <Image
-                      src={solution.icon}
-                      alt={solution.title}
-                      className="h-[2rem] md:h-[3rem]"
-                    />
-                  </h3>
-                  <p className="mb-3 text-sm leading-relaxed">
-                    {solution.description}
-                  </p>
-                  <p className="text-right">
-                    <a
-                      href="#"
-                      className="text-sm text-[#2F4EE8] font-medium transition-colors duration-300"
-                    >
-                      {solution.link}
-                      {' '}
-                      →
-                    </a>
-                  </p>
+              <div className="relative">
+                <h3 className="mb-4 text-xl font-semibold md:text-2xl">
+                  {solution.title}
+                </h3>
+                <p className="mb-6 text-sm leading-relaxed opacity-90">
+                  {solution.description}
+                </p>
+                <div className="flex items-center justify-start">
+                  <a
+                    href="#"
+                    className="inline-block hidden rounded-full bg-white px-6 py-2 text-sm text-[#0055FF] font-medium transition-all duration-300 group-hover:block"
+                  >
+                    {solution.link}
+                  </a>
                 </div>
               </div>
+
+              {/* 悬停效果装饰 */}
+              <div className="absolute h-24 w-24 rounded-full bg-white/10 opacity-0 transition-opacity duration-500 -right-4 -top-4 group-hover:opacity-100" />
+              <div className="absolute h-16 w-16 rounded-full bg-white/5 opacity-0 transition-opacity duration-500 -bottom-4 -left-4 group-hover:opacity-100" />
             </div>
           ))}
         </div>

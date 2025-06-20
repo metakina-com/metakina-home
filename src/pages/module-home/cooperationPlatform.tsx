@@ -2,14 +2,14 @@ import alImg from '@/assets/images/home/al.png';
 import awsImg from '@/assets/images/home/aws.png';
 import binanceImg from '@/assets/images/home/binance.png';
 import ChainlinkImg from '@/assets/images/home/Chainlink.png';
-import eImg from '@/assets/images/home/e.png';
+// import eImg from '@/assets/images/home/e.png';
 import IPFSImg from '@/assets/images/home/IPFS.png';
 import kImg from '@/assets/images/home/k.png';
 import metamaskImg from '@/assets/images/home/metamask.png';
 import openseaImg from '@/assets/images/home/opensea.png';
-import pImg from '@/assets/images/home/p.png';
+// import pImg from '@/assets/images/home/p.png';
 import platformImg from '@/assets/images/home/platform.png';
-import sImg from '@/assets/images/home/s.png';
+// import sImg from '@/assets/images/home/s.png';
 import thImg from '@/assets/images/home/th.png';
 import { Image } from 'antd';
 import { useTranslation } from 'react-i18next';
@@ -24,9 +24,9 @@ function CollaborationPlatform() {
     { name: 'Kinachain', logo: kImg, width: 48, height: 32 },
     { name: 'AWS', logo: awsImg, isImage: true },
     { name: 'Alibaba Cloud', logo: alImg, isImage: true, width: '86%' },
-    { name: 'Ethereum', logo: eImg, width: 32, height: 32 },
-    { name: 'Solana', logo: sImg, width: 32, height: 32 },
-    { name: 'Polygon', logo: pImg, width: 32, height: 32 },
+    // { name: 'Ethereum', logo: eImg, width: 32, height: 32 },
+    // { name: 'Solana', logo: sImg, width: 32, height: 32 },
+    // { name: 'Polygon', logo: pImg, width: 32, height: 32 },
     { name: 'OpenSea', logo: openseaImg, width: 32, height: 32 },
     { name: 'IPFS', logo: IPFSImg, width: 32, height: 32 },
     { name: 'thirdweb', logo: thImg, width: 32, height: 32 },

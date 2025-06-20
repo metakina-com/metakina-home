@@ -13,7 +13,7 @@ const LayoutIndex = memo(() => {
 
   return (
     <div className="h-full">
-      <Layout.Header className="fixed inset-x-[2vw] top-5 z-50 h-18 w-[96vw] flex rounded-2xl bg-[rgba(255,255,255,0.2)] p-0 text-white shadow-md">
+      <Layout.Header className="fixed inset-x-[2vw] left-0 z-99 h-18 w-full bg-[#0055FF] p-0 text-white">
         <LayoutHeader />
       </Layout.Header>
       {/* <Layout hasSider className="mt-20 bg-[rgba(255,255,255,0)]"> */}

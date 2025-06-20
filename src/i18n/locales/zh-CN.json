@@ -93,12 +93,12 @@
       "description": "非标资产难以快速变现，持有成本高。"
     },
     "financing": {
-      "title": "融资与合规难题",
+      "title": "融资瓶颈",
       "description": "传统渠道门槛高，跨境、数据资产化合规复杂。"
     },
     "efficiency": {
-      "title": "效率与透明度不足",
-      "description": "交易流程冗长，信息不对称，管理成本高。"
+      "title": "管理效率低下",
+      "description": "资产确权、估值、交易、收益分配等环节流程繁琐、人工依赖度高、信息不透明，增加管理成本与风险。"
     }
   },
   "solutions": {
@@ -109,42 +109,27 @@
     },
     "assetDigital": {
       "title": "资产数字化",
-      "description": "利用 AI 实现资产标准化，设计标准 Tokenomics，通过安全可靠的智能合约实现资产上链。"
+      "description": "利用 AI(“元启”)辅助评估，设计精准 Tokenomics，通过安全可靠的智能合约实现资产上链。"
     },
     "crossBorder": {
       "title": "合规跨境融资促进",
-      "description": "设计符合跨境监管的融资架构（如香港 JP+结构或 CFLP），搭建对接全球合规投资者网络。"
+      "description": "设计并执行创新的跨境金融结构（如香港LPF+陕西QFLP），精准对接全球合格投资者网络。"
     },
     "compliance": {
       "title": "全流程合规保障",
-      "description": "基于合规原则搭建，提供法规解读、整合 KYC/AML/KYB，保障数据安全与隐私。"
+      "description": "基于“合规前置”理念，提供法规解读，整合 KYC/AML/KYB，保障数据安全与隐私。"
     },
     "ecosystem": {
       "title": "生态与市场运营",
-      "description": "利用元宇宙 AI 进行市场分析，构建和运营社群，协调市场对接，提供持续的技术维护和品牌建设。"
+      "description": "利用“元策”AI 进行市场分析，构建和运营社群，协调市场对接，提供持续的技术维护和品牌建设。"
     },
     "dataFinance": {
       "title": "数据资产金融化",
-      "description": "基于中国'数据资产入表'政策，提供从合规治理到金融化方案设计、市场对接的全流程服务。"
+      "description": "紧跟中国“数据资产入表”政策，提供从合规治理到金融化方案设计、市场对接的全流程服务。"
     },
     "modular": {
       "title": "模块化与定制化",
       "description": "根据项目需求和预算，灵活选择服务模块，我们提供高度定制化的解决方案。"
-    }
-  },
-  "team": {
-    "title": "我们的核心团队",
-    "coo": {
-      "description": "资深金融背景，资产管理与风控专家"
-    },
-    "ceo": {
-      "description": "运营管理专家，精于流程优化与合规执行"
-    },
-    "cto": {
-      "description": "技术专家，精通区块链与智能合约安全"
-    },
-    "cmo": {
-      "description": "市场营销专家，品牌与市场沟通"
     }
   },
   "platform": {
@@ -152,9 +137,12 @@
   },
   "RWACooperation": {
     "title": "元话RWA数字投行合作计划",
+    "mainTitle": "元话RWA",
+    "subtitle": "数字投行合作计划",
     "flexibleMode": "灵活的合作模式",
     "processTitle": "合作流程 ",
     "getDetailButton": "获取详细报价与合作方案",
+    "applyPartnerButton": "申请成为合作伙伴",
     "plans": {
       "registered": {
         "title": "注册伙伴",
@@ -1097,5 +1085,96 @@
     "error": "请填写完整所有必填项",
     "info": "请到最后一步再提交",
     "progress": "进度"
+  },
+  "chooseUs": {
+    "title": "为什么选择元话",
+    "features": {
+      "financeCompliance": {
+        "title": "卓越跨境金融与合规",
+        "description": "精通LPF+QFLP等架构，深刻理解中港及国际法规"
+      },
+      "professionalTeam": {
+        "title": "跨界融合专业团队",
+        "description": "汇聚金融、技术、法律、市场资深专家"
+      },
+      "riskControl": {
+        "title": "深度合规与风控",
+        "description": "\"合规前置\"实践，全面风险缓释机制"
+      },
+      "ecosystemNetwork": {
+        "title": "强大生态网络",
+        "description": "链接全球与本地顶级技术、金融、法律伙伴"
+      },
+      "advancedTechnology": {
+        "title": "领先且合规的技术",
+        "description": "自主知识产权(公章书面)、中国备案基础、平台安全高效"
+      },
+      "successCases": {
+        "title": "丰富成功案例",
+        "description": "服务多元化资产配置机构投资客户的成功实践"
+      }
+    }
+  },
+  "resourceCenter": {
+    "title": "资源中心",
+    "subtitle": "洞察、学习与工具",
+    "coreFiles": {
+      "title": "核心文件",
+      "description": "下载白皮书、服务手册、合作计划介绍等。",
+      "action": "下载白皮书 →",
+      "secondAction": "下载服务手册 →"
+    },
+    "systemTutorials": {
+      "title": "系统教程",
+      "description": "查看平台合作伙伴知识库介绍，高效利用平台。",
+      "action": "查看教程（即将推出）→"
+    },
+    "learningCenter": {
+      "title": "学习中心",
+      "description": "探索 HWA、数据合伙代、区块链金融知识（含词汇表）。",
+      "action": "开始学习（即将推出）→"
+    },
+    "industryInsights": {
+      "title": "行业洞察与新闻",
+      "description": "获取最新 HWA 市场趋势、政策解读与行业洞察。",
+      "action": "阅读最新洞察 →"
+    }
+  },
+  "follow": {
+    "title": "联系我们",
+    "social": {
+      "wechat": "微信"
+    },
+    "description": "了解我们，把您的想法告诉我们",
+    "address": "中国 · 香港 · 西安",
+    "form": {
+      "title": "发送咨询",
+      "name": "姓名",
+      "phone": "电话",
+      "email": "邮箱",
+      "message": "留言",
+      "submit": "提交",
+      "name.placeholder": "姓名",
+      "name.required": "请输入您的姓名",
+      "phone.placeholder": "电话",
+      "phone.required": "请输入您的电话",
+      "email.placeholder": "邮箱",
+      "email.required": "请输入您的邮箱",
+      "email.invalid": "请输入有效的邮箱地址",
+      "message.placeholder": "留言",
+      "message.required": "请输入留言内容"
+    }
+  },
+  "form": {
+    "phone": {
+      "required": "请输入您的电话",
+      "invalid": "请输入有效的手机号码"
+    },
+    "email": {
+      "invalid": "请输入有效的邮箱地址"
+    }
+  },
+  "app": {
+    "submitSuccess": "提交成功！"
   }
 }

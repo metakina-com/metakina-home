@@ -1,3 +1,5 @@
+import dhFooter from '@/assets/images/layout/dh.png';
+import youxiangFooter from '@/assets/images/layout/youxiang-footer.png';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -18,6 +20,8 @@ const LayoutFooter = memo(() => {
 
   const resourceLinks = [
     { path: '/privacy-policy', key: 'Footer.resources.whitepaper' },
+    { path: '/privacy-policy', key: '隐私政策' },
+    { path: '/privacy-policy', key: 'Cookie政策' },
     { path: '/service-terms', key: 'Footer.resources.serviceManual' },
     { path: '/', key: 'Footer.resources.industryInsight' },
     { path: '/', key: 'Footer.resources.faq' },
@@ -108,8 +112,10 @@ const LayoutFooter = memo(() => {
   );
 
   const renderSocialLinks = () => (
-    <div className="space-y-4">
-      <h3 className="text-lg font-semibold">{t('Footer.followUs.title')}</h3>
+    <div className="space-y-6">
+      <h3 className="text-lg font-semibold">关注我们</h3>
+
+      {/* 社交媒体图标 */}
       <div className="flex space-x-4">
         {socialLinks.map((social, index) => (
           <a
@@ -124,6 +130,51 @@ const LayoutFooter = memo(() => {
           </a>
         ))}
       </div>
+
+      {/* 公司信息 */}
+      <div className="space-y-3">
+        <p className="text-sm text-gray-400 font-medium">
+          西安达普韦伯网络科技有限责任公司
+        </p>
+        <p className="text-sm text-gray-400">
+          总部：中国·西安
+        </p>
+
+        {/* 邮箱信息 */}
+        <div className="flex items-center space-x-2">
+          <img src={youxiangFooter} alt="邮箱" />
+          <a
+            href="mailto:contact@dappweb.cn"
+            className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
+          >
+            contact@dappweb.cn
+          </a>
+        </div>
+
+        {/* 电话信息 */}
+        <div className="space-y-1">
+          <div className="flex items-center space-x-2">
+            <img src={dhFooter} alt="电话" />
+            <a
+              href="tel:+8617709224992"
+              className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
+            >
+              +86 177 0922 4992
+            </a>
+          </div>
+          <div className="flex items-center space-x-2">
+            <span className="w-4"></span>
+            {' '}
+            {/* 占位符保持对齐 */}
+            <a
+              href="tel:+8613709298952"
+              className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
+            >
+              +86 137 0929 8952
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 
@@ -132,11 +183,11 @@ const LayoutFooter = memo(() => {
       <p className="text-sm text-white">
         {t('Footer.copyright')}
         <span className="px-2">|</span>
-        <Link to="/privacy-policy" className="transition-colors hover:text-white">
+        <Link to="/privacy-policy" className="text-white transition-colors hover:text-[#0055ff]">
           {t('Footer.privacyPolicy')}
         </Link>
         <span className="px-2">|</span>
-        <Link to="/terms-of-service" className="transition-colors hover:text-white">
+        <Link to="/terms-of-service" className="text-white transition-colors hover:text-[#0055ff]">
           {t('Footer.terms')}
         </Link>
       </p>
@@ -146,8 +197,10 @@ const LayoutFooter = memo(() => {
   return (
     <footer className="bg-black text-white">
       <div className="mx-auto px-4 py-12 container">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4 md:grid-cols-2">
-          {renderAboutSection()}
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 md:grid-cols-2">
+          <div className="col-span-2 md:col-span-1">
+            {renderAboutSection()}
+          </div>
           {renderQuickLinks()}
           {renderResourceLinks()}
           {renderSocialLinks()}

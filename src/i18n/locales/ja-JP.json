@@ -97,62 +97,47 @@
   "challenges": {
     "title": "従来資産とデータ資産が直面する課題",
     "liquidity": {
-      "title": "流動性の困難",
+      "title": "流動性困境",
       "description": "非標準資産は迅速な現金化が困難で、保有コストが高い。"
     },
     "financing": {
-      "title": "資金調達とコンプライアンスの課題",
+      "title": "融資ボトルネック",
       "description": "従来のチャネルは参入障壁が高く、国境を越えたデータ資産化のコンプライアンスは複雑。"
     },
     "efficiency": {
-      "title": "効率性と透明性の不足",
-      "description": "取引プロセスが長く、情報の非対称性があり、管理コストが高い。"
+      "title": "管理効率低下",
+      "description": "資産権利確認、評価、取引、収益分配などの過程が煩雑で、人工依存度が高く、情報透明性が不足し、管理コストとリスクが増加。"
     }
   },
   "solutions": {
     "sectionTitle": "ソリューション",
-    "mainTitle": "エンドツーエンドRWAとデータ資産トークン化サービス",
+    "mainTitle": "エンドツーエンド RWA とデータ資産化サービス",
     "common": {
       "learnMore": "詳細を見る"
     },
     "assetDigital": {
       "title": "資産デジタル化",
-      "description": "AIを活用した資産の標準化、標準的なトークノミクスの設計、安全なスマートコントラクトによる資産のトークン化を実現。"
+      "description": "AI（'元启'）補助評価を活用し、精密なTokenomicsを設計し、安全で信頼性の高いスマートコントラクトによる資産のオンチェーン化を実現。"
     },
     "crossBorder": {
-      "title": "コンプライアント国境越え融資",
-      "description": "国境を越えた規制に準拠した融資構造（香港JP+やCFLPなど）を設計し、グローバルなコンプライアント投資家ネットワークと接続。"
+      "title": "コンプライアント越境融資促進",
+      "description": "革新的な越境金融構造（香港LPF+陝西QFLPなど）を設計・実行し、グローバルな適格投資家ネットワークと精密に対接。"
     },
     "compliance": {
-      "title": "全プロセスコンプライアンス",
-      "description": "コンプライアンス原則に基づいて構築、規制解釈の提供、KYC/AML/KYBの統合、データセキュリティとプライバシーの確保。"
+      "title": "全プロセスコンプライアンス保障",
+      "description": "「コンプライアンス前置」理念に基づき、法規解読の提供、KYC/AML/KYBの統合、データセキュリティとプライバシーの保障。"
     },
     "ecosystem": {
       "title": "エコシステムと市場運営",
-      "description": "メタバースAIを活用した市場分析、コミュニティの構築と運営、市場接続の調整、継続的な技術メンテナンスとブランディングの提供。"
+      "description": "「元策」AIを活用した市場分析、コミュニティの構築・運営、市場対接の調整、継続的な技術メンテナンスとブランド構築の提供。"
     },
     "dataFinance": {
-      "title": "データ資産の金融化",
-      "description": "中国の「データ資産計上」政策に基づき、コンプライアンスガバナンスから金融ソリューション設計、市場接続までのフルサービスを提供。"
+      "title": "データ資産金融化",
+      "description": "中国の「データ資産入表」政策に密着し、コンプライアンスガバナンスから金融化ソリューション設計、市場対接までの全プロセスサービスを提供。"
     },
     "modular": {
       "title": "モジュール化とカスタマイズ",
-      "description": "プロジェクトのニーズと予算に基づいてサービスモジュールを柔軟に選択、高度にカスタマイズされたソリューションを提供。"
-    }
-  },
-  "team": {
-    "title": "コアチーム",
-    "coo": {
-      "description": "シニア金融バックグラウンド、資産管理とリスク管理の専門家"
-    },
-    "ceo": {
-      "description": "運営管理の専門家、プロセス最適化とコンプライアンス実行に精通"
-    },
-    "cto": {
-      "description": "技術専門家、ブロックチェーンとスマートコントラクトセキュリティに精通"
-    },
-    "cmo": {
-      "description": "マーケティング専門家、ブランドと市場コミュニケーション"
+      "description": "プロジェクトのニーズと予算に応じて、サービスモジュールを柔軟に選択し、高度にカスタマイズされたソリューションを提供。"
     }
   },
   "platform": {
@@ -160,9 +145,12 @@
   },
   "RWACooperation": {
     "title": "メタトークRWAデジタル投資銀行パートナーシッププログラム",
+    "mainTitle": "メタトークRWA",
+    "subtitle": "デジタル投資銀行パートナーシッププログラム",
     "flexibleMode": "柔軟な協力モデル",
     "processTitle": "協力プロセス",
     "getDetailButton": "詳細な見積もりと協力プランを取得",
+    "applyPartnerButton": "パートナー申請",
     "plans": {
       "registered": {
         "title": "登録パートナー",
@@ -1095,5 +1083,95 @@
     "error": "必須項目をすべてご記入ください",
     "info": "最終段階に到達してからご提出ください",
     "progress": "進捗"
+  },
+  "chooseUs": {
+    "title": "元話を選ぶ理由",
+    "features": {
+      "financeCompliance": {
+        "title": "卓越したクロスボーダー金融・コンプライアンス",
+        "description": "LPF+QFLP等の構造に精通し、香港及び国際規制を深く理解"
+      },
+      "professionalTeam": {
+        "title": "分野横断専門チーム",
+        "description": "金融、技術、法律、市場のシニア専門家を結集"
+      },
+      "riskControl": {
+        "title": "深層コンプライアンス・リスク管理",
+        "description": "「コンプライアンス優先」の実践、包括的リスク軽減メカニズム"
+      },
+      "ecosystemNetwork": {
+        "title": "強力なエコシステムネットワーク",
+        "description": "グローバル及びローカルの一流技術・金融・法律パートナーを連結"
+      },
+      "advancedTechnology": {
+        "title": "先進的でコンプライアントな技術",
+        "description": "自主知的財産権、中国基盤のコンプライアンス、安全で効率的なプラットフォーム"
+      },
+      "successCases": {
+        "title": "豊富な成功事例",
+        "description": "多様化資産配置機関投資家顧客への成功実践"
+      }
+    }
+  },
+  "resourceCenter": {
+    "title": "リソースセンター",
+    "subtitle": "洞察・学習・ツール",
+    "coreFiles": {
+      "title": "コアファイル",
+      "description": "ホワイトペーパー、サービスマニュアル、パートナーシッププログラムガイドなどをダウンロード。",
+      "action": "ホワイトペーパーをダウンロード →",
+      "secondAction": "サービスマニュアルをダウンロード →"
+    },
+    "systemTutorials": {
+      "title": "システムチュートリアル",
+      "description": "プラットフォームパートナー知識ベースガイドを参照し、効率的なプラットフォーム活用を実現。",
+      "action": "チュートリアルを表示（近日公開）→"
+    },
+    "learningCenter": {
+      "title": "学習センター",
+      "description": "HWA、データパートナーシップ、ブロックチェーン金融知識（用語集含む）を探索。",
+      "action": "学習を開始（近日公開）→"
+    },
+    "industryInsights": {
+      "title": "業界洞察・ニュース",
+      "description": "最新のHWA市場トレンド、政策解釈、業界洞察を取得。",
+      "action": "最新の洞察を読む →"
+    }
+  },
+  "follow": {
+    "social": {
+      "wechat": "WeChat"
+    },
+    "description": "私たちを知り、あなたの考えを教えてください",
+    "address": "中国・香港・西安",
+    "form": {
+      "title": "お問い合わせを送信",
+      "name": "お名前",
+      "phone": "電話番号",
+      "email": "メールアドレス",
+      "message": "メッセージ",
+      "submit": "送信",
+      "name.placeholder": "お名前",
+      "name.required": "お名前を入力してください",
+      "phone.placeholder": "電話番号",
+      "phone.required": "電話番号を入力してください",
+      "email.placeholder": "メールアドレス",
+      "email.required": "メールアドレスを入力してください",
+      "email.invalid": "有効なメールアドレスを入力してください",
+      "message.placeholder": "メッセージ",
+      "message.required": "メッセージを入力してください"
+    }
+  },
+  "form": {
+    "phone": {
+      "required": "電話番号を入力してください",
+      "invalid": "有効な電話番号を入力してください"
+    },
+    "email": {
+      "invalid": "有効なメールアドレスを入力してください"
+    }
+  },
+  "app": {
+    "submitSuccess": "送信完了！"
   }
 }

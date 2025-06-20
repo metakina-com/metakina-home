@@ -101,12 +101,12 @@
       "description": "Non-standard assets are difficult to liquidate quickly, with high holding costs."
     },
     "financing": {
-      "title": "Financing & Compliance Challenges",
+      "title": "Financing Bottleneck",
       "description": "Traditional channels have high barriers, cross-border and data asset compliance is complex."
     },
     "efficiency": {
-      "title": "Lack of Efficiency & Transparency",
-      "description": "Lengthy transaction processes, information asymmetry, and high management costs."
+      "title": "Low Management Efficiency",
+      "description": "Asset ownership confirmation, valuation, trading, revenue distribution and other processes are cumbersome, highly dependent on manual work, lack of information transparency, increasing management costs and risks."
     }
   },
   "solutions": {
@@ -117,42 +117,27 @@
     },
     "assetDigital": {
       "title": "Asset Digitalization",
-      "description": "Leverage AI for asset standardization, design standard Tokenomics, and implement secure smart contracts for asset tokenization."
+      "description": "Leverage AI ('Meta-Start') assisted evaluation, design precise Tokenomics, and implement asset tokenization through secure and reliable smart contracts."
     },
     "crossBorder": {
-      "title": "Compliant Cross-Border Financing",
-      "description": "Design financing structures compliant with cross-border regulations (e.g., Hong Kong JP+ or CFLP), connecting global compliant investor networks."
+      "title": "Compliant Cross-Border Financing Facilitation",
+      "description": "Design and execute innovative cross-border financial structures (such as Hong Kong LPF + Shaanxi QFLP), precisely connecting global qualified investor networks."
     },
     "compliance": {
-      "title": "Full-Process Compliance",
-      "description": "Built on compliance principles, providing regulatory interpretation, integrated KYC/AML/KYB, ensuring data security and privacy."
+      "title": "Full-Process Compliance Assurance",
+      "description": "Based on the 'compliance-first' concept, providing regulatory interpretation, integrating KYC/AML/KYB, ensuring data security and privacy."
     },
     "ecosystem": {
-      "title": "Ecosystem & Market Operations",
-      "description": "Utilize Metaverse AI for market analysis, build and operate communities, coordinate market connections, provide ongoing technical maintenance and branding."
+      "title": "Ecosystem and Market Operations",
+      "description": "Utilize 'Meta-Strategy' AI for market analysis, build and operate communities, coordinate market connections, provide continuous technical maintenance and brand building."
     },
     "dataFinance": {
       "title": "Data Asset Financialization",
-      "description": "Based on China's 'Data Asset Recognition' policy, providing full-service from compliance governance to financial solution design and market connections."
+      "description": "Following China's 'Data Asset on Balance Sheet' policy closely, providing full-process services from compliance governance to financialization solution design and market connections."
     },
     "modular": {
-      "title": "Modular & Customization",
-      "description": "Flexibly select service modules based on project needs and budget, we provide highly customized solutions."
-    }
-  },
-  "team": {
-    "title": "Our Core Team",
-    "coo": {
-      "description": "Senior financial background, asset management and risk control expert"
-    },
-    "ceo": {
-      "description": "Operations management expert, specializing in process optimization and compliance execution"
-    },
-    "cto": {
-      "description": "Technology expert, proficient in blockchain and smart contract security"
-    },
-    "cmo": {
-      "description": "Marketing expert, brand and market communication"
+      "title": "Modular and Customization",
+      "description": "Based on project requirements and budget, flexibly select service modules, we provide highly customized solutions."
     }
   },
   "platform": {
@@ -160,9 +145,12 @@
   },
   "RWACooperation": {
     "title": "MetaTalk RWA Digital Investment Banking Partnership Program",
+    "mainTitle": "MetaTalk RWA",
+    "subtitle": "Digital Investment Banking Partnership Program",
     "flexibleMode": "Flexible Cooperation Models",
     "processTitle": "Cooperation Process",
     "getDetailButton": "Get Detailed Pricing & Cooperation Plan",
+    "applyPartnerButton": "Apply to Become a Partner",
     "plans": {
       "registered": {
         "title": "Registered Partner",
@@ -1103,5 +1091,95 @@
     "error": "Please fill in all required fields",
     "info": "Please submit at the final step",
     "progress": "Progress"
+  },
+  "chooseUs": {
+    "title": "Why Choose Metakina",
+    "features": {
+      "financeCompliance": {
+        "title": "Excellence in Cross-border Finance & Compliance",
+        "description": "Proficient in LPF+QFLP structures, deep understanding of Hong Kong and international regulations"
+      },
+      "professionalTeam": {
+        "title": "Cross-disciplinary Professional Team",
+        "description": "Bringing together senior experts in finance, technology, law, and market"
+      },
+      "riskControl": {
+        "title": "Deep Compliance & Risk Control",
+        "description": "\"Compliance-first\" practice with comprehensive risk mitigation mechanisms"
+      },
+      "ecosystemNetwork": {
+        "title": "Powerful Ecosystem Network",
+        "description": "Connecting global and local top-tier technology, finance, and legal partners"
+      },
+      "advancedTechnology": {
+        "title": "Leading & Compliant Technology",
+        "description": "Proprietary intellectual property, China-based compliance foundation, secure and efficient platform"
+      },
+      "successCases": {
+        "title": "Rich Success Cases",
+        "description": "Successful practices serving diversified asset allocation institutional investor clients"
+      }
+    }
+  },
+  "resourceCenter": {
+    "title": "Resource Center",
+    "subtitle": "Insights, Learning & Tools",
+    "coreFiles": {
+      "title": "Core Files",
+      "description": "Download whitepapers, service manuals, partnership program guides, etc.",
+      "action": "Download Whitepaper →",
+      "secondAction": "Download Service Manual →"
+    },
+    "systemTutorials": {
+      "title": "System Tutorials",
+      "description": "View platform partner knowledge base guides for efficient platform utilization.",
+      "action": "View Tutorials (Coming Soon) →"
+    },
+    "learningCenter": {
+      "title": "Learning Center",
+      "description": "Explore HWA, data partnerships, blockchain finance knowledge (includes glossary).",
+      "action": "Start Learning (Coming Soon) →"
+    },
+    "industryInsights": {
+      "title": "Industry Insights & News",
+      "description": "Get latest HWA market trends, policy interpretation and industry insights.",
+      "action": "Read Latest Insights →"
+    }
+  },
+  "follow": {
+    "social": {
+      "wechat": "WeChat"
+    },
+    "description": "Get to know us and share your thoughts with us",
+    "address": "China · Hong Kong · Xi'an",
+    "form": {
+      "title": "Send Inquiry",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit",
+      "name.placeholder": "Name",
+      "name.required": "Please enter your name",
+      "phone.placeholder": "Phone",
+      "phone.required": "Please enter your phone",
+      "email.placeholder": "Email",
+      "email.required": "Please enter your email",
+      "email.invalid": "Please enter a valid email address",
+      "message.placeholder": "Message",
+      "message.required": "Please enter your message"
+    }
+  },
+  "form": {
+    "phone": {
+      "required": "Please enter your phone",
+      "invalid": "Please enter a valid phone number"
+    },
+    "email": {
+      "invalid": "Please enter a valid email address"
+    }
+  },
+  "app": {
+    "submitSuccess": "Submitted successfully!"
   }
 }
