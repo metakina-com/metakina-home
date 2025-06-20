@@ -3,6 +3,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';// 导入语言文件
 import enUS from './locales/en-US/index.js';
 import jaJP from './locales/ja-JP/index.js';
+import koKR from './locales/ko-KR/index.js';
 import zhCN from './locales/zh-CN/index.js';
 
 const resources = {
@@ -14,6 +15,9 @@ const resources = {
   },
   ja: {
     translation: jaJP,
+  },
+  ko: {
+    translation: koKR,
   },
 };
 

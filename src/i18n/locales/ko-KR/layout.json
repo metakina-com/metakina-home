@@ -1,0 +1,67 @@
+{
+  "Header": {
+    "services": "핵심 서비스",
+    "case": "성공 사례",
+    "platform": "협력 플랫폼",
+    "blog": "블로그 컨설팅",
+    "followUs": "팔로우",
+    "aboutUs": "회사소개",
+    "contactUs": "문의하기",
+    "home": "홈",
+    "whyChooseUs": "선택 이유",
+    "supportedChains": "지원 체인",
+    "cooperationMode": "협력 모드",
+    "joinUs": "플랫폼 신청"
+  },
+  "Footer": {
+    "footerLinks": {
+      "services": {
+        "title": "핵심 서비스",
+        "exchange": "거래소",
+        "dapp": "Dapp",
+        "gamefi": "GameFi",
+        "nft": "NFT",
+        "blockchain": "블록체인",
+        "layer2": "Layer2",
+        "wallet": "지갑",
+        "trustedData": "신뢰할 수 있는 데이터",
+        "ai": "AI"
+      }
+    },
+    "about": {
+      "title": "메타키나 RWA 소개",
+      "description": "실물 자산과 디지털 금융의 컴플라이언스 브리지 구축."
+    },
+    "quickLinks": {
+      "title": "빠른 링크",
+      "solutions": "솔루션",
+      "whyChooseUs": "선택 이유",
+      "marketDynamics": "시장 매칭",
+      "supportedChains": "지원 체인",
+      "digitalCurrency": "디지털 투자은행 협력",
+      "resourceCenter": "리소스 센터",
+      "customerSuccess": "고객 성공"
+    },
+    "resources": {
+      "title": "리소스",
+      "whitepaper": "백서",
+      "privacyPolicy": "개인정보 처리방침",
+      "cookiePolicy": "쿠키 정책",
+      "serviceManual": "서비스 매뉴얼",
+      "industryInsight": "업계 인사이트",
+      "faq": "자주 묻는 질문"
+    },
+    "followUs": {
+      "title": "팔로우"
+    },
+    "contact": {
+      "company": "시안 다푸웨이버 네트워크 기술 유한책임회사",
+      "location": "본사: 중국·시안",
+      "emailIcon": "이메일",
+      "phoneIcon": "전화"
+    },
+    "copyright": "© 2025 METAKINA LIMITED & 시안 다푸웨이버 네트워크 기술 유한책임회사. 모든 권리 보유.",
+    "privacyPolicy": "개인정보 처리방침",
+    "terms": "서비스 약관"
+  }
+}

@@ -1,8 +1,7 @@
 'use client';
 
 import { updateFormApi } from '@/apis/api-user.js';
-import titlebgImg from '@/assets/images/client/titlebg.png';
-import { Button, Checkbox, DatePicker, Form, Input, message, Progress, Radio, Select } from 'antd';
+import { Button, Checkbox, DatePicker, Form, Input, message, Radio, Select } from 'antd';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -15,7 +14,6 @@ export default function RWAApplicationForm() {
   const navigate = useNavigate();
   const [submitLoad, setSubmitLoad] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
-  const [percent, setPercent] = useState(100 / 9);
   // 添加全局formState状态，用于保存所有步骤的表单数据
   const [formState, setFormState] = useState({});
 
@@ -146,7 +144,6 @@ export default function RWAApplicationForm() {
       }));
 
       setCurrentStep(currentStep + 1);
-      setPercent(100 / 9 * (currentStep + 2));
       window.scrollTo(0, 0);
     } else {
       message.error(t('stepValidation.error'));
@@ -972,7 +969,7 @@ export default function RWAApplicationForm() {
         // 补充信息
         return (
           <>
-            <h2 className="mb-5 flex items-center gap-2.5 border-b-3 border-[#667eea] pb-2.5 text-2xl text-[#1e3c72] font-semibold">
+            <h2 className="mb-5 flex items-center gap-2.5 pb-2.5 text-2xl text-[#1e3c72] font-semibold">
               {t('RWAForm.sections.additional.title')}
             </h2>
             <div className="border-t border-[#130F30]"></div>
@@ -1026,80 +1023,84 @@ export default function RWAApplicationForm() {
   };
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="mx-auto max-w-[1200px] overflow-hidden rounded-[20px] shadow-lg">
+    <div className="min-h-screen py-[72px]">
+      <div className="overflow-hidden">
         {/* Header */}
-        <div className="relative p-10 text-center text-white">
-          {/* <div className="absolute right-5 top-2.5 text-xs opacity-70">{t('RWAForm.logo')}</div> */}
-          <h1 className="mb-2.5 text-4xl font-bold">{t('RWAForm.title')}</h1>
-          <p className="text-lg opacity-90">{t('RWAForm.subtitle')}</p>
-          <div className="mt-5 rounded-lg bg-white/20 p-4 text-sm">
-            <strong>{t('RWAForm.processTitle')}</strong>
-            {t('RWAForm.processDescription')}
+        <div className="relative bg-[#0055FF] p-10 text-center text-white">
+          <div className="mx-auto w-[80vw]">
+            {/* <div className="absolute right-5 top-2.5 text-xs opacity-70">{t('RWAForm.logo')}</div> */}
+            <h1 className="mb-2.5 text-4xl font-bold">{t('RWAForm.title')}</h1>
+            <p className="text-lg opacity-90">{t('RWAForm.subtitle')}</p>
+            <div className="mt-5 rounded-lg bg-white/20 p-4 text-sm">
+              <strong>{t('RWAForm.processTitle')}</strong>
+              {t('RWAForm.processDescription')}
+            </div>
           </div>
         </div>
 
         <Form
           form={form}
           layout="vertical"
-          className="p-10 space-y-8"
+          className="mx-auto mt-10 max-w-[1200px] p-10 space-y-8"
           scrollToFirstError
         >
           {/* 委托方基本信息 */}
-          <div className="border-2 border-[#C931F7] rounded-[15px] p-4 transition-all hover:shadow-md">
-            <div className="bg-white px-20 py-10 bg-no-repeat" style={{ backgroundImage: `url(${titlebgImg})` }}>
+          <div className="border border-gray-100 rounded-[15px] bg-white p-4 shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all">
+            <div className="bg-white px-20 py-10 bg-no-repeat">
               {renderStepContent()}
 
               <div className="mt-10 flex">
-                <span className="w-15">
-                  {t('stepValidation.progress')}
-                  :
-                </span>
-                <Progress showInfo={false} percent={percent} strokeColor="#D900FF" trailColor="rgba(217,0,255,0.1)" />
+                {
+                  Array.from({ length: 9 }).map((item, index) => {
+                    return (
+                      <div key={`${index}as`} className={`${index === 0 ? '' : 'ml-3'} h-[6px] w-[61px] rounded-full ${index <= currentStep ? 'bg-[#0077FC]' : 'bg-[#0077FC]/10'} cursor-pointer`}></div>
+                    );
+                  })
+                }
+              </div>
+              <div className="mt-5 text-right">
+                {currentStep === 0
+                  ? ''
+                  : (
+                      <Button
+                        type="primary"
+                        onClick={() => prevStep()}
+                        className="mr-10 h-auto bg-[#D4E8FF] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                      >
+                        上一步
+                      </Button>
+                    )}
+                {currentStep === 8
+                  ? (
+                      <Button
+                        type="primary"
+                        onClick={handleSubmit}
+                        loading={submitLoad}
+                        className="h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                      >
+                        {t('RWAForm.submit.button')}
+                      </Button>
+                    )
+                  : (
+                      <Button
+                        type="primary"
+                        onClick={() => nextStep()}
+                        className="h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                      >
+                        下一步
+                      </Button>
+                    )}
               </div>
             </div>
-            <div className="mt-5 text-right">
-              {currentStep === 0
-                ? ''
-                : (
-                    <Button
-                      type="primary"
-                      onClick={() => prevStep()}
-                      className="mr-10 h-auto bg-[#FFFFFF] px-10 py-4 text-xl text-black font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
-                    >
-                      上一步
-                    </Button>
-                  )}
-              {currentStep === 8
-                ? (
-                    <Button
-                      type="primary"
-                      onClick={handleSubmit}
-                      loading={submitLoad}
-                      className="h-auto bg-[#D502FE] px-10 py-4 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
-                    >
-                      {t('RWAForm.submit.button')}
-                    </Button>
-                  )
-                : (
-                    <Button
-                      type="primary"
-                      onClick={() => nextStep()}
-                      className="h-auto bg-[#D502FE] px-10 py-4 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
-                    >
-                      下一步
-                    </Button>
-                  )}
-            </div>
           </div>
 
-          <div className="mb-8 rounded-lg bg-blue-50 p-4 text-blue-800">
+          {/* <div className="mb-8 rounded-lg bg-blue-50 p-4 text-blue-800">
             <strong>{t('RWAForm.securityNote')}</strong>
-          </div>
+          </div> */}
 
           {/* Submit Section */}
-          <div className="p-10 text-center from-[#667eea] to-[#764ba2] bg-gradient-to-r -mx-10 -mb-10">
-            {/* {currentStep === 8
+          {/* <div className="p-10 text-center from-[#667eea] to-[#764ba2] bg-gradient-to-r -mx-10 -mb-10">
+            {currentStep === 8
               ? (
                   <Button
                     type="primary"
@@ -1110,14 +1111,14 @@ export default function RWAApplicationForm() {
                     {t('RWAForm.submit.button')}
                   </Button>
                 )
-              : ''} */}
+              : ''}
             <p className="mt-4 text-white opacity-90">
               {t('RWAForm.submit.description')}
             </p>
             <p className="mt-2.5 text-sm text-white opacity-80">
               {t('RWAForm.submit.contact')}
             </p>
-          </div>
+          </div> */}
         </Form>
       </div>
     </div>
