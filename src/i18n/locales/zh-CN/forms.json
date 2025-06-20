@@ -1,0 +1,112 @@
+{
+  "RWAForm": {
+    "logo": "元话RWA",
+    "title": "RWA数字化代币化项目资料收集表单",
+    "subtitle": "现实世界资产（RWA）的数字化、代币化全流程服务",
+    "processTitle": "服务流程：",
+    "processDescription": "第一阶段：咨询规划与法律结构设计 → 第二阶段：技术开发与代币化 → 第三阶段：代币发行与上市 → 第四阶段：链上资产管理与持续服务",
+    "sections": {
+      "basicInfo": {
+        "title": "委托方基本信息",
+        "badge": "基础信息",
+        "fields": {
+          "companyName": {
+            "label": "公司全称或个人姓名",
+            "placeholder": "请填写营业执照上的完整公司名称",
+            "required": "请填写公司全称或个人姓名"
+          },
+          "legalPerson": {
+            "label": "法定代表人或负责人",
+            "required": "请填写法定代表人或负责人"
+          },
+          "contactPerson": {
+            "label": "项目联系人",
+            "required": "请填写项目联系人"
+          },
+          "position": {
+            "label": "联系人职位"
+          },
+          "phone": {
+            "label": "联系电话",
+            "required": "请填写联系电话"
+          },
+          "email": {
+            "label": "电子邮箱",
+            "required": "请填写电子邮箱",
+            "invalid": "请输入有效的电子邮箱"
+          },
+          "address": {
+            "label": "详细地址",
+            "required": "请填写详细地址"
+          },
+          "businessLicense": {
+            "label": "营业执照统一社会信用代码"
+          },
+          "registeredCapital": {
+            "label": "注册资本（万元）"
+          }
+        }
+      },
+      "assetInfo": {
+        "title": "RWA资产详细信息",
+        "badge": "第一阶段",
+        "description": "请详细填写您的现实世界资产信息，这些信息将用于资产梳理、合规治理、产权确认、价值评估等前期工作。",
+        "fields": {
+          "assetType": {
+            "label": "资产类型",
+            "required": "请选择资产类型",
+            "placeholder": "请选择资产类型",
+            "options": {
+              "infrastructure": "基础设施（高速公路、桥梁、隧道等）",
+              "real_estate_commercial": "商业地产（写字楼、商场、酒店等）",
+              "real_estate_residential": "住宅地产",
+              "energy_renewable": "可再生能源（风电、光伏等）",
+              "energy_traditional": "传统能源（电力、燃气等）",
+              "transportation": "交通运输（港口、机场、物流中心）",
+              "utility": "公用事业（供水、供电、通信）",
+              "industrial": "工业资产（厂房、设备、产线）",
+              "agricultural": "农业资产（土地、农场、林地）",
+              "commodity": "大宗商品（贵金属、原材料等）",
+              "financial": "金融资产（债权、收益权等）",
+              "intellectual": "知识产权（专利、商标、版权）",
+              "other": "其他"
+            }
+          },
+          "assetSubtype": {
+            "label": "资产子类型详述",
+            "placeholder": "如：京秦高速某段、商业综合体、光伏电站等"
+          },
+          "assetDescription": {
+            "label": "资产详细描述",
+            "required": "请填写资产详细描述",
+            "placeholder": "请详细描述资产的地理位置、建设规模、运营状况、收益模式、市场地位等信息"
+          }
+        }
+      }
+    },
+    "securityNote": "信息安全承诺：我们承诺严格保护您提供的所有信息，仅用于项目评估和方案设计。所有资料将按照保密协议要求进行处理。",
+    "submit": {
+      "button": "提交项目申请",
+      "description": "提交后，我们的专业团队将在24小时内与您联系，进行项目初步评估",
+      "contact": "服务热线：17709224992 | 邮箱：contact@dappweb.cn",
+      "message": {
+        "success": "提交成功！",
+        "error": "提交失败,请稍后再试"
+      }
+    }
+  },
+  "stepValidation": {
+    "error": "请填写完整所有必填项",
+    "info": "请到最后一步再提交",
+    "progress": "进度"
+  },
+  "form": {
+    "phone": {
+      "required": "请输入您的电话",
+      "invalid": "请输入有效的手机号码"
+    },
+    "email": {
+      "invalid": "请输入有效的邮箱地址"
+    }
+  }
+}

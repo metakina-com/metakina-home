@@ -1,0 +1,231 @@
+{
+  "Home": {
+    "name": "达普韦伯",
+    "title": "元话RWA",
+    "tagLine": "盘活万亿资产，合规连接全球资本",
+    "description": "内置多语言支持的 Next.js 15 启动模板，助您快速构建面向全球的出海网站。简洁高效，开箱即用，完全优化的SEO基础架构。"
+  },
+  "Consult": {
+    "logo": "元话RWA",
+    "title": "盘活万亿资产，合规连接全球资本",
+    "subtitle": "提供机构级、端到端、合规优先的RWA与数据资产化解决方案，赋能您的资产潜力。",
+    "button": "申请免费咨询"
+  },
+  "challenges": {
+    "title": "传统资产与数据资产面临的挑战",
+    "liquidity": {
+      "title": "流动性困境",
+      "description": "非标资产难以快速变现，持有成本高。"
+    },
+    "financing": {
+      "title": "融资瓶颈",
+      "description": "传统渠道门槛高，跨境、数据资产化合规复杂。"
+    },
+    "efficiency": {
+      "title": "管理效率低下",
+      "description": "资产确权、估值、交易、收益分配等环节流程繁琐、人工依赖度高、信息不透明，增加管理成本与风险。"
+    }
+  },
+  "solutions": {
+    "sectionTitle": "解决方案",
+    "mainTitle": "端到端 RWA 与数据资产化服务",
+    "common": {
+      "learnMore": "了解详情"
+    },
+    "assetDigital": {
+      "title": "资产数字化",
+      "description": "利用 AI(\"元启\")辅助评估，设计精准 Tokenomics，通过安全可靠的智能合约实现资产上链。"
+    },
+    "crossBorder": {
+      "title": "合规跨境融资促进",
+      "description": "设计并执行创新的跨境金融结构（如香港LPF+陕西QFLP），精准对接全球合格投资者网络。"
+    },
+    "compliance": {
+      "title": "全流程合规保障",
+      "description": "基于\"合规前置\"理念，提供法规解读，整合 KYC/AML/KYB，保障数据安全与隐私。"
+    },
+    "ecosystem": {
+      "title": "生态与市场运营",
+      "description": "利用\"元策\"AI 进行市场分析，构建和运营社群，协调市场对接，提供持续的技术维护和品牌建设。"
+    },
+    "dataFinance": {
+      "title": "数据资产金融化",
+      "description": "紧跟中国\"数据资产入表\"政策，提供从合规治理到金融化方案设计、市场对接的全流程服务。"
+    },
+    "modular": {
+      "title": "模块化与定制化",
+      "description": "根据项目需求和预算，灵活选择服务模块，我们提供高度定制化的解决方案。"
+    }
+  },
+  "platform": {
+    "title": "合作平台"
+  },
+  "RWACooperation": {
+    "title": "元话RWA数字投行合作计划",
+    "mainTitle": "元话RWA",
+    "subtitle": "数字投行合作计划",
+    "flexibleMode": "灵活的合作模式",
+    "processTitle": "合作流程 ",
+    "getDetailButton": "获取详细报价与合作方案",
+    "applyPartnerButton": "申请成为合作伙伴",
+    "plans": {
+      "registered": {
+        "title": "注册伙伴",
+        "description": "建立联系，获取合作信息与基础资源。"
+      },
+      "certified": {
+        "title": "认证伙伴",
+        "description": "获得专业认证，享有专属支持，市场资源与佣金激励。"
+      },
+      "premium": {
+        "title": "优选伙伴",
+        "description": "深度战略合作，共享市场资源、最高权益、MDF及独家课程/软件授权"
+      }
+    },
+    "modes": {
+      "modular": {
+        "title": "模块化服务",
+        "description": "按需组合核心服务模块。"
+      },
+      "customized": {
+        "title": "定制化解决方案",
+        "description": "为特殊资产或大规模项目量身定制。"
+      },
+      "transparent": {
+        "title": "透明定价",
+        "description": "详细费用构成，可选里程碑或绩效模式。"
+      }
+    },
+    "process": {
+      "consultation": "初步咨询",
+      "evaluation": "项目评估",
+      "design": "方案设计",
+      "agreement": "协议签署",
+      "execution": "执行与追踪"
+    }
+  },
+  "contact": {
+    "title": {
+      "part1": "联系我们，",
+      "part2": "开启您的 RWA 之旅"
+    },
+    "form": {
+      "title": "发送咨询",
+      "name": "姓名",
+      "namePlaceholder": "请输入您的姓名",
+      "nameRequired": "请输入姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "请输入您的邮箱",
+      "emailRequired": "请输入邮箱",
+      "emailInvalid": "请输入有效的邮箱地址",
+      "company": "公司名称 (可选)",
+      "companyPlaceholder": "请输入您的公司名称",
+      "message": "您的需求或问题",
+      "messagePlaceholder": "请描述您的需求或问题",
+      "messageRequired": "请输入您的需求或问题",
+      "submit": "提交信息"
+    },
+    "info": {
+      "contactTitle": "联系方式",
+      "address": "地址",
+      "businessEmail": "业务邮箱",
+      "hk": {
+        "company": "香港 METAKINA LIMITED",
+        "address": "中国香港特别行政区数码港",
+        "businessEmail": "rwa.service@metakina.com",
+        "businessEmailLabel": "业务邮箱",
+        "contactPerson": "联系人（张强伟）",
+        "phone": "+86 177 0922 4992",
+        "website": "www.metakina.com",
+        "websiteLabel": "官网"
+      },
+      "xian": {
+        "company": "西安达普韦伯 (技术伙伴)",
+        "address": "中国陕西省西安市雁塔区",
+        "techConsult": "技术咨询",
+        "techEmail": "qiangweizhang@dappweb.cn",
+        "website": "www.dappweb.cn",
+        "websiteLabel": "官网"
+      }
+    }
+  },
+  "chooseUs": {
+    "title": "为什么选择元话",
+    "features": {
+      "financeCompliance": {
+        "title": "卓越跨境金融与合规",
+        "description": "精通LPF+QFLP等架构，深刻理解中港及国际法规"
+      },
+      "professionalTeam": {
+        "title": "跨界融合专业团队",
+        "description": "汇聚金融、技术、法律、市场资深专家"
+      },
+      "riskControl": {
+        "title": "深度合规与风控",
+        "description": "\"合规前置\"实践，全面风险缓释机制"
+      },
+      "ecosystemNetwork": {
+        "title": "强大生态网络",
+        "description": "链接全球与本地顶级技术、金融、法律伙伴"
+      },
+      "advancedTechnology": {
+        "title": "领先且合规的技术",
+        "description": "自主知识产权(公章书面)、中国备案基础、平台安全高效"
+      },
+      "successCases": {
+        "title": "丰富成功案例",
+        "description": "服务多元化资产配置机构投资客户的成功实践"
+      }
+    }
+  },
+  "resourceCenter": {
+    "title": "资源中心",
+    "subtitle": "洞察、学习与工具",
+    "coreFiles": {
+      "title": "核心文件",
+      "description": "下载白皮书、服务手册、合作计划介绍等。",
+      "action": "下载白皮书 →",
+      "secondAction": "下载服务手册 →"
+    },
+    "systemTutorials": {
+      "title": "系统教程",
+      "description": "查看平台合作伙伴知识库介绍，高效利用平台。",
+      "action": "查看教程（即将推出）→"
+    },
+    "learningCenter": {
+      "title": "学习中心",
+      "description": "探索 HWA、数据合伙代、区块链金融知识（含词汇表）。",
+      "action": "开始学习（即将推出）→"
+    },
+    "industryInsights": {
+      "title": "行业洞察与新闻",
+      "description": "获取最新 HWA 市场趋势、政策解读与行业洞察。",
+      "action": "阅读最新洞察 →"
+    }
+  },
+  "follow": {
+    "title": "联系我们",
+    "social": {
+      "wechat": "微信"
+    },
+    "description": "了解我们，把您的想法告诉我们",
+    "address": "中国 · 香港 · 西安",
+    "form": {
+      "title": "发送咨询",
+      "name": "姓名",
+      "phone": "电话",
+      "email": "邮箱",
+      "message": "留言",
+      "submit": "提交",
+      "name.placeholder": "姓名",
+      "name.required": "请输入您的姓名",
+      "phone.placeholder": "电话",
+      "phone.required": "请输入您的电话",
+      "email.placeholder": "邮箱",
+      "email.required": "请输入您的邮箱",
+      "email.invalid": "请输入有效的邮箱地址",
+      "message.placeholder": "留言",
+      "message.required": "请输入留言内容"
+    }
+  }
+}

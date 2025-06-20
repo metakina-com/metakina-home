@@ -1,0 +1,112 @@
+{
+  "RWAForm": {
+    "logo": "Metakina RWA",
+    "title": "RWA Digitalization & Tokenization Project Information Form",
+    "subtitle": "Comprehensive Services for Real World Assets (RWA) Digitalization and Tokenization",
+    "processTitle": "Service Process:",
+    "processDescription": "Phase 1: Consulting & Legal Structure Design → Phase 2: Technical Development & Tokenization → Phase 3: Token Issuance & Listing → Phase 4: On-chain Asset Management & Ongoing Services",
+    "sections": {
+      "basicInfo": {
+        "title": "Client Basic Information",
+        "badge": "Basic Info",
+        "fields": {
+          "companyName": {
+            "label": "Company Name or Individual Name",
+            "placeholder": "Please enter the complete company name as shown on business license",
+            "required": "Please enter company name or individual name"
+          },
+          "legalPerson": {
+            "label": "Legal Representative or Person in Charge",
+            "required": "Please enter legal representative or person in charge"
+          },
+          "contactPerson": {
+            "label": "Project Contact Person",
+            "required": "Please enter project contact person"
+          },
+          "position": {
+            "label": "Contact Person Position"
+          },
+          "phone": {
+            "label": "Contact Phone",
+            "required": "Please enter contact phone"
+          },
+          "email": {
+            "label": "Email",
+            "required": "Please enter email",
+            "invalid": "Please enter a valid email address"
+          },
+          "address": {
+            "label": "Detailed Address",
+            "required": "Please enter detailed address"
+          },
+          "businessLicense": {
+            "label": "Business License Number/Unified Social Credit Code"
+          },
+          "registeredCapital": {
+            "label": "Registered Capital (in 10,000 CNY)"
+          }
+        }
+      },
+      "assetInfo": {
+        "title": "RWA Asset Detailed Information",
+        "badge": "Phase 1",
+        "description": "Please provide detailed information about your real-world assets. This information will be used for asset assessment, compliance governance, ownership verification, and value evaluation in the preliminary work.",
+        "fields": {
+          "assetType": {
+            "label": "Asset Type",
+            "required": "Please select asset type",
+            "placeholder": "Please select asset type",
+            "options": {
+              "infrastructure": "Infrastructure (Highways, Bridges, Tunnels, etc.)",
+              "real_estate_commercial": "Commercial Real Estate (Office Buildings, Shopping Malls, Hotels, etc.)",
+              "real_estate_residential": "Residential Real Estate",
+              "energy_renewable": "Renewable Energy (Wind Power, Solar Power, etc.)",
+              "energy_traditional": "Traditional Energy (Electricity, Gas, etc.)",
+              "transportation": "Transportation (Ports, Airports, Logistics Centers)",
+              "utility": "Utilities (Water Supply, Power Supply, Communications)",
+              "industrial": "Industrial Assets (Plants, Equipment, Production Lines)",
+              "agricultural": "Agricultural Assets (Land, Farms, Forests)",
+              "commodity": "Commodities (Precious Metals, Raw Materials, etc.)",
+              "financial": "Financial Assets (Debt Rights, Income Rights, etc.)",
+              "intellectual": "Intellectual Property (Patents, Trademarks, Copyrights)",
+              "other": "Others"
+            }
+          },
+          "assetSubtype": {
+            "label": "Asset Subtype Details",
+            "placeholder": "e.g., Specific Highway Section, Commercial Complex, Solar Power Station, etc."
+          },
+          "assetDescription": {
+            "label": "Detailed Asset Description",
+            "required": "Please provide detailed asset description",
+            "placeholder": "Please describe the asset's location, scale, operational status, revenue model, market position, etc."
+          }
+        }
+      }
+    },
+    "securityNote": "Information Security Commitment: We commit to strictly protecting all information you provide, using it only for project evaluation and solution design. All materials will be handled according to confidentiality agreement requirements.",
+    "submit": {
+      "button": "Submit Project Application",
+      "description": "After submission, our professional team will contact you within 24 hours for initial project evaluation",
+      "contact": "Service Hotline: 17709224992 | Email: contact@dappweb.cn",
+      "message": {
+        "success": "Submitted successfully！",
+        "error": " Submission failed, please try again later"
+      }
+    }
+  },
+  "stepValidation": {
+    "error": "Please fill in all required fields",
+    "info": "Please submit at the final step",
+    "progress": "Progress"
+  },
+  "form": {
+    "phone": {
+      "required": "Please enter your phone",
+      "invalid": "Please enter a valid phone number"
+    },
+    "email": {
+      "invalid": "Please enter a valid email address"
+    }
+  }
+}

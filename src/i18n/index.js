@@ -1,9 +1,9 @@
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';// 导入语言文件
-import enUS from './locales/en-US.json';
-import jaJP from './locales/ja-JP.json';
-import zhCN from './locales/zh-CN.json';
+import enUS from './locales/en-US/index.js';
+import jaJP from './locales/ja-JP/index.js';
+import zhCN from './locales/zh-CN/index.js';
 
 const resources = {
   en: {

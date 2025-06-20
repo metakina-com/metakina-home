@@ -20,8 +20,8 @@ const LayoutFooter = memo(() => {
 
   const resourceLinks = [
     { path: '/privacy-policy', key: 'Footer.resources.whitepaper' },
-    { path: '/privacy-policy', key: '隐私政策' },
-    { path: '/privacy-policy', key: 'Cookie政策' },
+    { path: '/privacy-policy', key: 'Footer.resources.privacyPolicy' },
+    { path: '/privacy-policy', key: 'Footer.resources.cookiePolicy' },
     { path: '/service-terms', key: 'Footer.resources.serviceManual' },
     { path: '/', key: 'Footer.resources.industryInsight' },
     { path: '/', key: 'Footer.resources.faq' },
@@ -113,7 +113,7 @@ const LayoutFooter = memo(() => {
 
   const renderSocialLinks = () => (
     <div className="space-y-6">
-      <h3 className="text-lg font-semibold">关注我们</h3>
+      <h3 className="text-lg font-semibold">{t('Footer.followUs.title')}</h3>
 
       {/* 社交媒体图标 */}
       <div className="flex space-x-4">
@@ -134,15 +134,15 @@ const LayoutFooter = memo(() => {
       {/* 公司信息 */}
       <div className="space-y-3">
         <p className="text-sm text-gray-400 font-medium">
-          西安达普韦伯网络科技有限责任公司
+          {t('Footer.contact.company')}
         </p>
         <p className="text-sm text-gray-400">
-          总部：中国·西安
+          {t('Footer.contact.location')}
         </p>
 
         {/* 邮箱信息 */}
         <div className="flex items-center space-x-2">
-          <img src={youxiangFooter} alt="邮箱" />
+          <img src={youxiangFooter} alt={t('Footer.contact.emailIcon')} />
           <a
             href="mailto:contact@dappweb.cn"
             className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
@@ -154,7 +154,7 @@ const LayoutFooter = memo(() => {
         {/* 电话信息 */}
         <div className="space-y-1">
           <div className="flex items-center space-x-2">
-            <img src={dhFooter} alt="电话" />
+            <img src={dhFooter} alt={t('Footer.contact.phoneIcon')} />
             <a
               href="tel:+8617709224992"
               className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
