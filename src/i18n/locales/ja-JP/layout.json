@@ -9,7 +9,9 @@
     "supportedChains": "サポートチェーン",
     "cooperationMode": "協力モード",
     "joinUs": "申請する",
-    "contactUs": "お問い合わせ"
+    "contactUs": "お問い合わせ",
+    "solutions": "ソリューション",
+    "resourceCenter": "リソースセンター"
   },
   "Footer": {
     "about": {

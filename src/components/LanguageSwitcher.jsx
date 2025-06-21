@@ -34,6 +34,10 @@ export default function LanguageSwitcher() {
             value: 'ja-JP',
             label: '日本語',
           },
+          {
+            value: 'ko-KR',
+            label: '한국어',
+          },
         ]}
       />
     </div>

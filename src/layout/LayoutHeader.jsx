@@ -13,9 +13,9 @@ const LayoutHeader = memo(() => {
 
   const navItems = [
     { path: '/', label: t('Header.home') },
-    { path: '/', label: '解决方案' },
+    { path: '/', label: t('Header.solutions') },
     { path: '/', label: t('Header.supportedChains') },
-    { path: '/', label: '资源中心' },
+    { path: '/', label: t('Header.resourceCenter') },
     { path: '/', label: t('Header.cooperationMode') },
   ];
 
