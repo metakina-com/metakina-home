@@ -27,5 +27,14 @@
   },
   "app": {
     "submitSuccess": "送信完了！"
+  },
+  "buttons": {
+    "previousStep": "前のステップ",
+    "nextStep": "次のステップ",
+    "submit": "送信"
+  },
+  "errors": {
+    "formRestoreError": "フォーム状態の復元に失敗しました",
+    "formValidationError": "フォームの検証に失敗しました"
   }
 }

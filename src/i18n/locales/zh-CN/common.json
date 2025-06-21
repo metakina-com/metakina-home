@@ -22,5 +22,14 @@
   },
   "app": {
     "submitSuccess": "提交成功！"
+  },
+  "buttons": {
+    "previousStep": "上一步",
+    "nextStep": "下一步",
+    "submit": "提交"
+  },
+  "errors": {
+    "formRestoreError": "恢复表单状态失败",
+    "formValidationError": "表单验证失败"
   }
 }

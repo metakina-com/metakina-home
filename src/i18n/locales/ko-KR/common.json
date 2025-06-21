@@ -22,5 +22,14 @@
   },
   "app": {
     "submitSuccess": "제출 성공!"
+  },
+  "buttons": {
+    "previousStep": "이전 단계",
+    "nextStep": "다음 단계",
+    "submit": "제출"
+  },
+  "errors": {
+    "formRestoreError": "폼 상태 복원 실패",
+    "formValidationError": "폼 검증 실패"
   }
 }

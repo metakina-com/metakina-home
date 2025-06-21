@@ -27,5 +27,14 @@
   },
   "app": {
     "submitSuccess": "Submitted successfully!"
+  },
+  "buttons": {
+    "previousStep": "Previous",
+    "nextStep": "Next",
+    "submit": "Submit"
+  },
+  "errors": {
+    "formRestoreError": "Failed to restore form state",
+    "formValidationError": "Form validation failed"
   }
 }

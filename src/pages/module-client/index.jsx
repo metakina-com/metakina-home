@@ -29,7 +29,7 @@ export default function RWAApplicationForm() {
         form.setFieldsValue(parsedState);
       }
     } catch (error) {
-      console.error('恢复表单状态失败:', error);
+      console.error(`${t('common:errors.formRestoreError')}:`, error);
     }
   }, [form]);
 
@@ -120,7 +120,7 @@ export default function RWAApplicationForm() {
 
       return true;
     } catch (error) {
-      console.error('表单验证失败:', error);
+      console.error(`${t('common:errors.formValidationError')}:`, error);
 
       // 如果有错误字段，滚动到第一个错误字段
       if (error.errorFields && error.errorFields.length > 0) {
@@ -1046,7 +1046,7 @@ export default function RWAApplicationForm() {
         >
           {/* 委托方基本信息 */}
           <div className="border border-gray-100 rounded-[15px] bg-white p-4 shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all">
-            <div className="bg-white px-20 py-10 bg-no-repeat">
+            <div className="bg-white py-10 bg-no-repeat md:px-20">
               {renderStepContent()}
 
               <div className="mt-10 flex">
@@ -1058,28 +1058,40 @@ export default function RWAApplicationForm() {
                   })
                 }
               </div>
-              <div className="mt-5 text-right">
+              <div className="mt-5 text-right max-md:flex max-md:flex-col">
                 {currentStep === 0
                   ? ''
                   : (
                       <Button
                         type="primary"
                         onClick={() => prevStep()}
-                        className="mr-10 h-auto bg-[#D4E8FF] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                        className="h-auto bg-[#D4E8FF] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all max-md:mb-3 md:mr-10 hover:scale-105 hover:shadow-xl"
                       >
-                        上一步
+                        {t('buttons.previousStep')}
                       </Button>
                     )}
                 {currentStep === 8
                   ? (
-                      <Button
-                        type="primary"
-                        onClick={handleSubmit}
-                        loading={submitLoad}
-                        className="h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
-                      >
-                        {t('RWAForm.submit.button')}
-                      </Button>
+                      <>
+                        {/* 电脑端  提交按钮  */}
+                        <Button
+                          type="primary"
+                          onClick={handleSubmit}
+                          loading={submitLoad}
+                          className="hidden h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all md:block hover:scale-105 hover:shadow-xl"
+                        >
+                          {t('RWAForm.submit.button')}
+                        </Button>
+                        {/* 手机端按钮显示  提交 */}
+                        <Button
+                          type="primary"
+                          onClick={handleSubmit}
+                          loading={submitLoad}
+                          className="block h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all md:hidden hover:scale-105 hover:shadow-xl"
+                        >
+                          {t('buttons.submit')}
+                        </Button>
+                      </>
                     )
                   : (
                       <Button
@@ -1087,7 +1099,7 @@ export default function RWAApplicationForm() {
                         onClick={() => nextStep()}
                         className="h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                       >
-                        下一步
+                        {t('buttons.nextStep')}
                       </Button>
                     )}
               </div>
