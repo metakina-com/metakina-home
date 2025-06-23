@@ -1,5 +1,5 @@
 export const defaultLocale = 'zh-CN';
-export const locales = ['en-US', 'zh-CN', 'ja-JP', 'ko-KR'];
+export const locales = ['en-US', 'zh-CN', 'zh-TW', 'ja-JP', 'ko-KR'];
 
 export function getLanguageName(locale) {
   switch (locale) {
@@ -8,6 +8,9 @@ export function getLanguageName(locale) {
 
     case 'zh-CN':
       return '简体中文';
+
+    case 'zh-TW':
+      return '繁體中文';
 
     case 'ja-JP':
       return '日本語';
@@ -27,6 +30,9 @@ export function getLanguageFlag(locale) {
 
     case 'zh-CN':
       return '🇨🇳';
+
+    case 'zh-TW':
+      return '🇹🇼';
 
     case 'ja-JP':
       return '🇯🇵';

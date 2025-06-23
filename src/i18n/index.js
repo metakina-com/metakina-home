@@ -5,18 +5,22 @@ import enUS from './locales/en-US/index.js';
 import jaJP from './locales/ja-JP/index.js';
 import koKR from './locales/ko-KR/index.js';
 import zhCN from './locales/zh-CN/index.js';
+import zhTW from './locales/zh-TW/index.js';
 
 const resources = {
-  en: {
+  'en': {
     translation: enUS,
   },
-  zh: {
+  'zh': {
     translation: zhCN,
   },
-  ja: {
+  'zh-TW': {
+    translation: zhTW,
+  },
+  'ja': {
     translation: jaJP,
   },
-  ko: {
+  'ko': {
     translation: koKR,
   },
 };

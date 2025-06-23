@@ -27,6 +27,10 @@ export default function LanguageSwitcher() {
             label: '中文',
           },
           {
+            value: 'zh-TW',
+            label: '繁體中文',
+          },
+          {
             value: 'en-US',
             label: 'English',
           },

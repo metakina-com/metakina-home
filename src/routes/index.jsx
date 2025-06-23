@@ -15,6 +15,12 @@ const TextIndex = lazy(() => import('../pages/module-test/index.jsx'));
 const PrivacyPolicy = lazy(() => import('../pages/module-footer/PrivacyPolicy.jsx'));
 const ServiceTerms = lazy(() => import('../pages/module-footer/ServiceTerms.tsx'));
 const RWAApplicationForm = lazy(() => import('../pages/module-client/index.jsx'));
+const DigitalAsset = lazy(() => import('../pages/module-digital-asset/index.jsx'));
+const CrossBorderFunding = lazy(() => import('../pages/module-cross-border-funding/index.jsx'));
+const ProcessAssurance = lazy(() => import('../pages/module-process-assurance/index.jsx'));
+const MarketOperation = lazy(() => import('../pages/module-market-operation/index.jsx'));
+const AssetFinancialization = lazy(() => import('../pages/module-asset-financialization/index.jsx'));
+const Customization = lazy(() => import('../pages/module-customization/index.jsx'));
 
 const routes = [
   {
@@ -67,6 +73,54 @@ const routes = [
         element: <RWAApplicationForm />,
         meta: {
           title: 'RWA项目申请',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'digital-asset',
+        element: <DigitalAsset />,
+        meta: {
+          title: '资产数字化',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'cross-border-funding',
+        element: <CrossBorderFunding />,
+        meta: {
+          title: '合规跨境融资促进',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'process-assurance',
+        element: <ProcessAssurance />,
+        meta: {
+          title: '全流程合规保障',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'market-operation',
+        element: <MarketOperation />,
+        meta: {
+          title: '生态与市场运营',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'asset-financialization',
+        element: <AssetFinancialization />,
+        meta: {
+          title: '数据资产金融化',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'customization',
+        element: <Customization />,
+        meta: {
+          title: '模块化与定制化',
           needLogin: false,
         },
       },

@@ -28,6 +28,18 @@ function RouterTransition({ children }) {
         }}
         onEntered={() => {
           setIsLoading(false);
+          // 在路由切换完成后滚动到顶部
+          // 使用 requestAnimationFrame 确保在下一帧执行滚动
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              // 双重 requestAnimationFrame 确保页面完全渲染完成
+              window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'auto',
+              });
+            });
+          });
         }}
       >
         {children}

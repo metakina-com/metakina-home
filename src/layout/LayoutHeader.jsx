@@ -12,11 +12,11 @@ const LayoutHeader = memo(() => {
   const navigate = useNavigate();
 
   const navItems = [
-    { path: '/', label: t('Header.home') },
-    { path: '/', label: t('Header.solutions') },
-    { path: '/', label: t('Header.supportedChains') },
-    { path: '/', label: t('Header.resourceCenter') },
-    { path: '/', label: t('Header.cooperationMode') },
+    { path: '/', label: t('Header.home'), type: 'route' },
+    { path: '#solutions-section', label: t('Header.solutions'), type: 'anchor' },
+    { path: '/', label: t('Header.supportedChains'), type: 'route' },
+    { path: '/', label: t('Header.resourceCenter'), type: 'route' },
+    { path: '/', label: t('Header.cooperationMode'), type: 'route' },
   ];
 
   const renderLogo = () => (
@@ -33,16 +33,61 @@ const LayoutHeader = memo(() => {
     </Link>
   );
 
+  const handleNavClick = (item, event) => {
+    if (item.type === 'anchor') {
+      event.preventDefault();
+
+      // 如果不在首页，先跳转到首页
+      if (window.location.pathname !== '/home' && window.location.pathname !== '/') {
+        navigate('/home');
+        // 等待页面跳转完成后再滚动
+        setTimeout(() => {
+          const element = document.querySelector(item.path);
+
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        }, 500);
+      } else {
+        // 已经在首页，直接滚动
+        const element = document.querySelector(item.path);
+
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }
+    }
+  };
+
   const renderNavItems = () => (
     <>
       {navItems.map((item, index) => (
-        <Link
-          key={`${item.path}d${index}`}
-          to={item.path}
-          className={`flex items-center ${index > 0 ? 'ml-8' : ''}`}
-        >
-          <span className="text-lg text-white">{item.label}</span>
-        </Link>
+        item.type === 'anchor'
+          ? (
+              <a
+                key={`${item.path}d${index}`}
+                href={item.path}
+                onClick={e => handleNavClick(item, e)}
+                className={`flex items-center ${index > 0 ? 'ml-8' : ''}`}
+              >
+                <span className="text-lg text-white">{item.label}</span>
+              </a>
+            )
+          : (
+              <Link
+                key={`${item.path}d${index}`}
+                to={item.path}
+                className={`flex items-center ${index > 0 ? 'ml-8' : ''}`}
+              >
+                <span className="text-lg text-white">{item.label}</span>
+              </Link>
+            )
       ))}
     </>
   );
@@ -64,9 +109,40 @@ const LayoutHeader = memo(() => {
     </div>
   );
 
-  const handleAnchorClick = ({ _key, path }) => {
+  const handleAnchorClick = ({ key }) => {
     setMobileMenuOpen(false);
-    navigate(path);
+
+    const item = navItems.find(nav => nav.path === key);
+
+    if (item?.type === 'anchor') {
+      // 如果不在首页，先跳转到首页
+      if (window.location.pathname !== '/home' && window.location.pathname !== '/') {
+        navigate('/home');
+        // 等待页面跳转完成后再滚动
+        setTimeout(() => {
+          const element = document.querySelector(item.path);
+
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        }, 500);
+      } else {
+        // 已经在首页，直接滚动
+        const element = document.querySelector(item.path);
+
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }
+    } else {
+      navigate(key);
+    }
   };
 
   return (
@@ -98,9 +174,12 @@ const LayoutHeader = memo(() => {
             <Menu
               mode="inline"
               theme="dark"
-              items={navItems}
+              items={navItems.map(item => ({
+                key: item.path,
+                label: item.label,
+              }))}
               style={{ fontSize: '1rem', color: '#ffffff' }}
-              onSelect={({ key }) => handleAnchorClick({ key, path: '/' })}
+              onSelect={({ key }) => handleAnchorClick({ key })}
               className="white-text-menu !bg-[#0055FF] !text-white"
             />
           </div>

@@ -215,6 +215,151 @@
       "action": "Read Latest Insights →"
     }
   },
+  "processAssurance": {
+    "title": "Compliance First, Building Trust Foundation",
+    "description": "MetaTalk RWA adheres to the 'compliance-first' philosophy, integrating comprehensive compliance systems from project inception to ensure every operation is safe and reliable.",
+    "coreCompliance": {
+      "title": "Core Compliance Philosophy",
+      "items": [
+        {
+          "title": "Regulatory Insight Services & Consulting",
+          "description": "We provide professional regulatory insight services for enterprises and individuals, helping you deeply understand the latest changes in relevant laws and regulations to ensure compliant business operations."
+        },
+        {
+          "title": "\"Compliance-First\" Philosophy",
+          "description": "From the project design phase, we integrate compliance systems into every link, ensuring that every stage from project initiation to operational launch complies with regulatory requirements, avoiding risks of later modifications."
+        }
+      ]
+    },
+    "kycAmlKyb": {
+      "title": "Integrated KYC/AML/KYB System",
+      "items": [
+        {
+          "title": "Strict KYC (Know Your Customer)",
+          "description": "We implement multi-layered identity verification processes to ensure all participants' identities are authentic and reliable, effectively preventing fraudulent activities."
+        },
+        {
+          "title": "Robust AML (Anti-Money Laundering) Mechanisms",
+          "description": "Through integration with international anti-money laundering databases and blacklists, combined with intelligent monitoring systems, we effectively identify and prevent suspicious transactions, ensuring the legality of fund sources."
+        },
+        {
+          "title": "Comprehensive KYB (Know Your Business)",
+          "description": "We conduct in-depth background investigations and qualification audits of institutional and corporate clients to ensure the compliance and security of business cooperation."
+        }
+      ]
+    },
+    "dataSecurity": {
+      "title": "Data Security & Privacy Protection",
+      "items": [
+        {
+          "title": "High-Strength Encryption Technology",
+          "description": "We use industry-leading encryption algorithms to provide end-to-end encryption for all sensitive data, ensuring confidentiality during data transmission and storage."
+        },
+        {
+          "title": "Strict Access Control",
+          "description": "We implement Role-Based Access Control (RBAC) and the principle of least privilege to ensure only authorized personnel can access specific data."
+        },
+        {
+          "title": "Global Privacy Regulation Compliance",
+          "description": "We strictly comply with mainstream global data privacy regulations such as GDPR and CCPA, protecting user data rights and building trustworthy services."
+        }
+      ]
+    }
+  },
+  "customization": {
+    "header": {
+      "title": "Building Ecosystem, Operating Markets",
+      "description": "Leveraging \"Meta-Strategy\" AI for market analysis, building and operating communities, coordinating market connections, providing continuous technical maintenance and brand building."
+    },
+    "coreFeatures": {
+      "title": "Core Operational Strategies",
+      "empowerDevelopers": {
+        "title": "Empower Developers",
+        "description": "Provide comprehensive development tools, API interfaces, and technical support to help developers rapidly build innovative RWA-based applications and stimulate ecosystem vitality."
+      },
+      "qualityApps": {
+        "title": "Introduce Quality Applications",
+        "description": "Strictly screen and introduce RWA-related applications with high value, innovation, and user experience to enrich platform ecosystem content and meet diversified market demands."
+      },
+      "industryPartnership": {
+        "title": "Deep Empowerment of Industry Partners",
+        "description": "Closely collaborate with financial institutions, asset management companies, technology enterprises and other industry partners, sharing resources, technology, and market insights for mutual benefit."
+      },
+      "ecosystemBuilding": {
+        "title": "Build RWA Ecosystem",
+        "description": "Connect resources from all parties, build RWA infrastructure, cultivate a healthy market environment, and jointly promote innovation and development in the RWA field."
+      }
+    },
+    "advantages": {
+      "title": "Our Ecosystem Advantages and Vision",
+      "description": "MetaKina RWA believes that through openness, collaboration and innovation, we can build an interconnected, vibrant RWA ecosystem that brings unprecedented opportunities to real-world assets.",
+      "items": [
+        "√ Diversified Application Scenarios: Support digitization and trading of various RWAs including real estate, artworks, private equity, etc., expanding asset boundaries.",
+        "√ Strong Community Support: Actively cultivate and support developer communities to ensure continuous innovation and iteration of the ecosystem.",
+        "√ Global Strategic Layout: Actively expand international markets, attract global investors and project parties, and build a global RWA circulation network.",
+        "√ Equal Emphasis on Compliance and Security: Always adhere to compliance first in ecosystem construction and market operations, ensuring the interests of all participants."
+      ]
+    }
+  },
+  "digitalAsset": {
+    "header": {
+      "title": "Empowering Assets, On-Chain Future",
+      "description": "Through MetaTalk RWA's innovative technology, transform traditional assets into efficient, transparent digital assets, opening a new era of asset circulation."
+    },
+    "coreFeatures": {
+      "title": "Core Features",
+      "aiEvaluation": {
+        "title": "AI-Assisted Evaluation (Meta-Start)",
+        "description": "Utilize AI \"Meta-Start\" for comprehensive and precise asset evaluation, laying a solid foundation for digitalization."
+      },
+      "tokenomicsDesign": {
+        "title": "Precise Tokenomics Design",
+        "description": "Based on asset characteristics, market demand, and business objectives, customize optimal token economic models to maximize value."
+      },
+      "smartContract": {
+        "title": "Secure Smart Contracts",
+        "description": "Implement asset tokenization through secure, reliable, and multi-audited smart contracts, ensuring asset security and transparency."
+      },
+      "assetOnchain": {
+        "title": "Efficient Asset On-Chain",
+        "description": "Efficiently and conveniently transform various real-world assets (RWA) into on-chain digital assets, enhancing circulation efficiency."
+      }
+    },
+    "advantages": {
+      "title": "Digital Asset Advantages",
+      "liquidity": {
+        "title": "Enhanced Liquidity",
+        "description": "Digital assets are easier to trade and divide, significantly improving market liquidity and expanding investment channels."
+      },
+      "transparency": {
+        "title": "Increased Transparency",
+        "description": "Blockchain technology ensures effective regulation and transparency, improving market trust."
+      },
+      "divisibility": {
+        "title": "Achieving Divisibility",
+        "description": "Allows investors to participate in high-value assets with smaller units, lowering investment barriers."
+      },
+      "efficiency": {
+        "title": "Improved Efficiency",
+        "description": "Automated trading processes reduce intermediaries and manual intervention, significantly improving asset management and operational efficiency."
+      }
+    },
+    "safety": {
+      "title": "Security & Technical Assurance",
+      "description": "We adopt the most advanced blockchain technology and strict security measures to ensure your digital assets are secure and provide a stable, reliable operating environment.",
+      "items": [
+        "√ Secure and reliable smart contract development and auditing: All contracts are developed by experienced blockchain security expert teams and undergo strict multi-party auditing by independent third-party security institutions to eliminate potential vulnerabilities.",
+        "√ Decentralized network ensures asset immutability: Asset data and transaction records are deployed on decentralized blockchain networks, ensuring data immutability, high transparency, and effective resistance to single point of failure risks.",
+        "√ Multi-signature and encryption technology: Adopting industry-leading multi-signature (Multi-sig) wallet technology and advanced encryption algorithms to provide multi-layered protection for digital assets, effectively preventing unauthorized access.",
+        "√ Continuous security monitoring and upgrades: Our technical team conducts 7x24 continuous security monitoring of the platform and regularly performs system upgrades and maintenance based on the latest security threats and technological developments, ensuring the system is always at the latest and most secure level."
+      ]
+    },
+    "footer": {
+      "title": "Customize Your RWA Solution!",
+      "description": "No matter how unique your business scale or requirements are, MetaTalk RWA can tailor the most suitable blockchain RWA solution for you.",
+      "button": "Contact Us Now"
+    }
+  },
   "follow": {
     "social": {
       "wechat": "WeChat"
@@ -237,6 +382,177 @@
       "email.invalid": "Please enter a valid email address",
       "message.placeholder": "Message",
       "message.required": "Please enter your message"
+    }
+  },
+  "marketOperation": {
+    "header": {
+      "title": "灵活模块，定制未来",
+      "description": "元话 RWA 提供高度模块化和定制化的解决方案，精准匹配您的业务需求，构建专属RWA生态。"
+    },
+    "corePhilosophy": {
+      "title": "Core Philosophy",
+      "items": [
+        {
+          "title": "Modular Design",
+          "description": "Our RWA solutions adopt a highly modular architecture, breaking down complex functions into independent, reusable components, such as asset ownership modules, Tokenomics modules, smart contract deployment modules, etc., to maximize flexibility and efficiency."
+        },
+        {
+          "title": "High Customization",
+          "description": "Based on modular foundation, we can provide unparalleled customization services for customers. Whether it's specific business logic, unique token economic models, or complex compliance requirements, we can flexibly adjust and combine modules to create solutions that best meet your needs."
+        }
+      ]
+    },
+    "advantages": {
+      "title": "Advantages of Modularity and Customization",
+      "items": [
+        {
+          "title": "Accelerated Deployment",
+          "description": "Standardized modules can be quickly combined, significantly shortening the cycle from concept to launch for RWA projects, seizing market opportunities."
+        },
+        {
+          "title": "Cost Optimization",
+          "description": "By reusing mature modules and customizing on demand, avoiding redundant development, effectively reducing project development and maintenance costs."
+        },
+        {
+          "title": "Exceptional Flexibility",
+          "description": "Easily adapt to business changes and market demands, enabling rapid iteration and upgrades of functions, ensuring continuous competitiveness of solutions."
+        },
+        {
+          "title": "Efficient Scalability",
+          "description": "Modular architecture supports smooth scaling. When business scale grows or new functions are needed, simply integrate new modules."
+        }
+      ]
+    },
+    "applications": {
+      "title": "Application Scenarios",
+      "items": [
+        {
+          "title": "Financial Institution RWA Issuance & Management",
+          "description": "Provide customized RWA issuance platforms for banks, securities firms and other financial institutions, meeting their high requirements for compliance, risk control and asset management."
+        },
+        {
+          "title": "Digital Collectibles & Art Asset Tokenization",
+          "description": "Provide customized NFT issuance and trading solutions for art galleries, museums, and collectors, enabling digitization and financialization of artworks and collectibles."
+        },
+        {
+          "title": "Supply Chain Finance & Asset Securitization",
+          "description": "Through customized modules, put supply chain assets such as accounts receivable and warehouse receipts on-chain, enabling efficient circulation and financing, improving supply chain efficiency."
+        },
+        {
+          "title": "Cross-border Asset Compliant Circulation Solutions",
+          "description": "Combining modular compliance strategies and customized financial structures, providing end-to-end support for compliant issuance and circulation of cross-border assets."
+        }
+      ]
+    }
+  },
+  "crossBorderFunding": {
+    "header": {
+      "title": "Compliant Cross-border Financing, Connecting Global Capital",
+      "description": "Metakina RWA, with innovative financial structures and extensive investor networks, helps you achieve cross-border financing goals efficiently and safely."
+    },
+    "structure": {
+      "title": "Innovative Cross-border Financial Structure",
+      "lpf": {
+        "title": "Hong Kong Limited Partnership Fund (LPF)",
+        "description": "Leveraging Hong Kong's advantage as an East-West financial hub to provide convenient and comprehensive global asset allocation services for mainland investors, particularly USD assets."
+      },
+      "qflp": {
+        "title": "Shaanxi Qualified Foreign Limited Partner",
+        "description": "Through the Shaanxi QFLP pilot program, effectively guide foreign capital to invest in industries within China, expanding offshore and onshore investments."
+      },
+      "custom": {
+        "title": "Customized Structure Design",
+        "description": "Based on clients' investment needs and objectives, tailor professional structural solutions for cross-border capital allocation."
+      }
+    },
+    "advantages": {
+      "title": "Digital Asset Advantages",
+      "items": [
+        {
+          "title": "Improve Financing Efficiency",
+          "description": "Optimize financing processes through professional structural design and network connection, significantly shortening financing cycles."
+        },
+        {
+          "title": "Reduce Compliance Risks",
+          "description": "Strictly comply with regulatory requirements in various jurisdictions to ensure financing activities are legal and compliant, avoiding potential risks."
+        },
+        {
+          "title": "Broaden Funding Sources",
+          "description": "Connect with diversified global capital, providing broader financing options for your projects."
+        },
+        {
+          "title": "Enhance Asset Liquidity",
+          "description": "Through compliant structures and investor networks, promote efficient circulation of assets in international markets."
+        }
+      ]
+    },
+    "compliance": {
+      "title": "Compliance and Execution Assurance",
+      "contentTitle": "Metakina RWA has an experienced professional team proficient in cross-border financial regulations and practices, ensuring your financing projects are compliant and efficient from design to execution.",
+      "contentList": [
+        "√ Deep Legal and Tax Expertise: We collaborate with top international legal and tax advisors to ensure all financial structure designs and transactions comply with Hong Kong, mainland China, and relevant international regulations.",
+        "√ Full-Process Project Management: Providing comprehensive project management services from preliminary due diligence, structure building, document preparation, investor communication to final fund settlement.",
+        "√ Risk Control and Optimization: Utilizing advanced risk assessment models and control strategies to identify and mitigate potential risks in cross-border financing, optimizing financing costs and efficiency.",
+        "√ Continuous Compliance Support: After successful project financing, we continue to provide ongoing compliance consulting and support services to ensure your projects operate stably in the long term."
+      ]
+    }
+  },
+  "assetFinancialization": {
+    "header": {
+      "title": "Data-Empowered Finance, Activating Digital Economy",
+      "description": "Metakina RWA assists in compliant data asset rights confirmation, evaluation and circulation, transforming them into tradable financial products and releasing data factor value."
+    },
+    "coreFeatures": {
+      "title": "Core Operational Strategies",
+      "items": [
+        {
+          "title": "Data Asset Rights Confirmation and Evaluation",
+          "description": "Assist enterprises in compliant data asset rights confirmation, value assessment and qualification certification, laying the foundation for financialization."
+        },
+        {
+          "title": "Data Financial Product Design",
+          "description": "Based on data asset characteristics and market demand, design diversified data financial products such as data trusts and data securities."
+        },
+        {
+          "title": "Compliant Data Asset Circulation",
+          "description": "Build secure and compliant data circulation channels to ensure data assets are efficiently and transparently traded and used within the legal framework."
+        },
+        {
+          "title": "Data Asset Security and Privacy Protection",
+          "description": "Adopt advanced encryption technology and privacy computing to ensure data asset security and user privacy throughout the entire lifecycle."
+        }
+      ]
+    },
+    "coreStrategy": {
+      "title": "Core Operational Strategies",
+      "items": [
+        {
+          "title": "Release Data Value",
+          "description": "Transform valuable data into utilizable and tradable financial assets, activating their potential value."
+        },
+        {
+          "title": "Broaden Financing Channels",
+          "description": "Provide new financing paths for data owners, monetize intangible assets, and achieve sustainable development."
+        },
+        {
+          "title": "Enhance Data Liquidity",
+          "description": "Promote efficient circulation of data in compliant markets, break data silos, and improve market efficiency."
+        },
+        {
+          "title": "Promote Data Factor Market",
+          "description": "Drive the circulation and trading of data as emerging production factors, helping to build a comprehensive data factor market system."
+        }
+      ]
+    },
+    "safety": {
+      "title": "Data Security and Compliance Assurance",
+      "contentTitle": "Metakina RWA prioritizes data security and compliance in the data asset financialization process, ensuring data value maximization while maintaining user rights and market order.",
+      "contentList": [
+        "√ Full Lifecycle Data Security Management: From data collection, storage, processing to circulation, all adopt high-standard security protection measures, including multi-layer encryption, access control, and audit logs.",
+        "√ Privacy Computing Technology Application: Utilize federated learning, homomorphic encryption, zero-knowledge proof and other privacy computing technologies to mine and share data value without revealing original data.",
+        "√ Strict Compliance with Data Regulations: Strictly comply with global and local data protection regulations such as GDPR, CCPA, and China's Data Security Law and Personal Information Protection Law.",
+        "√ Transparent and Traceable Data Circulation: Use blockchain technology to achieve full traceability and immutability of data asset circulation, enhancing market transparency and trust."
+      ]
     }
   }
 }
