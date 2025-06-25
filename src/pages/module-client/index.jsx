@@ -66,7 +66,7 @@ export default function RWAApplicationForm() {
 
     setSubmitLoad(false);
 
-    if (res.msg === 'success') {
+    if (res.code === 200) {
       message.success(t('RWAForm.submit.message.success'));
       form.resetFields();
       setFormState({});
@@ -228,6 +228,15 @@ export default function RWAApplicationForm() {
             >
               <Input />
             </Form.Item>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              <Form.Item label="邀请人姓名" name="inviterName">
+                <Input />
+              </Form.Item>
+
+              <Form.Item label="邀请人手机号" name="inviterPhoneNumber">
+                <Input type="number" />
+              </Form.Item>
+            </div>
 
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <Form.Item label={t('RWAForm.sections.basicInfo.fields.businessLicense.label')} name="businessLicenseCode">
@@ -1078,7 +1087,7 @@ export default function RWAApplicationForm() {
                           type="primary"
                           onClick={handleSubmit}
                           loading={submitLoad}
-                          className="hidden h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all md:block hover:scale-105 hover:shadow-xl"
+                          className="hidden h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all md:inline-block hover:scale-105 hover:shadow-xl"
                         >
                           {t('RWAForm.submit.button')}
                         </Button>

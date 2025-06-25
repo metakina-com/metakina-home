@@ -10,9 +10,11 @@ import SectionTitle from '@/components/SectionTitle.jsx';
 import { Button } from 'antd';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 function RWAFlexible() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   // 合作模式数据
   const cooperationModes = [
@@ -138,6 +140,7 @@ function RWAFlexible() {
                   e.currentTarget.style.background = 'white';
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
+                onClick={() => navigate('/quotation-and-proposal')}
               >
                 {t('RWACooperation.getDetailButton')}
               </Button>

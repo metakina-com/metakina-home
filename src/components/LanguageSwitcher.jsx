@@ -3,7 +3,7 @@ import { Select } from 'antd';
 import { useTranslation } from 'react-i18next';
 import './LanguageSwitcher.css';
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ className, isDark = false }) {
   const { i18n } = useTranslation();
 
   const handleChange = (value) => {
@@ -11,7 +11,7 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="language-switcher flex items-center">
+    <div className={`language-switcher flex items-center ${isDark ? 'dark-theme' : ''}`}>
       <Select
         defaultValue={i18n.language}
         onChange={handleChange}
@@ -20,7 +20,7 @@ export default function LanguageSwitcher() {
           background: '#ffffff',
         }}
         className="language-select"
-        prefix={<GlobalOutlined className="text-white" />}
+        prefix={<GlobalOutlined className={`${isDark ? 'text-black' : 'text-white'} ${className}`} />}
         options={[
           {
             value: 'zh-CN',

@@ -91,7 +91,7 @@ export default defineConfig(({ mode }) => {
       proxy: {
         '/api': {
           // target: 'http://47.84.60.166:8083',
-          target: ' http://rwaform.dappweb.cn',
+          target: 'http://saas.platform.dappweb.cn',
           changeOrigin: true,
 
         },

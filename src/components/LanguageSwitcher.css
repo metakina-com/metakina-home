@@ -37,3 +37,24 @@
   background: #f0f0f0 !important;
   color: #000000 !important;
 }
+
+/* 黑色主题样式 */
+.language-switcher.dark-theme .language-select .ant-select-selector {
+  color: black !important;
+}
+
+.language-switcher.dark-theme .language-select .ant-select-arrow {
+  color: black !important;
+}
+
+.language-switcher.dark-theme .language-select .ant-select-selection-item {
+  color: black !important;
+}
+
+.language-switcher.dark-theme .language-select.ant-select-focused .ant-select-selector {
+  color: black !important;
+}
+
+.language-switcher.dark-theme .language-select.ant-select-focused .ant-select-selection-item {
+  color: black !important;
+}

@@ -19,7 +19,7 @@ export async function userLoginApi(value) {
 // 提交表单
 export async function updateFormApi(value) {
   try {
-    const data = await http.post(`${BASE_NAME}/v1/rwa/projects`, value);
+    const data = await http.post(`${BASE_NAME}/platform-system/platform/projects`, value);
 
     return data;
   } catch (error) {

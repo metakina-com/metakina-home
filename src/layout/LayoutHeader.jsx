@@ -1,29 +1,34 @@
 import groupImg from '@/assets/images/home/Group.png';
+import iconBlackImg from '@/assets/images/home/icon-black.png';
 import LanguageSwitcher from '@/components/LanguageSwitcher.jsx';
 import { MenuOutlined } from '@ant-design/icons';
 import { Button, Image, Menu } from 'antd';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const LayoutHeader = memo(() => {
   const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // 判断是否在quotation-and-proposal页面
+  const isQuotationPage = location.pathname === '/quotation-and-proposal';
 
   const navItems = [
     { path: '/', label: t('Header.home'), type: 'route' },
     { path: '#solutions-section', label: t('Header.solutions'), type: 'anchor' },
-    { path: '/', label: t('Header.supportedChains'), type: 'route' },
+    { path: '', label: t('Header.supportedChains'), type: 'route' },
     { path: '/', label: t('Header.resourceCenter'), type: 'route' },
-    { path: '/', label: t('Header.cooperationMode'), type: 'route' },
+    { path: '/quotation-and-proposal', label: t('Header.cooperationMode'), type: 'route' },
   ];
 
   const renderLogo = () => (
     <Link to="/" className="flex items-center font-bold space-x-1">
       <Image
         alt={t('Home.name')}
-        src={groupImg}
+        src={isQuotationPage ? iconBlackImg : groupImg}
         className="h-[41px]! max-md:h-8!"
         preview={false}
       />
@@ -76,7 +81,7 @@ const LayoutHeader = memo(() => {
                 onClick={e => handleNavClick(item, e)}
                 className={`flex items-center ${index > 0 ? 'ml-8' : ''}`}
               >
-                <span className="text-lg text-white">{item.label}</span>
+                <span className={`text-lg ${isQuotationPage ? 'text-black' : 'text-white'}`}>{item.label}</span>
               </a>
             )
           : (
@@ -85,7 +90,7 @@ const LayoutHeader = memo(() => {
                 to={item.path}
                 className={`flex items-center ${index > 0 ? 'ml-8' : ''}`}
               >
-                <span className="text-lg text-white">{item.label}</span>
+                <span className={`text-lg ${isQuotationPage ? 'text-black' : 'text-white'}`}>{item.label}</span>
               </Link>
             )
       ))}
@@ -96,13 +101,21 @@ const LayoutHeader = memo(() => {
     <div className="ml-8 flex items-center">
       <Link
         to="/apply"
-        className="flex items-center border border-white rounded-2 px-6 py-2 text-white transition-colors hover:bg-white/10"
+        className={`flex items-center border rounded-2 px-6 py-2 transition-colors ${
+          isQuotationPage
+            ? 'border-black text-black hover:bg-black/10'
+            : 'border-white text-white hover:bg-white/10'
+        }`}
       >
         <span className="text-base">{t('Header.joinUs')}</span>
       </Link>
       <Link
         to="/"
-        className="ml-4 flex items-center rounded-2 bg-[#ffffff] px-6 py-2 text-[#0055FF] transition-colors hover:bg-white/80"
+        className={`ml-4 flex items-center rounded-2 px-6 py-2 transition-colors ${
+          isQuotationPage
+            ? 'bg-[#0055FF] text-white hover:bg-[#0055FF]/80'
+            : 'bg-[#ffffff] text-[#0055FF] hover:bg-white/80'
+        }`}
       >
         <span className="text-base">{t('Header.contactUs')}</span>
       </Link>
@@ -146,7 +159,13 @@ const LayoutHeader = memo(() => {
   };
 
   return (
-    <div className="mx-auto h-full w-[85vw] flex flex-1 items-center justify-between px-2 max-md:w-[90vw] md:px-8">
+    <div
+      className="h-full w-[100vw] flex flex-1 items-center justify-between px-[7.5vw] max-md:w-[100vw] max-md:px-2"
+      style={{
+        backgroundColor: isQuotationPage ? 'white' : 'transparent',
+        color: isQuotationPage ? '#000' : '#fff',
+      }}
+    >
       <div className="flex items-center">
         {renderLogo()}
       </div>
@@ -154,33 +173,37 @@ const LayoutHeader = memo(() => {
         {renderNavItems()}
         {renderButtons()}
         <div className="ml-4">
-          <LanguageSwitcher />
+          <LanguageSwitcher isDark={isQuotationPage} />
         </div>
       </div>
       <div className="ml-2 flex md:hidden">
-        <LanguageSwitcher />
+        <LanguageSwitcher isDark={isQuotationPage} />
         <Button
           type="text"
           icon={<MenuOutlined />}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="ml-2"
-          style={{ color: 'white' }}
+          style={{ color: isQuotationPage ? '#000' : 'white' }}
         />
       </div>
       {/* 移动端导航菜单 */}
       {mobileMenuOpen && (
-        <div className="absolute left-0 right-0 top-[73px] z-[10] block bg-[#0055FF] py-2 md:hidden">
+        <div className={`absolute left-0 right-0 top-[73px] z-[10] block py-2 md:hidden ${isQuotationPage ? 'bg-white' : 'bg-[#0055FF]'}`}>
           <div className="mx-auto px-4 container">
             <Menu
               mode="inline"
-              theme="dark"
+              theme={isQuotationPage ? 'light' : 'dark'}
               items={navItems.map(item => ({
                 key: item.path,
                 label: item.label,
               }))}
-              style={{ fontSize: '1rem', color: '#ffffff' }}
+              style={{
+                fontSize: '1rem',
+                color: isQuotationPage ? '#000000' : '#ffffff',
+                backgroundColor: isQuotationPage ? 'white' : '#0055FF',
+              }}
               onSelect={({ key }) => handleAnchorClick({ key })}
-              className="white-text-menu !bg-[#0055FF] !text-white"
+              className={isQuotationPage ? '!bg-white !text-black' : 'white-text-menu !bg-[#0055FF] !text-white'}
             />
           </div>
         </div>

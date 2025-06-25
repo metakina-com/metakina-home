@@ -21,6 +21,7 @@ const ProcessAssurance = lazy(() => import('../pages/module-process-assurance/in
 const MarketOperation = lazy(() => import('../pages/module-market-operation/index.jsx'));
 const AssetFinancialization = lazy(() => import('../pages/module-asset-financialization/index.jsx'));
 const Customization = lazy(() => import('../pages/module-customization/index.jsx'));
+const QuotationAndProposal = lazy(() => import('../pages/module-quotation-and-proposal/index.jsx'));
 
 const routes = [
   {
@@ -121,6 +122,14 @@ const routes = [
         element: <Customization />,
         meta: {
           title: '模块化与定制化',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'quotation-and-proposal',
+        element: <QuotationAndProposal />,
+        meta: {
+          title: '报价与合作方案',
           needLogin: false,
         },
       },
