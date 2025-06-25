@@ -270,19 +270,19 @@ export default function RWAApplicationForm() {
                   rules={[{ required: true, message: t('RWAForm.sections.assetInfo.fields.assetType.required') }]}
                 >
                   <Select placeholder={t('RWAForm.sections.assetInfo.fields.assetType.placeholder')}>
-                    <Select.Option value="infrastructure">{t('RWAForm.sections.assetInfo.fields.assetType.options.infrastructure')}</Select.Option>
-                    <Select.Option value="real_estate_commercial">{t('RWAForm.sections.assetInfo.fields.assetType.options.real_estate_commercial')}</Select.Option>
-                    <Select.Option value="real_estate_residential">{t('RWAForm.sections.assetInfo.fields.assetType.options.real_estate_residential')}</Select.Option>
-                    <Select.Option value="energy_renewable">{t('RWAForm.sections.assetInfo.fields.assetType.options.energy_renewable')}</Select.Option>
-                    <Select.Option value="energy_traditional">{t('RWAForm.sections.assetInfo.fields.assetType.options.energy_traditional')}</Select.Option>
-                    <Select.Option value="transportation">{t('RWAForm.sections.assetInfo.fields.assetType.options.transportation')}</Select.Option>
-                    <Select.Option value="utility">{t('RWAForm.sections.assetInfo.fields.assetType.options.utility')}</Select.Option>
-                    <Select.Option value="industrial">{t('RWAForm.sections.assetInfo.fields.assetType.options.industrial')}</Select.Option>
-                    <Select.Option value="agricultural">{t('RWAForm.sections.assetInfo.fields.assetType.options.agricultural')}</Select.Option>
-                    <Select.Option value="commodity">{t('RWAForm.sections.assetInfo.fields.assetType.options.commodity')}</Select.Option>
-                    <Select.Option value="financial">{t('RWAForm.sections.assetInfo.fields.assetType.options.financial')}</Select.Option>
-                    <Select.Option value="intellectual">{t('RWAForm.sections.assetInfo.fields.assetType.options.intellectual')}</Select.Option>
-                    <Select.Option value="other">{t('RWAForm.sections.assetInfo.fields.assetType.options.other')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.infrastructure')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.infrastructure')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.real_estate_commercial')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.real_estate_commercial')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.real_estate_residential')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.real_estate_residential')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.energy_renewable')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.energy_renewable')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.energy_traditional')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.energy_traditional')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.transportation')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.transportation')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.utility')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.utility')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.industrial')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.industrial')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.agricultural')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.agricultural')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.commodity')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.commodity')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.financial')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.financial')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.intellectual')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.intellectual')}</Select.Option>
+                    <Select.Option value={t('RWAForm.sections.assetInfo.fields.assetType.options.other')}>{t('RWAForm.sections.assetInfo.fields.assetType.options.other')}</Select.Option>
                   </Select>
                 </Form.Item>
 

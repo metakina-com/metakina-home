@@ -190,6 +190,184 @@
       }
     }
   },
+  "quotationAndProposal": {
+    "tabs": {
+      "member": "Join Membership",
+      "customization": "Custom Projects"
+    },
+    "joinVip": "Join M-VIP",
+    "vip": {
+      "title": "Metakina VIP",
+      "subtitle": "Flexible pricing plans to meet all your needs",
+      "description1": "From individual investors to large financial institutions, we provide comprehensive solutions from SaaS platform subscriptions to end-to-end project services,",
+      "description2": "delivering professional, compliant, and efficient services for your RWA (Real World Assets) tokenization journey."
+    },
+    "pricing": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "yearlySaving": "(Save 17%)",
+      "plans": {
+        "free": {
+          "title": "Free",
+          "monthlyPrice": "HK¥ 0 /month",
+          "yearlyPrice": "HK¥ 0 /year",
+          "description": "For individuals, startups, proof of concept",
+          "status": "Planned",
+          "features": [
+            "10 basic RWA project overviews",
+            "Simple valuation calculator",
+            "Community forum access",
+            "Standard NFT display"
+          ]
+        },
+        "professional": {
+          "title": "Professional",
+          "monthlyPrice": "HK¥ 2,888/month",
+          "yearlyPrice": "HK¥ 28,888/year",
+          "description": "For professional investment institutions, traders",
+          "status": "Planned",
+          "recommended": "Recommended",
+          "features": [
+            "Basic RWA project overviews",
+            "Simple valuation calculator",
+            "Community forum access",
+            "Standard NFT display",
+            "\"Meta-Start\" AI valuation engine & \"Meta-Strategy\" AI prediction",
+            "Advanced analysis tools and real-time data",
+            "Basic API access & data export",
+            "Hong Kong compliance report templates",
+            "Portfolio management and risk reporting"
+          ]
+        },
+        "enterprise": {
+          "title": "Enterprise",
+          "monthlyPrice": "HK¥ 5,888/month and up",
+          "yearlyPrice": "HK¥ 58,888/year and up",
+          "description": "For large institutions requiring advanced customization",
+          "status": "Planned",
+          "features": [
+            "Basic RWA project overviews",
+            "Simple valuation calculator",
+            "Community forum access",
+            "Standard NFT display",
+            "\"Meta-Start\" AI valuation engine & \"Meta-Strategy\" AI prediction",
+            "Advanced analysis tools and real-time data",
+            "Basic API access & data export",
+            "Hong Kong compliance report templates",
+            "Portfolio management and risk reporting",
+            "Customized AI model training",
+            "White-label solutions",
+            "Unlimited API calls",
+            "24/7 dedicated customer service & account manager",
+            "Hong Kong Monetary Authority compliance consulting"
+          ]
+        }
+      }
+    },
+    "phases": {
+      "title": "RWA Project Comprehensive Planning Solution",
+      "phase1": {
+        "title": "Phase 1: Consultation & Planning",
+        "description": "Contains four items, all 2-4 weeks:",
+        "items": [
+          {
+            "name": "RWA project preliminary consultation & feasibility analysis",
+            "price": "(20K, suitable for both CEX & DEX)"
+          },
+          {
+            "name": "Asset due diligence assessment",
+            "price": "(20K, suitable for CEX, strongly recommended for DEX)"
+          },
+          {
+            "name": "Legal & compliance structure design",
+            "price": "(30K, suitable for CEX, technically optional for DEX)"
+          },
+          {
+            "name": "Tokenomics design",
+            "price": "(30K, suitable for both CEX & DEX)"
+          }
+        ]
+      },
+      "phase2": {
+        "title": "Phase 2: Pilot & Tokenization",
+        "description": "Contains six items, all 6-12 weeks:",
+        "items": [
+          {
+            "name": "Technical solution design & blockchain selection",
+            "price": "(40K, suitable for both CEX & DEX)"
+          },
+          {
+            "name": "Smart contract development",
+            "price": "(100K, suitable for both CEX & DEX)"
+          },
+          {
+            "name": "Smart contract security audit coordination",
+            "price": "(40K, suitable for both CEX & DEX)"
+          },
+          {
+            "name": "RWA data on-chain & verification mechanism",
+            "price": "(60K, suitable for CEX, strongly recommended for DEX)"
+          },
+          {
+            "name": "Tokenization platform/interface development",
+            "price": "(90K, strongly recommended for both CEX & DEX)"
+          },
+          {
+            "name": "Token minting & deployment",
+            "price": "(20K, suitable for both CEX & DEX)"
+          }
+        ]
+      },
+      "phase3": {
+        "title": "Phase 3: Issuance & Listing",
+        "description": "Contains four items, CEX 4-16 weeks; DEX 1-2 weeks",
+        "items": [
+          {
+            "name": "Primary market issuance strategy",
+            "price": "(80K, suitable for both CEX & DEX)"
+          },
+          {
+            "name": "Marketing & PR",
+            "price": "(60K, suitable for both CEX & DEX)"
+          },
+          {
+            "name": "Secondary market (exchange) listing coordination",
+            "price": "(120K, suitable for CEX, not applicable for DEX)"
+          },
+          {
+            "name": "Liquidity strategy & market maker connection",
+            "price": "(40K, suitable for CEX, different format for DEX)"
+          }
+        ]
+      },
+      "phase4": {
+        "title": "Phase 4: Ongoing Services",
+        "description": "Contains five items, ongoing:",
+        "items": [
+          {
+            "name": "On-chain asset data monitoring & reporting",
+            "price": "(60K, suitable for CEX, strongly recommended for DEX)"
+          },
+          {
+            "name": "Revenue/dividend distribution execution",
+            "price": "(50K, varies by project for both CEX & DEX)"
+          },
+          {
+            "name": "Compliance continuous monitoring & reporting",
+            "price": "(70K, suitable for CEX, technically optional for DEX)"
+          },
+          {
+            "name": "Technical platform & smart contract maintenance",
+            "price": "(70K, suitable for both CEX & DEX)"
+          },
+          {
+            "name": "Investor relations & community management support",
+            "price": "(50K, suitable for both CEX & DEX)"
+          }
+        ]
+      }
+    }
+  },
   "resourceCenter": {
     "title": "Resource Center",
     "subtitle": "Insights, Learning & Tools",

@@ -178,6 +178,184 @@
       }
     }
   },
+  "quotationAndProposal": {
+    "tabs": {
+      "member": "멤버십 가입",
+      "customization": "맞춤 프로젝트"
+    },
+    "joinVip": "M-VIP 가입",
+    "vip": {
+      "title": "Metakina VIP",
+      "subtitle": "모든 요구사항을 충족하는 유연한 가격 계획",
+      "description1": "개인 투자자부터 대형 금융기관까지, SaaS 플랫폼 구독부터 엔드투엔드 프로젝트 서비스까지 포괄적인 솔루션을 제공하며,",
+      "description2": "RWA(실물 자산) 토큰화 여정에서 전문적이고 규정을 준수하며 효율적인 서비스를 제공합니다."
+    },
+    "pricing": {
+      "monthly": "월간",
+      "yearly": "연간",
+      "yearlySaving": "(17% 절약)",
+      "plans": {
+        "free": {
+          "title": "무료 버전",
+          "monthlyPrice": "HK¥ 0 /월",
+          "yearlyPrice": "HK¥ 0 /년",
+          "description": "개인, 스타트업, 개념 증명에 적합",
+          "status": "계획 중",
+          "features": [
+            "10개 기본 RWA 프로젝트 개요",
+            "간단한 평가 계산기",
+            "커뮤니티 포럼 접근",
+            "표준 NFT 표시"
+          ]
+        },
+        "professional": {
+          "title": "전문가 버전",
+          "monthlyPrice": "HK¥ 2,888/월",
+          "yearlyPrice": "HK¥ 28,888/년",
+          "description": "전문 투자기관, 트레이더에 적합",
+          "status": "계획 중",
+          "recommended": "추천",
+          "features": [
+            "기본 RWA 프로젝트 개요",
+            "간단한 평가 계산기",
+            "커뮤니티 포럼 접근",
+            "표준 NFT 표시",
+            "\"Meta-Start\" AI 평가 엔진 & \"Meta-Strategy\" AI 예측",
+            "고급 분석 도구 및 실시간 데이터",
+            "기본 API 접근 & 데이터 내보내기",
+            "홍콩 컴플라이언스 보고서 템플릿",
+            "포트폴리오 관리 및 위험 보고"
+          ]
+        },
+        "enterprise": {
+          "title": "기업 버전",
+          "monthlyPrice": "HK¥ 5,888/월부터",
+          "yearlyPrice": "HK¥ 58,888/년부터",
+          "description": "고급 맞춤 기능이 필요한 대형 기관에 적합",
+          "status": "계획 중",
+          "features": [
+            "기본 RWA 프로젝트 개요",
+            "간단한 평가 계산기",
+            "커뮤니티 포럼 접근",
+            "표준 NFT 표시",
+            "\"Meta-Start\" AI 평가 엔진 & \"Meta-Strategy\" AI 예측",
+            "고급 분석 도구 및 실시간 데이터",
+            "기본 API 접근 & 데이터 내보내기",
+            "홍콩 컴플라이언스 보고서 템플릿",
+            "포트폴리오 관리 및 위험 보고",
+            "맞춤형 AI 모델 훈련",
+            "화이트 라벨 솔루션",
+            "무제한 API 호출",
+            "24/7 전담 고객서비스 & 계정 매니저",
+            "홍콩 금융관리청 컴플라이언스 컨설팅"
+          ]
+        }
+      }
+    },
+    "phases": {
+      "title": "RWA 프로젝트 종합 계획 솔루션",
+      "phase1": {
+        "title": "1단계: 컨설팅 & 계획",
+        "description": "4개 항목 포함, 모두 2-4주:",
+        "items": [
+          {
+            "name": "RWA 프로젝트 초기 컨설팅 & 타당성 분석",
+            "price": "(2만, CEX・DEX 모두 적용)"
+          },
+          {
+            "name": "자산 실사 평가",
+            "price": "(2만, CEX 적용・DEX 강력 권장)"
+          },
+          {
+            "name": "법률 & 컴플라이언스 구조 설계",
+            "price": "(3만, CEX 적용・DEX 기술적으로 비필수)"
+          },
+          {
+            "name": "토크노믹스 설계",
+            "price": "(3만, CEX・DEX 모두 적용)"
+          }
+        ]
+      },
+      "phase2": {
+        "title": "2단계: 파일럿 & 토큰화",
+        "description": "6개 항목 포함, 모두 6-12주:",
+        "items": [
+          {
+            "name": "기술 솔루션 설계 & 블록체인 선택",
+            "price": "(4만, CEX・DEX 모두 적용)"
+          },
+          {
+            "name": "스마트 컨트랙트 개발",
+            "price": "(10만, CEX・DEX 모두 적용)"
+          },
+          {
+            "name": "스마트 컨트랙트 보안 감사 조정",
+            "price": "(4만, CEX・DEX 모두 적용)"
+          },
+          {
+            "name": "RWA 데이터 온체인 & 검증 메커니즘",
+            "price": "(6만, CEX 적용・DEX 강력 권장)"
+          },
+          {
+            "name": "토큰화 플랫폼/인터페이스 개발",
+            "price": "(9만, CEX・DEX 모두 강력 권장)"
+          },
+          {
+            "name": "토큰 발행 & 배포",
+            "price": "(2만, CEX・DEX 모두 적용)"
+          }
+        ]
+      },
+      "phase3": {
+        "title": "3단계: 발행 & 상장",
+        "description": "4개 항목 포함, CEX 4-16주; DEX 1-2주",
+        "items": [
+          {
+            "name": "1차 시장 발행 전략",
+            "price": "(8만, CEX・DEX 모두 적용)"
+          },
+          {
+            "name": "마케팅 & PR",
+            "price": "(6만, CEX・DEX 모두 적용)"
+          },
+          {
+            "name": "2차 시장(거래소) 상장 조정",
+            "price": "(12만, CEX 적용・DEX 비적용)"
+          },
+          {
+            "name": "유동성 전략 & 마켓메이커 연결",
+            "price": "(4만, CEX 사용・DEX 형태 다름)"
+          }
+        ]
+      },
+      "phase4": {
+        "title": "4단계: 지속 서비스",
+        "description": "5개 항목 포함, 지속 진행:",
+        "items": [
+          {
+            "name": "온체인 자산 데이터 모니터링 & 보고",
+            "price": "(6만, CEX 적용・DEX 강력 권장)"
+          },
+          {
+            "name": "수익/배당 분배 실행",
+            "price": "(5만, CEX・DEX 프로젝트별 증감)"
+          },
+          {
+            "name": "컴플라이언스 지속 모니터링 & 보고",
+            "price": "(7만, CEX 적용・DEX 기술적으로 비필수)"
+          },
+          {
+            "name": "기술 플랫폼 & 스마트 컨트랙트 유지보수",
+            "price": "(7만, CEX・DEX 모두 적용)"
+          },
+          {
+            "name": "투자자 관계 & 커뮤니티 관리 지원",
+            "price": "(5만, CEX・DEX 모두 적용)"
+          }
+        ]
+      }
+    }
+  },
   "resourceCenter": {
     "title": "리소스 센터",
     "subtitle": "인사이트, 학습 및 도구",

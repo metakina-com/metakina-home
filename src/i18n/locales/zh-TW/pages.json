@@ -178,6 +178,184 @@
       }
     }
   },
+  "quotationAndProposal": {
+    "tabs": {
+      "member": "加入會員",
+      "customization": "定製項目"
+    },
+    "joinVip": "加入 M-VIP",
+    "vip": {
+      "title": "Metakina VIP",
+      "subtitle": "靈活的定價方案，滿足您的所有需求",
+      "description1": "從個人投資者到大型金融機構，我們提供從SaaS平台訂閱到端到端項目制的全方位解決方案，",
+      "description2": "為您的RWA（現實世界資產）代幣化之旅提供專業、合規、高效的服務。"
+    },
+    "pricing": {
+      "monthly": "月付",
+      "yearly": "年付",
+      "yearlySaving": "（節省17%）",
+      "plans": {
+        "free": {
+          "title": "免費版",
+          "monthlyPrice": "HK¥ 0 /月",
+          "yearlyPrice": "HK¥ 0 /年",
+          "description": "適合個人、初創企業、概念驗證",
+          "status": "計劃中",
+          "features": [
+            "10個基礎RWA項目測覽",
+            "簡單估值計算器",
+            "社區論壇訪問",
+            "標準NFT展示"
+          ]
+        },
+        "professional": {
+          "title": "專業版",
+          "monthlyPrice": "HK¥ 2,888/月",
+          "yearlyPrice": "HK¥ 28,888/年",
+          "description": "適合專業投資機構、交易員",
+          "status": "計劃中",
+          "recommended": "推薦",
+          "features": [
+            "基礎RWA項目測覽",
+            "簡單估值計算器",
+            "社區論壇訪問",
+            "標準NFT展示",
+            "\"元啟\"AI估值引擎 & \"元策\"AI預測",
+            "高級分析工具與實時數據",
+            "基礎API訪問 & 數據導出",
+            "香港合規報告模板",
+            "投資組合管理與風險報告"
+          ]
+        },
+        "enterprise": {
+          "title": "企業版",
+          "monthlyPrice": "HK¥ 5,888/月 起",
+          "yearlyPrice": "HK¥ 58,888/年 起",
+          "description": "適合需要高級定製功能的大型機構",
+          "status": "計劃中",
+          "features": [
+            "基礎RWA項目測覽",
+            "簡單估值計算器",
+            "社區論壇訪問",
+            "標準NFT展示",
+            "\"元啟\"AI估值引擎 & \"元策\"AI預測",
+            "高級分析工具與實時數據",
+            "基礎API訪問 & 數據導出",
+            "香港合規報告模板",
+            "投資組合管理與風險報告",
+            "定製化AI模型訓練",
+            "白標解決方案",
+            "無限API調用",
+            "24/7專屬客服&客戶經理",
+            "香港金管局合規諮詢"
+          ]
+        }
+      }
+    },
+    "phases": {
+      "title": "RWA 項目全景規劃方案",
+      "phase1": {
+        "title": "第一階段：諮詢與規劃",
+        "description": "含四項內容，均 2 - 4 週：",
+        "items": [
+          {
+            "name": "RWA 項目初步諮詢與可行性分析",
+            "price": "（2 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "資產盡職調查預估",
+            "price": "（2 萬，CEX 適用、DEX 強烈建議 ）"
+          },
+          {
+            "name": "法律與合規結構設計",
+            "price": "（3 萬，CEX 適用、DEX 技術非必要 ）"
+          },
+          {
+            "name": "代幣經濟學設計",
+            "price": "（3 萬，CEX、DEX 均適用 ）"
+          }
+        ]
+      },
+      "phase2": {
+        "title": "第二階段：試點與代幣化",
+        "description": "含六項內容，均6 - 12 週：",
+        "items": [
+          {
+            "name": "技術方案設計與區塊鏈選擇",
+            "price": "（4 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "智能合約開發",
+            "price": "（10 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "智能合約安全審計協調",
+            "price": "（4 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "RWA數據上鏈與驗證機制",
+            "price": "（6 萬，CEX 適用、DEX 強烈建議 ）"
+          },
+          {
+            "name": "代幣化平台/界面開發",
+            "price": "（9 萬，CEX、DEX 均強烈建議 ）"
+          },
+          {
+            "name": "代幣鑄造與部署",
+            "price": "（2 萬，CEX、DEX 均適用 ）"
+          }
+        ]
+      },
+      "phase3": {
+        "title": "第三階段：發行與上市",
+        "description": "含四項內容，CEX 4-16 週；DEX 1-2 週",
+        "items": [
+          {
+            "name": "一級市場發行策略",
+            "price": "（8 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "市場營銷與 PR",
+            "price": "（6 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "二級市場(交易所)上市協調",
+            "price": "（12 萬，CEX 適用、DEX 不適用 ）"
+          },
+          {
+            "name": "流動性策略與做市商對接",
+            "price": "（4 萬，CEX 使用、DEX 形式不同 ）"
+          }
+        ]
+      },
+      "phase4": {
+        "title": "第四階段：持續服務",
+        "description": "含五項內容，持續進行",
+        "items": [
+          {
+            "name": "鏈上資產數據監控與報告",
+            "price": "（6 萬，CEX 適用、DEX 強烈建議 ）"
+          },
+          {
+            "name": "收益/分紅分配執行",
+            "price": "（5 萬，CEX、DEX 以項目增減 ）"
+          },
+          {
+            "name": "合規性持續監控與報告",
+            "price": "（7 萬，CEX 適用、DEX 技術非必要 ）"
+          },
+          {
+            "name": "技術平台與智能合約維護",
+            "price": "（7 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "投資者關係與社區管理支持",
+            "price": "（5 萬，CEX、DEX 均適用 ）"
+          }
+        ]
+      }
+    }
+  },
   "resourceCenter": {
     "title": "資源中心",
     "subtitle": "洞察、學習與工具",
