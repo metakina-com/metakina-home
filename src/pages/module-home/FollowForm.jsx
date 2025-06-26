@@ -69,7 +69,7 @@ function FollowPage() {
     setLoading(true);
 
     try {
-      await submitContactForm({ content: data });
+      await submitContactForm(data);
       message.success(t('app.submitSuccess'));
       form.resetFields();
     } finally {
