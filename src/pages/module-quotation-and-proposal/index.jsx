@@ -65,12 +65,12 @@ function QuotationAndProposal() {
   return (
     <div className="bg-[#f5f7fa] pb-20 pt-[73px]">
       {/* 头部 */}
-      <div className="fixed top-[71px] z-20 h-[61px] w-full flex items-center justify-center bg-white text-black shadow-md">
+      <div className="fixed top-[71px] z-20 h-[61px] w-full flex items-center justify-between bg-white px-3 text-black shadow-md md:justify-center">
         <div className="text-[14px] font-[700]">
           <span className={`inline-block cursor-pointer px-4 py-2 ${activeTab === 'menber' ? classSelect : ''}`} onClick={() => handleTabClick('menber')}>{t('quotationAndProposal.tabs.member')}</span>
           <span className={`inline-block cursor-pointer px-4 py-2 ${activeTab === 'customization' ? classSelect : ''}`} onClick={() => handleTabClick('customization')}>{t('quotationAndProposal.tabs.customization')}</span>
         </div>
-        <button type="button" className="absolute right-0 cursor-pointer rounded-2 bg-black px-4 py-2 text-[17px] text-white md:right-[calc(7.5vw+148px)]">
+        <button type="button" className="right-0 cursor-pointer rounded-2 bg-black px-4 py-2 text-[17px] text-white md:absolute md:right-[calc(7.5vw+148px)]">
           {t('quotationAndProposal.joinVip')}
         </button>
       </div>
@@ -78,9 +78,14 @@ function QuotationAndProposal() {
       <div ref={memberSectionRef} className="mx-auto w-[80vw] bg-[#f5f7fa] pt-35">
         <div className="mb-6 text-[#333333]">
           <p className="text-[48px] font-[600]">{t('quotationAndProposal.vip.title')}</p>
-          <p className="text-[44px]">{t('quotationAndProposal.vip.subtitle')}</p>
-          <p className="text-[12px]">{t('quotationAndProposal.vip.description1')}</p>
-          <p className="text-[12px]">{t('quotationAndProposal.vip.description2')}</p>
+          <p className="mb-4 mt-5 text-[44px]">{t('quotationAndProposal.vip.subtitle')}</p>
+          <p className="text-[12px]">
+            {t('quotationAndProposal.vip.description1')}
+            <span className="inline md:hidden">
+              {t('quotationAndProposal.vip.description2')}
+            </span>
+          </p>
+          <p className="hidden text-[12px] md:block">{t('quotationAndProposal.vip.description2')}</p>
         </div>
         {/* 价格 */}
         <div className="mt-8 bg-[#f5f7fa] py-4">
@@ -114,9 +119,9 @@ function QuotationAndProposal() {
           </div>
 
           {/* 定价方案 */}
-          <div className="flex justify-center bg-white">
+          <div className="flex justify-center bg-white max-md:flex-col">
             {/* 免费版 */}
-            <div className="min-w-[362px] rounded-lg px-15 py-10">
+            <div className="w-full rounded-lg px-4 py-10 md:min-w-[362px] md:px-15">
               <div className="mb-4">
                 <h3 className="text-base text-[#0055FF] font-semibold">{t('quotationAndProposal.pricing.plans.free.title')}</h3>
               </div>
@@ -143,7 +148,7 @@ function QuotationAndProposal() {
             </div>
 
             {/* 专业版 */}
-            <div className="relative my-4 min-w-[362px] rounded-lg bg-white px-15 py-10 shadow-lg">
+            <div style={{ boxShadow: '0px 0px 10px rgba(0,0,0,0.1)' }} className="relative my-4 w-[98%] rounded-lg bg-white px-4 py-10 max-md:mx-[1%] md:min-w-[362px] md:px-15">
               <div className="absolute right-1 top-10 -translate-x-1/2">
                 <span className="rounded-full bg-[#f3f5fa] px-4 py-1 text-xs text-[#0055FF] font-medium">{t('quotationAndProposal.pricing.plans.professional.recommended')}</span>
               </div>
@@ -174,7 +179,7 @@ function QuotationAndProposal() {
             </div>
 
             {/* 企业版 */}
-            <div className="min-w-[362px] rounded-lg px-15 py-10">
+            <div className="w-full rounded-lg px-4 py-10 md:min-w-[362px] md:px-15">
               <div className="mb-4">
                 <h3 className="text-base text-[#0055FF] font-semibold">{t('quotationAndProposal.pricing.plans.enterprise.title')}</h3>
               </div>
@@ -205,7 +210,7 @@ function QuotationAndProposal() {
       {/* 规划方案 */}
       <div ref={plansSectionRef} className="mx-auto w-[80vw] bg-[#f5f7fa] pt-35">
         <p className="text-center text-[40px] font-[600]">{t('quotationAndProposal.phases.title')}</p>
-        <div className="mt-12 flex justify-between gap-6">
+        <div className="mt-12 flex justify-between gap-6 max-md:flex-col">
           {renderPhaseCard({
             img: Frame1Img,
             alt: t('quotationAndProposal.phases.phase1.title'),
