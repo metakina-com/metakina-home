@@ -20,7 +20,7 @@ const LayoutHeader = memo(() => {
     { path: '/', label: t('Header.home'), type: 'route' },
     { path: '#solutions-section', label: t('Header.solutions'), type: 'anchor' },
     { path: '', label: t('Header.supportedChains'), type: 'route' },
-    { path: '/', label: t('Header.resourceCenter'), type: 'route' },
+    { path: '', label: t('Header.resourceCenter'), type: 'route' },
     { path: '/quotation-and-proposal', label: t('Header.cooperationMode'), type: 'route' },
   ];
 
@@ -72,14 +72,19 @@ const LayoutHeader = memo(() => {
 
   const renderNavItems = () => (
     <>
-      {navItems.map((item, index) => (
-        item.type === 'anchor'
+      {navItems.map((item, index) => {
+        // 判断是否为当前选中的导航项
+        const isActive = item.type === 'route'
+          ? location.pathname === item.path || (item.path === '/' && location.pathname === '/home')
+          : false;
+
+        return item.type === 'anchor'
           ? (
               <a
                 key={`${item.path}d${index}`}
                 href={item.path}
                 onClick={e => handleNavClick(item, e)}
-                className={`flex items-center ${index > 0 ? 'ml-8' : ''}`}
+                className={`flex items-center relative ${index > 0 ? 'ml-8' : ''}`}
               >
                 <span className={`text-lg ${isQuotationPage ? 'text-black' : 'text-white'}`}>{item.label}</span>
               </a>
@@ -88,12 +93,16 @@ const LayoutHeader = memo(() => {
               <Link
                 key={`${item.path}d${index}`}
                 to={item.path}
-                className={`flex items-center ${index > 0 ? 'ml-8' : ''}`}
+                className={`flex items-center relative ${index > 0 ? 'ml-8' : ''}`}
               >
                 <span className={`text-lg ${isQuotationPage ? 'text-black' : 'text-white'}`}>{item.label}</span>
+                {/* 为当前选中项添加下划线 */}
+                { isActive && (
+                  <span className={`absolute bottom-[-8px] left-0 h-[2px] w-1/2 translate-x-[25%] ${isQuotationPage ? 'bg-black' : 'bg-white'}`}></span>
+                )}
               </Link>
-            )
-      ))}
+            );
+      })}
     </>
   );
 

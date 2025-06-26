@@ -229,11 +229,11 @@ export default function RWAApplicationForm() {
               <Input />
             </Form.Item>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-              <Form.Item label="邀请人姓名" name="inviterName">
+              <Form.Item label={t('client.inviterName')} name="inviterName">
                 <Input />
               </Form.Item>
 
-              <Form.Item label="邀请人手机号" name="inviterPhoneNumber">
+              <Form.Item label={t('client.inviterPhoneNumber')} name="inviterPhoneNumber">
                 <Input type="number" />
               </Form.Item>
             </div>

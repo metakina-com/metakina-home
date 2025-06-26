@@ -356,6 +356,10 @@
       }
     }
   },
+  "client": {
+    "inviterName": "초대자 이름",
+    "inviterPhoneNumber": "초대자 전화번호"
+  },
   "resourceCenter": {
     "title": "리소스 센터",
     "subtitle": "인사이트, 학습 및 도구",

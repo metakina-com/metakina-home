@@ -34,7 +34,7 @@ export async function updateFormApi(value) {
  */
 export async function submitContactForm(params) {
   try {
-    const data = await http.get(`${BASE_NAME}/v1/rwa/mail/send`, { params });
+    const data = await http.get(`${BASE_NAME}/platform-system/platform/mail/send`, { params });
 
     return data;
   } catch (error) {

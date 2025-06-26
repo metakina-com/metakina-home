@@ -368,6 +368,10 @@
       }
     }
   },
+  "client": {
+    "inviterName": "Inviter Name",
+    "inviterPhoneNumber": "Inviter Phone Number"
+  },
   "resourceCenter": {
     "title": "Resource Center",
     "subtitle": "Insights, Learning & Tools",

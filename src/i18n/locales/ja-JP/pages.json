@@ -368,6 +368,10 @@
       }
     }
   },
+  "client": {
+    "inviterName": "紹介者氏名",
+    "inviterPhoneNumber": "紹介者電話番号"
+  },
   "resourceCenter": {
     "title": "リソースセンター",
     "subtitle": "洞察・学習・ツール",

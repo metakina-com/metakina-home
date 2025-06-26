@@ -356,6 +356,10 @@
       }
     }
   },
+  "client": {
+    "inviterName": "邀請人姓名",
+    "inviterPhoneNumber": "邀請人手機號"
+  },
   "resourceCenter": {
     "title": "資源中心",
     "subtitle": "洞察、學習與工具",
