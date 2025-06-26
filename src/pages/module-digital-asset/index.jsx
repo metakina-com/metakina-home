@@ -10,10 +10,10 @@ import tuBiao_chakanxmlImg from '@/assets/images/digital-asset/tuBiao_chakanxml.
 import znhyImg from '@/assets/images/digital-asset/znhy.png';
 import SonHeader from '@/components/SonHeader.jsx';
 import { useTranslation } from 'react-i18next';
-import CoreFeatures from './core.tsx';
-import DigitalAssetFooter from './footer.jsx';
-import DigitalAssetAdvantages from './number.tsx';
-import Safety from './safety.tsx';
+import CoreFeatures from './Core.tsx';
+import DigitalAssetFooter from './Footer.jsx';
+import DigitalAssetAdvantages from './Number.tsx';
+import Safety from './Safety.tsx';
 
 function DigitalAsset() {
   const { t } = useTranslation();

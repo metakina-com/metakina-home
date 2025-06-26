@@ -5,8 +5,8 @@ import suoImg from '@/assets/images/process-assurance/suo.png';
 import yinsiImg from '@/assets/images/process-assurance/yinsi.png';
 import SonHeader from '@/components/SonHeader.jsx';
 import { useTranslation } from 'react-i18next';
-import Footer from '../module-digital-asset/footer.jsx';
-import Compliance from './compliance.tsx';
+import Footer from '../module-digital-asset/Footer.jsx';
+import Compliance from './Compliance.tsx';
 
 function ProcessAssurance() {
   const { t } = useTranslation();

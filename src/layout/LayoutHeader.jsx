@@ -19,8 +19,8 @@ const LayoutHeader = memo(() => {
   const navItems = [
     { path: '/', label: t('Header.home'), type: 'route' },
     { path: '#solutions-section', label: t('Header.solutions'), type: 'anchor' },
-    { path: '', label: t('Header.supportedChains'), type: 'route' },
-    { path: '', label: t('Header.resourceCenter'), type: 'route' },
+    { path: '#chooseUs', label: t('Header.supportedChains'), type: 'anchor' },
+    { path: '#resourceCenter', label: t('Header.resourceCenter'), type: 'anchor' },
     { path: '/quotation-and-proposal', label: t('Header.cooperationMode'), type: 'route' },
   ];
 
@@ -43,7 +43,7 @@ const LayoutHeader = memo(() => {
       event.preventDefault();
 
       // 如果不在首页，先跳转到首页
-      if (window.location.pathname !== '/home' && window.location.pathname !== '/') {
+      if (window.location.hash !== '#/home') {
         navigate('/home');
         // 等待页面跳转完成后再滚动
         setTimeout(() => {
@@ -55,7 +55,7 @@ const LayoutHeader = memo(() => {
               block: 'start',
             });
           }
-        }, 500);
+        }, 600);
       } else {
         // 已经在首页，直接滚动
         const element = document.querySelector(item.path);
@@ -118,16 +118,17 @@ const LayoutHeader = memo(() => {
       >
         <span className="text-base">{t('Header.joinUs')}</span>
       </Link>
-      <Link
-        to="/"
-        className={`ml-4 flex items-center rounded-2 px-6 py-2 transition-colors ${
+      <a
+        href="#contact"
+        onClick={e => handleNavClick({ path: '#contact', type: 'anchor' }, e)}
+        className={`ml-4 flex items-center rounded-2 px-6 py-2 transition-colors cursor-pointer ${
           isQuotationPage
             ? 'bg-[#0055FF] text-white hover:bg-[#0055FF]/80'
             : 'bg-[#ffffff] text-[#0055FF] hover:bg-white/80'
         }`}
       >
         <span className="text-base">{t('Header.contactUs')}</span>
-      </Link>
+      </a>
     </div>
   );
 
@@ -136,13 +137,13 @@ const LayoutHeader = memo(() => {
 
     const item = navItems.find(nav => nav.path === key);
 
-    if (item?.type === 'anchor') {
+    if (item?.type === 'anchor' || key === '#contact') {
       // 如果不在首页，先跳转到首页
-      if (window.location.pathname !== '/home' && window.location.pathname !== '/') {
-        navigate('/home');
+      if (window.location.hash !== '#/home') {
+        navigate('/');
         // 等待页面跳转完成后再滚动
         setTimeout(() => {
-          const element = document.querySelector(item.path);
+          const element = document.querySelector(item?.path || key);
 
           if (element) {
             element.scrollIntoView({
@@ -153,7 +154,7 @@ const LayoutHeader = memo(() => {
         }, 500);
       } else {
         // 已经在首页，直接滚动
-        const element = document.querySelector(item.path);
+        const element = document.querySelector(item?.path || key);
 
         if (element) {
           element.scrollIntoView({
@@ -202,10 +203,20 @@ const LayoutHeader = memo(() => {
             <Menu
               mode="inline"
               theme={isQuotationPage ? 'light' : 'dark'}
-              items={navItems.map(item => ({
-                key: item.path,
-                label: item.label,
-              }))}
+              items={[
+                ...navItems.map(item => ({
+                  key: item.path,
+                  label: item.label,
+                })),
+                {
+                  key: '/apply',
+                  label: t('Header.joinUs'),
+                },
+                {
+                  key: '#contact',
+                  label: t('Header.contactUs'),
+                },
+              ]}
               style={{
                 fontSize: '1rem',
                 color: isQuotationPage ? '#000000' : '#ffffff',

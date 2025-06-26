@@ -6,9 +6,9 @@ import stImg from '@/assets/images/customization/st.png';
 import yzImg from '@/assets/images/customization/yz.png';
 import SonHeader from '@/components/SonHeader.jsx';
 import { useTranslation } from 'react-i18next';
-import CoreFeatures from '../module-digital-asset/core.tsx';
-import Footer from '../module-digital-asset/footer.jsx';
-import Safety from '../module-digital-asset/safety.tsx';
+import CoreFeatures from '../module-digital-asset/Core.tsx';
+import Footer from '../module-digital-asset/Footer.jsx';
+import Safety from '../module-digital-asset/Safety.tsx';
 
 function MarketOperation() {
   const { t } = useTranslation();

@@ -18,6 +18,10 @@ export default function RWASolutionsPage() {
   const handleLearnMore = (path) => {
     if (path) {
       navigate(path);
+      // 等待页面跳转完成后再滚动到顶部
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 100);
     }
   };
 

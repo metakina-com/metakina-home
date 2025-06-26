@@ -185,7 +185,7 @@ export default function ChooseUs() {
   };
 
   return (
-    <div className={STYLES.container}>
+    <div id="chooseUs" className={STYLES.container}>
       <div className={STYLES.innerContainer}>
         {/* 标题部分 */}
         <SectionTitle title={t('chooseUs.title')} />

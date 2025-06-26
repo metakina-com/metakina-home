@@ -6,10 +6,10 @@ import tkzyImg from '@/assets/images/cross-border-funding/tkzy.png';
 import ldxImg from '@/assets/images/digital-asset/ldx.png';
 import SonHeader from '@/components/SonHeader.jsx';
 import { useTranslation } from 'react-i18next';
-import Footer from '../module-digital-asset/footer.jsx';
-import Number from '../module-digital-asset/number.tsx';
-import Safety from '../module-digital-asset/safety.tsx';
-import Structure from './structure.jsx';
+import Footer from '../module-digital-asset/Footer.jsx';
+import Number from '../module-digital-asset/Number.tsx';
+import Safety from '../module-digital-asset/Safety.tsx';
+import Structure from './Structure.jsx';
 
 function CrossBorderFunding() {
   const { t } = useTranslation();

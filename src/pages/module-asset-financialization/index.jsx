@@ -6,10 +6,10 @@ import pingguImg from '@/assets/images/asset-financialization/pinggu.png';
 import ysbhImg from '@/assets/images/asset-financialization/ysbh.png';
 import SonHeader from '@/components/SonHeader.jsx';
 import { useTranslation } from 'react-i18next';
-import CoreFeatures from '../module-digital-asset/core.tsx';
-import Footer from '../module-digital-asset/footer.jsx';
-import Safety from '../module-digital-asset/safety.tsx';
-import CoreStrategy from './coreStrategy.jsx';
+import CoreFeatures from '../module-digital-asset/Core.tsx';
+import Footer from '../module-digital-asset/Footer.jsx';
+import Safety from '../module-digital-asset/Safety.tsx';
+import CoreStrategy from './CoreStrategy.jsx';
 
 function AssetFinancialization() {
   const { t } = useTranslation();

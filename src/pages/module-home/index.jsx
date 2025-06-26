@@ -1,14 +1,14 @@
-import ChallengePage from './challenge.jsx';
-import ChooseUsPage from './chooseUs.jsx';
-import ConsultPage from './consult.jsx';
+import ChallengePage from './Challenge.jsx';
+import ChooseUsPage from './ChooseUs.jsx';
+import ConsultPage from './Consult.jsx';
 // import ContactUsPage from './contactUs.jsx';
-import FlexiblePage from './flexible.jsx';
-import FollowPage from './followForm.jsx';
+import FlexiblePage from './Flexible.jsx';
+import FollowPage from './FollowForm.jsx';
 // import CooperationPlatformPage from './cooperationPlatform.tsx';
-import NumberPage from './number.jsx';
-import PartnerLogoPage from './partnerLogo.jsx';
-import ResourceCenterPage from './resourceCenter.jsx';
-import SolutionPage from './solution.jsx';
+import NumberPage from './Number.jsx';
+import PartnerLogoPage from './PartnerLogo.jsx';
+import ResourceCenterPage from './ResourceCenter.jsx';
+import SolutionPage from './Solution.jsx';
 
 function Index() {
   return (
