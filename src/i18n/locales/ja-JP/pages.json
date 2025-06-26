@@ -546,6 +546,10 @@
     "social": {
       "wechat": "WeChat"
     },
+    "wechatModal": {
+      "title": "WeChat QRコード",
+      "description": "QRコードをスキャンしてWeChatを追加"
+    },
     "description": "私たちを知り、あなたの考えを教えてください",
     "address": "中国・香港・西安",
     "form": {

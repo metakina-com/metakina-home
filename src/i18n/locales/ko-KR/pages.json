@@ -535,6 +535,10 @@
     "social": {
       "wechat": "위챗"
     },
+    "wechatModal": {
+      "title": "위챗 QR 코드",
+      "description": "QR 코드를 스캔하여 위챗 추가"
+    },
     "description": "저희를 알아보시고, 여러분의 생각을 들려주세요",
     "address": "중국 · 홍콩 · 시안",
     "form": {

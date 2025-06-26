@@ -546,6 +546,10 @@
     "social": {
       "wechat": "WeChat"
     },
+    "wechatModal": {
+      "title": "WeChat QR Code",
+      "description": "Scan QR code to add WeChat"
+    },
     "description": "Get to know us and share your thoughts with us",
     "address": "China · Hong Kong · Xi'an",
     "form": {

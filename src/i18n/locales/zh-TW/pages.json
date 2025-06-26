@@ -441,6 +441,10 @@
     "social": {
       "wechat": "微信"
     },
+    "wechatModal": {
+      "title": "微信二維碼",
+      "description": "掃描二維碼添加微信"
+    },
     "description": "瞭解我們，把您的想法告訴我們",
     "address": "中國 · 香港 · 西安",
     "form": {

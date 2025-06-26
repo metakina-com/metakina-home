@@ -3,6 +3,7 @@ import dzImg from '@/assets/images/home/dz.png';
 import followBgImage from '@/assets/images/home/fllow-bg.png';
 import gwImg from '@/assets/images/home/gw.png';
 import lxrImg from '@/assets/images/home/lxr.png';
+import wxIMg from '@/assets/images/home/wx.jpg';
 import yxImg from '@/assets/images/home/yx.png';
 import {
   LinkedinOutlined,
@@ -10,7 +11,7 @@ import {
   TwitterOutlined,
   WechatOutlined,
 } from '@ant-design/icons';
-import { Button, Form, Input, message } from 'antd';
+import { Button, Form, Input, message, Modal } from 'antd';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
@@ -21,6 +22,8 @@ function FollowPage() {
   const { t } = useTranslation();
   const location = useLocation();
   const [loading, setLoading] = useState(false);
+  const [wechatModalVisible, setWechatModalVisible] = useState(false);
+
   const socialMedias = [
     {
       name: 'Twitter',
@@ -45,6 +48,7 @@ function FollowPage() {
       icon: <WechatOutlined />,
       url: '',
       className: 'bg-[#07C160]! py-6!',
+      isWechat: true,
     },
   ];
 
@@ -70,6 +74,14 @@ function FollowPage() {
       form.resetFields();
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleSocialClick = (social) => {
+    if (social.isWechat) {
+      setWechatModalVisible(true);
+    } else if (social.url) {
+      window.open(social.url, '_blank');
     }
   };
 
@@ -220,8 +232,7 @@ function FollowPage() {
                 size="middle"
                 icon={social.icon}
                 className={`${social.className} w-[10rem]`}
-                href={social.url}
-                target={social.url ? '_blank' : undefined}
+                onClick={() => handleSocialClick(social)}
               >
                 {social.name}
               </Button>
@@ -324,8 +335,7 @@ function FollowPage() {
                   size="large"
                   icon={social.icon}
                   className={social.className}
-                  href={social.url}
-                  target={social.url ? '_blank' : undefined}
+                  onClick={() => handleSocialClick(social)}
                 >
                   {social.name}
                 </Button>
@@ -412,6 +422,24 @@ function FollowPage() {
         {renderMobileVersion()}
         {renderDesktopVersion()}
       </div>
+
+      <Modal
+        title={t('follow.wechatModal.title')}
+        open={wechatModalVisible}
+        onCancel={() => setWechatModalVisible(false)}
+        footer={null}
+        centered
+        width={400}
+      >
+        <div className="py-4 text-center">
+          <img
+            src={wxIMg}
+            alt={t('follow.wechatModal.title')}
+            className="mx-auto max-w-xs w-full rounded-lg"
+          />
+          <p className="mt-4 text-gray-600">{t('follow.wechatModal.description')}</p>
+        </div>
+      </Modal>
     </section>
   );
 }
