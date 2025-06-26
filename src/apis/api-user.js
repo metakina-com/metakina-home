@@ -34,7 +34,7 @@ export async function updateFormApi(value) {
  */
 export async function submitContactForm(params) {
   try {
-    const data = await http.get(`${BASE_NAME}/platform-system/platform/mail/send`, { params });
+    const data = await http.post(`${BASE_NAME}/platform-system/platform/mail/send?content=${params}`);
 
     return data;
   } catch (error) {
