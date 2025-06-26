@@ -6,7 +6,7 @@ import lxrImg from '@/assets/images/home/lxr.png';
 import yxImg from '@/assets/images/home/yx.png';
 import {
   LinkedinOutlined,
-  SendOutlined,
+  TikTokOutlined,
   TwitterOutlined,
   WechatOutlined,
 } from '@ant-design/icons';
@@ -25,19 +25,19 @@ function FollowPage() {
     {
       name: 'Twitter',
       icon: <TwitterOutlined />,
-      url: 'https://twitter.com/dappweb',
+      url: 'twitter：https://x.com/DappwebC707',
       className: 'bg-[#1DA1F2]! py-6!',
     },
     {
       name: 'LinkedIn',
       icon: <LinkedinOutlined />,
-      url: 'https://linkedin.com/company/dappweb',
+      url: 'https://www.linkedin.com/in/qiangweizhang/',
       className: 'bg-[#0A66C2]! py-6!',
     },
     {
-      name: 'Telegram',
-      icon: <SendOutlined />,
-      url: 'https://t.me/dappweb',
+      name: 'TikTok',
+      icon: <TikTokOutlined />,
+      url: 'https://www.tiktok.com/@kolmarket.cn',
       className: 'bg-[#2AABEE]! py-6!',
     },
     {
