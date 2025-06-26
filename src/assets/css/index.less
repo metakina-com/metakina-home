@@ -1,0 +1,31 @@
+@import './normalize.less';
+@import './router-transition.less';
+
+/* 六边形图标样式 */
+.clip-path-hexagon {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+/* 移动端特色卡片样式增强 */
+.mobile-feature-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-feature-icon::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  z-index: 1;
+}
+
+.mobile-feature-icon img {
+  position: relative;
+  z-index: 2;
+  filter: brightness(0) invert(1);
+}

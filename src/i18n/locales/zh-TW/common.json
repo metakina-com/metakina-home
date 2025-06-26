@@ -1,0 +1,35 @@
+{
+  "LocaleSwitcher": {
+    "label": "更改語言",
+    "locale": "{locale}"
+  },
+  "Navigation": {
+    "home": "首頁",
+    "about": "關於",
+    "contact": "聯絡我們"
+  },
+  "Company": {
+    "name": "西安達普韋伯網路科技有限責任公司",
+    "address": "總部：中國西安"
+  },
+  "LanguageDetection": {
+    "title": "語言建議",
+    "description": "偵測到您的瀏覽器語言和當前語言不一樣，您隨時都可切換語言 👉",
+    "countdown": "將在 {countdown} 秒後關閉"
+  },
+  "meta": {
+    "title": "Meta話RWA - 盤活萬億資產，合規連接全球資本"
+  },
+  "app": {
+    "submitSuccess": "提交成功！"
+  },
+  "buttons": {
+    "previousStep": "上一步",
+    "nextStep": "下一步",
+    "submit": "提交"
+  },
+  "errors": {
+    "formRestoreError": "恢復表單狀態失敗",
+    "formValidationError": "表單驗證失敗"
+  }
+}

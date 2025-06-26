@@ -1,0 +1,40 @@
+{
+  "LocaleSwitcher": {
+    "label": "言語を変更",
+    "locale": "{locale}"
+  },
+  "Navigation": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "contact": "お問い合わせ"
+  },
+  "LanguageDetection": {
+    "title": "言語の提案",
+    "description": "ブラウザの言語設定が現在のサイト言語と異なっています。いつでも言語を切り替えることができます 👉",
+    "countdown": "閉じるまで {countdown} 秒"
+  },
+  "Company": {
+    "name": "ダップウェブ"
+  },
+  "form": {
+    "phone": {
+      "required": "電話番号を入力してください",
+      "invalid": "有効な電話番号を入力してください"
+    },
+    "email": {
+      "invalid": "有効なメールアドレスを入力してください"
+    }
+  },
+  "app": {
+    "submitSuccess": "送信完了！"
+  },
+  "buttons": {
+    "previousStep": "前のステップ",
+    "nextStep": "次のステップ",
+    "submit": "送信"
+  },
+  "errors": {
+    "formRestoreError": "フォーム状態の復元に失敗しました",
+    "formValidationError": "フォームの検証に失敗しました"
+  }
+}

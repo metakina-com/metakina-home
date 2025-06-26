@@ -1,0 +1,69 @@
+{
+  "Header": {
+    "services": "核心服務",
+    "case": "成功案例",
+    "platform": "合作平台",
+    "blog": "部落格諮詢",
+    "followUs": "關注我們",
+    "aboutUs": "關於我們",
+    "contactUs": "聯絡我們",
+    "home": "首頁",
+    "whyChooseUs": "為何選擇我們",
+    "supportedChains": "支持公鏈",
+    "cooperationMode": "合作模式",
+    "joinUs": "平台申請",
+    "solutions": "解決方案",
+    "resourceCenter": "資源中心"
+  },
+  "Footer": {
+    "footerLinks": {
+      "services": {
+        "title": "核心服務",
+        "exchange": "交易所",
+        "dapp": "Dapp",
+        "gamefi": "GameFi",
+        "nft": "NFT",
+        "blockchain": "區塊鏈",
+        "layer2": "Layer2",
+        "wallet": "錢包",
+        "trustedData": "可信數據",
+        "ai": "AI"
+      }
+    },
+    "about": {
+      "title": "關於Meta話RWA",
+      "description": "構建現實資產與數位金融的合規橋樑。"
+    },
+    "quickLinks": {
+      "title": "快速連結",
+      "solutions": "解決方案",
+      "whyChooseUs": "為何選擇我們",
+      "marketDynamics": "市場對接",
+      "supportedChains": "支持公鏈",
+      "digitalCurrency": "數位投行合作",
+      "resourceCenter": "資源中心",
+      "customerSuccess": "客戶成功"
+    },
+    "resources": {
+      "title": "資源",
+      "whitepaper": "白皮書",
+      "privacyPolicy": "隱私政策",
+      "cookiePolicy": "Cookie政策",
+      "serviceManual": "服務手冊",
+      "industryInsight": "行業洞察",
+      "faq": "常見問題"
+    },
+    "followUs": {
+      "title": "關注我們"
+    },
+    "contact": {
+      "company": "西安達普韋伯網路科技有限責任公司",
+      "location": "總部：中國·西安",
+      "emailIcon": "信箱",
+      "phoneIcon": "電話"
+    },
+    "copyright": "© 2025 METAKINA LIMITED & 西安達普韋伯網路科技有限責任公司. 保留所有權利.",
+    "privacyPolicy": "隱私政策",
+    "terms": "服務條款"
+  }
+}

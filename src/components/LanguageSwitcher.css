@@ -1,0 +1,60 @@
+.language-switcher .language-select .ant-select-selector {
+  color: white !important;
+  padding-right: 20px !important;
+}
+
+.language-switcher .language-select .ant-select-arrow {
+  color: white !important;
+}
+
+.language-switcher .language-select .ant-select-selection-item {
+  padding-left: 8px !important;
+  color: white !important;
+}
+
+.language-switcher .language-select.ant-select-focused .ant-select-selector {
+  color: white !important;
+}
+
+.language-switcher .language-select.ant-select-focused .ant-select-selection-item {
+  color: white !important;
+}
+
+.language-switcher .language-select .ant-select-dropdown {
+  background: #ffffff !important;
+}
+
+.language-switcher .language-select .ant-select-item {
+  color: #000000 !important;
+}
+
+.language-switcher .language-select .ant-select-item-option-selected {
+  background: #f0f0f0 !important;
+  color: #000000 !important;
+}
+
+.language-switcher .language-select .ant-select-item-option-active {
+  background: #f0f0f0 !important;
+  color: #000000 !important;
+}
+
+/* 黑色主题样式 */
+.language-switcher.dark-theme .language-select .ant-select-selector {
+  color: black !important;
+}
+
+.language-switcher.dark-theme .language-select .ant-select-arrow {
+  color: black !important;
+}
+
+.language-switcher.dark-theme .language-select .ant-select-selection-item {
+  color: black !important;
+}
+
+.language-switcher.dark-theme .language-select.ant-select-focused .ant-select-selector {
+  color: black !important;
+}
+
+.language-switcher.dark-theme .language-select.ant-select-focused .ant-select-selection-item {
+  color: black !important;
+}

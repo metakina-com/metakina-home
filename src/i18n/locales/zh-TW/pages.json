@@ -1,0 +1,729 @@
+{
+  "Home": {
+    "name": "達普韋伯",
+    "title": "元話RWA",
+    "tagLine": "盤活萬億資產，合規連接全球資本",
+    "description": "內建多語言支援的 Next.js 15 啟動範本，助您快速構建面向全球的出海網站。簡潔高效，開箱即用，完全優化的SEO基礎架構。"
+  },
+  "Consult": {
+    "logo": "元話RWA",
+    "title": "盤活萬億資產，合規連接全球資本",
+    "subtitle": "提供機構級、端到端、合規優先的RWA與資料資產化解決方案，賦能您的資產潛力。",
+    "button": "申請免費諮詢"
+  },
+  "challenges": {
+    "title": "傳統資產與資料資產面臨的挑戰",
+    "liquidity": {
+      "title": "流動性困境",
+      "description": "非標資產難以快速變現，持有成本高。"
+    },
+    "financing": {
+      "title": "融資瓶頸",
+      "description": "傳統管道門檻高，跨境、資料資產化合規複雜。"
+    },
+    "efficiency": {
+      "title": "管理效率低下",
+      "description": "資產確權、估值、交易、收益分配等環節流程繁瑣、人工依賴度高、資訊不透明，增加管理成本與風險。"
+    }
+  },
+  "solutions": {
+    "sectionTitle": "解決方案",
+    "mainTitle": "端到端 RWA 與資料資產化服務",
+    "common": {
+      "learnMore": "瞭解詳情"
+    },
+    "assetDigital": {
+      "title": "資產數位化",
+      "description": "利用 AI(\"元啟\")輔助評估，設計精準 Tokenomics，透過安全可靠的智慧合約實現資產上鏈。"
+    },
+    "crossBorder": {
+      "title": "合規跨境融資促進",
+      "description": "設計並執行創新的跨境金融結構（如香港LPF+陝西QFLP），精準對接全球合格投資者網路。"
+    },
+    "compliance": {
+      "title": "全流程合規保障",
+      "description": "基於\"合規前置\"理念，提供法規解讀，整合 KYC/AML/KYB，保障資料安全與隱私。"
+    },
+    "ecosystem": {
+      "title": "生態與市場營運",
+      "description": "利用\"元策\"AI 進行市場分析，構建和營運社群，協調市場對接，提供持續的技術維護和品牌建設。"
+    },
+    "dataFinance": {
+      "title": "資料資產金融化",
+      "description": "緊跟中國\"資料資產入表\"政策，提供從合規治理到金融化方案設計、市場對接的全流程服務。"
+    },
+    "modular": {
+      "title": "模組化與客製化",
+      "description": "根據專案需求和預算，靈活選擇服務模組，我們提供高度客製化的解決方案。"
+    }
+  },
+  "platform": {
+    "title": "合作平台"
+  },
+  "RWACooperation": {
+    "title": "元話RWA數位投行合作計畫",
+    "mainTitle": "元話RWA",
+    "subtitle": "數位投行合作計畫",
+    "flexibleMode": "靈活的合作模式",
+    "processTitle": "合作流程 ",
+    "getDetailButton": "獲取詳細報價與合作方案",
+    "applyPartnerButton": "申請成為合作夥伴",
+    "plans": {
+      "registered": {
+        "title": "註冊夥伴",
+        "description": "建立聯繫，獲取合作資訊與基礎資源。"
+      },
+      "certified": {
+        "title": "認證夥伴",
+        "description": "獲得專業認證，享有專屬支援，市場資源與佣金激勵。"
+      },
+      "premium": {
+        "title": "優選夥伴",
+        "description": "深度戰略合作，共享市場資源、最高權益、MDF及獨家課程/軟體授權"
+      }
+    },
+    "modes": {
+      "modular": {
+        "title": "模組化服務",
+        "description": "按需組合核心服務模組。"
+      },
+      "customized": {
+        "title": "客製化解決方案",
+        "description": "為特殊資產或大規模專案量身定制。"
+      },
+      "transparent": {
+        "title": "透明定價",
+        "description": "詳細費用構成，可選里程碑或績效模式。"
+      }
+    },
+    "process": {
+      "consultation": "初步諮詢",
+      "evaluation": "專案評估",
+      "design": "方案設計",
+      "agreement": "協議簽署",
+      "execution": "執行與追蹤"
+    }
+  },
+  "contact": {
+    "title": {
+      "part1": "聯絡我們，",
+      "part2": "開啟您的 RWA 之旅"
+    },
+    "form": {
+      "title": "發送諮詢",
+      "name": "姓名",
+      "namePlaceholder": "請輸入您的姓名",
+      "nameRequired": "請輸入姓名",
+      "email": "信箱",
+      "emailPlaceholder": "請輸入您的信箱",
+      "emailRequired": "請輸入信箱",
+      "emailInvalid": "請輸入有效的信箱地址",
+      "company": "公司名稱 (可選)",
+      "companyPlaceholder": "請輸入您的公司名稱",
+      "message": "您的需求或問題",
+      "messagePlaceholder": "請描述您的需求或問題",
+      "messageRequired": "請輸入您的需求或問題",
+      "submit": "提交資訊"
+    },
+    "info": {
+      "contactTitle": "聯絡方式",
+      "address": "地址",
+      "businessEmail": "業務信箱",
+      "hk": {
+        "company": "香港 METAKINA LIMITED",
+        "address": "中國香港特別行政區數碼港",
+        "businessEmail": "rwa.service@metakina.com",
+        "businessEmailLabel": "業務信箱",
+        "contactPerson": "聯絡人（張強偉）",
+        "phone": "+86 177 0922 4992",
+        "website": "www.metakina.com",
+        "websiteLabel": "官網"
+      },
+      "xian": {
+        "company": "西安達普韋伯 (技術夥伴)",
+        "address": "中國陝西省西安市雁塔區",
+        "techConsult": "技術諮詢",
+        "techEmail": "qiangweizhang@dappweb.cn",
+        "website": "www.dappweb.cn",
+        "websiteLabel": "官網"
+      }
+    }
+  },
+  "chooseUs": {
+    "title": "為什麼選擇元話",
+    "features": {
+      "financeCompliance": {
+        "title": "卓越跨境金融與合規",
+        "description": "精通LPF+QFLP等架構，深刻理解中港及國際法規"
+      },
+      "professionalTeam": {
+        "title": "跨界融合專業團隊",
+        "description": "匯聚金融、技術、法律、市場資深專家"
+      },
+      "riskControl": {
+        "title": "深度合規與風控",
+        "description": "\"合規前置\"實踐，全面風險緩釋機制"
+      },
+      "ecosystemNetwork": {
+        "title": "強大生態網路",
+        "description": "連接全球與本地頂級技術、金融、法律夥伴"
+      },
+      "advancedTechnology": {
+        "title": "領先且合規的技術",
+        "description": "自主知識產權(公章書面)、中國備案基礎、平台安全高效"
+      },
+      "successCases": {
+        "title": "豐富成功案例",
+        "description": "服務多元化資產配置機構投資客戶的成功實踐"
+      }
+    }
+  },
+  "quotationAndProposal": {
+    "tabs": {
+      "member": "加入會員",
+      "customization": "定製項目"
+    },
+    "joinVip": "加入 M-VIP",
+    "vip": {
+      "title": "Metakina VIP",
+      "subtitle": "靈活的定價方案，滿足您的所有需求",
+      "description1": "從個人投資者到大型金融機構，我們提供從SaaS平台訂閱到端到端項目制的全方位解決方案，",
+      "description2": "為您的RWA（現實世界資產）代幣化之旅提供專業、合規、高效的服務。"
+    },
+    "pricing": {
+      "monthly": "月付",
+      "yearly": "年付",
+      "yearlySaving": "（節省17%）",
+      "plans": {
+        "free": {
+          "title": "免費版",
+          "monthlyPrice": "HK¥ 0 /月",
+          "yearlyPrice": "HK¥ 0 /年",
+          "description": "適合個人、初創企業、概念驗證",
+          "status": "計劃中",
+          "features": [
+            "10個基礎RWA項目測覽",
+            "簡單估值計算器",
+            "社區論壇訪問",
+            "標準NFT展示"
+          ]
+        },
+        "professional": {
+          "title": "專業版",
+          "monthlyPrice": "HK¥ 2,888/月",
+          "yearlyPrice": "HK¥ 28,888/年",
+          "description": "適合專業投資機構、交易員",
+          "status": "計劃中",
+          "recommended": "推薦",
+          "features": [
+            "基礎RWA項目測覽",
+            "簡單估值計算器",
+            "社區論壇訪問",
+            "標準NFT展示",
+            "\"元啟\"AI估值引擎 & \"元策\"AI預測",
+            "高級分析工具與實時數據",
+            "基礎API訪問 & 數據導出",
+            "香港合規報告模板",
+            "投資組合管理與風險報告"
+          ]
+        },
+        "enterprise": {
+          "title": "企業版",
+          "monthlyPrice": "HK¥ 5,888/月 起",
+          "yearlyPrice": "HK¥ 58,888/年 起",
+          "description": "適合需要高級定製功能的大型機構",
+          "status": "計劃中",
+          "features": [
+            "基礎RWA項目測覽",
+            "簡單估值計算器",
+            "社區論壇訪問",
+            "標準NFT展示",
+            "\"元啟\"AI估值引擎 & \"元策\"AI預測",
+            "高級分析工具與實時數據",
+            "基礎API訪問 & 數據導出",
+            "香港合規報告模板",
+            "投資組合管理與風險報告",
+            "定製化AI模型訓練",
+            "白標解決方案",
+            "無限API調用",
+            "24/7專屬客服&客戶經理",
+            "香港金管局合規諮詢"
+          ]
+        }
+      }
+    },
+    "phases": {
+      "title": "RWA 項目全景規劃方案",
+      "phase1": {
+        "title": "第一階段：諮詢與規劃",
+        "description": "含四項內容，均 2 - 4 週：",
+        "items": [
+          {
+            "name": "RWA 項目初步諮詢與可行性分析",
+            "price": "（2 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "資產盡職調查預估",
+            "price": "（2 萬，CEX 適用、DEX 強烈建議 ）"
+          },
+          {
+            "name": "法律與合規結構設計",
+            "price": "（3 萬，CEX 適用、DEX 技術非必要 ）"
+          },
+          {
+            "name": "代幣經濟學設計",
+            "price": "（3 萬，CEX、DEX 均適用 ）"
+          }
+        ]
+      },
+      "phase2": {
+        "title": "第二階段：試點與代幣化",
+        "description": "含六項內容，均6 - 12 週：",
+        "items": [
+          {
+            "name": "技術方案設計與區塊鏈選擇",
+            "price": "（4 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "智能合約開發",
+            "price": "（10 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "智能合約安全審計協調",
+            "price": "（4 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "RWA數據上鏈與驗證機制",
+            "price": "（6 萬，CEX 適用、DEX 強烈建議 ）"
+          },
+          {
+            "name": "代幣化平台/界面開發",
+            "price": "（9 萬，CEX、DEX 均強烈建議 ）"
+          },
+          {
+            "name": "代幣鑄造與部署",
+            "price": "（2 萬，CEX、DEX 均適用 ）"
+          }
+        ]
+      },
+      "phase3": {
+        "title": "第三階段：發行與上市",
+        "description": "含四項內容，CEX 4-16 週；DEX 1-2 週",
+        "items": [
+          {
+            "name": "一級市場發行策略",
+            "price": "（8 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "市場營銷與 PR",
+            "price": "（6 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "二級市場(交易所)上市協調",
+            "price": "（12 萬，CEX 適用、DEX 不適用 ）"
+          },
+          {
+            "name": "流動性策略與做市商對接",
+            "price": "（4 萬，CEX 使用、DEX 形式不同 ）"
+          }
+        ]
+      },
+      "phase4": {
+        "title": "第四階段：持續服務",
+        "description": "含五項內容，持續進行",
+        "items": [
+          {
+            "name": "鏈上資產數據監控與報告",
+            "price": "（6 萬，CEX 適用、DEX 強烈建議 ）"
+          },
+          {
+            "name": "收益/分紅分配執行",
+            "price": "（5 萬，CEX、DEX 以項目增減 ）"
+          },
+          {
+            "name": "合規性持續監控與報告",
+            "price": "（7 萬，CEX 適用、DEX 技術非必要 ）"
+          },
+          {
+            "name": "技術平台與智能合約維護",
+            "price": "（7 萬，CEX、DEX 均適用 ）"
+          },
+          {
+            "name": "投資者關係與社區管理支持",
+            "price": "（5 萬，CEX、DEX 均適用 ）"
+          }
+        ]
+      }
+    }
+  },
+  "client": {
+    "inviterName": "邀請人姓名",
+    "inviterPhoneNumber": "邀請人手機號"
+  },
+  "resourceCenter": {
+    "title": "資源中心",
+    "subtitle": "洞察、學習與工具",
+    "coreFiles": {
+      "title": "核心檔案",
+      "description": "下載白皮書、服務手冊、合作計畫介紹等。",
+      "action": "下載白皮書 →",
+      "secondAction": "下載服務手冊 →"
+    },
+    "systemTutorials": {
+      "title": "系統教學",
+      "description": "檢視平台合作夥伴知識庫介紹，高效利用平台。",
+      "action": "檢視教學（即將推出）→"
+    },
+    "learningCenter": {
+      "title": "學習中心",
+      "description": "探索 RWA、資料合夥代、區塊鏈金融知識（含詞彙表）。",
+      "action": "開始學習（即將推出）→"
+    },
+    "industryInsights": {
+      "title": "行業洞察與新聞",
+      "description": "獲取最新 RWA 市場趨勢、政策解讀與行業洞察。",
+      "action": "閱讀最新洞察 →"
+    }
+  },
+  "processAssurance": {
+    "title": "合規前置，鑄就信任基石",
+    "description": "元話 RWA 秉持\"合規前置\"理念，從專案伊始即融入全面合規體系，保障每一步操作都安全可靠。",
+    "coreCompliance": {
+      "title": "核心合規理念",
+      "items": [
+        {
+          "title": "法規洞察服務與諮詢",
+          "description": "我們為企業和個人提供專業的法規洞察服務，幫助您深入瞭解相關法律法規的最新變化，確保業務合規營運。"
+        },
+        {
+          "title": "\"合規前置\"理念",
+          "description": "從專案設計中期，我們將合規體系融入每一個環節，確保從專案立項到上線營運的每個環節都符合監管要求，避免後期整改風險。"
+        }
+      ]
+    },
+    "kycAmlKyb": {
+      "title": "整合 KYC/AML/KYB 體系",
+      "items": [
+        {
+          "title": "嚴格的 KYC(瞭解您的客戶)",
+          "description": "我們實施多層次的身份驗證流程，確保所有參與方身份真實可靠，有效防範欺詐行為。"
+        },
+        {
+          "title": "強大的 AML(反洗錢)機制",
+          "description": "透過與國際反洗錢資料庫和黑名單的整合，配合智慧監控系統，有效識別並阻止可疑交易，確保資金來源的合法性。"
+        },
+        {
+          "title": "全面的 KYB(瞭解您的業務夥伴)",
+          "description": "對機構和企業客戶進行深入的背景調查和資質審核，確保業務合作的合規性與安全性。"
+        }
+      ]
+    },
+    "dataSecurity": {
+      "title": "保障資料安全與隱私",
+      "items": [
+        {
+          "title": "高強度加密技術",
+          "description": "採用行業領先的加密演算法，對所有敏感資料進行端到端加密，確保資料在傳輸和儲存過程中的機密性。"
+        },
+        {
+          "title": "嚴格的存取控制",
+          "description": "實施基於角色的存取控制(RBAC)和最小權限原則，確保只有授權人員才能存取特定資料。"
+        },
+        {
+          "title": "全球隱私法規遵循",
+          "description": "嚴格遵循 GDPR、CCPA 等全球主流資料隱私法規，保障使用者資料權利，構建值得信賴的服務。"
+        }
+      ]
+    }
+  },
+  "follow": {
+    "title": "聯絡我們",
+    "social": {
+      "wechat": "微信"
+    },
+    "description": "瞭解我們，把您的想法告訴我們",
+    "address": "中國 · 香港 · 西安",
+    "form": {
+      "title": "發送諮詢",
+      "name": "姓名",
+      "phone": "電話",
+      "email": "信箱",
+      "message": "留言",
+      "submit": "提交",
+      "name.placeholder": "姓名",
+      "name.required": "請輸入您的姓名",
+      "phone.placeholder": "電話",
+      "phone.required": "請輸入您的電話",
+      "email.placeholder": "信箱",
+      "email.required": "請輸入您的信箱",
+      "email.invalid": "請輸入有效的信箱地址",
+      "message.placeholder": "留言",
+      "message.required": "請輸入留言內容"
+    }
+  },
+  "digitalAsset": {
+    "header": {
+      "title": "賦能資產，鏈上未來",
+      "description": "透過元話 RWA 的創新技術，將傳統資產轉化為高效、透明的數位資產，開啟資產流通的新時代。"
+    },
+    "coreFeatures": {
+      "title": "核心功能",
+      "aiEvaluation": {
+        "title": "AI輔助評估(元啟)",
+        "description": "利用人工智慧\"元啟\"對資產進行全面精準的評估，為數位化奠定堅實基礎。"
+      },
+      "tokenomicsDesign": {
+        "title": "精準Tokenomics 設計",
+        "description": "根據資產特性、市場需求和業務目標，客製最佳化代幣經濟模型，實現價值最大化。"
+      },
+      "smartContract": {
+        "title": "安全智慧合約",
+        "description": "透過安全可靠且經過多重稽核的智慧合約實現資產上鏈，保障資產安全與透明。"
+      },
+      "assetOnchain": {
+        "title": "高效資產上鏈",
+        "description": "將各類現實世界資產(RWA)高效便捷地轉化為鏈上數位資產提升流通效率。"
+      }
+    },
+    "advantages": {
+      "title": "數位資產化優勢",
+      "liquidity": {
+        "title": "提升流動性",
+        "description": "數位資產更易於交易和分割，大幅提升市場流動性，拓展投資管道。"
+      },
+      "transparency": {
+        "title": "增強透明度",
+        "description": "區塊鏈技術賦能保證有效監管和透明度，提高市場信任度。"
+      },
+      "divisibility": {
+        "title": "實現可分割性",
+        "description": "允許投資者以更小的單位參與高價值資產，降低投資門檻。"
+      },
+      "efficiency": {
+        "title": "提高效率",
+        "description": "自動化交易流程，減少中間環節和人工干預，大幅提高資產管理和營運效率。"
+      }
+    },
+    "safety": {
+      "title": "安全與技術保障",
+      "description": "我們採用最先進的區塊鏈技術和嚴格的安全措施，確保您的數位資產安全無虞，並提供穩定可靠的執行環境。",
+      "items": [
+        "√ 安全可靠的智慧合約開發與稽核 : 所有合約均由經驗豐富的區塊鏈安全專家團隊開發，並經過獨立的第三方安全機構進行嚴格的多重稽核，消除潛在漏洞。",
+        "√ 去中心化網路保障資產的不可篡改性 : 資產資料和交易紀錄部署在去中心化區塊鏈網路上，確保資料不可篡改、高度透明，並有效抵禦單點故障風險。",
+        "√ 多重簽名和加密技術 : 採用行業領先的多重簽名(Multi-sig)錢包技術和先進的加密演算法，為數位資產提供多層次的保護，有效防範未經授權的存取。",
+        "√ 持續的安全監控與升級 : 我們的技術團隊對平台進行7x24小時不間斷的安全監控，並根據最新的安全威脅和技術進展，定期進行系統升級和維護，確保系統始終處於最新、最安全的水準。"
+      ]
+    },
+    "footer": {
+      "title": "客製您的RWA解決方案!",
+      "description": "無論您的業務規模或需求有多獨特，元話 RWA 都能為您量身打造最合適的區塊鏈RWA解決方案。",
+      "button": "立即聯絡我們"
+    }
+  },
+  "customization": {
+    "header": {
+      "title": "構建生態體系，營運市場",
+      "description": "利用\"元策\"AI 進行市場分析，構建和營運社群，協調市場對接，提供持續的技術維護和品牌建設。"
+    },
+    "coreFeatures": {
+      "title": "核心營運策略",
+      "empowerDevelopers": {
+        "title": "賦能開發者",
+        "description": "提供全面的開發工具、API介面和技術支援，助力開發者快速構建基於RWA的創新應用，激發生態活力。"
+      },
+      "qualityApps": {
+        "title": "引入優質應用",
+        "description": "嚴格篩選並引入具有高價值、創新性和使用者體驗的RWA相關應用，豐富平台生態內容，滿足多元化市場需求。"
+      },
+      "industryPartnership": {
+        "title": "深度賦能行業夥伴",
+        "description": "與金融機構、資產管理公司、科技企業等行業夥伴緊密合作，共享資源、技術和市場洞察，實現互利共贏。"
+      },
+      "ecosystemBuilding": {
+        "title": "構建RWA生態體系",
+        "description": "透過連接各方資源，搭建RWA基礎設施，培育健康的市場環境，共同推動RWA領域的創新與發展。"
+      }
+    },
+    "advantages": {
+      "title": "我們的生態優勢與願景",
+      "description": "元話 RWA 相信，透過開放、協作和創新，能夠構建一個互聯互通、充滿活力的 RWA 生態系統，為現實世界資產帶來前所未有的機遇。",
+      "items": [
+        "√ 多元化應用場景 : 支援包括房地產、藝術品、私募股權等多種RWA的數位化與交易，拓寬資產邊界。",
+        "√ 強大的社群支援 : 積極培養和支援開發者社群，確保生態系統持續創新和迭代。",
+        "√ 全球化戰略佈局 : 積極拓展國際市場，吸引全球投資者和專案方，構建全球RWA流通網路。",
+        "√ 合規與安全並重 :在生態建設和市場營運中始終堅持合規前置，保障所有參與者的利益。"
+      ]
+    }
+  },
+  "marketOperation": {
+    "header": {
+      "title": "靈活模組，客製未來",
+      "description": "元話 RWA 提供高度模組化和客製化的解決方案，精準匹配您的業務需求，構建專屬RWA生態。"
+    },
+    "corePhilosophy": {
+      "title": "核心理念",
+      "items": [
+        {
+          "title": "模組化設計",
+          "description": "我們的RWA解決方案採用高度模組化的架構，將複雜功能拆解為獨立、可重用的組件，例如資產確權模組、Tokenomics模組、智慧合約部署模組等，實現靈活性和效率最大化。"
+        },
+        {
+          "title": "高度客製化",
+          "description": "基於模組化基礎，我們能夠為客戶提供無與倫比的客製化服務。無論是特定的業務邏輯、獨特的代幣經濟模型，還是複雜的合規要求，我們都能靈活調整和組合模組，打造最符合您需求的解決方案。"
+        }
+      ]
+    },
+    "advantages": {
+      "title": "模組化與客製化的優勢",
+      "items": [
+        {
+          "title": "加速部署",
+          "description": "標準化的模組可快速組合，顯著縮短RWA專案從概念到上線的週期，搶佔市場先機。"
+        },
+        {
+          "title": "優化成本",
+          "description": "透過重用成熟模組和按需客製，避免重複開發，有效降低專案開發和維護成本。"
+        },
+        {
+          "title": "卓越靈活性",
+          "description": "輕鬆適應業務變化和市場需求，實現功能的快速迭代與升級，確保方案的持續競爭力。"
+        },
+        {
+          "title": "高效擴展",
+          "description": "模組化架構支援平滑擴展，當業務規模增長或需要新增功能時，只需整合新模組即可。"
+        }
+      ]
+    },
+    "applications": {
+      "title": "應用場景",
+      "items": [
+        {
+          "title": "金融機構RWA發行與管理",
+          "description": "為銀行、券商等金融機構提供客製化的RWA發行平台，滿足其對合規、風控和資產管理的高度要求。"
+        },
+        {
+          "title": "數位收藏品與藝術品資產化",
+          "description": "為藝術畫廊、博物館、收藏家提供客製化的NFT發行與交易解決方案，實現藝術品和收藏品的數位化金融化。"
+        },
+        {
+          "title": "供應鏈金融與資產證券化",
+          "description": "透過客製化的模組，將供應鏈中的應收帳款、倉單等資產上鏈，實現高效流轉和融資，提升供應鏈效率。"
+        },
+        {
+          "title": "跨境資產合規流通方案",
+          "description": "結合模組化合規策略和客製化金融結構，為跨境資產的合規發行與流通提供端到端支援。"
+        }
+      ]
+    }
+  },
+  "crossBorderFunding": {
+    "header": {
+      "title": "合規跨境融資，連接全球資本",
+      "description": "元話 RWA 憑藉創新的金融結構和廣泛的投資者網路，助您高效、安全地實現跨境融資目標。"
+    },
+    "structure": {
+      "title": "創新跨境金融結構",
+      "lpf": {
+        "title": "香港有限合夥基金(LPF)",
+        "description": "利用香港作為東西方金融樞紐的優勢，為內地投資者提供便捷、全面的全球資產配置服務，特別是美元資產。"
+      },
+      "qflp": {
+        "title": "陝西合格境外有限合夥人",
+        "description": "透過陝西QFLP試點，有效引導境外資本在中國境內投資產業，拓展離岸與在岸投資。"
+      },
+      "custom": {
+        "title": "客製化結構設計",
+        "description": "依據客戶的投資需求與目標，量身客製跨境資金配置及其的專業結構解決方案。"
+      }
+    },
+    "advantages": {
+      "title": "數位資產化優勢",
+      "items": [
+        {
+          "title": "提升融資效率",
+          "description": "優化融資流程，透過專業結構設計和網路對接，顯著縮短融資週期。"
+        },
+        {
+          "title": "降低合規風險",
+          "description": "嚴格遵守各地監管法規，確保融資活動合法合規，規避潛在風險。"
+        },
+        {
+          "title": "拓寬資金來源",
+          "description": "連接全球多元化資本，為您的專案提供更廣闊的融資選擇。"
+        },
+        {
+          "title": "增強資產流動性",
+          "description": "透過合規結構和投資者網路，促進資產在國際市場上的高效流轉。"
+        }
+      ]
+    },
+    "compliance": {
+      "title": "合規與執行保障",
+      "contentTitle": "元話 RWA 擁有一支經驗豐富的專業團隊，精通跨境金融法規和實務，確保您的融資專案從設計到執行全程合規、高效。",
+      "contentList": [
+        "√ 深厚的法律與稅務專長 : 我們與國際頂尖的法律和稅務顧問合作，確保所有金融結構設計和交易符合香港、中國大陸及相關國際法規。",
+        "√ 全流程專案管理 : 提供從前期盡職調查、結構搭建、文件準備、投資者溝通到後期資金交割的全方位專案管理服務。",
+        "√ 風險控制與優化 : 運用先進的風險評估模型和控制策略，識別並規避跨境融資中的潛在風險，優化融資成本和效率。",
+        "√ 持續的合規支援 : 在專案成功融資後，我們繼續提供持續的合規諮詢和支援服務，確保您的專案長期穩健執行。"
+      ]
+    }
+  },
+  "assetFinancialization": {
+    "header": {
+      "title": "資料賦能金融，啟動數位經濟",
+      "description": "元話 RWA 助力資料資產合規確權、評估與流轉，將其轉化為可交易的金融產品，釋放資料要素價值。"
+    },
+    "coreFeatures": {
+      "title": "核心營運策略",
+      "items": [
+        {
+          "title": "資料資產確權與評估",
+          "description": "協助企業進行資料資產的合規確權、價值評估和資質認定，為金融化打下基礎。"
+        },
+        {
+          "title": "資料金融產品設計",
+          "description": "依據資料資產特性和市場需求，設計多樣化的資料金融產品，如資料信託、資料證券等。"
+        },
+        {
+          "title": "資料資產合規流轉",
+          "description": "構建安全合規的資料流轉通道，確保資料資產在法律框架內進行高效、透明的交易與使用。"
+        },
+        {
+          "title": "資料資產安全與隱私保護",
+          "description": "採用先進加密技術和隱私運算，保障資料資產全生命週期的安全與使用者隱私。"
+        }
+      ]
+    },
+    "coreStrategy": {
+      "title": "核心營運策略",
+      "items": [
+        {
+          "title": "釋放資料價值",
+          "description": "將價值的資料轉化為可利用、可交易的金融資產，啟動其潛在價值。"
+        },
+        {
+          "title": "拓寬融資管道",
+          "description": "為資料擁有者提供新的融資路徑，居住無形資產，實現可持續發展。"
+        },
+        {
+          "title": "提升資料流動性",
+          "description": "促進資料在合規市場中的高效流通，打破資料孤島，提升市場效率。"
+        },
+        {
+          "title": "促進資料要素市場",
+          "description": "推動資料作為新興生產要素的流通和交易，助力構建完善的資料要素市場體系。"
+        }
+      ]
+    },
+    "safety": {
+      "title": "資料安全與合規保障",
+      "contentTitle": "元話 RWA 在資料資產金融化過程中，將資料安全與合規置於首位，確保資料價值最大化的同時，維護使用者權益與市場秩序。",
+      "contentList": [
+        "√ 全生命週期資料安全管理 ：從資料採集、儲存、處理到流轉，均採用高標準的安全防護措施，包括多層加密、存取控制和稽核記錄。",
+        "√ 隱私運算技術應用 ：運用聯邦學習、同態加密、零知識證明等隱私運算技術，在不洩露原始資料的前提下進行資料價值挖掘與共享。",
+        "√ 嚴格遵循資料合規法規 ：嚴格遵守全球及地方資料保護法規，如GDPR、CCPA以及中國的資料安全法、個人資訊保護法等。",
+        "√ 透明可追溯的資料流轉 ：利用區塊鏈技術實現資料資產流轉的全程可追溯和不可篡改，增強市場透明度與信任。"
+      ]
+    }
+  }
+}

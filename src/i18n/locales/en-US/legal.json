@@ -1,0 +1,136 @@
+{
+  "TermsOfService": {
+    "title": "Terms of Service",
+    "description": "Terms of Service"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "description": "Privacy Policy"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective Date: ",
+    "dateFormat": "April 20, 2025",
+    "intro": "Welcome to DAppWeb.cn (hereinafter referred to as \"we\" or \"this website\"). We value and are committed to protecting your privacy. This privacy policy explains how we collect, use, and protect your information when you visit https://dappweb.cn (\"this website\").",
+
+    "section1": {
+      "title": "1. Information We Collect",
+      "content": "We do not collect any personal information unless you actively provide it through our contact form, email, or other means.",
+      "subhead": "We may automatically collect the following technical non-personal information for statistical and analytical purposes:",
+      "item1": "Browser type and version",
+      "item2": "IP address (anonymized where applicable)",
+      "item3": "Pages visited and time spent",
+      "item4": "Device type and operating system",
+      "item5": "Referral sources (such as referral links)",
+      "annotation": "This information is used to improve website performance and user experience."
+    },
+
+    "section2": {
+      "title": "2. How We Use Information",
+      "content": "The information we collect may be used for the following purposes:",
+      "item1": "Analyzing website traffic and usage patterns",
+      "item2": "Improving our website and services",
+      "item3": "Responding to user inquiries or technical support requests",
+      "annotation": "We do not sell, trade, or rent your personal information."
+    },
+
+    "section3": {
+      "title": "3. Cookies",
+      "content": "We may use cookies or similar technologies for the following purposes:",
+      "item1": "Enabling basic website functionality",
+      "item2": "Website analytics and performance tracking (e.g., Google Analytics)",
+      "annotation": "You can manage or disable cookies through your browser settings."
+    },
+
+    "section4": {
+      "title": "4. Third-Party Services",
+      "content": "We may use third-party services (such as analytics tools, hosting services, or communication tools). These services may collect some technical data to support their normal operation.",
+      "annotation": "We recommend that you also review the privacy policies of these service providers."
+    },
+
+    "section5": {
+      "title": "5. Data Security",
+      "content": "We take reasonable security measures to protect your information, but no network system can guarantee absolute security."
+    },
+
+    "section6": {
+      "title": "6. Your Rights",
+      "content": "Depending on your location, you may have the following rights:",
+      "item1": "Request access to the data we store about you",
+      "item2": "Request deletion or correction of information",
+      "item3": "Object to how we process your data",
+      "annotation": "Please feel free to contact us with any requests."
+    },
+
+    "section7": {
+      "title": "7. Policy Updates",
+      "content": "We may update this privacy policy from time to time. All updates will be published on this page with the latest effective date."
+    },
+
+    "section8": {
+      "title": "8. Contact Information",
+      "content": "If you have any questions about this privacy policy, please contact us at:",
+      "email": "support@dappweb.cn"
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: May 29, 2025",
+    "intro": {
+      "paragraph1": "Please read these Terms of Service ('Terms') carefully before using the [Your Website Name] website ('Service') operated by DappWeb (referred to as 'we', 'us', or 'our').",
+      "paragraph2": "Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.",
+      "paragraph3": "By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Service."
+    },
+    "accounts": {
+      "title": "1. Accounts",
+      "paragraph1": "When you create an account with us, you must provide us with information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.",
+      "paragraph2": "You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password, whether in our Service or a third-party service.",
+      "paragraph3": "You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.",
+      "paragraph4": "You may not use as a username the name of another person or entity or that is not lawfully available for use, a name or trademark that is subject to any rights of another person or entity other than you without appropriate authorization, or a name that is otherwise offensive, vulgar, or obscene."
+    },
+    "intellectual": {
+      "title": "2. Intellectual Property",
+      "content": "The Service and its original content, features, and functionality are and will remain the exclusive property of DappWeb and its licensors. The Service is protected by copyright, trademark, and other laws of Singapore and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of DappWeb."
+    },
+    "links": {
+      "title": "3. Links to Other Websites",
+      "paragraph1": "Our Service may contain links to third-party websites or services that are not owned or controlled by DappWeb.",
+      "paragraph2": "DappWeb has no control over and assumes no responsibility for the content, privacy policies, or practices of any third-party websites or services. You further acknowledge and agree that DappWeb shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.",
+      "paragraph3": "We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit."
+    },
+    "termination": {
+      "title": "4. Termination",
+      "paragraph1": "We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.",
+      "paragraph2": "Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service.",
+      "paragraph3": "All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability."
+    },
+    "indemnification": {
+      "title": "5. Indemnification",
+      "content": "You agree to defend, indemnify, and hold harmless DappWeb and its licensors and licensees, and their employees, contractors, agents, officers, and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from: a) your use and access of the Service, including by anyone using your account and password; b) a breach of these Terms; or c) content posted on the Service."
+    },
+    "limitation": {
+      "title": "6. Limitation of Liability",
+      "content": "In no event shall DappWeb, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use, or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence), or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose."
+    },
+    "disclaimer": {
+      "title": "7. Disclaimer",
+      "paragraph1": "Your use of the Service is at your sole risk. The Service is provided on an 'AS IS' and 'AS AVAILABLE' basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.",
+      "paragraph2": "DappWeb, its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure, or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements."
+    },
+    "governing": {
+      "title": "8. Governing Law",
+      "paragraph1": "These Terms shall be governed and construed in accordance with the laws of Singapore, without regard to its conflict of law provisions.",
+      "paragraph2": "Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service and supersede and replace any prior agreements we might have between us regarding the Service."
+    },
+    "changes": {
+      "title": "9. Changes",
+      "paragraph1": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.",
+      "paragraph2": "By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service."
+    },
+    "contact": {
+      "title": "10. Contact Us",
+      "content": "If you have any questions about these Terms, please contact us at:",
+      "email": "contact@dappweb.cn"
+    }
+  }
+}

@@ -1,0 +1,742 @@
+{
+  "RWAForm": {
+    "logo": "Meta話RWA",
+    "title": "RWA數位化代幣化專案資料收集表單",
+    "subtitle": "現實世界資產（RWA）的數位化、代幣化全流程服務",
+    "processTitle": "服務流程：",
+    "processDescription": "第一階段：諮詢規劃與法律結構設計 → 第二階段：技術開發與代幣化 → 第三階段：代幣發行與上市 → 第四階段：鏈上資產管理與持續服務",
+    "sections": {
+      "basicInfo": {
+        "title": "委託方基本資訊",
+        "badge": "基礎資訊",
+        "fields": {
+          "companyName": {
+            "label": "公司全稱或個人姓名",
+            "placeholder": "請填寫營業執照上的完整公司名稱",
+            "required": "請填寫公司全稱或個人姓名"
+          },
+          "legalPerson": {
+            "label": "法定代表人或負責人",
+            "required": "請填寫法定代表人或負責人"
+          },
+          "contactPerson": {
+            "label": "專案聯絡人",
+            "required": "請填寫專案聯絡人"
+          },
+          "position": {
+            "label": "聯絡人職位"
+          },
+          "phone": {
+            "label": "聯絡電話",
+            "required": "請填寫聯絡電話"
+          },
+          "email": {
+            "label": "電子信箱",
+            "required": "請填寫電子信箱",
+            "invalid": "請輸入有效的電子信箱"
+          },
+          "address": {
+            "label": "詳細地址",
+            "required": "請填寫詳細地址"
+          },
+          "businessLicense": {
+            "label": "營業執照統一社會信用代碼"
+          },
+          "registeredCapital": {
+            "label": "註冊資本（萬元）"
+          }
+        }
+      },
+      "assetInfo": {
+        "title": "RWA資產詳細資訊",
+        "badge": "第一階段",
+        "description": "請詳細填寫您的現實世界資產資訊，這些資訊將用於資產梳理、合規治理、產權確認、價值評估等前期工作。",
+        "fields": {
+          "assetType": {
+            "label": "資產類型",
+            "required": "請選擇資產類型",
+            "placeholder": "請選擇資產類型",
+            "options": {
+              "infrastructure": "基礎設施（高速公路、橋樑、隧道等）",
+              "real_estate_commercial": "商業地產（寫字樓、商場、酒店等）",
+              "real_estate_residential": "住宅地產",
+              "energy_renewable": "可再生能源（風電、光伏等）",
+              "energy_traditional": "傳統能源（電力、燃氣等）",
+              "transportation": "交通運輸（港口、機場、物流中心）",
+              "utility": "公用事業（供水、供電、通信）",
+              "industrial": "工業資產（廠房、設備、產線）",
+              "agricultural": "農業資產（土地、農場、林地）",
+              "commodity": "大宗商品（貴金屬、原材料等）",
+              "financial": "金融資產（債權、收益權等）",
+              "intellectual": "智慧財產權（專利、商標、著作權）",
+              "other": "其他"
+            }
+          },
+          "assetSubtype": {
+            "label": "資產子類型詳述",
+            "placeholder": "如：京秦高速某段、商業綜合體、光伏電站等"
+          },
+          "assetDescription": {
+            "label": "資產詳細描述",
+            "required": "請填寫資產詳細描述",
+            "placeholder": "請詳細描述資產的地理位置、建設規模、營運狀況、收益模式、市場地位等資訊"
+          },
+          "assetValue": {
+            "title": "資產價值與財務資訊",
+            "fields": {
+              "latestAssessmentValue": {
+                "label": "最新評估價值（萬元）",
+                "required": "請填寫資產評估價值"
+              },
+              "assessmentDate": {
+                "label": "評估日期"
+              },
+              "assessmentMethod": {
+                "label": "評估方法",
+                "placeholder": "請選擇",
+                "options": {
+                  "cost_approach": "成本法",
+                  "income_approach": "收益法",
+                  "market_approach": "市場法",
+                  "dcf": "現金流折現法",
+                  "multiple": "多種方法綜合"
+                }
+              },
+              "annualRevenue": {
+                "label": "年營業收入（萬元）"
+              },
+              "annualProfit": {
+                "label": "年淨利潤（萬元）"
+              },
+              "annualReturn": {
+                "label": "年化收益率（%）"
+              },
+              "operationPeriod": {
+                "label": "營運期限",
+                "placeholder": "請選擇",
+                "options": {
+                  "5_years": "5年以內",
+                  "5_10_years": "5-10年",
+                  "10_20_years": "10-20年",
+                  "20_30_years": "20-30年",
+                  "over_30_years": "30年以上",
+                  "permanent": "永久"
+                }
+              }
+            }
+          },
+          "ownershipStatus": {
+            "title": "產權與法律狀況",
+            "fields": {
+              "ownershipStatus": {
+                "label": "產權狀態",
+                "required": "請選擇產權狀態",
+                "options": {
+                  "full_ownership": "完全產權/所有權",
+                  "partial_ownership": "部分產權/共有產權",
+                  "usage_rights": "使用權/特許經營權",
+                  "pending": "產權辦理中"
+                }
+              },
+              "ownershipRatio": {
+                "label": "持有比例（%）"
+              },
+              "encumbrance": {
+                "label": "是否存在抵押、質押等權利限制",
+                "options": {
+                  "no": "無權利限制",
+                  "yes": "存在權利限制"
+                }
+              },
+              "encumbranceDetails": {
+                "label": "權利限制詳情",
+                "placeholder": "如存在抵押、質押等情況，請詳細說明"
+              }
+            }
+          },
+          "assetDocuments": {
+            "title": "現有資產證明檔案",
+            "fields": {
+              "assetDocuments": {
+                "label": "已具備的資產證明檔案",
+                "options": {
+                  "property_deed": "產權證書/不動產權證",
+                  "business_license": "營業執照/經營許可證",
+                  "valuation_report": "資產評估報告",
+                  "financial_statements": "財務報表（近3年）",
+                  "audit_report": "稽核報告",
+                  "legal_opinion": "法律意見書",
+                  "insurance": "保險合約/保單",
+                  "environmental": "環評報告",
+                  "operation_contract": "營運管理合約",
+                  "revenue_contract": "收益權證明檔案"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tokenization": {
+        "title": "代幣化需求與專案目標",
+        "badge": "第一階段",
+        "description": "本部分資訊將用於代幣經濟模型（Tokenomics）設計和金融結構設計。",
+        "fields": {
+          "projectGoals": {
+            "title": "專案核心目標",
+            "fields": {
+              "projectGoals": {
+                "label": "代幣化主要目標（可多選）",
+                "required": "請選擇代幣化目標",
+                "options": {
+                  "increase_liquidity": "提升資產流動性",
+                  "expand_funding": "拓展融資管道",
+                  "simplify_management": "簡化資產管理",
+                  "attract_investors": "吸引更多投資者",
+                  "transparent_operation": "實現透明化營運",
+                  "fractional_ownership": "實現分割所有權",
+                  "global_access": "面向全球投資者",
+                  "automatic_dividend": "自動化收益分配"
+                }
+              }
+            }
+          },
+          "fundingTarget": {
+            "title": "融資與投資者定位",
+            "fields": {
+              "fundingTarget": {
+                "label": "融資目標（萬元）"
+              }
+            }
+          },
+          "tokenPercent": {
+            "label": "擬代幣化資產比例（%）",
+            "description": "計畫將多少比例的資產進行代幣化"
+          },
+          "targetInvestors": {
+            "label": "目標投資者群體",
+            "options": {
+              "institutional": "機構投資者",
+              "high_net_worth": "高淨值個人",
+              "retail": "個人投資者",
+              "mixed": "混合投資者"
+            }
+          },
+          "minInvestment": {
+            "label": "最小投資金額（萬元）"
+          },
+          "maxInvestors": {
+            "label": "最大投資者數量"
+          },
+          "tokenRights": {
+            "title": "代幣權益設計偏好",
+            "fields": {
+              "tokenRights": {
+                "label": "代幣持有者權益（可多選）",
+                "options": {
+                  "revenue_share": "收益分紅權",
+                  "voting_rights": "治理投票權",
+                  "transfer_rights": "轉讓交易權",
+                  "redemption_rights": "贖回權",
+                  "information_rights": "資訊知情權",
+                  "liquidation_rights": "清算分配權"
+                }
+              }
+            }
+          },
+          "dividendFrequency": {
+            "label": "收益分配頻率",
+            "placeholder": "請選擇",
+            "options": {
+              "monthly": "按月分配",
+              "quarterly": "按季分配",
+              "semi_annually": "按半年分配",
+              "annually": "按年分配",
+              "event_based": "基於特定事件"
+            }
+          },
+          "dividendRatio": {
+            "label": "擬分配收益比例（%）"
+          }
+        }
+      },
+      "technology": {
+        "title": "技術開發需求",
+        "badge": "第二階段",
+        "description": "根據合約約定，我們將進行技術方案設計、智慧合約開發、安全稽核協調等工作。",
+        "fields": {
+          "blockchainPreference": {
+            "title": "區塊鏈技術選擇",
+            "fields": {
+              "blockchainPreference": {
+                "label": "區塊鏈平台偏好",
+                "options": {
+                  "consortium": "聯盟鏈（優先推薦）",
+                  "ethereum": "以太坊主網",
+                  "polygon": "Polygon",
+                  "bsc": "BSC幣安智慧鏈",
+                  "custom": "訂製化方案"
+                }
+              }
+            }
+          },
+          "tokenStandard": {
+            "label": "智慧合約代幣標準偏好",
+            "fields": {
+              "tokenStandard": {
+                "options": {
+                  "erc3643": "ERC-3643（合規標準推薦）",
+                  "erc1400": "ERC-1400（證券型代幣）",
+                  "erc20": "ERC-20（標準代幣）",
+                  "custom": "訂製化合約標準"
+                }
+              }
+            }
+          },
+          "platformFeatures": {
+            "title": "平台功能需求",
+            "fields": {
+              "platformFeatures": {
+                "label": "數位資產管理平台核心功能（可多選）",
+                "required": "請選擇所需功能模組",
+                "options": {
+                  "user_management": "使用者管理（註冊/登入/KYC）",
+                  "wallet_management": "錢包連接與管理",
+                  "asset_tracking": "鏈上資產狀態同步",
+                  "token_management": "代幣轉帳/接收功能",
+                  "dividend_distribution": "自動化收益分配",
+                  "compliance_module": "合規功能（白名單管理等）",
+                  "reporting_dashboard": "資料看板與報告生成",
+                  "document_management": "資產相關檔案管理",
+                  "notification_system": "通知提醒系統",
+                  "otc_trading": "場外交易功能（可選）"
+                }
+              }
+            }
+          },
+          "dataSource": {
+            "title": "資料整合與驗證需求",
+            "fields": {
+              "dataSource": {
+                "label": "資產資料來源",
+                "options": {
+                  "manual_input": "人工錄入",
+                  "erp_integration": "ERP系統對接",
+                  "iot_sensors": "IoT感測器資料",
+                  "third_party_api": "第三方資料API",
+                  "oracle_service": "預言機服務"
+                }
+              }
+            }
+          },
+          "updateFrequency": {
+            "label": "資料更新頻率要求",
+            "placeholder": "請選擇",
+            "options": {
+              "real_time": "即時更新",
+              "daily": "每日更新",
+              "weekly": "每週更新",
+              "monthly": "每月更新",
+              "quarterly": "每季度更新",
+              "event_driven": "事件驅動更新"
+            }
+          },
+          "needAudit": {
+            "label": "是否需要第三方安全稽核",
+            "options": {
+              "yes": "需要（推薦）",
+              "no": "暫不需要"
+            }
+          }
+        }
+      },
+      "compliance": {
+        "title": "合規與法律要求",
+        "badge": "全階段",
+        "warning": "重要提示：代幣化專案必須嚴格遵守相關法律法規。請確保您已充分瞭解專案涉及地區的監管要求。",
+        "important": "重要提示：代幣化專案必須嚴格遵守相關法律法規。請確保您已充分瞭解專案涉及地區的監管要求。",
+        "fields": {
+          "jurisdictions": {
+            "title": "司法管轄與合規要求",
+            "fields": {
+              "jurisdictions": {
+                "label": "專案涉及的司法管轄區（可多選）",
+                "required": "請選擇司法管轄區",
+                "options": {
+                  "china_mainland": "中國大陸",
+                  "hongkong": "香港特別行政區",
+                  "singapore": "新加坡",
+                  "usa": "美國",
+                  "eu": "歐盟",
+                  "japan": "日本",
+                  "south_korea": "韓國",
+                  "other": "其他地區"
+                }
+              }
+            }
+          },
+          "legalStructure": {
+            "label": "擬採用的法律結構",
+            "fields": {
+              "legalStructure": {
+                "options": {
+                  "spv": "SPV（特殊目的載體）",
+                  "trust": "信託結構",
+                  "fund": "基金結構",
+                  "company": "公司直接發行",
+                  "uncertain": "需要專業建議"
+                }
+              }
+            }
+          },
+          "complianceExperience": {
+            "title": "現有法律與合規準備",
+            "fields": {
+              "complianceExperience": {
+                "label": "合規經驗水準",
+                "options": {
+                  "expert": "豐富的數位資產合規經驗",
+                  "some": "有傳統金融合規經驗",
+                  "limited": "合規經驗有限",
+                  "none": "無相關合規經驗"
+                }
+              }
+            }
+          },
+          "legalSupport": {
+            "label": "現有法律支援情況",
+            "fields": {
+              "legalSupport": {
+                "options": {
+                  "have_lawyers": "已有專業律師團隊",
+                  "partial_support": "部分法律支援",
+                  "need_lawyers": "需要法律支援",
+                  "unsure": "不確定"
+                }
+              }
+            }
+          },
+          "existingLicenses": {
+            "label": "已獲得的相關許可證或牌照",
+            "placeholder": "如金融服務牌照、數位資產交易許可等"
+          },
+          "riskAcknowledgment": {
+            "title": "風險評估與聲明",
+            "fields": {
+              "riskAcknowledgment": {
+                "label": "風險認知與承擔能力",
+                "required": true,
+                "options": {
+                  "policy_risk": "已充分瞭解政策風險",
+                  "market_risk": "已充分瞭解市場風險",
+                  "technical_risk": "已充分瞭解技術風險",
+                  "compliance_risk": "已充分瞭解合規風險",
+                  "responsibility": "承諾獨立承擔專案風險"
+                }
+              }
+            }
+          }
+        }
+      },
+      "budget": {
+        "title": "預算與時間安排",
+        "note": "參考報價：根據合約約定，完整的四階段服務總費用為105萬元人民幣（不含第三方費用）。具體費用將根據您的實際需求進行調整。",
+        "fields": {
+          "totalBudget": {
+            "title": "預算安排",
+            "fields": {
+              "totalBudget": {
+                "label": "專案總預算範圍（萬元）",
+                "placeholder": "請選擇預算範圍",
+                "options": {
+                  "50_100": "50-100萬",
+                  "100_150": "100-150萬（標準配置）",
+                  "150_200": "150-200萬",
+                  "200_300": "200-300萬",
+                  "over_300": "300萬以上",
+                  "flexible": "預算靈活，依據需求確定"
+                }
+              }
+            }
+          },
+          "thirdPartyBudget": {
+            "label": "第三方費用預算（萬元）",
+            "description": "包括交易所上市費、稽核費、法律費用等"
+          },
+          "paymentPreference": {
+            "label": "付款方式偏好",
+            "fields": {
+              "paymentPreference": {
+                "options": {
+                  "milestone": "按里程碑分期付款（推薦）",
+                  "stage": "按服務階段付款",
+                  "monthly": "按月付款",
+                  "custom": "自訂付款方式"
+                }
+              }
+            }
+          },
+          "projectTimeline": {
+            "title": "時間安排",
+            "fields": {
+              "projectTimeline": {
+                "label": "期望專案完成時間",
+                "placeholder": "請選擇時間週期",
+                "options": {
+                  "3_months": "3個月內",
+                  "4_months": "4個月（標準週期）",
+                  "6_months": "6個月內",
+                  "12_months": "12個月內",
+                  "flexible": "時間靈活"
+                }
+              }
+            }
+          },
+          "urgency": {
+            "label": "專案緊急程度",
+            "options": {
+              "normal": "正常進度",
+              "urgent": "較為緊急",
+              "very_urgent": "非常緊急"
+            }
+          },
+          "preferredStartDate": {
+            "label": "希望開始日期"
+          },
+          "targetLaunchDate": {
+            "label": "目標發行日期"
+          }
+        }
+      },
+      "additional": {
+        "title": "補充資訊與特殊需求",
+        "fields": {
+          "specialRequirements": {
+            "label": "特殊需求或訂製化要求",
+            "placeholder": "請描述任何特殊的技術需求、合規要求、時間安排或其他訂製化需求"
+          },
+          "concernsQuestions": {
+            "label": "主要關注點或疑問",
+            "placeholder": "請描述您在專案實施過程中最關心的問題或需要我們重點關注的方面"
+          },
+          "hearAboutUs": {
+            "label": "如何瞭解到我們的服務？",
+            "placeholder": "請選擇",
+            "options": {
+              "referral": "朋友/合作夥伴推薦",
+              "search_engine": "搜尋引擎",
+              "social_media": "社交媒體",
+              "industry_event": "行業會議/活動",
+              "media_report": "媒體報道",
+              "business_partner": "商業夥伴介紹",
+              "other": "其他"
+            }
+          },
+          "existingProjects": {
+            "label": "是否有其他RWA專案經驗",
+            "fields": {
+              "existingProjects": {
+                "options": {
+                  "yes": "有相關經驗",
+                  "no": "這是首個專案"
+                }
+              }
+            }
+          },
+          "additionalInfo": {
+            "label": "其他補充資訊",
+            "placeholder": "任何其他您希望我們瞭解的資訊"
+          }
+        }
+      },
+      "ongoingService": {
+        "title": "鏈上資產管理與持續服務需求",
+        "badge": "第四階段",
+        "description": "第四階段服務確保代幣化資產的長期價值維護和投資者關係管理。",
+        "fields": {
+          "onchainServices": {
+            "title": "鏈上資產管理需求",
+            "fields": {
+              "onchainServices": {
+                "label": "鏈上資產管理服務需求（可多選）",
+                "options": {
+                  "asset_monitoring": "鏈上資產資料監控",
+                  "automated_distribution": "自動化收益分配執行",
+                  "compliance_monitoring": "持續合規監控",
+                  "platform_maintenance": "技術平台維護",
+                  "security_updates": "安全更新與技術支援",
+                  "investor_relations": "投資者關係管理",
+                  "community_management": "社群管理支援",
+                  "reporting_services": "定期報告生成"
+                }
+              }
+            }
+          },
+          "serviceLevel": {
+            "label": "服務水準要求",
+            "placeholder": "請選擇服務等級",
+            "options": {
+              "basic": "基礎服務（月度報告）",
+              "standard": "標準服務（週度監控）",
+              "premium": "高級服務（即時監控）",
+              "enterprise": "企業級服務（7x24支援）"
+            }
+          },
+          "serviceDuration": {
+            "label": "預期服務期限",
+            "placeholder": "請選擇",
+            "options": {
+              "1_year": "1年",
+              "2_years": "2年",
+              "3_years": "3年",
+              "5_years": "5年",
+              "long_term": "長期合作"
+            }
+          }
+        }
+      },
+      "tokenMarket": {
+        "title": "代幣發行與市場對接需求",
+        "badge": "第三階段",
+        "description": "根據合約約定，我們將協助您完成一級市場發行、二級市場上市以及市場推廣等工作。注意：上市決定權和費用由交易所決定。",
+        "fields": {
+          "primaryMarket": {
+            "title": "一級市場發行策略",
+            "fields": {
+              "primaryMarket": {
+                "label": "一級市場發行方式偏好",
+                "options": {
+                  "sto": "STO（證券型代幣發行）",
+                  "private_sale": "私募發行",
+                  "ieo": "IEO（交易所首次發行）",
+                  "ido": "IDO（去中心化首次發行）",
+                  "mixed": "混合發行模式"
+                }
+              }
+            }
+          },
+          "launchpadPreference": {
+            "label": "Launchpad平台偏好",
+            "placeholder": "請選擇平台類型",
+            "options": {
+              "tier1": "一線平台（Binance Launchpad等）",
+              "tier2": "二線知名平台",
+              "specialized": "專業化RWA平台",
+              "decentralized": "去中心化發行平台",
+              "multiple": "多平台同步發行",
+              "no_preference": "無特殊偏好"
+            }
+          },
+          "issuePrice": {
+            "label": "預期發行價格（USDT）"
+          },
+          "kycRequirement": {
+            "label": "KYC/AML合規要求",
+            "fields": {
+              "kycRequirement": {
+                "options": {
+                  "strict": "嚴格KYC（機構級）",
+                  "standard": "標準KYC",
+                  "basic": "基礎KYC"
+                }
+              }
+            }
+          },
+          "exchangePreference": {
+            "title": "二級市場交易所對接",
+            "fields": {
+              "exchangePreference": {
+                "label": "目標交易所類型（可多選）",
+                "options": {
+                  "cex_tier1": "一線中心化交易所",
+                  "cex_tier2": "二線中心化交易所",
+                  "dex_uniswap": "Uniswap類DEX",
+                  "dex_curve": "Curve類穩定幣DEX",
+                  "specialized_rwa": "專業RWA交易平台",
+                  "regional_exchange": "區域性交易所"
+                }
+              }
+            }
+          },
+          "liquidityStrategy": {
+            "label": "流動性策略偏好",
+            "fields": {
+              "liquidityStrategy": {
+                "options": {
+                  "market_maker": "專業做市商服務",
+                  "liquidity_pool": "DEX流動性池",
+                  "incentive_program": "流動性激勵計畫",
+                  "treasury_management": "國庫管理策略"
+                }
+              }
+            }
+          },
+          "marketingSupport": {
+            "title": "市場推廣需求",
+            "fields": {
+              "marketingSupport": {
+                "label": "市場行銷與PR支援需求（可多選）",
+                "options": {
+                  "whitepaper": "白皮書撰寫最佳化",
+                  "tokenomics_design": "Tokenomics視覺化設計",
+                  "community_building": "社群建設管理",
+                  "pr_services": "PR公關服務",
+                  "ama_events": "AMA活動策劃",
+                  "roadshow": "投資者路演",
+                  "media_coverage": "媒體報道推廣",
+                  "influencer_marketing": "KOL合作推廣"
+                }
+              }
+            }
+          },
+          "marketingBudget": {
+            "label": "市場推廣預算（萬元）",
+            "placeholder": "請選擇預算範圍",
+            "options": {
+              "under_50": "50萬以下",
+              "50_100": "50-100萬",
+              "100_200": "100-200萬",
+              "200_500": "200-500萬",
+              "over_500": "500萬以上",
+              "flexible": "預算靈活"
+            },
+            "description": "用於廣告投放、KOL宣傳、社群活動等執行費用"
+          },
+          "marketingTimeline": {
+            "label": "推廣時間週期",
+            "placeholder": "請選擇",
+            "options": {
+              "pre_launch": "發行前預熱（1-2個月）",
+              "launch_period": "發行期間（1個月）",
+              "post_launch": "發行後維護（3-6個月）",
+              "long_term": "長期推廣（1年以上）"
+            }
+          }
+        }
+      }
+    },
+    "securityNote": "資訊安全承諾：我們承諾嚴格保護您提供的所有資訊，僅用於專案評估和方案設計。所有資料將按照保密協議要求進行處理。",
+    "submit": {
+      "button": "提交專案申請",
+      "description": "提交後，我們的專業團隊將在24小時內與您聯絡，進行專案初步評估",
+      "contact": "服務熱線：17709224992 | 信箱：contact@dappweb.cn",
+      "message": {
+        "success": "提交成功！",
+        "error": "提交失敗,請稍後再試"
+      }
+    }
+  },
+  "stepValidation": {
+    "error": "請填寫完整所有必填項",
+    "info": "請到最後一步再提交",
+    "progress": "進度"
+  },
+  "form": {
+    "phone": {
+      "required": "請輸入您的電話",
+      "invalid": "請輸入有效的手機號碼"
+    },
+    "email": {
+      "invalid": "請輸入有效的信箱地址"
+    }
+  }
+}
