@@ -28,7 +28,7 @@ function FollowPage() {
     {
       name: 'Twitter',
       icon: <TwitterOutlined />,
-      url: 'twitter：https://x.com/DappwebC707',
+      url: 'https://x.com/DappwebC707',
       className: 'bg-[#1DA1F2]! py-6!',
     },
     {
