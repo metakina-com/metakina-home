@@ -2,6 +2,10 @@ import Frame1Img from '@/assets/images/quotation-and-proposal/Frame-1.png';
 import Frame2Img from '@/assets/images/quotation-and-proposal/Frame-2.png';
 import Frame3Img from '@/assets/images/quotation-and-proposal/Frame-3.png';
 import Frame4Img from '@/assets/images/quotation-and-proposal/Frame-4.png';
+import HexinImg from '@/assets/images/quotation-and-proposal/hexin.png';
+import OneImg from '@/assets/images/quotation-and-proposal/one.png';
+import ThreeImg from '@/assets/images/quotation-and-proposal/three.png';
+import TwoImg from '@/assets/images/quotation-and-proposal/two.png';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -239,6 +243,258 @@ function QuotationAndProposal() {
             description: t('quotationAndProposal.phases.phase4.description'),
             items: t('quotationAndProposal.phases.phase4.items', { returnObjects: true }),
           })}
+        </div>
+      </div>
+      {/* 项目配套服务费用清单 */}
+      <div className="mx-auto w-[80vw] pt-16">
+        {/* 标题 */}
+        <h1 className="mb-8 text-center text-[1.7rem] text-[#0357FF] font-[600]">
+          {t('quotationAndProposal.costList.title')}
+        </h1>
+
+        {/* 副标题 */}
+        <p className="mx-auto mb-6 max-w-[613px] text-left text-[1rem] text-[#000000] leading-relaxed">
+          {t('quotationAndProposal.costList.subtitle')}
+        </p>
+
+        {/* 预算核心 */}
+        <div className="mb-8 mt-20 flex items-center justify-start">
+          <div className="flex items-center">
+            <img src={HexinImg} alt={t('quotationAndProposal.costList.budgetCore')} className="h-10 w-10" />
+            <span className="pl-6 text-[1.3rem] text-[#000000] font-[600]">
+              {t('quotationAndProposal.costList.totalBudget')}
+              <span className="text-[#0357FF] font-bold">1,100,000</span>
+              {t('quotationAndProposal.costList.currency')}
+            </span>
+          </div>
+        </div>
+
+        {/* 第一部分：法律与合规框架建设 */}
+        <div className="mb-16 rounded-lg bg-white p-6">
+          <div className="mb-6 flex items-center gap-5">
+            <img src={OneImg} alt={t('quotationAndProposal.costList.section1.title')} />
+            <div className="flex flex-col">
+              <h2 className="text-[1.1rem] text-[#000000]">
+                {t('quotationAndProposal.costList.section1.title')}
+              </h2>
+              <p className="text-[14px] text-[#333333]">
+                {t('quotationAndProposal.costList.section1.description')}
+              </p>
+            </div>
+          </div>
+
+          {/* 表格 */}
+          <div className="ml-12 overflow-hidden rounded-lg">
+            <table className="w-full table-fixed">
+              <thead>
+                <tr>
+                  <th className="w-1/3 px-6 py-4 text-left text-[14px] text-[#000000] font-semibold">{t('quotationAndProposal.costList.table.costItem')}</th>
+                  <th className="w-1/3 px-6 py-4 text-left text-[14px] text-[#000000] font-semibold">{t('quotationAndProposal.costList.table.detailsAndPurpose')}</th>
+                  <th className="w-1/3 px-6 py-4 text-left text-[14px] text-[#000000] font-semibold">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.table.keyDeliverables')}
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div>{t('quotationAndProposal.costList.section1.items.legal.name')}</div>
+                    <div className="text-[#0357FF] font-semibold">
+                      (
+                      {t('quotationAndProposal.costList.section1.items.legal.price')}
+                      )
+                    </div>
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    {t('quotationAndProposal.costList.section1.items.legal.description')}
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.section1.items.legal.deliverable')}
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div>{t('quotationAndProposal.costList.section1.items.whitepaper.name')}</div>
+                    <div className="text-[#0357FF] font-semibold">
+                      (
+                      {t('quotationAndProposal.costList.section1.items.whitepaper.price')}
+                      )
+                    </div>
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    {t('quotationAndProposal.costList.section1.items.whitepaper.description')}
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.section1.items.whitepaper.deliverable')}
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* 第二部分：代币发行与市场推广 */}
+        <div className="mb-16 rounded-lg bg-white p-6">
+          <div className="mb-6 flex items-center gap-5">
+            <img src={TwoImg} alt={t('quotationAndProposal.costList.section2.title')} />
+            <div className="flex flex-col">
+              <h2 className="text-[1.1rem] text-[#000000]">
+                {t('quotationAndProposal.costList.section2.title')}
+              </h2>
+              <p className="text-[14px] text-[#333333]">
+                {t('quotationAndProposal.costList.section2.description')}
+              </p>
+            </div>
+          </div>
+
+          {/* 表格 */}
+          <div className="ml-12 overflow-hidden rounded-lg">
+            <table className="w-full table-fixed">
+              <thead>
+                <tr>
+                  <th className="w-1/3 px-6 py-4 text-left text-[14px] text-[#000000] font-semibold">{t('quotationAndProposal.costList.table.costItem')}</th>
+                  <th className="w-1/3 px-6 py-4 text-left text-[14px] text-[#000000] font-semibold">{t('quotationAndProposal.costList.table.detailsAndPurpose')}</th>
+                  <th className="w-1/3 px-6 py-4 text-left text-[14px] text-[#000000] font-semibold">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.table.keyDeliverables')}
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div>{t('quotationAndProposal.costList.section2.items.tokenIssuance.name')}</div>
+                    <div className="text-[#0357FF] font-semibold">
+                      (
+                      {t('quotationAndProposal.costList.section2.items.tokenIssuance.price')}
+                      )
+                    </div>
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    {t('quotationAndProposal.costList.section2.items.tokenIssuance.description')}
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.section2.items.tokenIssuance.deliverable')}
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* 第三部分：资产安全与持续运营 */}
+        <div className="mb-16 rounded-lg bg-white p-6">
+          <div className="mb-6 flex items-center gap-5">
+            <img src={ThreeImg} alt={t('quotationAndProposal.costList.section3.title')} />
+            <div className="flex flex-col">
+              <h2 className="text-[1.1rem] text-[#000000]">
+                {t('quotationAndProposal.costList.section3.title')}
+              </h2>
+              <p className="text-[14px] text-[#333333]">
+                {t('quotationAndProposal.costList.section3.description')}
+              </p>
+            </div>
+          </div>
+
+          {/* 表格 */}
+          <div className="ml-12 overflow-hidden rounded-lg">
+            <table className="w-full table-fixed">
+              <thead>
+                <tr>
+                  <th className="w-1/3 px-6 py-4 text-left text-[14px] text-[#000000] font-semibold">{t('quotationAndProposal.costList.table.costItem')}</th>
+                  <th className="w-1/3 px-6 py-4 text-left text-[14px] text-[#000000] font-semibold">{t('quotationAndProposal.costList.table.detailsAndPurpose')}</th>
+                  <th className="w-1/3 px-6 py-4 text-left text-[14px] text-[#000000] font-semibold">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.table.keyDeliverables')}
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div>{t('quotationAndProposal.costList.section3.items.assetManagement.name')}</div>
+                    <div className="text-[#0357FF] font-semibold">
+                      (
+                      {t('quotationAndProposal.costList.section3.items.assetManagement.price')}
+                      )
+                    </div>
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    {t('quotationAndProposal.costList.section3.items.assetManagement.description')}
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.section3.items.assetManagement.deliverable')}
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div>{t('quotationAndProposal.costList.section3.items.mediaPromotion.name')}</div>
+                    <div className="text-[#0357FF] font-semibold">
+                      (
+                      {t('quotationAndProposal.costList.section3.items.mediaPromotion.price')}
+                      )
+                    </div>
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    {t('quotationAndProposal.costList.section3.items.mediaPromotion.description')}
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.section3.items.mediaPromotion.deliverable')}
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div>{t('quotationAndProposal.costList.section3.items.auditRating.name')}</div>
+                    <div className="text-[#0357FF] font-semibold">
+                      (
+                      {t('quotationAndProposal.costList.section3.items.auditRating.price')}
+                      )
+                    </div>
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    {t('quotationAndProposal.costList.section3.items.auditRating.description')}
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.section3.items.auditRating.deliverable')}
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div>{t('quotationAndProposal.costList.section3.items.exchangeListing.name')}</div>
+                    <div className="text-[#0357FF] font-semibold">
+                      (
+                      {t('quotationAndProposal.costList.section3.items.exchangeListing.price')}
+                      )
+                    </div>
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    {t('quotationAndProposal.costList.section3.items.exchangeListing.description')}
+                  </td>
+                  <td className="w-1/3 px-6 py-4 text-[14px] text-[#333333]">
+                    <div className="pl-1/4">
+                      {t('quotationAndProposal.costList.section3.items.exchangeListing.deliverable')}
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

@@ -354,6 +354,78 @@
           }
         ]
       }
+    },
+    "costList": {
+      "title": "項目配套服務費用清單",
+      "subtitle": "本費用清單基於您提供的「元話RWA項目全景規劃」中的服務開銷部分，旨在為項目的資訊、合規及關鍵第三方服務提供一份更詳盡、更具可操作性的預算參考。",
+      "budgetCore": "預算核心",
+      "totalBudget": "總預算核心：約",
+      "currency": "人民幣(¥)",
+      "table": {
+        "costItem": "費用項目",
+        "detailsAndPurpose": "細分說明與用途",
+        "keyDeliverables": "關鍵交付成果"
+      },
+      "section1": {
+        "title": "第一部分：法律與合規框架搭建(¥500,000)",
+        "description": "這部分是項目能夠合規運營的基石，確保項目從法律結構到日常運營都符合香港的監管要求。",
+        "items": {
+          "legal": {
+            "name": "法律及合規架構諮詢報告",
+            "price": "¥150,000",
+            "description": "聘金融科技律所，評估RWA模式合規性，分析SFO、AMLO、VASP要求，出具合規路徑報告。",
+            "deliverable": "牌照類型、架構及風險法律意見書"
+          },
+          "whitepaper": {
+            "name": "項目白皮書/法律文件",
+            "price": "¥350,000",
+            "description": "白皮書+法律文件：合規撰寫/審核白皮書；律師起草全套協議(ToS/隱私政策/代幣認購等)，保障項目合法性。",
+            "deliverable": "合規白皮書及全系法務文件"
+          }
+        }
+      },
+      "section2": {
+        "title": "第二部分：代幣發行與市場推廣(¥330,000)",
+        "description": "這部分涵蓋了將RWA代幣成功推向市場所需的關鍵第三方服務。",
+        "items": {
+          "tokenIssuance": {
+            "name": "第三方代幣發行與上幣服務",
+            "price": "¥330,000",
+            "description": "Launchpad/IDO費用:發行平台的宣發、引流及代幣銷售費用 做市商服務:專業團隊提供流動性，維穩初期價格。",
+            "deliverable": "知名Launchpad首發，上線即穩流"
+          }
+        }
+      },
+      "section3": {
+        "title": "第三部分：資產安全與持續運營(¥270,000)",
+        "description": "這部分確保了項目資產的安全、運營的透明以及品牌的公信力。",
+        "items": {
+          "assetManagement": {
+            "name": "鏈上資產管理與托管服務",
+            "price": "¥30,000",
+            "description": "採用機構級托管方案(如Fireblocks等)，支持多簽、冷熱隔離、保險，確保鏈上資產安全，符合SFC監管要求。",
+            "deliverable": "機構級數字資產安全管理系統（附認證）"
+          },
+          "mediaPromotion": {
+            "name": "項目宣傳與媒體服務",
+            "price": "¥120,000",
+            "description": "財經PR+媒體合作:專業發稿、主流曝光(Web3+傳統)、深度專訪，提升公信力。",
+            "deliverable": "廣媒好評，關係穩固"
+          },
+          "auditRating": {
+            "name": "項目審計與評級服務",
+            "price": "¥60,000",
+            "description": "智能合約審計:邀請Certik等知名機構審計RWA代幣合約並公開報告。項目評級:由獨立第三方(Launchpad)評級。",
+            "deliverable": "公開安全審計·行業認可評級"
+          },
+          "exchangeListing": {
+            "name": "交易所上市服務費",
+            "price": "¥60,000",
+            "description": "CEX上幣/市場合作費(中小型交易所適用)",
+            "deliverable": "代幣上線CEX，拓寬交易渠道"
+          }
+        }
+      }
     }
   },
   "client": {

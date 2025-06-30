@@ -354,6 +354,78 @@
           }
         ]
       }
+    },
+    "costList": {
+      "title": "项目配套服务费用清单",
+      "subtitle": "本费用清单基于您提供的\"元话RWA项目全景规划\"中的服务开销部分，旨在为项目的资讯、合规及关键第三方服务提供一份更详尽、更具可操作性的预算参考。",
+      "budgetCore": "预算核心",
+      "totalBudget": "总预算核心：约",
+      "currency": "人民币(¥)",
+      "table": {
+        "costItem": "费用项目",
+        "detailsAndPurpose": "细分说明与用途",
+        "keyDeliverables": "关键交付成果"
+      },
+      "section1": {
+        "title": "第一部分：法律与合规框架搭建(¥500,000)",
+        "description": "这部分是项目能够合规运营的基石，确保项目从法律结构到日常运营都符合香港的监管要求。",
+        "items": {
+          "legal": {
+            "name": "法律及合规架构咨询报告",
+            "price": "¥150,000",
+            "description": "聘金融科技律所，评估RWA模式合规性，分析SFO、AMLO、VASP要求，出具合规路径报告。",
+            "deliverable": "牌照类型、架构及风险法律意见书"
+          },
+          "whitepaper": {
+            "name": "项目白皮书/法律文件",
+            "price": "¥350,000",
+            "description": "白皮书+法律文件：合规撰写/审核白皮书；律师起草全套协议(ToS/隐私政策/代币认购等)，保障项目合法性。",
+            "deliverable": "合规白皮书及全系法务文件"
+          }
+        }
+      },
+      "section2": {
+        "title": "第二部分：代币发行与市场推广(¥330,000)",
+        "description": "这部分涵盖了将RWA代币成功推向市场所需的关键第三方服务。",
+        "items": {
+          "tokenIssuance": {
+            "name": "第三方代币发行与上币服务",
+            "price": "¥330,000",
+            "description": "Launchpad/E0费用:发行平台的宣发、引流及代币销售费用 做市商服务:专业团队提供流动性，维稳初期价格。",
+            "deliverable": "知名Launchpad首发，上线即稳流"
+          }
+        }
+      },
+      "section3": {
+        "title": "第三部分：资产安全与持续运营(¥270,000)",
+        "description": "这部分确保了项目资产的安全、运营的透明以及品牌的公信力。",
+        "items": {
+          "assetManagement": {
+            "name": "链上资产管理与托管服务",
+            "price": "¥30,000",
+            "description": "采用机构级托管方案(如Fireblocks等)，支持多签、冷热隔离、保险，确保链上资产安全，符合SFC兰管要求。",
+            "deliverable": "机构级数字资产安全管理系统（附认证）"
+          },
+          "mediaPromotion": {
+            "name": "项目宣传与媒体服务",
+            "price": "¥120,000",
+            "description": "财经PR+媒体合作:专业发稿、主流爆光(Web3+传统)、深度专访，提升公信力。",
+            "deliverable": "广媒好评，关系稳固"
+          },
+          "auditRating": {
+            "name": "项目审计与评级服务",
+            "price": "¥60,000",
+            "description": "智能合约审计:罗调Certik等知名机构审计RWA代币合约并公开报告。项目评级:由独立第三方(Launchpad)评级。",
+            "deliverable": "公开安全审计·行业认可评级"
+          },
+          "exchangeListing": {
+            "name": "交易所上市服务费",
+            "price": "¥60,000",
+            "description": "CEX上币/市场合作费(中小型交易所适用)",
+            "deliverable": "代币上线CEX，拓宽交易渠道"
+          }
+        }
+      }
     }
   },
   "client": {

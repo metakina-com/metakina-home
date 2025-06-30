@@ -366,6 +366,78 @@
           }
         ]
       }
+    },
+    "costList": {
+      "title": "Project Supporting Services Cost List",
+      "subtitle": "This cost list is based on the service overhead section of the \"Meta-Talk RWA Project Panoramic Planning\" you provided, aiming to provide a more detailed and actionable budget reference for project information, compliance, and key third-party services.",
+      "budgetCore": "Budget Core",
+      "totalBudget": "Total Budget Core: Approximately",
+      "currency": "RMB (¥)",
+      "table": {
+        "costItem": "Cost Item",
+        "detailsAndPurpose": "Details & Purpose",
+        "keyDeliverables": "Key Deliverables"
+      },
+      "section1": {
+        "title": "Part 1: Legal & Compliance Framework Development (¥500,000)",
+        "description": "This part is the foundation for compliant project operations, ensuring that the project complies with Hong Kong regulatory requirements from legal structure to daily operations.",
+        "items": {
+          "legal": {
+            "name": "Legal & Compliance Architecture Consulting Report",
+            "price": "¥150,000",
+            "description": "Engage fintech law firms to assess RWA model compliance, analyze SFO, AMLO, VASP requirements, and produce compliance pathway reports.",
+            "deliverable": "License types, architecture, and risk legal opinions"
+          },
+          "whitepaper": {
+            "name": "Project Whitepaper/Legal Documents",
+            "price": "¥350,000",
+            "description": "Whitepaper + Legal Documents: Compliant writing/review of whitepaper; lawyers draft complete agreements (ToS/Privacy Policy/Token Subscription, etc.), ensuring project legality.",
+            "deliverable": "Compliant whitepaper and complete legal documents"
+          }
+        }
+      },
+      "section2": {
+        "title": "Part 2: Token Issuance & Market Promotion (¥330,000)",
+        "description": "This part covers the key third-party services needed to successfully bring RWA tokens to market.",
+        "items": {
+          "tokenIssuance": {
+            "name": "Third-party Token Issuance & Listing Services",
+            "price": "¥330,000",
+            "description": "Launchpad/IDO fees: Issuance platform promotion, traffic acquisition and token sales fees. Market maker services: Professional teams provide liquidity and stabilize initial prices.",
+            "deliverable": "Famous Launchpad debut, stable flow upon launch"
+          }
+        }
+      },
+      "section3": {
+        "title": "Part 3: Asset Security & Continuous Operations (¥270,000)",
+        "description": "This part ensures project asset security, operational transparency, and brand credibility.",
+        "items": {
+          "assetManagement": {
+            "name": "On-chain Asset Management & Custody Services",
+            "price": "¥30,000",
+            "description": "Adopt institutional-grade custody solutions (such as Fireblocks), supporting multi-signature, cold-hot isolation, insurance, ensuring on-chain asset security and SFC regulatory compliance.",
+            "deliverable": "Institutional-grade digital asset security management system (with certification)"
+          },
+          "mediaPromotion": {
+            "name": "Project Promotion & Media Services",
+            "price": "¥120,000",
+            "description": "Financial PR + Media Cooperation: Professional press releases, mainstream exposure (Web3 + traditional), in-depth interviews, enhancing credibility.",
+            "deliverable": "Positive media coverage, stable relationships"
+          },
+          "auditRating": {
+            "name": "Project Audit & Rating Services",
+            "price": "¥60,000",
+            "description": "Smart contract audit: Engage renowned institutions like Certik to audit RWA token contracts and publish reports. Project rating: Independent third-party (Launchpad) rating.",
+            "deliverable": "Public security audit · Industry-recognized rating"
+          },
+          "exchangeListing": {
+            "name": "Exchange Listing Service Fee",
+            "price": "¥60,000",
+            "description": "CEX listing/market cooperation fees (applicable to small and medium exchanges)",
+            "deliverable": "Token listing on CEX, expanding trading channels"
+          }
+        }
+      }
     }
   },
   "client": {
