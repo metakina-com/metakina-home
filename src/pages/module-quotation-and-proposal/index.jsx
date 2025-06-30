@@ -70,9 +70,6 @@ function QuotationAndProposal() {
           <span className={`inline-block cursor-pointer px-4 py-2 ${activeTab === 'menber' ? classSelect : ''}`} onClick={() => handleTabClick('menber')}>{t('quotationAndProposal.tabs.member')}</span>
           <span className={`inline-block cursor-pointer px-4 py-2 ${activeTab === 'customization' ? classSelect : ''}`} onClick={() => handleTabClick('customization')}>{t('quotationAndProposal.tabs.customization')}</span>
         </div>
-        <button type="button" className="right-0 cursor-pointer rounded-2 bg-black px-4 py-2 text-[17px] text-white md:absolute md:right-[calc(7.5vw+148px)]">
-          {t('quotationAndProposal.joinVip')}
-        </button>
       </div>
       {/* 会员 */}
       <div ref={memberSectionRef} className="mx-auto w-[80vw] bg-[#f5f7fa] pt-35">
@@ -181,7 +178,7 @@ function QuotationAndProposal() {
             {/* 企业版 */}
             <div className="w-full rounded-lg px-4 py-10 md:min-w-[362px] md:px-15">
               <div className="mb-4">
-                <h3 className="text-base text-[#0055FF] font-semibold">{t('quotationAndProposal.pricing.plans.enterprise.title')}</h3>
+                <h3 className="text-base text-[#060708] font-semibold">{t('quotationAndProposal.pricing.plans.enterprise.title')}</h3>
               </div>
 
               <div className="mb-20">
