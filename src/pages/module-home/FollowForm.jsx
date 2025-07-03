@@ -119,10 +119,6 @@ function FollowPage() {
               name="phone"
               rules={[
                 { required: true, message: t('follow.form.phone.required') },
-                {
-                  pattern: /^1[3-9]\d{9}$/,
-                  message: t('form.phone.invalid'),
-                },
               ]}
             >
               <Input placeholder={t('follow.form.phone.placeholder')} />
@@ -370,10 +366,6 @@ function FollowPage() {
                   label={t('follow.form.phone')}
                   rules={[
                     { required: true, message: t('form.phone.required') },
-                    {
-                      pattern: /^1[3-9]\d{9}$/,
-                      message: t('form.phone.invalid'),
-                    },
                   ]}
                 >
                   <Input placeholder={t('follow.form.phone.placeholder')} />
