@@ -19,7 +19,7 @@ const LayoutFooter = memo(() => {
   ];
 
   const resourceLinks = [
-    { path: '/privacy-policy', key: 'Footer.resources.whitepaper' },
+    { path: '/service-terms', key: 'Footer.resources.whitepaper' },
     { path: '/privacy-policy', key: 'Footer.resources.privacyPolicy' },
     { path: '/privacy-policy', key: 'Footer.resources.cookiePolicy' },
     { path: '/service-terms', key: 'Footer.resources.serviceManual' },
@@ -187,7 +187,7 @@ const LayoutFooter = memo(() => {
           {t('Footer.privacyPolicy')}
         </Link>
         <span className="px-2">|</span>
-        <Link to="/terms-of-service" className="text-white transition-colors hover:text-[#0055ff]">
+        <Link to="/service-terms" className="text-white transition-colors hover:text-[#0055ff]">
           {t('Footer.terms')}
         </Link>
       </p>

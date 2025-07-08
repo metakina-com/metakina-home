@@ -66,15 +66,15 @@ const TermsOfService: React.FC = () => {
   ];
 
   return (
-    <div className="py-20 text-white">
+    <div className="py-20 text-black">
       <div className="mx-auto max-w-2xl px-4">
         <h1 className="mb-4 text-center text-3xl font-bold">{t('terms.title')}</h1>
-        <p className="mb-8 text-right text-lg text-white">{t('terms.lastUpdated')}</p>
+        <p className="mb-8 text-right text-lg text-black">{t('terms.lastUpdated')}</p>
 
         <div className="mb-8">
-          <p className="mb-4 text-white leading-relaxed">{t('terms.intro.paragraph1')}</p>
-          <p className="mb-4 text-white leading-relaxed">{t('terms.intro.paragraph2')}</p>
-          <p className="text-white leading-relaxed">{t('terms.intro.paragraph3')}</p>
+          <p className="mb-4 text-black leading-relaxed">{t('terms.intro.paragraph1')}</p>
+          <p className="mb-4 text-black leading-relaxed">{t('terms.intro.paragraph2')}</p>
+          <p className="text-black leading-relaxed">{t('terms.intro.paragraph3')}</p>
         </div>
 
         {sections.map(section => (
@@ -85,14 +85,14 @@ const TermsOfService: React.FC = () => {
               ? (
                   <>
                     {Array.from({ length: section.paragraphs || 0 }, (_, idx) => (
-                      <p key={idx} className="mb-4 text-white leading-relaxed">
+                      <p key={idx} className="mb-4 text-black leading-relaxed">
                         {t(`terms.${section.key}.paragraph${idx + 1}`)}
                       </p>
                     ))}
                   </>
                 )
               : (
-                  <p className="text-white leading-relaxed">
+                  <p className="text-black leading-relaxed">
                     {t(`terms.${section.key}.content`)}
                     {section.hasEmail && (
                       <span className="text-blue-600 font-medium">{t(`terms.${section.key}.email`)}</span>

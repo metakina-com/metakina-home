@@ -57,7 +57,7 @@ function PrivacyPolicy() {
 
   return (
     <div className="py-20">
-      <div className="mx-auto max-w-2xl text-white">
+      <div className="mx-auto max-w-2xl text-black">
         <h1 className="text-center text-3xl font-bold">{t('privacy.title')}</h1>
         <h2 className="mt-2 text-right text-xl">
           {' '}
