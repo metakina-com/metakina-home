@@ -460,12 +460,12 @@
     },
     "learningCenter": {
       "title": "学習センター",
-      "description": "HWA、データパートナーシップ、ブロックチェーン金融知識（用語集含む）を探索。",
+      "description": "RWA、データパートナーシップ、ブロックチェーン金融知識（用語集含む）を探索。",
       "action": "学習を開始（近日公開）→"
     },
     "industryInsights": {
       "title": "業界洞察・ニュース",
-      "description": "最新のHWA市場トレンド、政策解釈、業界洞察を取得。",
+      "description": "最新のRWA市場トレンド、政策解釈、業界洞察を取得。",
       "action": "最新の洞察を読む →"
     }
   },

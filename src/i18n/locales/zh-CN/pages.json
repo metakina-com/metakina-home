@@ -448,12 +448,12 @@
     },
     "learningCenter": {
       "title": "学习中心",
-      "description": "探索 HWA、数据合伙代、区块链金融知识（含词汇表）。",
+      "description": "探索 RWA、数据合伙代、区块链金融知识（含词汇表）。",
       "action": "开始学习（即将推出）→"
     },
     "industryInsights": {
       "title": "行业洞察与新闻",
-      "description": "获取最新 HWA 市场趋势、政策解读与行业洞察。",
+      "description": "获取最新 RWA 市场趋势、政策解读与行业洞察。",
       "action": "阅读最新洞察 →"
     }
   },

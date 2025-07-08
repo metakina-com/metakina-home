@@ -460,12 +460,12 @@
     },
     "learningCenter": {
       "title": "Learning Center",
-      "description": "Explore HWA, data partnerships, blockchain finance knowledge (includes glossary).",
+      "description": "Explore RWA, data partnerships, blockchain finance knowledge (includes glossary).",
       "action": "Start Learning (Coming Soon) →"
     },
     "industryInsights": {
       "title": "Industry Insights & News",
-      "description": "Get latest HWA market trends, policy interpretation and industry insights.",
+      "description": "Get latest RWA market trends, policy interpretation and industry insights.",
       "action": "Read Latest Insights →"
     }
   },
