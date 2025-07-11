@@ -31,5 +31,8 @@
   "errors": {
     "formRestoreError": "恢复表单状态失败",
     "formValidationError": "表单验证失败"
+  },
+  "messages": {
+    "pageUnderConstruction": "该页面正在建设中，敬请期待！"
   }
 }

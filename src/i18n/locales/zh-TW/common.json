@@ -31,5 +31,8 @@
   "errors": {
     "formRestoreError": "恢復表單狀態失敗",
     "formValidationError": "表單驗證失敗"
+  },
+  "messages": {
+    "pageUnderConstruction": "該頁面正在建設中，敬請期待！"
   }
 }

@@ -1,30 +1,32 @@
 import dhFooter from '@/assets/images/layout/dh.png';
 import youxiangFooter from '@/assets/images/layout/youxiang-footer.png';
+import { message } from 'antd';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LayoutFooter = memo(() => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   // 使用相同的链接配置和社交媒体配置
   const quickLinks = [
-    { path: '/', key: 'Footer.quickLinks.solutions' },
-    { path: '/', key: 'Footer.quickLinks.whyChooseUs' },
-    { path: '/', key: 'Footer.quickLinks.marketDynamics' },
-    { path: '/', key: 'Footer.quickLinks.supportedChains' },
-    { path: '/', key: 'Footer.quickLinks.digitalCurrency' },
-    { path: '/', key: 'Footer.quickLinks.resourceCenter' },
-    { path: '/', key: 'Footer.quickLinks.customerSuccess' },
+    // { path: '/', key: 'Footer.quickLinks.solutions' },
+    // { path: '/', key: 'Footer.quickLinks.whyChooseUs' },
+    { path: '/wu', key: 'Footer.quickLinks.marketDynamics' },
+    // { path: '/', key: 'Footer.quickLinks.supportedChains' },
+    { path: '/wu', key: 'Footer.quickLinks.digitalCurrency' },
+    // { path: '/', key: 'Footer.quickLinks.resourceCenter' },
+    { path: '/wu', key: 'Footer.quickLinks.customerSuccess' },
   ];
 
   const resourceLinks = [
-    { path: '/service-terms', key: 'Footer.resources.whitepaper' },
+    // { path: '/service-terms', key: 'Footer.resources.whitepaper' },
     { path: '/privacy-policy', key: 'Footer.resources.privacyPolicy' },
     { path: '/privacy-policy', key: 'Footer.resources.cookiePolicy' },
     { path: '/service-terms', key: 'Footer.resources.serviceManual' },
-    { path: '/', key: 'Footer.resources.industryInsight' },
-    { path: '/', key: 'Footer.resources.faq' },
+    { path: '/wu', key: 'Footer.resources.industryInsight' },
+    { path: '/wu', key: 'Footer.resources.faq' },
   ];
 
   const socialLinks = [
@@ -66,14 +68,51 @@ const LayoutFooter = memo(() => {
     },
   ];
 
-  const renderAboutSection = () => (
-    <div className="space-y-4">
-      <h3 className="text-lg font-semibold">{t('Footer.about.title')}</h3>
-      <p className="text-sm text-gray-400 leading-relaxed">
-        {t('Footer.about.description')}
-      </p>
-    </div>
-  );
+  // const renderAboutSection = () => (
+  //   <div className="space-y-4">
+  //     <h3 className="text-lg font-semibold">{t('Footer.about.title')}</h3>
+  //     <p className="text-sm text-gray-400 leading-relaxed">
+  //       {t('Footer.about.description')}
+  //     </p>
+  //   </div>
+  // );
+
+  const handleNavClick = (item, event) => {
+    if (item.type === 'anchor') {
+      event.preventDefault();
+
+      // 如果不在首页，先跳转到首页
+      if (window.location.hash !== '#/home') {
+        navigate('/home');
+        // 等待页面跳转完成后再滚动
+        setTimeout(() => {
+          const element = document.querySelector(item.path);
+
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        }, 600);
+      } else {
+        // 已经在首页，直接滚动
+        const element = document.querySelector(item.path);
+
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }
+    } else if (item.path === '/wu') {
+      message.info(t('messages.pageUnderConstruction'));
+    } else {
+      // 对于其他类型的链接，直接使用 React Router 的 Link 组件进行导航
+      navigate(item.path);
+    }
+  };
 
   const renderQuickLinks = () => (
     <div className="space-y-4">
@@ -81,12 +120,12 @@ const LayoutFooter = memo(() => {
       <ul className="space-y-2">
         {quickLinks.map((link, index) => (
           <li key={`${link.path}s${index}`}>
-            <Link
-              to={link.path}
+            <a
+              onClick={e => handleNavClick(link, e)}
               className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
             >
               {t(link.key)}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
@@ -99,12 +138,12 @@ const LayoutFooter = memo(() => {
       <ul className="space-y-2">
         {resourceLinks.map((link, index) => (
           <li key={`${link.path}a${index}`}>
-            <Link
-              to={link.path}
+            <a
+              onClick={e => handleNavClick(link, e)}
               className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
             >
               {t(link.key)}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
@@ -197,10 +236,10 @@ const LayoutFooter = memo(() => {
   return (
     <footer className="bg-black text-white">
       <div className="mx-auto px-4 py-12 container">
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 md:grid-cols-2">
-          <div className="col-span-2 md:col-span-1">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-3 md:grid-cols-2">
+          {/* <div className="col-span-2 md:col-span-1">
             {renderAboutSection()}
-          </div>
+          </div> */}
           {renderQuickLinks()}
           {renderResourceLinks()}
           {renderSocialLinks()}

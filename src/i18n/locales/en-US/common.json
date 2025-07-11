@@ -36,5 +36,8 @@
   "errors": {
     "formRestoreError": "Failed to restore form state",
     "formValidationError": "Form validation failed"
+  },
+  "messages": {
+    "pageUnderConstruction": "This page is under construction, please stay tuned!"
   }
 }

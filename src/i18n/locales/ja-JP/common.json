@@ -36,5 +36,8 @@
   "errors": {
     "formRestoreError": "フォーム状態の復元に失敗しました",
     "formValidationError": "フォームの検証に失敗しました"
+  },
+  "messages": {
+    "pageUnderConstruction": "このページは建設中です。お楽しみに！"
   }
 }

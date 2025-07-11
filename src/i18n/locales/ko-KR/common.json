@@ -31,5 +31,8 @@
   "errors": {
     "formRestoreError": "폼 상태 복원 실패",
     "formValidationError": "폼 검증 실패"
+  },
+  "messages": {
+    "pageUnderConstruction": "이 페이지는 건설 중입니다. 기대해 주세요!"
   }
 }
