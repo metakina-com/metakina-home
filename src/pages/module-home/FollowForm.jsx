@@ -59,17 +59,17 @@ function FollowPage() {
   }, [location.pathname, form]);
 
   const onFinish = async (values) => {
-    const data = `
-      姓名：${values.name}
-      电话：${values.phone}
-      邮箱：${values.email || ''}
-      留言：${values.message || ''}
-    `;
+    // const data = `
+    //   姓名：${values.name}
+    //   电话：${values.phone}
+    //   邮箱：${values.email || ''}
+    //   留言：${values.message || ''}
+    // `;
 
     setLoading(true);
 
     try {
-      await submitContactForm(data);
+      await submitContactForm(values);
       message.success(t('app.submitSuccess'));
       form.resetFields();
     } finally {
