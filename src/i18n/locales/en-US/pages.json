@@ -812,5 +812,16 @@
         "√ Transparent and Traceable Data Circulation: Use blockchain technology to achieve full traceability and immutability of data asset circulation, enhancing market transparency and trust."
       ]
     }
+  },
+  "HKBA": {
+    "title": "Strategic Partner: HKBA",
+    "description": "This cooperation aims to integrate Hong Kong's international financial hub resources, Vietnam's emerging market potential, and global compliance experience to jointly promote innovative development in blockchain technology, RWA (Real World Assets) digitization, and cross-border investment ecosystems.",
+    "coreMembers": "Core Members",
+    "disclaimer": "* Member information is for reference only. Please refer to the HKBA official website for the latest list",
+    "navigation": {
+      "prev": "Previous",
+      "next": "Next",
+      "goToPage": "Go to page {{page}}"
+    }
   }
 }

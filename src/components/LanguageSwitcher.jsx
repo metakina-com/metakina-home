@@ -24,7 +24,7 @@ export default function LanguageSwitcher({ className, isDark = false }) {
         options={[
           {
             value: 'zh-CN',
-            label: '中文',
+            label: '简体中文',
           },
           {
             value: 'zh-TW',

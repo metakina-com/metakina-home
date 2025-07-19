@@ -1,0 +1,310 @@
+{
+  "members": [
+    {
+      "zhName": "蔡维德 교수",
+      "enName": "Prof. Wei-Tek Tsai",
+      "introduce": [
+        "HKBA 명예회장",
+        "중국 빅데이터 및 블록체인 전문가",
+        "베이징항공항천대학 교수 국가특빙교수  |  미국 다수 소프트웨어공학 및 서비스컴퓨팅 프로젝트 책임자",
+        "중국오픈소스소프트웨어추진연맹 전문위원회"
+      ]
+    },
+    {
+      "zhName": "왕 兟",
+      "enName": "Sing Wang",
+      "introduce": [
+        "HKBA 명예회장  |  홍콩 우리집 회장",
+        "전 세계 5대 사모펀드 중 하나인 TPG덕태집단 글로벌 파트너 및 대중화권 연석회장 역임",
+        "TOM.com 집단 CEO  |  Goldman Sachs 골드만삭스 중국 테크놀로지 사업 책임자",
+        "미국 맥킨지 McKinsey 전략컨설팅 고문"
+      ]
+    },
+    {
+      "zhName": "주가명 교수",
+      "enName": "Prof. Zhu JiaMing",
+      "introduce": [
+        "HKBA 명예회장  |  대중화권 유명 경제학자",
+        "디지털자산 연구원 원장  |  유엔공업발전기구 경제학자",
+        "매사추세츠공과대학 슬론경영대학원 (MIT) MBA"
+      ]
+    },
+    {
+      "zhName": "곽의가 교수",
+      "enName": "Prof. GUO Yike",
+      "introduce": [
+        "HKBA 전 명예회장 2021-2022  |  홍콩과기대학 수석부총장",
+        "기업데이터분석플랫폼회사 InforSense 설립  |  유럽과학원 원사 MAE",
+        "임페리얼칼리지런던 데이터사이언스연구소 소장",
+        "영국컴퓨터학회 원사 FBCS"
+      ]
+    },
+    {
+      "zhName": "왕양",
+      "enName": "Wong Yeung",
+      "introduce": [
+        "홍콩블록체인협회 명예회장  |  홍콩과기대학 부총장  |  수학자",
+        "수학과 좌석교수  |  이학원 원장  |  홍콩과기대학 빅데이터생물지능실험실 주임",
+        "홍콩과기대학 빅데이터연구소 부소장"
+      ]
+    },
+    {
+      "zhName": "임가례 박사",
+      "enName": "Dr. Lee George Lam",
+      "introduce": [
+        "HKBA 명예회장",
+        "홍콩사이버포트 이사회 전 회장",
+        "홍콩무역발전국 일대일로 위원회 위원"
+      ]
+    },
+    {
+      "zhName": "구달근",
+      "enName": "Duncan Chiu",
+      "introduce": [
+        "HKBA 명예회장  |  홍콩입법회 의원",
+        "단결홍콩기금  |  홍콩정보기술연합회 회장",
+        "HKITJC.org.hk/Innovate for Future 창과미래 소집인",
+        "혜과자본 연합창시자/여원유한공사 회장  |  Web3 엔젤투자자"
+      ]
+    },
+    {
+      "zhName": "장준용",
+      "enName": "Thomas Cheung",
+      "introduce": [
+        "HKBA 명예회장  |  전 홍콩지구 전국인민대표대회 대표",
+        "중국 전국인민대표대회 전 대표",
+        "홍콩 InnoAngel 펀드 파트너  |  홍콩중화총상회 이사  |  홍콩블록체인학회"
+      ]
+    },
+    {
+      "zhName": "채문승",
+      "enName": "Cai WenSheng",
+      "introduce": [
+        "HKBA 전 명예회장  |  유명 인터넷 연속 기업가",
+        "Web3 스타트업 엔젤투자자  |  메이투 Meitu.com 창시자  |  유명 엔젤투자자",
+        "홍콩 최초 암호화폐투자 상장기업 CEO"
+      ]
+    },
+    {
+      "zhName": "류지위",
+      "enName": "Liu ZhiWei",
+      "introduce": [
+        "HKBA 명예회장  |  순대집단 회장",
+        "화흥자본집단 창시자 겸 CEO  |  RDPay.com",
+        "칭화대학 오도구금융학원 홍콩마카오 동창회 회장"
+      ]
+    },
+    {
+      "zhName": "진건영",
+      "enName": "Prof. Timmy Tan",
+      "introduce": [
+        "HKBA 명예회장  |  SK Techno-lube 창시자",
+        "필리핀화상총회",
+        "SuperAngelsVentures Manila"
+      ]
+    },
+    {
+      "zhName": "진요장",
+      "enName": "Anson Chan",
+      "introduce": [
+        "HKBA 명예회장  |  보성집단 회장",
+        "InnoAngel.com 홍콩 InnoAngel 펀드 파트너",
+        "홍콩산학연합작촉진회 회장"
+      ]
+    },
+    {
+      "zhName": "마홍명",
+      "enName": "John Ma",
+      "introduce": [
+        "HKBA 명예회장  |  가영나홀딩스 집행이사",
+        "일대일로과기금융협회 창설회장",
+        "요창흥기업 독립비집행이사"
+      ]
+    },
+    {
+      "zhName": "유소응",
+      "enName": "Steve Lau",
+      "introduce": [
+        "HKBA 명예회장",
+        "독수리엔젤펀드 창시자 EaglesFund.com  |  중국청년엔젤회",
+        "홍콩 상장기업 장원홀딩스 Fortune Telecom 창시자"
+      ]
+    },
+    {
+      "zhName": "뇌지빈",
+      "enName": "Prof. James LEI Zhibin",
+      "introduce": [
+        "HKBA 명예회장  |  블록체인 금융과기 전문가",
+        "ETD (Ethereum Data) Blockchain Lab  |  ASTRI.org 홍콩응용과기연구원",
+        "홍콩과기대학 교수",
+        "후베이대학 정보과학학원 특빙교수"
+      ]
+    },
+    {
+      "zhName": "등적",
+      "enName": "Deng Di",
+      "introduce": [
+        "HKBA 명예회장  |  태일운집단 창시자 TaiYiYun.com",
+        "베이징운련과기 창시자  |  중국공신부 인증 클라우드컴퓨팅 전문가",
+        "스위스 다보스 - 글로벌블록체인비즈니스위원회 (GBBC) 중국대표단 단장",
+        "칭화대학 중국산업연구센터 이사"
+      ]
+    },
+    {
+      "zhName": "양걸양",
+      "enName": "Jay Liang",
+      "introduce": [
+        "HKBA 명예회장  |  금사강디지털펀드 파트너 GSR Matrix Fund",
+        "OES Capital 동방억태자본 파트너  |  미중공상협회 명예회장 연석회장",
+        "양명산미래학사"
+      ]
+    },
+    {
+      "zhName": "우가녕 박사",
+      "enName": "Dr. Yu JiaNing",
+      "introduce": [
+        "HKBA 명예회장  |  원 공신부정보센터 공업경제연구소 소장",
+        "Huobi University 화대교육 교장",
+        "중국통신공업협회 블록체인전문위원회 윤번회장",
+        "중국이동통신연합회 메타버스산업위원회 집행주임"
+      ]
+    },
+    {
+      "zhName": "Albert Saychuan Cheok",
+      "enName": "Albert Saychuan Cheok",
+      "introduce": [
+        "HKBA 명예회장  |  싱가포르 상장기업 Amplefield Limited 회장",
+        "홍콩국제표준자원홀딩스유한공사 회장  |  SuperAngel Investor 아시아블록체인연맹 ABA",
+        "Asia Blockchain Alliance"
+      ]
+    },
+    {
+      "zhName": "이상신",
+      "enName": "Samson Lee",
+      "introduce": [
+        "CEO of CoinStreet(고이가)  |  Co-organizer TADS Awards",
+        "홍콩비동질화토큰협회 공동창시자·공동회장",
+        "STO Winner of \"Security Tokens Realised Awards London 2020",
+        "항생대학 홍콩 핀테크·블록체인 위원회"
+      ]
+    },
+    {
+      "zhName": "진가호",
+      "enName": "Emil Chan HKBA",
+      "introduce": [
+        "HKBA 명예회장  |  아시아메타버스연맹 공동회장",
+        "진가호 선생은 아시아태평양지역 외자은행에서 20년 이상의 정보기술관리 및 행정경험 보유",
+        "빅데이터, 블록체인, Open API 등 금융과기기술 응용에 독특한 견해",
+        "최근 다수 유명대학 객원강사로 인재육성, FinTech 창업고문으로 대만구 경제발전 추진"
+      ]
+    },
+    {
+      "zhName": "당의",
+      "enName": "Tony Tong.co",
+      "introduce": [
+        "HKBA 집행회장  |  Edi.College 메타버스교육학원 연합창시자",
+        "SuperAngelsVentures.com 슈퍼엔젤단 집행회장",
+        "일대일로과기금융협회 집행회장  |  아시아메타버스연맹 연합창시자"
+      ]
+    },
+    {
+      "zhName": "Ander Tsui",
+      "enName": "Ander Tsui",
+      "introduce": [
+        "공동회장  |  Hong Kong Blockchain Association",
+        "SuperChainCapital (Singapore) 창시자  |  VertexLabs.UK 창시자",
+        "아시아메타버스연맹 AsiaMeta.club Alliance"
+      ]
+    },
+    {
+      "zhName": "시가양",
+      "enName": "Chai GeYang",
+      "introduce": [
+        "HKBA 공동회장  |  Tagging.club 창시자",
+        "SocialFaceAI.com 창시자 CEO  |  백예지능전매 창시자",
+        "아시아블록체인연맹 ABA  |  아시아메타버스연맹 AsiaMeta.club Alliance"
+      ]
+    },
+    {
+      "zhName": "채전",
+      "enName": "Charley Tsai HKBA",
+      "introduce": [
+        "홍콩블록체인협회 창설 연석회장  |  하이난자유무역항 금융발전센터 특별초빙전문가",
+        "국제금융과기, 청산결제 및 무역금융 전문가  |  국내 최초 거래은행업무 사업부 창설",
+        "홍콩스탠다드차타드은행 본점, 중국은행, 남아프리카투자은행 등 역임"
+      ]
+    },
+    {
+      "zhName": "왕월화",
+      "enName": "Richard Wang",
+      "introduce": [
+        "HKBA 연석회장  |  Web3 VC 블록체인 투자자",
+        "DFJ.com 덕정창신펀드  |  DraperDragon.com 관리 파트너",
+        "대만교통대학 전신공학 석사  |  아시아메타버스연맹 AsiaMeta.club Alliance"
+      ]
+    },
+    {
+      "zhName": "임화 박사",
+      "enName": "Dr. Lin Hua CFA FRM",
+      "introduce": [
+        "홍콩블록체인협회 연석회장 베이징자금지능금융연구원 원장",
+        "중앙은행 「금융회계」 편위  |  중국금융회계학회 상무이사",
+        "재정부기업회계준칙자문위원  |  중국증권기금업협회 자산증권화고문"
+      ]
+    },
+    {
+      "zhName": "조욱",
+      "enName": "Michael Xu Zhao",
+      "introduce": [
+        "HKBA 연석회장  |  전 PBOC 국가외환관리국 SAFE 근무",
+        "Crypto1.vip Acquisition SPAC Nasdaq:DAOO IDCM.io 창시자",
+        "아시아메타버스연맹 AsiaMeta.club Alliance"
+      ]
+    },
+    {
+      "zhName": "노유신 박사",
+      "enName": "Dr. WaiShunLo",
+      "introduce": [
+        "HKBA 공동회장  |  DL Capital 점량자본 파트너",
+        "전해국제블록체인생태권연맹 회장",
+        "CUHK 홍콩중문대학 정보공학과 겸임교수"
+      ]
+    },
+    {
+      "zhName": "Dixon Sze",
+      "enName": "Dixon Sze",
+      "introduce": [
+        "HKBA EABA.io 연석회장  |  Gaia Venture Sg",
+        "Cosmos Information Technology Ltd 창시자·회장",
+        "아시아블록체인연맹 ABA  |  Asia Blockchain Alliance  |  AsiaBlockchain.club"
+      ]
+    },
+    {
+      "zhName": "장수송",
+      "enName": "Sossion",
+      "introduce": [
+        "HKBA 공동회장",
+        "AsiaBlockchain.club 아시아블록체인협회 회장",
+        "JU.com Jubi 취폐망 창시자 취련집단 회장"
+      ]
+    },
+    {
+      "zhName": "석주",
+      "enName": "Shi Zhu",
+      "introduce": [
+        "HKBA 공동회장",
+        "중국문화기금회 회장",
+        "전 중국주뉴질랜드 경제상무영사"
+      ]
+    },
+    {
+      "zhName": "진서",
+      "enName": "Zeoi Can",
+      "introduce": [
+        "홍콩블록체인협회 연합회장  |  메타버스·Web3싱크탱크 MetaZ 창시자",
+        "홍콩반산싱크탱크 창설발기인  |  중국국제과기촉진회 메타버스전문위원회 부주임",
+        "Coindesk 중국 전 연합출판인"
+      ]
+    }
+  ]
+}

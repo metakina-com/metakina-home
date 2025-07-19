@@ -1,0 +1,310 @@
+{
+  "members": [
+    {
+      "zhName": "蔡維德教授",
+      "enName": "Prof. Wei-Tek Tsai",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席",
+        "China Big Data & Blockchain Expert 大數據及區塊鏈專家",
+        "北京航空航天大學教授 國家特聘教授  丨  美國多項軟件工程及服務計算項目負責人",
+        "中國開源軟件推進聯盟（China OSS Promotion Union）專家委員會"
+      ]
+    },
+    {
+      "zhName": "王兟",
+      "enName": "Sing Wang",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  香港我哋家主席",
+        "曾任全球五大私募基金之一TPG德太集團全球合夥人及大中華區聯席主席",
+        "TOM.com 集團 CEO  丨  Goldman Sachs高盛中國科技業務負責人",
+        "美國麥肯錫 McKinsey 戰略諮詢顧問"
+      ]
+    },
+    {
+      "zhName": "朱嘉明教授",
+      "enName": "Prof. Zhu JiaMing",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  Economist 大中華區著名經濟學家",
+        "Digital Asset 數字資產研究院院長  丨  聯合國工業發展組織的經濟學家",
+        "麻省理工學院斯隆管理學院 (MIT) MBA"
+      ]
+    },
+    {
+      "zhName": "郭毅可教授",
+      "enName": "Prof. GUO Yike",
+      "introduce": [
+        "HKBA前榮譽主席2021-2022  丨  香港科技大學 HKUST.edu.hk 郭毅可教授 首席副校長",
+        "創立企業數據分析平台公司 InforSense  丨  歐洲科學院院士MAE",
+        "帝國學院 (Imperial College London) 數據科學研究所所長",
+        "英國電腦學會院士FBCS"
+      ]
+    },
+    {
+      "zhName": "汪揚",
+      "enName": "Wong Yeung",
+      "introduce": [
+        "香港區塊鏈協會榮譽主席  丨  香港科技大學副校長  丨  數學家",
+        "數學系講座教授  丨  理學院院長  丨  香港科技大學大數據生物智能實驗室主任",
+        "香港科技大學大數據研究所副所長"
+      ]
+    },
+    {
+      "zhName": "林家禮博士",
+      "enName": "Dr. Lee George Lam",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席",
+        "香港數碼港董事局前主席 Former Chairman of Hong Kong Cyberport.HK",
+        "香港貿易發展局一帶一路委員會委員"
+      ]
+    },
+    {
+      "zhName": "邱達根",
+      "enName": "Duncan Chiu",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  香港立法會議員 Legislative Council",
+        "團結香港基金/Our HK Foundation  丨  香港資訊科技聯會會長",
+        "HKITJC.org.hk/Innovate for Future 創科未來 召集人",
+        "慧科資本聯合創始人/荔園有限公司主席  丨  Web3 Angel Investor 投資者"
+      ]
+    },
+    {
+      "zhName": "張俊勇",
+      "enName": "Thomas Cheung",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  前港區全國人大代表",
+        "Former Delegate to China National People's Congress NPC InnoAngel.com",
+        "香港英諾天使基金合夥人  丨  香港中華總商會會董  丨  香港區塊鏈學會HKBS"
+      ]
+    },
+    {
+      "zhName": "蔡文勝",
+      "enName": "Cai WenSheng",
+      "introduce": [
+        "HKBA前榮譽主席  丨  Renowned Internet Serial Entrepreneur",
+        "Angel Investor in Web3 Startups  丨  美圖 Meitu.com 創始人  丨  著名天使投資人",
+        "香港首例投資加密貨幣上市公司CEO"
+      ]
+    },
+    {
+      "zhName": "柳志偉",
+      "enName": "Liu ZhiWei",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  淳大集團董事長",
+        "華興資本集團創始人兼首席執行官  丨  RDPay.com",
+        "清華大學五道口金融學院港澳校友會會長"
+      ]
+    },
+    {
+      "zhName": "陳建榮",
+      "enName": "Prof. Timmy Tan",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  SK Techno-lube 創始人",
+        "菲律賓華商總會",
+        "SuperAngelsVentures Manila"
+      ]
+    },
+    {
+      "zhName": "陳燿璋",
+      "enName": "Anson Chan",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  寶聲集團主席",
+        "InnoAngel.com 香港英諾天使基金合夥人",
+        "香港產學研合作促進會會長"
+      ]
+    },
+    {
+      "zhName": "馬鴻銘",
+      "enName": "John Ma",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  佳寧娜控股執行董事",
+        "一帶一路科技金融協會創會主席",
+        "廖創興企業獨立非執行董事"
+      ]
+    },
+    {
+      "zhName": "劉小鷹",
+      "enName": "Steve Lau",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席",
+        "老鷹天使基金創始人EaglesFund.com  丨  中國青年天使會",
+        "香港上市公司長遠控股 Fortune Telecom 創始人"
+      ]
+    },
+    {
+      "zhName": "雷志斌",
+      "enName": "Prof. James LEI Zhibin",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  區塊鏈金融科技專家",
+        "ETD (Ethereum Data) Blockchain Lab  丨  ASTRI.org 香港應用科技研究院",
+        "香港科技大學教授 University of Science & Technology UST.hk",
+        "湖北大學信息科學學院特聘教授"
+      ]
+    },
+    {
+      "zhName": "鄧迪",
+      "enName": "Deng Di",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  太一雲集團創始人 TaiYiYun.com",
+        "北京雲聯科技創始人  丨  中國工信部認證雲計算專家",
+        "瑞士 Davos 達沃斯 - 全球區塊鏈商業理事會 (GBBC) 中國代表團團長",
+        "清華大學中國產業研究中心理事"
+      ]
+    },
+    {
+      "zhName": "梁捷揚",
+      "enName": "Jay Liang",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  金沙江數字基金 合夥人 GSR Matrix Fund",
+        "OES Capital 東方億泰資本 合夥人  丨  美中工商協會名譽主席 聯席會長",
+        "陽明山未來學社"
+      ]
+    },
+    {
+      "zhName": "于佳寧 博士",
+      "enName": "Dr. Yu JiaNing",
+      "introduce": [
+        "HKBA 榮譽主席  丨  原工信部信息中心工業經濟研究所所長",
+        "Founder & President of Huobi University 火大教育 校長",
+        "中國通信工業協會區塊鏈專委會 輪值主席",
+        "中國移動通信聯合會元宇宙產業委員會執行主任"
+      ]
+    },
+    {
+      "zhName": "Albert Saychuan Cheok",
+      "enName": "Albert Saychuan Cheok",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  新加坡上市公司 Amplefield Limited 主席",
+        "香港國際標準資源控股有限公司主席  丨  SuperAngel Investor 亞洲區塊鏈聯盟ABA",
+        "Asia Blockchain Alliance"
+      ]
+    },
+    {
+      "zhName": "李尚信",
+      "enName": "Samson Lee",
+      "introduce": [
+        "CEO of CoinStreet(高爾街)  丨  Co-organizer TADS Awards",
+        "Co-Founder & Co-Chairman of NFT Association of Hong Kong 香港非同質化代幣協會",
+        "STO Winner of \"Security Tokens Realised Awards London 2020",
+        "Fintech & Blockchain Committee of Hang Seng University of Hong Kong"
+      ]
+    },
+    {
+      "zhName": "陳家豪",
+      "enName": "Emil Chan HKBA",
+      "introduce": [
+        "HKBA Honorary Chairman 榮譽主席  丨  亞洲元宇宙聯盟 Co-Chairman",
+        "陳家豪先生擁有超過20年於亞太區外資銀行的信息科技管理及行政經驗",
+        "對金融科技如大數據、區塊鏈、Open API 等技術之應用有其獨特見解",
+        "近年以多家知名大學客席講師培訓人才，並任FinTech初創顧問，推動大灣區經濟發展。"
+      ]
+    },
+    {
+      "zhName": "唐儀",
+      "enName": "Tony Tong.co",
+      "introduce": [
+        "HKBA 執行會長  丨  Edi.College 元宇宙教育學院聯合創始人",
+        "SuperAngelsVentures.com 超級天使團執行主席",
+        "一帶一路科技金融協會執行主席  丨  亞洲元宇宙聯盟聯合創始人"
+      ]
+    },
+    {
+      "zhName": "Ander Tsui",
+      "enName": "Ander Tsui",
+      "introduce": [
+        "Co-Chairman  丨  Hong Kong Blockchain Association",
+        "SuperChainCapital (Singapore) Founder  丨  VertexLabs.UK Founder",
+        "亞洲元宇宙聯盟 AsiaMeta.club Alliance"
+      ]
+    },
+    {
+      "zhName": "柴舸洋",
+      "enName": "Chai GeYang",
+      "introduce": [
+        "HKBA Co-Chairman 聯席會長  丨  Tagging.club 創始人",
+        "SocialFaceAI.com 創始人 CEO  丨  鉑睿智能傳媒 創始人",
+        "亞洲區塊鏈聯盟ABA  丨  亞洲元宇宙聯盟 AsiaMeta.club Alliance"
+      ]
+    },
+    {
+      "zhName": "蔡全",
+      "enName": "Charley Tsai HKBA",
+      "introduce": [
+        "香港區塊鏈協會創會聯席主席  丨  海南自由貿易港金融發展中心特邀專家",
+        "國際金融科技、清結算和交易金融專家  丨  創建國內第一家交易銀行業務事業部",
+        "曾任職香港渣打銀行總行、中國銀行和南非投行等"
+      ]
+    },
+    {
+      "zhName": "王岳華",
+      "enName": "Richard Wang",
+      "introduce": [
+        "HKBA 聯席會長  丨  Web3 VC區塊鏈投資人",
+        "DFJ.com 德鼎創新基金  丨  DraperDragon.com 管理合夥人",
+        "臺灣交通大學 電信工程碩士  丨  亞洲元宇宙聯盟 AsiaMeta.club Alliance"
+      ]
+    },
+    {
+      "zhName": "林華 博士",
+      "enName": "Dr. Lin Hua CFA FRM",
+      "introduce": [
+        "香港區塊鏈協會聯席主席北京紫金智能金融研究院院長",
+        "央行《金融會計》編委  丨  中國金融會計學會常務理事",
+        "財政部企業會計準則諮詢委員  丨  中國證券基金業協會資產證券化顧問"
+      ]
+    },
+    {
+      "zhName": "趙旭",
+      "enName": "Michael Xu Zhao",
+      "introduce": [
+        "HKBA 聯席會長  丨  曾任職PBOC 國家外管局SAFE",
+        "Crypto1.vip Acquisition SPAC Nasdaq:DAOO IDCM.io 創始人",
+        "亞洲元宇宙聯盟 AsiaMeta.club Alliance"
+      ]
+    },
+    {
+      "zhName": "勞維信博士",
+      "enName": "Dr. WaiShunLo",
+      "introduce": [
+        "HKBA Co-Chairman 聯席會長  丨  DL Capital 點亮資本合夥人",
+        "前海國際區塊鏈生態圈聯盟主席",
+        "CUHK香港中文大學訊息工程系兼任教授"
+      ]
+    },
+    {
+      "zhName": "Dixon Sze",
+      "enName": "Dixon Sze",
+      "introduce": [
+        "HKBA EABA.io 聯席會長  丨  Gaia Venture Sg",
+        "Founder & Chairman of Cosmos Information Technology Ltd",
+        "亞洲區塊鏈聯盟ABA  丨  Asia Blockchain Alliance  丨  AsiaBlockchain.club"
+      ]
+    },
+    {
+      "zhName": "張壽松",
+      "enName": "Sossion",
+      "introduce": [
+        "HKBA Co-Chairman 聯席會長",
+        "AsiaBlockchain.club 亞洲區塊鏈協會會長",
+        "JU.com Jubi 聚幣網創始人 聚鏈集團董事長"
+      ]
+    },
+    {
+      "zhName": "石柱",
+      "enName": "Shi Zhu",
+      "introduce": [
+        "HKBA Co-Chairman 聯席會長",
+        "中國文化基金會主席",
+        "前中國駐新西蘭經濟商務領事"
+      ]
+    },
+    {
+      "zhName": "陳序",
+      "enName": "Zeoi Can",
+      "introduce": [
+        "香港區塊鏈協會 聯合會長  丨  元宇宙和Web3智庫MetaZ創始人",
+        "香港半山智庫創始發起人  丨  中國國際科技促進會元宇宙專業委員會副主任",
+        "Coindesk中國前聯合出版人"
+      ]
+    }
+  ]
+}

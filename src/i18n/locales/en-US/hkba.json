@@ -1,0 +1,309 @@
+{
+  "members": [
+    {
+      "zhName": "Prof. Cai Weide",
+      "enName": "Prof. Wei-Tek Tsai",
+      "introduce": [
+        "HKBA Honorary Chairman",
+        "China Big Data & Blockchain Expert",
+        "Professor at Beihang University, National Distinguished Professor | Principal Investigator of Multiple US Software Engineering and Service Computing Projects",
+        "Expert Committee of China OSS Promotion Union"
+      ]
+    },
+    {
+      "zhName": "Sing Wang",
+      "enName": "Sing Wang",
+      "introduce": [
+        "HKBA Honorary Chairman | Chairman of Our Hong Kong",
+        "Former Global Partner and Co-Chairman of Greater China at TPG, one of the world's top five private equity funds",
+        "CEO of TOM.com Group | Head of Goldman Sachs China Technology Business",
+        "Strategic Consultant at McKinsey & Company"
+      ]
+    },
+    {
+      "zhName": "Prof. Zhu Jiaming",
+      "enName": "Prof. Zhu JiaMing",
+      "introduce": [
+        "HKBA Honorary Chairman | Renowned Economist in Greater China",
+        "Director of Digital Asset Research Institute | Economist at United Nations Industrial Development Organization",
+        "MBA from MIT Sloan School of Management"
+      ]
+    },
+    {
+      "zhName": "Prof. Guo Yike",
+      "enName": "Prof. GUO Yike",
+      "introduce": [
+        "Former HKBA Honorary Chairman 2021-2022 | Senior Vice President at Hong Kong University of Science and Technology",
+        "Founder of InforSense, Enterprise Data Analytics Platform Company | Fellow of European Academy of Sciences",
+        "Director of Data Science Institute at Imperial College London",
+        "Fellow of British Computer Society"
+      ]
+    },
+    {
+      "zhName": "Wang Yang",
+      "enName": "Wong Yeung",
+      "introduce": [
+        "Honorary Chairman of Hong Kong Blockchain Association | Vice President of HKUST | Mathematician",
+        "Chair Professor of Mathematics | Dean of School of Science | Director of HKUST Big Data Bio-Intelligence Lab",
+        "Associate Director of HKUST Big Data Institute"
+      ]
+    },
+    {
+      "zhName": "Dr. George Lam",
+      "enName": "Dr. Lee George Lam",
+      "introduce": [
+        "HKBA Honorary Chairman",
+        "Former Chairman of Hong Kong Cyberport",
+        "Member of Belt and Road Committee, Hong Kong Trade Development Council"
+      ]
+    },
+    {
+      "zhName": "Duncan Chiu",
+      "enName": "Duncan Chiu",
+      "introduce": [
+        "HKBA Honorary Chairman | Member of Hong Kong Legislative Council",
+        "Our Hong Kong Foundation | President of Hong Kong Information Technology Joint Council",
+        "Convenor of Innovate for Future | Co-founder of Wisesoft Capital/Chairman of Lai Yuen Limited | Web3 Angel Investor"
+      ]
+    },
+    {
+      "zhName": "Thomas Cheung",
+      "enName": "Thomas Cheung",
+      "introduce": [
+        "HKBA Honorary Chairman | Former Hong Kong Deputy to National People's Congress",
+        "Former Delegate to China National People's Congress NPC",
+        "Partner of InnoAngel Fund Hong Kong | Director of Hong Kong Chinese General Chamber of Commerce | Hong Kong Blockchain Society"
+      ]
+    },
+    {
+      "zhName": "Cai Wensheng",
+      "enName": "Cai WenSheng",
+      "introduce": [
+        "Former HKBA Honorary Chairman | Renowned Internet Serial Entrepreneur",
+        "Angel Investor in Web3 Startups | Founder of Meitu.com | Famous Angel Investor",
+        "CEO of Hong Kong's First Public Company to Invest in Cryptocurrency"
+      ]
+    },
+    {
+      "zhName": "Liu Zhiwei",
+      "enName": "Liu ZhiWei",
+      "introduce": [
+        "HKBA Honorary Chairman | Chairman of Chun Tai Group",
+        "Founder and CEO of China Renaissance Capital Group | RDPay.com",
+        "President of Tsinghua PBC School of Finance Hong Kong and Macau Alumni Association"
+      ]
+    },
+    {
+      "zhName": "Chen Jianrong",
+      "enName": "Prof. Timmy Tan",
+      "introduce": [
+        "HKBA Honorary Chairman | Founder of SK Techno-lube",
+        "Philippines Chinese Chamber of Commerce",
+        "SuperAngelsVentures Manila"
+      ]
+    },
+    {
+      "zhName": "Anson Chan",
+      "enName": "Anson Chan",
+      "introduce": [
+        "HKBA Honorary Chairman | Chairman of Polyshine Group",
+        "Partner of InnoAngel Fund Hong Kong",
+        "President of Hong Kong Industry-Academia-Research Collaboration Association"
+      ]
+    },
+    {
+      "zhName": "John Ma",
+      "enName": "John Ma",
+      "introduce": [
+        "HKBA Honorary Chairman | Executive Director of Carnival Group",
+        "Founding Chairman of Belt and Road Fintech Association",
+        "Independent Non-Executive Director of Liu Chong Hing Enterprise"
+      ]
+    },
+    {
+      "zhName": "Steve Lau",
+      "enName": "Steve Lau",
+      "introduce": [
+        "HKBA Honorary Chairman",
+        "Founder of Eagles Fund | China Young Angels Association",
+        "Founder of Hong Kong Listed Company Fortune Telecom Holdings"
+      ]
+    },
+    {
+      "zhName": "Prof. James Lei Zhibin",
+      "enName": "Prof. James LEI Zhibin",
+      "introduce": [
+        "HKBA Honorary Chairman | Blockchain Fintech Expert",
+        "ETD (Ethereum Data) Blockchain Lab | Hong Kong Applied Science and Technology Research Institute",
+        "Professor at Hong Kong University of Science & Technology",
+        "Distinguished Professor at School of Information Science, Hubei University"
+      ]
+    },
+    {
+      "zhName": "Deng Di",
+      "enName": "Deng Di",
+      "introduce": [
+        "HKBA Honorary Chairman | Founder of TaiYiYun Group",
+        "Founder of Beijing Yunlian Technology | Certified Cloud Computing Expert by China's Ministry of Industry and Information Technology",
+        "Head of China Delegation, Global Blockchain Business Council (GBBC), Davos, Switzerland",
+        "Director of China Industry Research Center, Tsinghua University"
+      ]
+    },
+    {
+      "zhName": "Jay Liang",
+      "enName": "Jay Liang",
+      "introduce": [
+        "HKBA Honorary Chairman | Partner of GSR Matrix Fund",
+        "Partner of OES Capital | Honorary Chairman and Co-Chairman of US-China Business Association",
+        "Yangmingshan Future Society"
+      ]
+    },
+    {
+      "zhName": "Dr. Yu Jianing",
+      "enName": "Dr. Yu JiaNing",
+      "introduce": [
+        "HKBA Honorary Chairman | Former Director of Industrial Economics Research Institute, Information Center of Ministry of Industry and Information Technology",
+        "Founder & President of Huobi University",
+        "Rotating Chairman of Blockchain Committee, China Association of Communications Enterprises",
+        "Executive Director of Metaverse Industry Committee, China Federation of Mobile Communications"
+      ]
+    },
+    {
+      "zhName": "Albert Saychuan Cheok",
+      "enName": "Albert Saychuan Cheok",
+      "introduce": [
+        "HKBA Honorary Chairman | Chairman of Singapore Listed Company Amplefield Limited",
+        "Chairman of Hong Kong International Standard Resources Holdings Limited | SuperAngel Investor Asian Blockchain Alliance",
+        "Asia Blockchain Alliance"
+      ]
+    },
+    {
+      "zhName": "Samson Lee",
+      "enName": "Samson Lee",
+      "introduce": [
+        "CEO of CoinStreet | Co-organizer TADS Awards",
+        "Co-Founder & Co-Chairman of NFT Association of Hong Kong",
+        "STO Winner of \"Security Tokens Realised Awards London 2020\"",
+        "Fintech & Blockchain Committee of Hang Seng University of Hong Kong"
+      ]
+    },
+    {
+      "zhName": "Emil Chan",
+      "enName": "Emil Chan HKBA",
+      "introduce": [
+        "HKBA Honorary Chairman | Co-Chairman of Asia Metaverse Alliance",
+        "Mr. Emil Chan has over 20 years of IT management and executive experience in foreign banks in the Asia-Pacific region",
+        "Has unique insights into the application of fintech technologies such as big data, blockchain, and Open API",
+        "In recent years, he has trained talents as a guest lecturer at many prestigious universities and served as a FinTech startup advisor, promoting economic development in the Greater Bay Area"
+      ]
+    },
+    {
+      "zhName": "Tony Tong",
+      "enName": "Tony Tong.co",
+      "introduce": [
+        "HKBA Executive Chairman | Co-founder of Edi.College Metaverse Education Institute",
+        "Executive Chairman of SuperAngelsVentures.com",
+        "Executive Chairman of Belt and Road Fintech Association | Co-founder of Asia Metaverse Alliance"
+      ]
+    },
+    {
+      "zhName": "Ander Tsui",
+      "enName": "Ander Tsui",
+      "introduce": [
+        "Co-Chairman | Hong Kong Blockchain Association",
+        "SuperChainCapital (Singapore) Founder | VertexLabs.UK Founder",
+        "Asia Metaverse Alliance"
+      ]
+    },
+    {
+      "zhName": "Chai Geyang",
+      "enName": "Chai GeYang",
+      "introduce": [
+        "HKBA Co-Chairman | Founder of Tagging.club",
+        "Founder and CEO of SocialFaceAI.com | Founder of Platinum Smart Media",
+        "Asian Blockchain Alliance | Asia Metaverse Alliance"
+      ]
+    },
+    {
+      "zhName": "Charley Tsai",
+      "enName": "Charley Tsai HKBA",
+      "introduce": [
+        "Founding Co-Chairman of Hong Kong Blockchain Association | Special Expert of Hainan Free Trade Port Financial Development Center",
+        "International Fintech, Clearing and Settlement, and Trade Finance Expert | Established China's First Transaction Banking Business Division",
+        "Former positions at Standard Chartered Bank Hong Kong Head Office, Bank of China, and South African Investment Banks"
+      ]
+    },
+    {
+      "zhName": "Richard Wang",
+      "enName": "Richard Wang",
+      "introduce": [
+        "HKBA Co-Chairman | Web3 VC Blockchain Investor",
+        "DFJ Innovation Fund | Managing Partner of DraperDragon.com",
+        "Master of Telecommunications Engineering from National Chiao Tung University Taiwan | Asia Metaverse Alliance"
+      ]
+    },
+    {
+      "zhName": "Dr. Lin Hua",
+      "enName": "Dr. Lin Hua CFA FRM",
+      "introduce": [
+        "Co-Chairman of Hong Kong Blockchain Association, Director of Beijing Zijin Intelligent Finance Research Institute",
+        "Editorial Board Member of People's Bank of China \"Financial Accounting\" | Standing Director of China Financial Accounting Society",
+        "Consultant of Ministry of Finance Enterprise Accounting Standards Committee | Asset Securitization Advisor of China Securities Investment Fund Association"
+      ]
+    },
+    {
+      "zhName": "Michael Xu Zhao",
+      "enName": "Michael Xu Zhao",
+      "introduce": [
+        "HKBA Co-Chairman | Former PBOC National Administration of Foreign Exchange",
+        "Founder of Crypto1.vip Acquisition SPAC Nasdaq:DAOO IDCM.io",
+        "Asia Metaverse Alliance"
+      ]
+    },
+    {
+      "zhName": "Dr. WaiShun Lo",
+      "enName": "Dr. WaiShunLo",
+      "introduce": [
+        "HKBA Co-Chairman | Partner of DL Capital",
+        "Chairman of Qianhai International Blockchain Ecosystem Alliance",
+        "Adjunct Professor of Information Engineering Department, Chinese University of Hong Kong"
+      ]
+    },
+    {
+      "zhName": "Dixon Sze",
+      "enName": "Dixon Sze",
+      "introduce": [
+        "HKBA EABA.io Co-Chairman | Gaia Venture Sg",
+        "Founder & Chairman of Cosmos Information Technology Ltd",
+        "Asian Blockchain Alliance | Asia Blockchain Alliance"
+      ]
+    },
+    {
+      "zhName": "Sossion Zhang",
+      "enName": "Sossion",
+      "introduce": [
+        "HKBA Co-Chairman",
+        "President of AsiaBlockchain.club Asian Blockchain Association",
+        "Founder of JU.com Jubi Exchange, Chairman of Jubi Group"
+      ]
+    },
+    {
+      "zhName": "Shi Zhu",
+      "enName": "Shi Zhu",
+      "introduce": [
+        "HKBA Co-Chairman",
+        "Chairman of China Cultural Foundation",
+        "Former Chinese Economic and Commercial Consul to New Zealand"
+      ]
+    },
+    {
+      "zhName": "Chen Xu",
+      "enName": "Zeoi Can",
+      "introduce": [
+        "Co-Chairman of Hong Kong Blockchain Association | Founder of MetaZ, Metaverse and Web3 Think Tank",
+        "Founding Initiator of Hong Kong Mid-Levels Think Tank | Deputy Director of Metaverse Professional Committee, China International Science and Technology Promotion Association",
+        "Former Co-Publisher of Coindesk China"
+      ]
+    }
+  ]
+}

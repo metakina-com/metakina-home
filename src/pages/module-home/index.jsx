@@ -4,6 +4,7 @@ import ConsultPage from './Consult.jsx';
 // import ContactUsPage from './contactUs.jsx';
 import FlexiblePage from './Flexible.jsx';
 import FollowPage from './FollowForm.jsx';
+import HKBAPage from './HKBA.jsx';
 // import CooperationPlatformPage from './cooperationPlatform.tsx';
 import NumberPage from './Number.jsx';
 import PartnerLogoPage from './PartnerLogo.jsx';
@@ -20,6 +21,7 @@ function Index() {
       {/* <CooperationPlatformPage /> */}
       <NumberPage />
       <PartnerLogoPage />
+      <HKBAPage />
       <FlexiblePage />
       <ResourceCenterPage />
       {/* <ContactUsPage /> */}
