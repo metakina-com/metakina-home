@@ -29,12 +29,18 @@ const LayoutHeader = memo(() => {
       <Image
         alt={t('Home.name')}
         src={isQuotationPage ? iconBlackImg : groupImg}
-        className="h-[41px]! max-md:h-8!"
+        className="h-[41px]! w-[41px]! max-md:h-8!"
         preview={false}
       />
-      {/* <span className="pl-[5px] text-xl text-white md:text-3xl hover:text-gray-200">
-        {t('Home.title')}
-      </span> */}
+      <div className="flex flex-col">
+        <span className={`pl-[5px] text-xl ${isQuotationPage ? 'text-black' : 'text-white'} md:text-[20px] hover:text-gray-200`}>
+          {t('Home.title')}
+        </span>
+
+        <span className={`pl-[5px] text-xl ${isQuotationPage ? 'text-black' : 'text-white'} leading-none md:text-[14px] hover:text-gray-200`}>
+          Metakina.com
+        </span>
+      </div>
     </Link>
   );
 
