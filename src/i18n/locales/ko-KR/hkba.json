@@ -1,6 +1,15 @@
 {
   "members": [
     {
+      "zhName": "당의",
+      "enName": "Tony Tong.co",
+      "introduce": [
+        "HKBA 집행회장  |  Edi.College 메타버스교육학원 연합창시자",
+        "SuperAngelsVentures.com 슈퍼엔젤단 집행회장",
+        "일대일로과기금융협회 집행회장  |  아시아메타버스연맹 연합창시자"
+      ]
+    },
+    {
       "zhName": "蔡维德 교수",
       "enName": "Prof. Wei-Tek Tsai",
       "introduce": [
@@ -196,15 +205,6 @@
         "진가호 선생은 아시아태평양지역 외자은행에서 20년 이상의 정보기술관리 및 행정경험 보유",
         "빅데이터, 블록체인, Open API 등 금융과기기술 응용에 독특한 견해",
         "최근 다수 유명대학 객원강사로 인재육성, FinTech 창업고문으로 대만구 경제발전 추진"
-      ]
-    },
-    {
-      "zhName": "당의",
-      "enName": "Tony Tong.co",
-      "introduce": [
-        "HKBA 집행회장  |  Edi.College 메타버스교육학원 연합창시자",
-        "SuperAngelsVentures.com 슈퍼엔젤단 집행회장",
-        "일대일로과기금융협회 집행회장  |  아시아메타버스연맹 연합창시자"
       ]
     },
     {

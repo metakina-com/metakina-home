@@ -1,6 +1,15 @@
 {
   "members": [
     {
+      "zhName": "Tony Tong",
+      "enName": "Tony Tong.co",
+      "introduce": [
+        "HKBA Executive Chairman | Co-founder of Edi.College Metaverse Education Institute",
+        "Executive Chairman of SuperAngelsVentures.com",
+        "Executive Chairman of Belt and Road Fintech Association | Co-founder of Asia Metaverse Alliance"
+      ]
+    },
+    {
       "zhName": "Prof. Cai Weide",
       "enName": "Prof. Wei-Tek Tsai",
       "introduce": [
@@ -195,15 +204,6 @@
         "Mr. Emil Chan has over 20 years of IT management and executive experience in foreign banks in the Asia-Pacific region",
         "Has unique insights into the application of fintech technologies such as big data, blockchain, and Open API",
         "In recent years, he has trained talents as a guest lecturer at many prestigious universities and served as a FinTech startup advisor, promoting economic development in the Greater Bay Area"
-      ]
-    },
-    {
-      "zhName": "Tony Tong",
-      "enName": "Tony Tong.co",
-      "introduce": [
-        "HKBA Executive Chairman | Co-founder of Edi.College Metaverse Education Institute",
-        "Executive Chairman of SuperAngelsVentures.com",
-        "Executive Chairman of Belt and Road Fintech Association | Co-founder of Asia Metaverse Alliance"
       ]
     },
     {
