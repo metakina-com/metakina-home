@@ -39,6 +39,7 @@ import zhTWData from '@/i18n/locales/zh-TW/hkba.json';
 
 // 图片数组，按顺序对应人物
 const images = [
+  hkba22Image,
   hkba1Image,
   hkba2Image,
   hkba3Image,
@@ -60,7 +61,6 @@ const images = [
   hkba19Image,
   hkba20Image,
   hkba21Image,
-  hkba22Image,
   hkba23Image,
   hkba24Image,
   hkba25Image,

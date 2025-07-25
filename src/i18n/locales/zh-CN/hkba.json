@@ -1,6 +1,15 @@
 {
   "members": [
     {
+      "zhName": "唐仪",
+      "enName": "Tony Tong.co",
+      "introduce": [
+        "HKBA 执行会长  丨  Edi.College 元宇宙教育学院联合创始人",
+        "SuperAngelsVentures.com 超级天使团执行主席",
+        "一带一路科技金融协会执行主席  丨  亚洲元宇宙联盟联合创始人"
+      ]
+    },
+    {
       "zhName": "蔡维德教授",
       "enName": "Prof. Wei-Tek Tsai",
       "introduce": [
@@ -196,15 +205,6 @@
         "陈家豪先生拥有超过20年于亚太区外资银行的信息科技管理及行政经验",
         "对金融科技如大数据、区块链、Open API 等技术之应用有其独特见解",
         "近年以多家知名大学客席讲师培训人才，并任FinTech初创顾问，推动大湾区经济发展。"
-      ]
-    },
-    {
-      "zhName": "唐仪",
-      "enName": "Tony Tong.co",
-      "introduce": [
-        "HKBA 执行会长  丨  Edi.College 元宇宙教育学院联合创始人",
-        "SuperAngelsVentures.com 超级天使团执行主席",
-        "一带一路科技金融协会执行主席  丨  亚洲元宇宙联盟联合创始人"
       ]
     },
     {

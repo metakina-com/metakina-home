@@ -23,12 +23,12 @@ function HKBAPage() {
 
   // 上一页
   const handlePrev = () => {
-    setCurrentIndex(prev => prev === 0 ? groupedData.length - 1 : prev - 1);
+    setCurrentIndex(prev => prev === 0 ? 0 : prev - 1);
   };
 
   // 下一页
   const handleNext = () => {
-    setCurrentIndex(prev => prev === groupedData.length - 1 ? 0 : prev + 1);
+    setCurrentIndex(prev => prev === groupedData.length - 1 ? groupedData.length - 1 : prev + 1);
   };
 
   return (
@@ -59,20 +59,21 @@ function HKBAPage() {
               <button
                 type="button"
                 onClick={handlePrev}
-                className="group h-40px w-40px flex cursor-pointer items-center justify-center border-2 border-[#DBDBDB] rounded-full transition-colors hover:border-[#0357FF]"
+                className={`group h-40px w-40px flex ${currentIndex === 0 ? 'cursor-not-allowed' : 'cursor-pointer'} items-center justify-center border-2 border-[#DBDBDB] rounded-full transition-colors ${currentIndex === 0 ? 'hover:border-gray' : 'hover:border-[#0357FF]'}`}
                 aria-label={t('HKBA.navigation.prev')}
               >
-                <svg className="h-6 w-6 text-[#DBDBDB] group-hover:text-[#0357FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`h-6 w-6 text-[#DBDBDB] ${currentIndex === 0 ? 'group-hover:text-gray' : 'group-hover:text-[#0357FF]'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               <button
                 type="button"
                 onClick={handleNext}
-                className="group h-40px w-40px flex cursor-pointer items-center justify-center border-2 border-[#DBDBDB] rounded-full transition-colors hover:border-[#0357FF]"
+                disabled={currentIndex === groupedData.length - 1}
+                className={`group h-40px w-40px flex ${currentIndex === groupedData.length - 1 ? 'cursor-not-allowed' : 'cursor-pointer'} items-center justify-center border-2 border-[#DBDBDB] rounded-full transition-colors ${currentIndex === groupedData.length - 1 ? 'hover:border-gray' : 'hover:border-[#0357FF]'}`}
                 aria-label={t('HKBA.navigation.next')}
               >
-                <svg className="h-6 w-6 text-[#DBDBDB] group-hover:text-[#0357FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`h-6 w-6 text-[#DBDBDB] ${currentIndex === groupedData.length - 1 ? 'group-hover:text-gray' : 'group-hover:text-[#0357FF]'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
