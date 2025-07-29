@@ -194,13 +194,16 @@
       "monthly": "月付",
       "yearly": "年付",
       "yearlySaving": "（节省17%）",
+      "month": "月",
+      "year": "年",
       "plans": {
         "free": {
-          "title": "免费版",
+          "title": "标准版",
           "monthlyPrice": "HK¥ 0 /月",
           "yearlyPrice": "HK¥ 0 /年",
           "description": "适合个人、初创企业、概念验证",
           "status": "计划中",
+          "activate": "开通标准版",
           "features": [
             "10个基础RWA项目测览",
             "简单估值计算器",
@@ -215,6 +218,7 @@
           "description": "适合专业投资机构、交易员",
           "status": "计划中",
           "recommended": "推荐",
+          "activate": "开通专业版",
           "features": [
             "基础RWA项目测览",
             "简单估值计算器",
@@ -233,6 +237,7 @@
           "yearlyPrice": "HK¥ 58,888/年 起",
           "description": "适合需要高级定制功能的大型机构",
           "status": "计划中",
+          "activate": "开通企业版",
           "features": [
             "基础RWA项目测览",
             "简单估值计算器",

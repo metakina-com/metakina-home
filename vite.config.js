@@ -90,10 +90,9 @@ export default defineConfig(({ mode }) => {
       open: true,
       proxy: {
         '/api': {
-          // target: 'http://47.84.60.166:8083',
+          // target: 'http://192.168.0.28:8001',
           target: 'http://saas.platform.dappweb.cn',
           changeOrigin: true,
-
         },
       },
     },

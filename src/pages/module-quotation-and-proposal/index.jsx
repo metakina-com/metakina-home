@@ -1,11 +1,17 @@
+import BzbBgImg from '@/assets/images/quotation-and-proposal/bzb-bg.png';
+import BzbImg from '@/assets/images/quotation-and-proposal/bzb.png';
 import Frame1Img from '@/assets/images/quotation-and-proposal/Frame-1.png';
 import Frame2Img from '@/assets/images/quotation-and-proposal/Frame-2.png';
 import Frame3Img from '@/assets/images/quotation-and-proposal/Frame-3.png';
 import Frame4Img from '@/assets/images/quotation-and-proposal/Frame-4.png';
 import HexinImg from '@/assets/images/quotation-and-proposal/hexin.png';
 import OneImg from '@/assets/images/quotation-and-proposal/one.png';
+import QybBgImg from '@/assets/images/quotation-and-proposal/qyb-bg.png';
+import QybImg from '@/assets/images/quotation-and-proposal/qyb.png';
 import ThreeImg from '@/assets/images/quotation-and-proposal/three.png';
 import TwoImg from '@/assets/images/quotation-and-proposal/two.png';
+import ZybBgImg from '@/assets/images/quotation-and-proposal/zyb-bg.png';
+import ZybImg from '@/assets/images/quotation-and-proposal/zyb.png';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -40,6 +46,50 @@ function QuotationAndProposal() {
     } else if (tabName === 'customization') {
       // 滚动到规划方案部分
       scrollToSection(plansSectionRef);
+    }
+  };
+
+  // 支付按钮
+  const handleClickPayment = (type) => {
+    if (type === 'standard-edition') {
+      switch (paymentType) {
+        case 'monthly':
+          window.open('https://pay.metakina.com/b/6oU3cw8LldO9ftAcXRdQQ09', '_blank');
+          break;
+
+        case 'yearly':
+          window.open('https://pay.metakina.com/b/5kQcN6f9JcK5gxEf5ZdQQ06', '_blank');
+          break;
+
+        default:
+          break;
+      }
+    } else if (type === 'professional-edition') {
+      switch (paymentType) {
+        case 'monthly':
+          window.open('https://pay.metakina.com/b/cNi28sd1B11n6X49LFdQQ0a', '_blank');
+          break;
+
+        case 'yearly':
+          window.open('https://pay.metakina.com/b/7sY4gA1iT5hD4OWe1VdQQ07', '_blank');
+          break;
+
+        default:
+          break;
+      }
+    } else if (type === 'Enterprise-version') {
+      switch (paymentType) {
+        case 'monthly':
+          window.open('https://pay.metakina.com/b/dRm5kEaTtbG13KS0b5dQQ0b', '_blank');
+          break;
+
+        case 'yearly':
+          window.open('https://pay.metakina.com/b/14AfZi0eP9xT0yGe1VdQQ08', '_blank');
+          break;
+
+        default:
+          break;
+      }
     }
   };
 
@@ -120,22 +170,27 @@ function QuotationAndProposal() {
           </div>
 
           {/* 定价方案 */}
-          <div className="flex justify-center bg-white max-md:flex-col">
-            {/* 免费版 */}
-            <div className="w-full rounded-lg px-4 py-10 md:min-w-[362px] md:px-15">
+          <div className="flex justify-center gap-10 max-md:flex-col md:gap-2%">
+            {/* 标准版 */}
+            <div style={{ backgroundImage: `url(${BzbBgImg})`, backgroundSize: '100% 100%' }} className="rounded-lg px-4 py-10 transition-transform duration-300 bg-no-repeat md:min-w-[362px] md:w-32% hover:scale-102 md:px-10">
               <div className="mb-4">
-                <h3 className="text-base text-[#0055FF] font-semibold">{t('quotationAndProposal.pricing.plans.free.title')}</h3>
+                <img src={BzbImg} alt={t('quotationAndProposal.pricing.plans.free.title')} className="h-10 w-10" />
+                <h3 className="text-base text-[#333333] font-semibold">{t('quotationAndProposal.pricing.plans.free.title')}</h3>
               </div>
 
-              <div className="mb-20">
+              <div className="mb-16">
                 <div className="text-[1.5rem] text-black font-bold">
-                  {paymentType === 'monthly' ? t('quotationAndProposal.pricing.plans.free.monthlyPrice') : t('quotationAndProposal.pricing.plans.free.yearlyPrice')}
+                  {paymentType === 'monthly' ? '500' : '5,000'}
+                  {' '}
+                  /
+                  {' '}
+                  {paymentType === 'monthly' ? t('quotationAndProposal.pricing.month') : t('quotationAndProposal.pricing.year')}
                 </div>
                 <p className="mt-2 text-[12px] text-[#666666]">{t('quotationAndProposal.pricing.plans.free.description')}</p>
               </div>
 
-              <div className="mb-6 w-full rounded-lg bg-black/5 py-2 pl-6 text-[1rem] text-[#333333] font-[600]">
-                {t('quotationAndProposal.pricing.plans.free.status')}
+              <div onClick={() => handleClickPayment('standard-edition')} className="mb-6 w-full cursor-pointer rounded-lg bg-black/5 py-3 text-center text-[1rem] text-[#333333] font-[600]">
+                {t('quotationAndProposal.pricing.plans.free.activate')}
               </div>
 
               <div className="space-y-3">
@@ -149,24 +204,30 @@ function QuotationAndProposal() {
             </div>
 
             {/* 专业版 */}
-            <div style={{ boxShadow: '0px 0px 10px rgba(0,0,0,0.1)' }} className="relative my-4 w-[98%] rounded-lg bg-white px-4 py-10 max-md:mx-[1%] md:min-w-[362px] md:px-15">
-              <div className="absolute right-1 top-10 -translate-x-1/2">
-                <span className="rounded-full bg-[#f3f5fa] px-4 py-1 text-xs text-[#0055FF] font-medium">{t('quotationAndProposal.pricing.plans.professional.recommended')}</span>
-              </div>
+            <div style={{ backgroundImage: `url(${ZybBgImg})`, backgroundSize: '106% 104%', backgroundPosition: 'center' }} className="rounded-lg px-4 py-10 transition-transform duration-300 bg-no-repeat md:min-w-[362px] md:w-32% hover:scale-102 md:px-10">
 
               <div className="mb-4">
-                <h3 className="text-base text-[#0055FF] font-semibold">{t('quotationAndProposal.pricing.plans.professional.title')}</h3>
+                <img src={ZybImg} alt={t('quotationAndProposal.pricing.plans.professional.title')} className="h-10 w-10" />
+                <h3 className="text-base text-[#0055FF] font-semibold">
+                  {t('quotationAndProposal.pricing.plans.professional.title')}
+
+                  <span className="ml-4 inline-block rounded-full bg-[#ecefe9] px-4 py-1 text-xs text-[#0055FF] font-medium">{t('quotationAndProposal.pricing.plans.professional.recommended')}</span>
+                </h3>
               </div>
 
-              <div className="mb-20">
+              <div className="mb-16">
                 <div className="text-[1.5rem] text-black font-bold">
-                  {paymentType === 'monthly' ? t('quotationAndProposal.pricing.plans.professional.monthlyPrice') : t('quotationAndProposal.pricing.plans.professional.yearlyPrice')}
+                  {paymentType === 'monthly' ? '2,000' : '20,000'}
+                  {' '}
+                  /
+                  {' '}
+                  {paymentType === 'monthly' ? t('quotationAndProposal.pricing.month') : t('quotationAndProposal.pricing.year')}
                 </div>
                 <p className="mt-2 text-[12px] text-[#666666]">{t('quotationAndProposal.pricing.plans.professional.description')}</p>
               </div>
 
-              <div className="mb-6 w-full rounded-lg bg-black py-2 pl-6 text-[1rem] text-[#ffffff] font-[600]">
-                {t('quotationAndProposal.pricing.plans.professional.status')}
+              <div onClick={() => handleClickPayment('professional-edition')} className="mb-6 w-full cursor-pointer rounded-lg bg-[#0055FF] py-3 text-center text-[1rem] text-[#ffffff] font-[600]">
+                {t('quotationAndProposal.pricing.plans.professional.activate')}
               </div>
 
               <div className="space-y-3">
@@ -180,20 +241,25 @@ function QuotationAndProposal() {
             </div>
 
             {/* 企业版 */}
-            <div className="w-full rounded-lg px-4 py-10 md:min-w-[362px] md:px-15">
+            <div style={{ backgroundImage: `url(${QybBgImg})`, backgroundSize: '100% 100%' }} className="rounded-lg px-4 py-10 transition-transform duration-300 bg-no-repeat md:min-w-[362px] md:w-32% hover:scale-102 md:px-10">
               <div className="mb-4">
-                <h3 className="text-base text-[#060708] font-semibold">{t('quotationAndProposal.pricing.plans.enterprise.title')}</h3>
+                <img src={QybImg} alt={t('quotationAndProposal.pricing.plans.enterprise.title')} className="h-10 w-10" />
+                <h3 className="text-base text-[#E8B069] font-semibold">{t('quotationAndProposal.pricing.plans.enterprise.title')}</h3>
               </div>
 
-              <div className="mb-20">
+              <div className="mb-16">
                 <div className="text-[1.5rem] text-black font-bold">
-                  {paymentType === 'monthly' ? t('quotationAndProposal.pricing.plans.enterprise.monthlyPrice') : t('quotationAndProposal.pricing.plans.enterprise.yearlyPrice')}
+                  {paymentType === 'monthly' ? '10,000' : '100,000'}
+                  {' '}
+                  /
+                  {' '}
+                  {paymentType === 'monthly' ? t('quotationAndProposal.pricing.month') : t('quotationAndProposal.pricing.year')}
                 </div>
                 <p className="mt-2 text-[12px] text-[#666666]">{t('quotationAndProposal.pricing.plans.enterprise.description')}</p>
               </div>
 
-              <div className="mb-6 w-full rounded-lg bg-black/5 py-2 pl-6 text-[1rem] text-[#333333] font-[600]">
-                {t('quotationAndProposal.pricing.plans.enterprise.status')}
+              <div onClick={() => handleClickPayment('Enterprise-version')} className="mb-6 w-full cursor-pointer rounded-lg bg-black py-3 text-center text-[1rem] text-[#E8B069] font-[600]">
+                {t('quotationAndProposal.pricing.plans.enterprise.activate')}
               </div>
 
               <div className="space-y-3">

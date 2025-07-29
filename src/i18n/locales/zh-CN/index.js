@@ -1,4 +1,8 @@
+/*
+ * @Author: D.YW
+ */
 import common from './common.json';
+import cooperativePartner from './cooperative-partner.json';
 import forms from './forms.json';
 import layout from './layout.json';
 import legal from './legal.json';
@@ -10,4 +14,5 @@ export default {
   ...pages,
   ...forms,
   ...legal,
+  ...cooperativePartner,
 };

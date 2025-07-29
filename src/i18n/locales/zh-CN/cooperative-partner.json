@@ -1,0 +1,30 @@
+{
+  "cooperativePartner": {
+    "title": "元话RWA合作伙伴申请表",
+    "subtitle": "现实世界资产（RWA）的数字化、代币化全流程服务",
+    "form": {
+      "companyName": "公司名称",
+      "companyNamePlaceholder": "公司名称",
+      "contactName": "联系人",
+      "contactNamePlaceholder": "联系人",
+      "contactPhone": "联系电话",
+      "contactPhonePlaceholder": "联系电话",
+      "expectedCustomerCount": "合作半年内预计达成的客户数量",
+      "expectedCustomerCountPlaceholder": "客户数量",
+      "websiteUrl": "官网地址",
+      "websiteUrlPlaceholder": "官网地址",
+      "contactPosition": "职位",
+      "contactPositionPlaceholder": "职位",
+      "contactEmail": "电子邮箱",
+      "contactEmailPlaceholder": "电子邮箱",
+      "promotionCountry": "计划推广的国家",
+      "promotionCountryPlaceholder": "计划推广的国家",
+      "required": "请输入{{field}}",
+      "invalidEmail": "请输入有效的邮箱地址"
+    },
+    "cancel": "取消",
+    "submit": "提交",
+    "success": "提交成功",
+    "fail": "提交失败"
+  }
+}

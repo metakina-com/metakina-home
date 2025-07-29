@@ -1,0 +1,30 @@
+{
+  "cooperativePartner": {
+    "title": "元話RWA合作夥伴申請表",
+    "subtitle": "現實世界資產（RWA）的數字化、代幣化全流程服務",
+    "form": {
+      "companyName": "公司名稱",
+      "companyNamePlaceholder": "公司名稱",
+      "contactName": "聯繫人",
+      "contactNamePlaceholder": "聯繫人",
+      "contactPhone": "聯繫電話",
+      "contactPhonePlaceholder": "聯繫電話",
+      "expectedCustomerCount": "合作半年內預計達成的客戶數量",
+      "expectedCustomerCountPlaceholder": "客戶數量",
+      "websiteUrl": "官網地址",
+      "websiteUrlPlaceholder": "官網地址",
+      "contactPosition": "職位",
+      "contactPositionPlaceholder": "職位",
+      "contactEmail": "電子郵箱",
+      "contactEmailPlaceholder": "電子郵箱",
+      "promotionCountry": "計劃推廣的國家",
+      "promotionCountryPlaceholder": "計劃推廣的國家",
+      "required": "請輸入{{field}}",
+      "invalidEmail": "請輸入有效的郵箱地址"
+    },
+    "cancel": "取消",
+    "submit": "提交",
+    "success": "提交成功",
+    "fail": "提交失敗"
+  }
+}

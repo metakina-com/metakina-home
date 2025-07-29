@@ -206,13 +206,16 @@
       "monthly": "月額",
       "yearly": "年額",
       "yearlySaving": "（17%節約）",
+      "month": "月",
+      "year": "年",
       "plans": {
         "free": {
-          "title": "無料版",
+          "title": "スタンダード版",
           "monthlyPrice": "HK¥ 0 /月",
           "yearlyPrice": "HK¥ 0 /年",
           "description": "個人、スタートアップ、概念実証に適用",
           "status": "計画中",
+          "activate": "スタンダード版を有効化",
           "features": [
             "10の基本RWAプロジェクト概要",
             "シンプルな評価計算機",
@@ -227,6 +230,7 @@
           "description": "プロ投資機関、トレーダーに適用",
           "status": "計画中",
           "recommended": "推奨",
+          "activate": "プロ版を有効化",
           "features": [
             "基本RWAプロジェクト概要",
             "シンプルな評価計算機",
@@ -245,6 +249,7 @@
           "yearlyPrice": "HK¥ 58,888/年〜",
           "description": "高度なカスタマイゼーション機能が必要な大型機関に適用",
           "status": "計画中",
+          "activate": "エンタープライズ版を有効化",
           "features": [
             "基本RWAプロジェクト概要",
             "シンプルな評価計算機",

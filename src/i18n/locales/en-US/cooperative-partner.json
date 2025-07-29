@@ -1,0 +1,30 @@
+{
+  "cooperativePartner": {
+    "title": "Metakina RWA Partner Application Form",
+    "subtitle": "Full-process service for digitalization and tokenization of Real World Assets (RWA)",
+    "form": {
+      "companyName": "Company Name",
+      "companyNamePlaceholder": "Company Name",
+      "contactName": "Contact Person",
+      "contactNamePlaceholder": "Contact Person",
+      "contactPhone": "Contact Phone",
+      "contactPhonePlaceholder": "Contact Phone",
+      "expectedCustomerCount": "Expected Customer Count in Half a Year",
+      "expectedCustomerCountPlaceholder": "Customer Count",
+      "websiteUrl": "Website",
+      "websiteUrlPlaceholder": "Website",
+      "contactPosition": "Position",
+      "contactPositionPlaceholder": "Position",
+      "contactEmail": "Email",
+      "contactEmailPlaceholder": "Email",
+      "promotionCountry": "Target Country",
+      "promotionCountryPlaceholder": "Target Country",
+      "required": "Please enter {{field}}",
+      "invalidEmail": "Please enter a valid email address"
+    },
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "success": "Submitted successfully",
+    "fail": "Submission failed"
+  }
+}

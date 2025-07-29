@@ -1,0 +1,30 @@
+{
+  "cooperativePartner": {
+    "title": "メタキナRWAパートナー申請フォーム",
+    "subtitle": "現実世界資産（RWA）のデジタル化・トークン化の全プロセスサービス",
+    "form": {
+      "companyName": "会社名",
+      "companyNamePlaceholder": "会社名",
+      "contactName": "担当者",
+      "contactNamePlaceholder": "担当者",
+      "contactPhone": "連絡先電話番号",
+      "contactPhonePlaceholder": "連絡先電話番号",
+      "expectedCustomerCount": "協力半年以内に達成予定の顧客数",
+      "expectedCustomerCountPlaceholder": "顧客数",
+      "websiteUrl": "公式サイト",
+      "websiteUrlPlaceholder": "公式サイト",
+      "contactPosition": "役職",
+      "contactPositionPlaceholder": "役職",
+      "contactEmail": "メールアドレス",
+      "contactEmailPlaceholder": "メールアドレス",
+      "promotionCountry": "展開予定国",
+      "promotionCountryPlaceholder": "展開予定国",
+      "required": "{{field}}を入力してください",
+      "invalidEmail": "有効なメールアドレスを入力してください"
+    },
+    "cancel": "キャンセル",
+    "submit": "送信",
+    "success": "送信成功",
+    "fail": "送信失敗"
+  }
+}

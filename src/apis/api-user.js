@@ -1,3 +1,6 @@
+/*
+ * @Author: D.YW
+ */
 /**
  * 用户相关接口
  */
@@ -35,6 +38,21 @@ export async function updateFormApi(value) {
 export async function submitContactForm(params) {
   try {
     const data = await http.post(`${BASE_NAME}/platform-system/platform/mail/send`, params);
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+/**
+ * 提交合作伙伴表单
+ * @param params 表单数据
+ * @returns 提交结果
+ */
+export async function submitPartnerForm(params) {
+  try {
+    const data = await http.post(`${BASE_NAME}/partnerService/v1/partner/create`, params);
 
     return data;
   } catch (error) {

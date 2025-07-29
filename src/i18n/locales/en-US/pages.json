@@ -206,13 +206,16 @@
       "monthly": "Monthly",
       "yearly": "Yearly",
       "yearlySaving": "(Save 17%)",
+      "month": "month",
+      "year": "year",
       "plans": {
         "free": {
-          "title": "Free",
+          "title": "Standard",
           "monthlyPrice": "HK¥ 0 /month",
           "yearlyPrice": "HK¥ 0 /year",
           "description": "For individuals, startups, proof of concept",
           "status": "Planned",
+          "activate": "Activate Standard",
           "features": [
             "10 basic RWA project overviews",
             "Simple valuation calculator",
@@ -227,6 +230,7 @@
           "description": "For professional investment institutions, traders",
           "status": "Planned",
           "recommended": "Recommended",
+          "activate": "Activate Professional",
           "features": [
             "Basic RWA project overviews",
             "Simple valuation calculator",
@@ -245,6 +249,7 @@
           "yearlyPrice": "HK¥ 58,888/year and up",
           "description": "For large institutions requiring advanced customization",
           "status": "Planned",
+          "activate": "Activate Enterprise",
           "features": [
             "Basic RWA project overviews",
             "Simple valuation calculator",

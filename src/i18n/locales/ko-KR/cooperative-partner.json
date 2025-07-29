@@ -1,0 +1,30 @@
+{
+  "cooperativePartner": {
+    "title": "메타키나 RWA 파트너 신청서",
+    "subtitle": "실물 자산(RWA)의 디지털화 및 토큰화 전 과정 서비스",
+    "form": {
+      "companyName": "회사명",
+      "companyNamePlaceholder": "회사명",
+      "contactName": "담당자",
+      "contactNamePlaceholder": "담당자",
+      "contactPhone": "연락처",
+      "contactPhonePlaceholder": "연락처",
+      "expectedCustomerCount": "협력 반년 내 달성 예정 고객 수",
+      "expectedCustomerCountPlaceholder": "고객 수",
+      "websiteUrl": "공식 웹사이트",
+      "websiteUrlPlaceholder": "공식 웹사이트",
+      "contactPosition": "직책",
+      "contactPositionPlaceholder": "직책",
+      "contactEmail": "이메일",
+      "contactEmailPlaceholder": "이메일",
+      "promotionCountry": "진출 예정 국가",
+      "promotionCountryPlaceholder": "진출 예정 국가",
+      "required": "{{field}}을(를) 입력해 주세요",
+      "invalidEmail": "유효한 이메일 주소를 입력해 주세요"
+    },
+    "cancel": "취소",
+    "submit": "제출",
+    "success": "제출 성공",
+    "fail": "제출 실패"
+  }
+}
