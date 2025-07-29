@@ -180,6 +180,8 @@ function QuotationAndProposal() {
 
               <div className="mb-16">
                 <div className="text-[1.5rem] text-black font-bold">
+                  $
+                  {' '}
                   {paymentType === 'monthly' ? '500' : '5,000'}
                   {' '}
                   /
@@ -217,6 +219,8 @@ function QuotationAndProposal() {
 
               <div className="mb-16">
                 <div className="text-[1.5rem] text-black font-bold">
+                  $
+                  {' '}
                   {paymentType === 'monthly' ? '2,000' : '20,000'}
                   {' '}
                   /
@@ -249,6 +253,8 @@ function QuotationAndProposal() {
 
               <div className="mb-16">
                 <div className="text-[1.5rem] text-black font-bold">
+                  $
+                  {' '}
                   {paymentType === 'monthly' ? '10,000' : '100,000'}
                   {' '}
                   /
