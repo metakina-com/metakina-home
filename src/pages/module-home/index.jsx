@@ -1,30 +1,12 @@
-import ChallengePage from './Challenge.jsx';
-import ChooseUsPage from './ChooseUs.jsx';
-import ConsultPage from './Consult.jsx';
-// import ContactUsPage from './contactUs.jsx';
-import FlexiblePage from './Flexible.jsx';
-import FollowPage from './FollowForm.jsx';
-import HKBAPage from './HKBA.jsx';
-// import CooperationPlatformPage from './cooperationPlatform.tsx';
-import NumberPage from './Number.jsx';
-import PartnerLogoPage from './PartnerLogo.jsx';
-import ResourceCenterPage from './ResourceCenter.jsx';
-import SolutionPage from './Solution.jsx';
+import ConsultPage from '../module-about-us/Consult.jsx';
+import FollowPage from '../module-about-us/FollowForm.jsx';
+import Bazaar from './Bazaar.jsx';
 
 function Index() {
   return (
     <div>
       <ConsultPage />
-      <ChallengePage />
-      <SolutionPage />
-      <ChooseUsPage />
-      {/* <CooperationPlatformPage /> */}
-      <NumberPage />
-      <PartnerLogoPage />
-      <HKBAPage />
-      <FlexiblePage />
-      <ResourceCenterPage />
-      {/* <ContactUsPage /> */}
+      <Bazaar />
       <FollowPage />
     </div>
   );

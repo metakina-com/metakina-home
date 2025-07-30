@@ -48,7 +48,7 @@ function RWAFlexible() {
   ];
 
   return (
-    <div className="mt-[72px] lg:px-12 md:px-4 md:px-8 md:pb-20">
+    <div className="mt-[72px] lg:px-12 md:px-4 md:pb-20">
       {/* 灵活的合作模式 */}
       <section className="mx-auto w-[80vw]">
         <div className="text-center md:py-16">

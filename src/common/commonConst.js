@@ -1,3 +1,6 @@
+/*
+ * @Author: D.YW
+ */
 /**
  * 默认使用的字体基础大小
  */
@@ -8,7 +11,7 @@ export const BASE_FONT_SIZE = 16;
  * 移动端最小宽度设置为320px（iPhone SE等小屏设备）
  * 移动端最小高度设置为480px
  */
-export const BASE_MIN_VW_VH = { VW: 320, VH: 480 };
+export const BASE_MIN_VW_VH = { VW: 1440, VH: 900 };
 
 /**
  * 响应式断点

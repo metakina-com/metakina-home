@@ -61,7 +61,7 @@ export default function ResourceCenter() {
   return (
     <div
       id="resourceCenter"
-      className="py-16 text-white lg:px-12 md:px-4 md:px-8 md:py-24"
+      className="py-16 text-white lg:px-12 md:px-4 md:py-24"
       style={{
         background: ` url(${resourceBgImg}) no-repeat center center/cover`,
         backgroundBlendMode: 'overlay',

@@ -18,10 +18,8 @@ const LayoutHeader = memo(() => {
 
   const navItems = [
     { path: '/', label: t('Header.home'), type: 'route' },
-    { path: '#solutions-section', label: t('Header.solutions'), type: 'anchor' },
-    { path: '#chooseUs', label: t('Header.supportedChains'), type: 'anchor' },
-    { path: '#resourceCenter', label: t('Header.resourceCenter'), type: 'anchor' },
     { path: '/quotation-and-proposal', label: t('Header.cooperationMode'), type: 'route' },
+    { path: '/about-us', label: '关于我们', type: 'route' },
   ];
 
   const renderLogo = () => (
@@ -29,7 +27,7 @@ const LayoutHeader = memo(() => {
       <Image
         alt={t('Home.name')}
         src={isQuotationPage ? iconBlackImg : groupImg}
-        className="h-[41px]! w-[41px]! max-md:h-8!"
+        className="h-[41px]! w-[41px]!"
         preview={false}
       />
       <div className="flex flex-col">
@@ -77,7 +75,7 @@ const LayoutHeader = memo(() => {
   };
 
   const renderNavItems = () => (
-    <>
+    <div className="ml-12 hidden items-center md:flex">
       {navItems.map((item, index) => {
         // 判断是否为当前选中的导航项
         const isActive = item.type === 'route'
@@ -109,28 +107,38 @@ const LayoutHeader = memo(() => {
               </Link>
             );
       })}
-    </>
+    </div>
   );
 
   const renderButtons = () => (
     <div className="ml-8 flex items-center">
       <Link
-        to="/apply"
-        className={`flex items-center border rounded-2 px-6 py-2 transition-colors ${
+        to="/cooperative-partner-apply"
+        className={`flex items-center bg-[#FFFFFF26] rounded-2 px-6 py-2 transition-colors ${
           isQuotationPage
-            ? 'border-black text-black hover:bg-black/10'
-            : 'border-white text-white hover:bg-white/10'
+            ? 'borders text-black hover:text-black hover:bg-black/10'
+            : 'text-white hover:text-white hover:bg-white/30'
         }`}
       >
-        <span className="text-base">{t('Header.joinUs')}</span>
+        <span className="text-base">合作商申请</span>
+      </Link>
+      <Link
+        to="/apply"
+        className={`flex items-center ml-4  bg-[#FFFFFF26] rounded-2 px-6 py-2 transition-colors ${
+          isQuotationPage
+            ? 'borders text-black hover:text-black hover:bg-black/10'
+            : 'text-white hover:text-white hover:bg-white/30'
+        }`}
+      >
+        <span className="text-base">项目方申请</span>
       </Link>
       <a
         href="#contact"
         onClick={e => handleNavClick({ path: '#contact', type: 'anchor' }, e)}
-        className={`ml-4 flex items-center rounded-2 px-6 py-2 transition-colors cursor-pointer ${
+        className={`ml-4 flex items-center rounded-2 px-6 py-2 bg-[#FFFFFF26] transition-colors cursor-pointer ${
           isQuotationPage
-            ? 'bg-[#0055FF] text-white hover:bg-[#0055FF]/80'
-            : 'bg-[#ffffff] text-[#0055FF] hover:bg-white/80'
+            ? 'borders text-black hover:text-black hover:bg-black/10'
+            : ' text-white hover:text-white hover:bg-white/30'
         }`}
       >
         <span className="text-base">{t('Header.contactUs')}</span>
@@ -178,15 +186,15 @@ const LayoutHeader = memo(() => {
     <div
       className="h-full w-[100vw] flex flex-1 items-center justify-between px-[7.5vw] max-md:w-[100vw] max-md:px-2"
       style={{
-        backgroundColor: isQuotationPage ? 'white' : 'transparent',
+        backgroundColor: isQuotationPage ? 'white' : '#0055FF',
         color: isQuotationPage ? '#000' : '#fff',
       }}
     >
       <div className="flex items-center">
         {renderLogo()}
+        {renderNavItems()}
       </div>
       <div className="ml-12 hidden items-center md:flex">
-        {renderNavItems()}
         {renderButtons()}
         <div className="ml-4">
           <LanguageSwitcher isDark={isQuotationPage} />

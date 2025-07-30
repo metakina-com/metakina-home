@@ -1,3 +1,6 @@
+/*
+ * @Author: D.YW
+ */
 import consultBgImg from '@/assets/images/home/consult-bg.png';
 import consultMobileBgImg from '@/assets/images/home/mobile-home-bg.png';
 import { Button } from 'antd';
@@ -31,19 +34,19 @@ export default function Consult() {
       className="mt-[72px]"
     >
       <div className="m-x-auto h-[calc(100vh-72px)] w-[85vw] flex items-center px-0 text-white lg:px-24 md:px-16">
-        <div className="max-md:absolute max-md:top-[3rem]">
+        <div className="max-md:absolute max-md:top-[10rem]">
           {/* Logo */}
-          <h1 className="mb-10 text-[3rem] text-white font-bold md:text-[6rem]">
+          <h1 className="mb-10 text-[80px] text-white font-bold md:text-[6rem]">
             {t('Consult.logo')}
           </h1>
 
           {/* 主标题 */}
-          <h2 className="mb-8 text-xl leading-tight md:text-[3rem]">
+          <h2 className="mb-8 text-[40px] leading-tight md:text-[3rem]">
             {t('Consult.title')}
           </h2>
 
           {/* 副标题 */}
-          <p className="mb-12 w-[60%] text-xs text-gray-300 md:w-[31vw] md:text-2xl">
+          <p className="mb-12 w-[66%] text-[18px] text-gray-300 md:w-[31vw] md:text-2xl">
             {t('Consult.subtitle')}
           </p>
 
@@ -51,13 +54,12 @@ export default function Consult() {
           <Button
             type="primary"
             size="large"
-            className="transition-all duration-300 hover:scale-105"
+            className="text-[20px] transition-all duration-300 hover:scale-105"
             style={{
               background: 'linear-gradient(180deg, #0055FF 0%, #2F4EE8 100%)',
               border: 'none',
               height: 'auto',
               padding: '16px 32px',
-              fontSize: '1rem',
               fontWeight: 500,
               borderRadius: '8px',
             }}

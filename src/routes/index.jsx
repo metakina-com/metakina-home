@@ -10,7 +10,9 @@ import { Navigate } from 'react-router-dom';
 // 路由懒加载
 /* eslint-disable react-refresh/only-export-components */
 const Index = lazy(() => import('../pages/index.jsx'));
+const AboutUsIndex = lazy(() => import('../pages/module-about-us/index.jsx'));
 const HomeIndex = lazy(() => import('../pages/module-home/index.jsx'));
+const HomeDetails = lazy(() => import('../pages/module-home/Details.jsx'));
 const TextIndex = lazy(() => import('../pages/module-test/index.jsx'));
 const PrivacyPolicy = lazy(() => import('../pages/module-footer/PrivacyPolicy.jsx'));
 const ServiceTerms = lazy(() => import('../pages/module-footer/ServiceTerms.tsx'));
@@ -22,6 +24,7 @@ const MarketOperation = lazy(() => import('../pages/module-market-operation/inde
 const AssetFinancialization = lazy(() => import('../pages/module-asset-financialization/index.jsx'));
 const Customization = lazy(() => import('../pages/module-customization/index.jsx'));
 const QuotationAndProposal = lazy(() => import('../pages/module-quotation-and-proposal/index.jsx'));
+const CooperativePartner = lazy(() => import('../pages/module-client/CooperativePartner.jsx'));
 
 const routes = [
   {
@@ -42,6 +45,22 @@ const routes = [
         element: <HomeIndex />,
         meta: {
           title: '首页',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'home-details',
+        element: <HomeDetails />,
+        meta: {
+          title: '首页项目列表详情',
+          needLogin: false,
+        },
+      },
+      {
+        path: 'about-us',
+        element: <AboutUsIndex />,
+        meta: {
+          title: '关于我们',
           needLogin: false,
         },
       },
@@ -76,6 +95,15 @@ const routes = [
           title: 'RWA项目申请',
           needLogin: false,
         },
+      },
+      {
+        path: 'cooperative-partner-apply',
+        element: <CooperativePartner />,
+        meta: {
+          title: '合作伙伴申请表',
+          needLogin: false,
+        },
+
       },
       {
         path: 'digital-asset',

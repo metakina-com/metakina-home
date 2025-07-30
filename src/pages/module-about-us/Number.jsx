@@ -2,9 +2,11 @@ import cooperationBgImg from '@/assets/images/home/cooperation-bg.png';
 import { Button } from 'antd';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 function RWACooperationPlan() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [selectId, setSelectId] = useState('');
   // 合作计划数据-
   const cooperationPlans = [
@@ -27,6 +29,10 @@ function RWACooperationPlan() {
 
   const handleClickNum = (id) => {
     setSelectId(id === selectId ? '' : id);
+  };
+
+  const handleApplyPartner = () => {
+    navigate('/cooperative-partner-apply');
   };
 
   return (
@@ -65,6 +71,7 @@ function RWACooperationPlan() {
                   <Button
                     type="primary"
                     className="mt-6"
+                    onClick={handleApplyPartner}
                     style={{
                       background: '#0357FF',
                       border: 'none',
