@@ -9,6 +9,7 @@ import { App as AntdApp, ConfigProvider } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import { useRoutes } from 'react-router-dom';
+import GlobalLoginModal from './components/GlobalLoginModal.jsx';
 import PageTitle from './components/PageTitle.jsx';
 import { setHtmlRem } from './plugins/plugin-set-rem.js';
 import routes, { transformRoutes } from './routes/index.jsx';
@@ -52,6 +53,7 @@ export default function App() {
       <AntdApp message={{ maxCount: 1 }} style={{ width: '100%', height: '100%' }}>
         <PageTitle />
         {isUseRem ? <StyleProvider transformers={[px2rem]}>{pages}</StyleProvider> : pages}
+        <GlobalLoginModal />
       </AntdApp>
     </ConfigProvider>
   );

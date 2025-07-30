@@ -1,6 +1,7 @@
 import groupImg from '@/assets/images/home/Group.png';
 import iconBlackImg from '@/assets/images/home/icon-black.png';
 import LanguageSwitcher from '@/components/LanguageSwitcher.jsx';
+import { showLoginModal } from '@/utils/loginModal.js';
 import { MenuOutlined } from '@ant-design/icons';
 import { Button, Image, Menu } from 'antd';
 import { memo, useState } from 'react';
@@ -143,6 +144,13 @@ const LayoutHeader = memo(() => {
       >
         <span className="text-base">{t('Header.contactUs')}</span>
       </a>
+      <Button
+        type="primary"
+        className="ml-4 bg-white py-4.5 text-[#0055FF]"
+        onClick={showLoginModal}
+      >
+        登录 / 注册
+      </Button>
     </div>
   );
 
