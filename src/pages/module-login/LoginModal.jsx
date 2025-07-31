@@ -1,12 +1,9 @@
-/*
- * @Author: D.YW
- */
 import { Form, Modal } from 'antd';
 import { memo, useState } from 'react';
 import LoginPage from './LoginPage.jsx';
 import RegistrationPage from './RegistrationPage.jsx';
 
-const LoginModal = memo(({ visible, onCancel, onLogin, onRegister }) => {
+const LoginModal = memo(({ visible, onCancel, onLogin }) => {
   const [form] = Form.useForm();
   const [currentPage, setCurrentPage] = useState('login'); // 'login' 或 'register'
 
@@ -28,8 +25,8 @@ const LoginModal = memo(({ visible, onCancel, onLogin, onRegister }) => {
     onLogin?.(userData);
   };
 
-  const handleRegisterSuccess = (userData) => {
-    onRegister?.(userData);
+  const handleRegisterSuccess = () => {
+    handleSwitchToLogin();
   };
 
   return (

@@ -4,14 +4,40 @@
 /**
  * 用户相关接口
  */
-import http, { BASE_NAME } from './index.js';
+import http, { BASE_NAME, BASE_USER } from './index.js';
 
 /**
- * 登录
+ * 发送验证码
  */
-export async function userLoginApi(value) {
+export async function postSendCode(value) {
   try {
-    const data = await http.post(`${BASE_NAME}/login`, value);
+    const data = await http.post(`${BASE_USER}/v1/user/visitor/sendCode`, value);
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+/**
+ * 注册用户
+ */
+export async function postVisitorRegister(value) {
+  try {
+    const data = await http.post(`${BASE_USER}/v1/user/visitor/register`, value);
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+/**
+ *  登录用户
+ */
+export async function postVisitorLogin(value) {
+  try {
+    const data = await http.post(`${BASE_USER}/v1/user/visitor/login`, value);
 
     return data;
   } catch (error) {

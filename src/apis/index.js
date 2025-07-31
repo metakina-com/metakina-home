@@ -3,6 +3,7 @@ import axios from 'axios';
 
 // 访问前缀（线下）
 export const BASE_NAME = '/api'; // 测试版本
+export const BASE_USER = '/api/userService';
 
 // 响应码
 export const ResponseCode = {

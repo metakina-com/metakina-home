@@ -13,10 +13,6 @@ const GlobalLoginModal = memo(() => {
       visible={loginModalVisible}
       onCancel={hideLoginModal}
       onLogin={handleLoginSuccess}
-      onRegister={(userData) => {
-        console.info('注册成功:', userData);
-        hideLoginModal();
-      }}
     />
   );
 });

@@ -1,3 +1,4 @@
+import { postVisitorLogin } from '@/apis/api-user.js';
 import iconBlackImg from '@/assets/images/home/icon-black.png';
 import { Button, Checkbox, Form, Image, Input, message } from 'antd';
 import { memo } from 'react';
@@ -9,10 +10,16 @@ const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
     try {
       // 这里可以调用你的登录API
       // 模拟登录成功
-      message.success('登录成功');
-      console.info('登录信息:', values);
-      onLogin?.(values);
-      form.resetFields();
+      const response = await postVisitorLogin(values);
+
+      if (response.code === 0) {
+        message.success('登录成功');
+        console.info('登录信息:', values);
+        onLogin?.(values);
+        form.resetFields();
+      } else {
+        message.error(response.message || '登录失败，请重试');
+      }
     } catch {
       message.error('登录失败，请重试');
     }

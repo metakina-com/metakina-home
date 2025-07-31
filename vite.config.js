@@ -89,9 +89,13 @@ export default defineConfig(({ mode }) => {
       host: true,
       open: true,
       proxy: {
-        '/api': {
-          // target: 'http://192.168.0.28:8001',
-          target: 'http://saas.platform.dappweb.cn',
+        // '/api': {
+        //   // target: 'http://192.168.0.28:8001',
+        //   target: 'http://saas.platform.dappweb.cn',
+        //   changeOrigin: true,
+        // },
+        '/api/userService': {
+          target: 'http://192.168.0.21:8001',
           changeOrigin: true,
         },
       },

@@ -1,3 +1,4 @@
+import { postSendCode, postVisitorRegister } from '@/apis/api-user.js';
 /*
  * @Author: D.YW
  */
@@ -12,18 +13,24 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
   const handleSubmit = async (values) => {
     try {
       // 这里可以调用你的注册API
+      const res = await postVisitorRegister(values);
+
       console.info('注册信息:', values);
 
+      if (res.code === 0) {
       // 模拟注册成功
-      message.success('注册成功');
-      onRegister?.(values);
-      form.resetFields();
+        message.success('注册成功');
+        onRegister?.(values);
+        form.resetFields();
+      } else {
+        message.error(res.message || '注册失败，请稍后再试');
+      }
     } catch {
       message.error('注册失败，请重试');
     }
   };
 
-  const handleGetCode = () => {
+  const handleGetCode = async () => {
     // 验证邮箱是否已填写
     const email = form.getFieldValue('email');
 
@@ -49,7 +56,15 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
     }, 1000);
 
     // 这里可以调用发送验证码的API
-    message.success('验证码已发送');
+    const params = { email, type: 1 };
+    const res = await postSendCode(params);
+
+    if (res.code === 0) {
+      message.success('验证码已发送');
+    } else {
+      message.error(res.message || '验证码发送失败，请稍后再试');
+      clearInterval(timer);
+    }
   };
 
   return (
