@@ -5,10 +5,12 @@ import { postSendCode, postVisitorRegister } from '@/apis/api-user.js';
 import iconBlackImg from '@/assets/images/home/icon-black.png';
 import { Button, Form, Image, Input, message } from 'antd';
 import { memo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
   const [form] = Form.useForm();
   const [countdown, setCountdown] = useState(0);
+  const { t } = useTranslation();
 
   const handleSubmit = async (values) => {
     try {
@@ -19,14 +21,14 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
 
       if (res.code === 0) {
       // 模拟注册成功
-        message.success('注册成功');
+        message.success(t('register.success'));
         onRegister?.(values);
         form.resetFields();
       } else {
-        message.error(res.message || '注册失败，请稍后再试');
+        message.error(res.message || t('register.error'));
       }
     } catch {
-      message.error('注册失败，请重试');
+      message.error(t('register.error'));
     }
   };
 
@@ -35,7 +37,7 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
     const email = form.getFieldValue('email');
 
     if (!email) {
-      message.error('请先输入邮箱');
+      message.error(t('register.emailRequired'));
 
       return;
     }
@@ -60,9 +62,9 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
     const res = await postSendCode(params);
 
     if (res.code === 0) {
-      message.success('验证码已发送');
+      message.success(t('register.codeSent'));
     } else {
-      message.error(res.message || '验证码发送失败，请稍后再试');
+      message.error(res.message || t('register.codeError'));
       clearInterval(timer);
     }
   };
@@ -79,11 +81,14 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
         />
         <div className="text-center">
           <h2 className="mb-2 text-[#0A1B39]">
-            <span className="text-[36px]">欢迎注册 </span>
-            <span className="text-[24px]">元话RWA 平台</span>
+            <span className="text-[36px]">
+              {t('register.welcome')}
+              {' '}
+            </span>
+            <span className="text-[24px]">{t('register.platform')}</span>
           </h2>
           <p className="text-[18px] text-[#777777]">
-            解锁万亿美元资产,合规地连接全球资本
+            {t('register.subtitle')}
           </p>
         </div>
       </div>
@@ -91,7 +96,7 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
       {/* 注册表单 */}
       <div className="w-full">
         <h3 className="mb-6 text-base text-[#333333] font-medium">
-          注册账户
+          {t('register.title')}
         </h3>
 
         <Form
@@ -104,12 +109,12 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
           <Form.Item
             name="email"
             rules={[
-              { required: true, message: '请输入邮箱' },
-              { type: 'email', message: '请输入正确的邮箱格式' },
+              { required: true, message: t('register.email.required') },
+              { type: 'email', message: t('register.email.invalid') },
             ]}
           >
             <Input
-              placeholder="请输入邮箱"
+              placeholder={t('register.email.placeholder')}
               size="large"
               className="h-12 border-gray-200 rounded-lg bg-gray-50"
               styles={{
@@ -124,13 +129,13 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
           <Form.Item
             name="verificationCode"
             rules={[
-              { required: true, message: '请输入验证码' },
-              { len: 6, message: '验证码为6位数字' },
+              { required: true, message: t('register.verificationCode.required') },
+              { len: 6, message: t('register.verificationCode.invalid') },
             ]}
           >
             <div className="flex gap-3">
               <Input
-                placeholder="请输入验证码"
+                placeholder={t('register.verificationCode.placeholder')}
                 size="large"
                 className="h-12 flex-1 border-gray-200 rounded-lg bg-gray-50"
                 styles={{
@@ -147,7 +152,7 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
                 disabled={countdown > 0}
                 className="h-12 border-0 bg-[#0055FF] px-4 text-white font-medium"
               >
-                {countdown > 0 ? `${countdown}s` : '获取验证码'}
+                {countdown > 0 ? t('register.verificationCode.countdown', { countdown }) : t('register.verificationCode.getCode')}
               </Button>
             </div>
           </Form.Item>
@@ -155,12 +160,12 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
           <Form.Item
             name="password"
             rules={[
-              { required: true, message: '请输入密码' },
-              { min: 6, message: '密码至少6位' },
+              { required: true, message: t('register.password.required') },
+              { min: 6, message: t('register.password.minLength') },
             ]}
           >
             <Input.Password
-              placeholder="请输入密码"
+              placeholder={t('register.password.placeholder')}
               size="large"
               className="h-12 border-gray-200 rounded-lg bg-gray-50"
               styles={{
@@ -176,20 +181,20 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
             name="confirmPassword"
             dependencies={['password']}
             rules={[
-              { required: true, message: '请确认密码' },
+              { required: true, message: t('register.confirmPassword.required') },
               ({ getFieldValue }) => ({
                 validator(_, value) {
                   if (!value || getFieldValue('password') === value) {
                     return Promise.resolve();
                   }
 
-                  return Promise.reject(new Error('两次输入的密码不一致'));
+                  return Promise.reject(new Error(t('register.confirmPassword.mismatch')));
                 },
               }),
             ]}
           >
             <Input.Password
-              placeholder="请确认密码"
+              placeholder={t('register.confirmPassword.placeholder')}
               size="large"
               className="h-12 border-gray-200 rounded-lg bg-gray-50"
               styles={{
@@ -209,7 +214,7 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
               size="large"
               className="h-12 w-full border-0 bg-[#0055FF] text-white font-medium"
             >
-              注册
+              {t('register.registerButton')}
             </Button>
           </Form.Item>
 
@@ -220,7 +225,7 @@ const RegistrationPage = memo(({ onRegister, onSwitchToLogin }) => {
               className="text-[14px] text-[#0055FF]"
               onClick={onSwitchToLogin}
             >
-              登录账户
+              {t('register.loginLink')}
             </Button>
           </div>
         </Form>

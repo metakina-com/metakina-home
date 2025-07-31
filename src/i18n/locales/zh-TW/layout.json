@@ -13,7 +13,10 @@
     "cooperationMode": "合作模式",
     "joinUs": "平台申請",
     "solutions": "解決方案",
-    "resourceCenter": "資源中心"
+    "resourceCenter": "資源中心",
+    "partnerApply": "合作商申請",
+    "projectApply": "項目方申請",
+    "loginRegister": "登錄 / 註冊"
   },
   "Footer": {
     "footerLinks": {

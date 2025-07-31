@@ -2,6 +2,7 @@
   "Header": {
     "blogs": "Blogs",
     "about": "About",
+    "aboutUs": "About Us",
     "sourceCode": "Source Code",
     "proVersion": "Pro Version",
     "home": "Home",
@@ -11,7 +12,10 @@
     "joinUs": "Apply Now",
     "contactUs": "Contact Us",
     "solutions": "Solutions",
-    "resourceCenter": "Resource Center"
+    "resourceCenter": "Resource Center",
+    "partnerApply": "Partner Application",
+    "projectApply": "Project Application",
+    "loginRegister": "Login / Register"
   },
   "Footer": {
     "about": {

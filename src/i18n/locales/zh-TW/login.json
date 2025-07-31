@@ -1,0 +1,58 @@
+{
+  "login": {
+    "welcome": "歡迎登錄",
+    "platform": "元話RWA 平台",
+    "subtitle": "解鎖萬億美元資產,合規地連接全球資本",
+    "title": "賬號密碼登錄",
+    "email": {
+      "placeholder": "請輸入郵箱",
+      "required": "請輸入郵箱",
+      "invalid": "請輸入正確的郵箱格式"
+    },
+    "password": {
+      "placeholder": "請輸入密碼",
+      "required": "請輸入密碼"
+    },
+    "rememberMe": "記住我",
+    "forgotPassword": "忘記密碼?",
+    "loginButton": "登錄",
+    "registerLink": "註冊賬戶",
+    "success": "登錄成功",
+    "error": "登錄失敗，請重試"
+  },
+  "register": {
+    "welcome": "歡迎註冊",
+    "platform": "元話RWA 平台",
+    "subtitle": "解鎖萬億美元資產,合規地連接全球資本",
+    "title": "註冊賬戶",
+    "email": {
+      "placeholder": "請輸入郵箱",
+      "required": "請輸入郵箱",
+      "invalid": "請輸入正確的郵箱格式"
+    },
+    "verificationCode": {
+      "placeholder": "請輸入驗證碼",
+      "required": "請輸入驗證碼",
+      "invalid": "驗證碼為6位數字",
+      "getCode": "獲取驗證碼",
+      "countdown": "{countdown}s"
+    },
+    "password": {
+      "placeholder": "請輸入密碼",
+      "required": "請輸入密碼",
+      "minLength": "密碼至少6位"
+    },
+    "confirmPassword": {
+      "placeholder": "請確認密碼",
+      "required": "請確認密碼",
+      "mismatch": "兩次輸入的密碼不一致"
+    },
+    "registerButton": "註冊",
+    "loginLink": "登錄賬戶",
+    "success": "註冊成功",
+    "error": "註冊失敗，請稍後再試",
+    "emailRequired": "請先輸入郵箱",
+    "codeSent": "驗證碼已發送",
+    "codeError": "驗證碼發送失敗，請稍後再試"
+  }
+}

@@ -13,7 +13,10 @@
     "cooperationMode": "협력 모드",
     "joinUs": "플랫폼 신청",
     "solutions": "솔루션",
-    "resourceCenter": "리소스 센터"
+    "resourceCenter": "리소스 센터",
+    "partnerApply": "파트너 신청",
+    "projectApply": "프로젝트 신청",
+    "loginRegister": "로그인 / 등록"
   },
   "Footer": {
     "footerLinks": {

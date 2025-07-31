@@ -20,7 +20,7 @@ const LayoutHeader = memo(() => {
   const navItems = [
     { path: '/', label: t('Header.home'), type: 'route' },
     { path: '/quotation-and-proposal', label: t('Header.cooperationMode'), type: 'route' },
-    { path: '/about-us', label: '关于我们', type: 'route' },
+    { path: '/about-us', label: t('Header.aboutUs'), type: 'route' },
   ];
 
   const renderLogo = () => (
@@ -121,7 +121,7 @@ const LayoutHeader = memo(() => {
             : 'text-white hover:text-white hover:bg-white/30'
         }`}
       >
-        <span className="text-base">合作商申请</span>
+        <span className="text-base">{t('Header.partnerApply')}</span>
       </Link>
       <Link
         to="/apply"
@@ -131,7 +131,7 @@ const LayoutHeader = memo(() => {
             : 'text-white hover:text-white hover:bg-white/30'
         }`}
       >
-        <span className="text-base">项目方申请</span>
+        <span className="text-base">{t('Header.projectApply')}</span>
       </Link>
       <a
         href="#contact"
@@ -149,7 +149,7 @@ const LayoutHeader = memo(() => {
         className="ml-4 bg-white py-4.5 text-[#0055FF]"
         onClick={showLoginModal}
       >
-        登录 / 注册
+        {t('Header.loginRegister')}
       </Button>
     </div>
   );

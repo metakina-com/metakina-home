@@ -1,0 +1,58 @@
+{
+  "login": {
+    "welcome": "ログインへようこそ",
+    "platform": "メタキナRWAプラットフォーム",
+    "subtitle": "兆ドル規模の資産をアンロックし、グローバル資本をコンプライアントに接続",
+    "title": "アカウントパスワードログイン",
+    "email": {
+      "placeholder": "メールアドレスを入力してください",
+      "required": "メールアドレスを入力してください",
+      "invalid": "正しいメールアドレス形式を入力してください"
+    },
+    "password": {
+      "placeholder": "パスワードを入力してください",
+      "required": "パスワードを入力してください"
+    },
+    "rememberMe": "ログイン状態を保持",
+    "forgotPassword": "パスワードを忘れた方?",
+    "loginButton": "ログイン",
+    "registerLink": "アカウント登録",
+    "success": "ログインに成功しました",
+    "error": "ログインに失敗しました。もう一度お試しください"
+  },
+  "register": {
+    "welcome": "登録へようこそ",
+    "platform": "メタキナRWAプラットフォーム",
+    "subtitle": "兆ドル規模の資産をアンロックし、グローバル資本をコンプライアントに接続",
+    "title": "アカウント登録",
+    "email": {
+      "placeholder": "メールアドレスを入力してください",
+      "required": "メールアドレスを入力してください",
+      "invalid": "正しいメールアドレス形式を入力してください"
+    },
+    "verificationCode": {
+      "placeholder": "認証コードを入力してください",
+      "required": "認証コードを入力してください",
+      "invalid": "認証コードは6桁の数字です",
+      "getCode": "認証コードを取得",
+      "countdown": "{countdown}s"
+    },
+    "password": {
+      "placeholder": "パスワードを入力してください",
+      "required": "パスワードを入力してください",
+      "minLength": "パスワードは6文字以上で入力してください"
+    },
+    "confirmPassword": {
+      "placeholder": "パスワードを確認してください",
+      "required": "パスワードを確認してください",
+      "mismatch": "パスワードが一致しません"
+    },
+    "registerButton": "登録",
+    "loginLink": "ログインアカウント",
+    "success": "登録に成功しました",
+    "error": "登録に失敗しました。もう一度お試しください",
+    "emailRequired": "先にメールアドレスを入力してください",
+    "codeSent": "認証コードを送信しました",
+    "codeError": "認証コードの送信に失敗しました。もう一度お試しください"
+  }
+}

@@ -2,6 +2,7 @@
   "Header": {
     "blogs": "ブログ",
     "about": "サイトについて",
+    "aboutUs": "私たちについて",
     "sourceCode": "ソースコード",
     "proVersion": "Pro Version",
     "home": "ホーム",
@@ -11,7 +12,10 @@
     "joinUs": "申請する",
     "contactUs": "お問い合わせ",
     "solutions": "ソリューション",
-    "resourceCenter": "リソースセンター"
+    "resourceCenter": "リソースセンター",
+    "partnerApply": "パートナー申請",
+    "projectApply": "プロジェクト申請",
+    "loginRegister": "ログイン / 登録"
   },
   "Footer": {
     "about": {

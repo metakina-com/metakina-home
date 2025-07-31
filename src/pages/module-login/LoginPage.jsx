@@ -2,9 +2,11 @@ import { postVisitorLogin } from '@/apis/api-user.js';
 import iconBlackImg from '@/assets/images/home/icon-black.png';
 import { Button, Checkbox, Form, Image, Input, message } from 'antd';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
   const [form] = Form.useForm();
+  const { t } = useTranslation();
 
   const handleSubmit = async (values) => {
     try {
@@ -13,15 +15,15 @@ const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
       const response = await postVisitorLogin(values);
 
       if (response.code === 0) {
-        message.success('登录成功');
+        message.success(t('login.success'));
         console.info('登录信息:', values);
         onLogin?.(values);
         form.resetFields();
       } else {
-        message.error(response.message || '登录失败，请重试');
+        message.error(response.message || t('login.error'));
       }
     } catch {
-      message.error('登录失败，请重试');
+      message.error(t('login.error'));
     }
   };
 
@@ -37,11 +39,14 @@ const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
         />
         <div className="text-center">
           <h2 className="mb-2 text-[#0A1B39]">
-            <span className="text-[36px]">欢迎登录 </span>
-            <span className="text-[24px]">元话RWA 平台</span>
+            <span className="text-[36px]">
+              {t('login.welcome')}
+              {' '}
+            </span>
+            <span className="text-[24px]">{t('login.platform')}</span>
           </h2>
           <p className="text-[18px] text-[#777777]">
-            解锁万亿美元资产,合规地连接全球资本
+            {t('login.subtitle')}
           </p>
         </div>
       </div>
@@ -49,7 +54,7 @@ const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
       {/* 登录表单 */}
       <div className="w-full">
         <h3 className="mb-6 text-base text-[#333333] font-medium">
-          账号密码登录
+          {t('login.title')}
         </h3>
 
         <Form
@@ -62,12 +67,12 @@ const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
           <Form.Item
             name="email"
             rules={[
-              { required: true, message: '请输入邮箱' },
-              { type: 'email', message: '请输入正确的邮箱格式' },
+              { required: true, message: t('login.email.required') },
+              { type: 'email', message: t('login.email.invalid') },
             ]}
           >
             <Input
-              placeholder="请输入邮箱"
+              placeholder={t('login.email.placeholder')}
               size="large"
               className="h-12 border-gray-200 rounded-lg bg-gray-50"
               styles={{
@@ -82,11 +87,11 @@ const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
           <Form.Item
             name="password"
             rules={[
-              { required: true, message: '请输入密码' },
+              { required: true, message: t('login.password.required') },
             ]}
           >
             <Input.Password
-              placeholder="请输入密码"
+              placeholder={t('login.password.placeholder')}
               size="large"
               className="h-12 border-gray-200 rounded-lg bg-gray-50"
               styles={{
@@ -102,11 +107,11 @@ const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
           <div className="mb-6 flex items-center justify-between">
             <Form.Item name="remember" valuePropName="checked" noStyle>
               <Checkbox className="text-[#777777]">
-                记住我
+                {t('login.rememberMe')}
               </Checkbox>
             </Form.Item>
             <Button type="link" className="p-0 text-[#0055FF]">
-              忘记密码?
+              {t('login.forgotPassword')}
             </Button>
           </div>
 
@@ -118,7 +123,7 @@ const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
               size="large"
               className="h-12 w-full border-0 bg-[#0055FF] text-white font-medium"
             >
-              登录
+              {t('login.loginButton')}
             </Button>
           </Form.Item>
 
@@ -129,7 +134,7 @@ const LoginPage = memo(({ onSwitchToRegister, onLogin }) => {
               className="text-[14px] text-[#0055FF]"
               onClick={onSwitchToRegister}
             >
-              注册账户
+              {t('login.registerLink')}
             </Button>
           </div>
         </Form>

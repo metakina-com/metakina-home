@@ -1,0 +1,58 @@
+{
+  "login": {
+    "welcome": "Welcome to Login",
+    "platform": "Metakina RWA Platform",
+    "subtitle": "Unlock trillion-dollar assets, compliantly connect global capital",
+    "title": "Account Password Login",
+    "email": {
+      "placeholder": "Please enter your email",
+      "required": "Please enter your email",
+      "invalid": "Please enter a valid email format"
+    },
+    "password": {
+      "placeholder": "Please enter your password",
+      "required": "Please enter your password"
+    },
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "loginButton": "Login",
+    "registerLink": "Register Account",
+    "success": "Login successful",
+    "error": "Login failed, please try again"
+  },
+  "register": {
+    "welcome": "Welcome to Register",
+    "platform": "Metakina RWA Platform",
+    "subtitle": "Unlock trillion-dollar assets, compliantly connect global capital",
+    "title": "Register Account",
+    "email": {
+      "placeholder": "Please enter your email",
+      "required": "Please enter your email",
+      "invalid": "Please enter a valid email format"
+    },
+    "verificationCode": {
+      "placeholder": "Please enter verification code",
+      "required": "Please enter verification code",
+      "invalid": "Verification code must be 6 digits",
+      "getCode": "Get Code",
+      "countdown": "{countdown}s"
+    },
+    "password": {
+      "placeholder": "Please enter your password",
+      "required": "Please enter your password",
+      "minLength": "Password must be at least 6 characters"
+    },
+    "confirmPassword": {
+      "placeholder": "Please confirm your password",
+      "required": "Please confirm your password",
+      "mismatch": "The two passwords do not match"
+    },
+    "registerButton": "Register",
+    "loginLink": "Login Account",
+    "success": "Registration successful",
+    "error": "Registration failed, please try again",
+    "emailRequired": "Please enter your email first",
+    "codeSent": "Verification code sent",
+    "codeError": "Failed to send verification code, please try again"
+  }
+}
