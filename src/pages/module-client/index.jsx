@@ -52,6 +52,7 @@ export default function RWAApplicationForm() {
     const formData = {
       ...formState,
       ...form.getFieldsValue(true),
+      visitorId: '',
     };
 
     // 处理数组类型的值，转换为字符串
