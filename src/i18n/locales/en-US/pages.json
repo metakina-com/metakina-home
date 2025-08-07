@@ -18,7 +18,8 @@
     "logo": "Metakina RWA",
     "title": "Unlock Trillion-Dollar Assets, Connect Global Capital Compliantly",
     "subtitle": "Providing institutional-grade, end-to-end, compliance-first RWA and data asset tokenization solutions to empower your asset potential.",
-    "button": "Apply for Free Consultation"
+    "button": "Apply for Free Consultation",
+    "ht": "Project Backend"
   },
   "challenges": {
     "title": "Challenges Facing Traditional and Data Assets",
@@ -70,8 +71,8 @@
     "title": "Cooperation Platform"
   },
   "RWACooperation": {
-    "title": "MetaTalk RWA Digital Investment Banking Partnership Program",
-    "mainTitle": "MetaTalk RWA",
+    "title": "Metakina RWA Digital Investment Banking Partnership Program",
+    "mainTitle": "Metakina RWA",
     "subtitle": "Digital Investment Banking Partnership Program",
     "flexibleMode": "Flexible Cooperation Models",
     "processTitle": "Cooperation Process",
@@ -476,7 +477,7 @@
   },
   "processAssurance": {
     "title": "Compliance First, Building Trust Foundation",
-    "description": "MetaTalk RWA adheres to the 'compliance-first' philosophy, integrating comprehensive compliance systems from project inception to ensure every operation is safe and reliable.",
+    "description": "Metakina RWA adheres to the 'compliance-first' philosophy, integrating comprehensive compliance systems from project inception to ensure every operation is safe and reliable.",
     "coreCompliance": {
       "title": "Core Compliance Philosophy",
       "items": [
@@ -563,7 +564,7 @@
   "digitalAsset": {
     "header": {
       "title": "Empowering Assets, On-Chain Future",
-      "description": "Through MetaTalk RWA's innovative technology, transform traditional assets into efficient, transparent digital assets, opening a new era of asset circulation."
+      "description": "Through Metakina RWA's innovative technology, transform traditional assets into efficient, transparent digital assets, opening a new era of asset circulation."
     },
     "coreFeatures": {
       "title": "Core Features",
@@ -615,7 +616,7 @@
     },
     "footer": {
       "title": "Customize Your RWA Solution!",
-      "description": "No matter how unique your business scale or requirements are, MetaTalk RWA can tailor the most suitable blockchain RWA solution for you.",
+      "description": "No matter how unique your business scale or requirements are, Metakina RWA can tailor the most suitable blockchain RWA solution for you.",
       "button": "Contact Us Now"
     }
   },
