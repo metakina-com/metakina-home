@@ -198,7 +198,7 @@ const LayoutFooter = memo(() => {
               href="tel:+8617709224992"
               className="text-sm text-gray-400 transition-colors duration-200 hover:text-white"
             >
-              +86 177 0922 4992
+              +86 156 6705 1843
             </a>
           </div>
           <div className="flex items-center space-x-2">
