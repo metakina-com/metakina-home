@@ -13,7 +13,8 @@ export default function RWAApplicationForm() {
   const [form] = Form.useForm();
   const navigate = useNavigate();
   const [submitLoad, setSubmitLoad] = useState(false);
-  const [currentStep, setCurrentStep] = useState(0);
+  const currentStep = 0;
+  // const [currentStep, setCurrentStep] = useState(0);
   // 添加全局formState状态，用于保存所有步骤的表单数据
   const [formState, setFormState] = useState({});
 
@@ -40,44 +41,6 @@ export default function RWAApplicationForm() {
     }
   }, [formState]);
 
-  const handleSubmit = async () => {
-    // 如果不是最后一步，显示提示信息
-    if (currentStep !== 8) {
-      return message.info(t('stepValidation.info'));
-    }
-
-    setSubmitLoad(true);
-
-    // 提交前再次获取完整表单数据
-    const formData = {
-      ...formState,
-      ...form.getFieldsValue(true),
-      visitorId: '',
-    };
-
-    // 处理数组类型的值，转换为字符串
-    for (const key in formData) {
-      if (Array.isArray(formData[key])) {
-        formData[key] = formData[key].join(';');
-      }
-    }
-
-    // 使用formData进行API提交，确保包含所有表单数据
-    const res = await updateFormApi(formData);
-
-    setSubmitLoad(false);
-
-    if (res.code === 200) {
-      message.success(t('RWAForm.submit.message.success'));
-      form.resetFields();
-      setFormState({});
-      localStorage.setItem('rwaFormState', JSON.stringify({}));
-      navigate('/home');
-    } else {
-      message.error(t('RWAForm.submit.message.error'));
-    }
-  };
-
   const validateCurrentStep = async () => {
     try {
       let fieldsToValidate = [];
@@ -91,6 +54,8 @@ export default function RWAApplicationForm() {
           'contactPhone',
           'contactEmail',
           'companyAddress',
+          'assetType',
+          'assetDescription',
         ];
       } else if (currentStep === 1) {
         // RWA资产详细信息必填字段
@@ -132,37 +97,80 @@ export default function RWAApplicationForm() {
     }
   };
 
-  const nextStep = async () => {
+  const handleSubmit = async () => {
+    // 如果不是最后一步，显示提示信息
+    // if (currentStep !== 8) {
+    //   return message.info(t('stepValidation.info'));
+    // }
     const isValid = await validateCurrentStep();
 
-    if (isValid) {
-      // 保存当前步骤数据
-      const currentValues = form.getFieldsValue(true);
+    if (!isValid) {
+      return;
+    }
 
-      setFormState(prevState => ({
-        ...prevState,
-        ...currentValues,
-      }));
+    setSubmitLoad(true);
 
-      setCurrentStep(currentStep + 1);
-      window.scrollTo(0, 0);
+    // 提交前再次获取完整表单数据
+    const formData = {
+      ...formState,
+      ...form.getFieldsValue(true),
+      visitorId: '',
+    };
+
+    // 处理数组类型的值，转换为字符串
+    for (const key in formData) {
+      if (Array.isArray(formData[key])) {
+        formData[key] = formData[key].join(';');
+      }
+    }
+
+    // 使用formData进行API提交，确保包含所有表单数据
+    const res = await updateFormApi(formData);
+
+    setSubmitLoad(false);
+
+    if (res.code === 200) {
+      message.success(t('RWAForm.submit.message.success'));
+      form.resetFields();
+      setFormState({});
+      localStorage.setItem('rwaFormState', JSON.stringify({}));
+      navigate('/home');
     } else {
-      message.error(t('stepValidation.error'));
+      message.error(t('RWAForm.submit.message.error'));
     }
   };
 
-  const prevStep = () => {
-    // 保存当前步骤数据
-    const currentValues = form.getFieldsValue(true);
+  // const nextStep = async () => {
+  //   const isValid = await validateCurrentStep();
 
-    setFormState(prevState => ({
-      ...prevState,
-      ...currentValues,
-    }));
+  //   if (isValid) {
+  //     // 保存当前步骤数据
+  //     const currentValues = form.getFieldsValue(true);
 
-    setCurrentStep(currentStep - 1);
-    window.scrollTo(0, 0);
-  };
+  //     setFormState(prevState => ({
+  //       ...prevState,
+  //       ...currentValues,
+  //     }));
+
+  //     setCurrentStep(currentStep + 1);
+  //     window.scrollTo(0, 0);
+  //   } else {
+  //     message.error(t('stepValidation.error'));
+  //   }
+  // };
+
+  // const prevStep = () => {
+  //   // 保存当前步骤数据
+  //   const currentValues = form.getFieldsValue(true);
+
+  //   setFormState(prevState => ({
+  //     ...prevState,
+  //     ...currentValues,
+  //   }));
+
+  //   setCurrentStep(currentStep - 1);
+  //   window.scrollTo(0, 0);
+  // };
 
   const renderStepContent = () => {
     switch (currentStep) {
@@ -229,41 +237,7 @@ export default function RWAApplicationForm() {
             >
               <Input />
             </Form.Item>
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-              <Form.Item label={t('client.inviterName')} name="inviterName">
-                <Input />
-              </Form.Item>
-
-              <Form.Item label={t('client.inviterPhoneNumber')} name="inviterPhoneNumber">
-                <Input type="number" />
-              </Form.Item>
-            </div>
-
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-              <Form.Item label={t('RWAForm.sections.basicInfo.fields.businessLicense.label')} name="businessLicenseCode">
-                <Input />
-              </Form.Item>
-
-              <Form.Item label={t('RWAForm.sections.basicInfo.fields.registeredCapital.label')} name="registeredCapital">
-                <Input type="number" />
-              </Form.Item>
-            </div>
-          </>
-        );
-
-      case 1:
-        // RWA资产详细信息
-        return (
-          <>
-            <h2 className="text-block mb-5 flex items-center gap-2.5 pb-2.5 text-2xl font-semibold">
-              {t('RWAForm.sections.assetInfo.title')}
-            </h2>
-            <div className="border-t border-[#130F30]"></div>
-
-            <div className="mt-4 rounded-lg bg-blue-50 p-4 text-blue-800">
-              <strong>{t('RWAForm.sections.assetInfo.description')}</strong>
-            </div>
-            <div className="mb-8 rounded-lg bg-white p-4">
+            <div className="mb-8 rounded-lg bg-white">
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <Form.Item
                   label={t('RWAForm.sections.assetInfo.fields.assetType.label')}
@@ -302,6 +276,40 @@ export default function RWAApplicationForm() {
                   placeholder={t('RWAForm.sections.assetInfo.fields.assetDescription.placeholder')}
                 />
               </Form.Item>
+            </div>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              <Form.Item label={t('client.inviterName')} name="inviterName">
+                <Input />
+              </Form.Item>
+
+              <Form.Item label={t('client.inviterPhoneNumber')} name="inviterPhoneNumber">
+                <Input type="number" />
+              </Form.Item>
+            </div>
+
+            {/* <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              <Form.Item label={t('RWAForm.sections.basicInfo.fields.businessLicense.label')} name="businessLicenseCode">
+                <Input />
+              </Form.Item>
+
+              <Form.Item label={t('RWAForm.sections.basicInfo.fields.registeredCapital.label')} name="registeredCapital">
+                <Input type="number" />
+              </Form.Item>
+            </div> */}
+          </>
+        );
+
+      case 1:
+        // RWA资产详细信息
+        return (
+          <>
+            <h2 className="text-block mb-5 flex items-center gap-2.5 pb-2.5 text-2xl font-semibold">
+              {t('RWAForm.sections.assetInfo.title')}
+            </h2>
+            <div className="border-t border-[#130F30]"></div>
+
+            <div className="mt-4 rounded-lg bg-blue-50 p-4 text-blue-800">
+              <strong>{t('RWAForm.sections.assetInfo.description')}</strong>
             </div>
 
             {/* 资产价值与财务信息 */}
@@ -1059,7 +1067,7 @@ export default function RWAApplicationForm() {
             <div className="bg-white py-10 bg-no-repeat md:px-20">
               {renderStepContent()}
 
-              <div className="mt-10 flex">
+              {/* <div className="mt-10 flex">
                 {
                   Array.from({ length: 9 }).map((item, index) => {
                     return (
@@ -1067,9 +1075,9 @@ export default function RWAApplicationForm() {
                     );
                   })
                 }
-              </div>
+              </div> */}
               <div className="mt-5 text-right max-md:flex max-md:flex-col">
-                {currentStep === 0
+                {/* {currentStep === 0
                   ? ''
                   : (
                       <Button
@@ -1079,30 +1087,30 @@ export default function RWAApplicationForm() {
                       >
                         {t('buttons.previousStep')}
                       </Button>
-                    )}
-                {currentStep === 8
-                  ? (
-                      <>
-                        {/* 电脑端  提交按钮  */}
-                        <Button
-                          type="primary"
-                          onClick={handleSubmit}
-                          loading={submitLoad}
-                          className="hidden h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all md:inline-block hover:scale-105 hover:shadow-xl"
-                        >
-                          {t('RWAForm.submit.button')}
-                        </Button>
-                        {/* 手机端按钮显示  提交 */}
-                        <Button
-                          type="primary"
-                          onClick={handleSubmit}
-                          loading={submitLoad}
-                          className="block h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all md:hidden hover:scale-105 hover:shadow-xl"
-                        >
-                          {t('buttons.submit')}
-                        </Button>
-                      </>
-                    )
+                    )} */}
+                {/* {currentStep === 8
+                  ? ( */}
+                <>
+                  {/* 电脑端  提交按钮  */}
+                  <Button
+                    type="primary"
+                    onClick={handleSubmit}
+                    loading={submitLoad}
+                    className="hidden h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all md:inline-block hover:scale-105 hover:shadow-xl"
+                  >
+                    {t('RWAForm.submit.button')}
+                  </Button>
+                  {/* 手机端按钮显示  提交 */}
+                  <Button
+                    type="primary"
+                    onClick={handleSubmit}
+                    loading={submitLoad}
+                    className="block h-auto bg-[#0077FC] px-10 py-2 text-xl text-white font-semibold shadow-lg transition-all md:hidden hover:scale-105 hover:shadow-xl"
+                  >
+                    {t('buttons.submit')}
+                  </Button>
+                </>
+                {/* )
                   : (
                       <Button
                         type="primary"
@@ -1111,7 +1119,7 @@ export default function RWAApplicationForm() {
                       >
                         {t('buttons.nextStep')}
                       </Button>
-                    )}
+                    )} */}
               </div>
             </div>
           </div>
