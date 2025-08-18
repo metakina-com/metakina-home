@@ -22,7 +22,7 @@ export async function userLoginApi(value) {
 // 提交表单
 export async function updateFormApi(value) {
   try {
-    const data = await http.post(`${BASE_NAME}/userService/v1/user/projects`, value);
+    const data = await http.post(`${BASE_NAME}/platform-system/platform/projects`, value);
 
     return data;
   } catch (error) {
@@ -37,7 +37,7 @@ export async function updateFormApi(value) {
  */
 export async function submitContactForm(params) {
   try {
-    const data = await http.post(`${BASE_NAME}/userService/v1/user/mail/send`, params);
+    const data = await http.post(`${BASE_NAME}/platform-system/platform/mail/send`, params);
 
     return data;
   } catch (error) {
@@ -52,7 +52,7 @@ export async function submitContactForm(params) {
  */
 export async function submitPartnerForm(params) {
   try {
-    const data = await http.post(`${BASE_NAME}/userService/v1/user/partner/create`, params);
+    const data = await http.post(`${BASE_NAME}/partnerService/v1/partner/create`, params);
 
     return data;
   } catch (error) {
